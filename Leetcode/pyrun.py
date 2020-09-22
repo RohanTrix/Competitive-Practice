@@ -1,8 +1,7 @@
 import os
 import time
-prog_name = "A.cpp"
-os.system(f'g++ -o out {prog_name}')
+prog_name = "prog.py"
 t1 = time.time()
-os.system("out")
+os.system(f'python {prog_name}')
 t2 = time.time()
 print("TIME TAKEN: ",t2-t1)
