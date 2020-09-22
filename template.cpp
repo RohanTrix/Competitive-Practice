@@ -40,9 +40,6 @@ void solve() {
   int i, j, n, m;
     
 
-
-
-
 }
 
 int main() {
