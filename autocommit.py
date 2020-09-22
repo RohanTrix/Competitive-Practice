@@ -5,7 +5,7 @@ while(True):
         print(0)
         time.sleep(60)
         f = open('helloworld.txt','w')
-        f.write(time.time())
+        f.write(str(time.time()))
         f.close()
         continue
     os.system('git add-commit -m "Committed changes"')
