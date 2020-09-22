@@ -39,7 +39,6 @@ const int N = 3e5, M = N;
 void solve() {
   int i, j, n, m;
 
-
 }
 
 int main() {
