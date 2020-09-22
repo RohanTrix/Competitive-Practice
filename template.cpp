@@ -9,8 +9,6 @@ using namespace std;
 #define pi(x)	printf("%d\n",x)
 #define pl(x)	printf("%lld\n",x)
 #define ps(s)	printf("%s\n",s)
-#define deb(x) cout << #x << "=" << x << endl
-#define deb2(x, y) cout << #x << "=" << x << "," << #y << "=" << y << endl
 #define pb push_back
 #define mp make_pair
 #define F first
@@ -41,8 +39,6 @@ const int mod = 1'000'000'007;
 const int N = 3e5, M = N;
 //=======================
 
-vi g[N];
-int a[N];
 
 void solve() {
   int i, j, n, m;
