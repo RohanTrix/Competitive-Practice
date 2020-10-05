@@ -35,6 +35,7 @@ for _ in range(int(input())):
         l[k-1]= X
     l = sorted(l)
     val = binary_search(l,X)
+    if (val<=k and k<p) or p<k<=y:
     if p<=val:
         if p<k:
             print(-1)
