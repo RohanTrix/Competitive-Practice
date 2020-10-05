@@ -1,7 +1,7 @@
-t = int(input())
 import sys
 sys.stdin = open('input.txt', 'r')  
-sys.stdout = open('output.txt', 'w') 
+sys.stdout = open('output.txt', 'w')
+t = int(input())
 def binary_search(arr, x): 
     low = 0
     high = len(arr) - 1
