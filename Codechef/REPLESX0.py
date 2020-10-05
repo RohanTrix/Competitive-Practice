@@ -1,6 +1,6 @@
 import sys
-#sys.stdin = open('input.txt', 'r')  
-#sys.stdout = open('output.txt', 'w')
+sys.stdin = open('input.txt', 'r')  
+sys.stdout = open('output.txt', 'w')
 def binary_search(arr, x): 
     low = 0
     high = len(arr) - 1
@@ -24,8 +24,7 @@ def binary_search(arr, x):
   
     # If we reach here, then the element was not present 
     return -1
-t = int(input())
-for _ in range():
+for _ in range(int(input())):
     n, X, p ,k = map(int,input().split())
     l = list(map(int,input().split()))
     p-=1
@@ -47,4 +46,3 @@ for _ in range():
             print(-1)
         else:
             print(p-val)
-    t-=1
