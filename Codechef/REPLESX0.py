@@ -35,15 +35,7 @@ for _ in range(int(input())):
         l[k-1]= X
     l = sorted(l)
     val = binary_search(l,X)
-    if (val<=k and k<p) or p<k<=y:
-    if p<=val:
-        if p<k:
-            print(-1)
-            continue
-        else:
-            print(val-p)
-    else:
-        if p>k:
-            print(-1)
-        else:
-            print(p-val)
+    if (val<=k and k<p) or (p<k and k<=val):
+        print(-1)
+        continue
+    print(abs(val-p))
