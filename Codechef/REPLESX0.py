@@ -10,7 +10,6 @@ def binary_search(arr, x):
   
         mid = (high + low) // 2
   
-        # Check if x is present at mid 
         if arr[mid] < x: 
             low = mid + 1
   
