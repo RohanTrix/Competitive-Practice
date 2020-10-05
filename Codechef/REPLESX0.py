@@ -14,15 +14,11 @@ def binary_search(arr, x):
         if arr[mid] < x: 
             low = mid + 1
   
-        # If x is greater, ignore left half 
         elif arr[mid] > x: 
             high = mid - 1
   
-        # If x is smaller, ignore right half 
         else: 
             return mid 
-  
-    # If we reach here, then the element was not present 
     return -1
 for _ in range(int(input())):
     n, X, p ,k = map(int,input().split())
