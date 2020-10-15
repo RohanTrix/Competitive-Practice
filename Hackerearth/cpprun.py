@@ -1,6 +1,6 @@
 import os
 import time
-prog_name = "A.cpp"
+prog_name = ".c"
 os.system(f'g++ -o out {prog_name}')
 t1 = time.time()
 os.system("out")
