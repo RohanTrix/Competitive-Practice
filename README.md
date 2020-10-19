@@ -8,6 +8,8 @@
 5. SPLITIT
 ## Codeforces
 
+1. XORwice
+
 ## Hackerrank
 
 ## Leetcode
