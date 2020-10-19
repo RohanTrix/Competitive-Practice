@@ -7,6 +7,14 @@ import java.io.PrintWriter;
 import java.io.FileReader;
 public class XORwice
 {
+    public static void solve()
+    {
+
+
+
+
+
+    }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
@@ -18,10 +26,7 @@ public class XORwice
         int t = sc.nextInt();
         for(int i=0;i<t;i++)
         { 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int x = a & b;
-        sc.println((a^x) + (b^x));
+            solve();
         }
         //CODE END
         // sc.flush() if the output needs to be flushed
