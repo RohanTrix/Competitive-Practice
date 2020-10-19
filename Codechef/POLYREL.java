@@ -5,29 +5,8 @@ import java.util.StringTokenizer;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.FileReader;
-public class XORwice
-{
-    public static void main(String[] args) 
-    {
-        // FastReader(true)         for File I/O
-        // FastReader()             for terminal I/O    
-
-        FastReader sc=new FastReader(true); 
-
-        //CODE BEGIN
-        int t = sc.nextInt();
-        for(int i=0;i<t;i++)
-        { 
-        int a = sc.nextInt();
-        int b = sc.nextInt();
-        int x = a & b;
-        sc.println((a^x) + (b^x));
-        }
-        //CODE END
-        // sc.flush() if the output needs to be flushed
-        sc.closer();
-        
-    }
+public class POLYREL
+{ 
     static class FastReader 
     { 
         BufferedReader br; 
@@ -126,5 +105,41 @@ public class XORwice
             }
         
         }
+    }
+
+    public static void solve(FastReader sc)
+    {
+        int num = 0;
+        int n = sc.nextInt();
+        for(int k=0;k<n;k++)
+            sc.nextLine();
+        while(n>5)
+        {
+            num+=n;
+            n = (int) n/2;
+        }
+        sc.println(num + n);
+        }
+    
+    public static void main(String[] args) 
+    {
+        // FastReader(true)         for File I/O
+        // FastReader()             for terminal I/O    
+
+        FastReader sc=new FastReader(); 
+
+        //CODE BEGIN
+
+        int t = sc.nextInt();
+        while(t-- > 0)
+        {
+            solve(sc);
+        }
+
+
+        //CODE END
+
+        // sc.flush() if the output needs to be flushed
+        sc.closer();
     } 
 }
