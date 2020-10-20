@@ -22,7 +22,7 @@ public class Dominant_Piranha
         sc.println(al);
         sc.println(arr);
         Iterator<Integer> itr = al.iterator();
-        boolean b = false;
+        boolean b = false;/*
         while (itr.hasNext()) 
         { 
             int i = (Integer)itr.next();
@@ -38,6 +38,7 @@ public class Dominant_Piranha
             b=true;
             break;
             }
+            */
    
         } 
         
