@@ -1,3 +1,7 @@
+
+import sys 
+sys.stdin = open('input.txt', 'r')  
+sys.stdout = open('output.txt', 'w+') 
 def solve():
     n = int(input())
     l = list(map(int,input().split()))
