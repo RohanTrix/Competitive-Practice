@@ -19,7 +19,13 @@ public class Dominant_Pir
             if(arr[i]==m)
             al.add(i);
         }
-        for(int i)
+        Iterator<Integer> itr = al.iterator();
+        while (itr.hasNext()) 
+        { 
+            int i = (Integer)itr.next();
+            if(i<)
+   
+        } 
 
 
         
