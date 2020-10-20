@@ -23,7 +23,9 @@ public class Dominant_Pir
         while (itr.hasNext()) 
         { 
             int i = (Integer)itr.next();
-            if((i==n-1 && arr[i-1]<m) || (i==0 && arr[1]m))
+            if((i==n-1 && arr[i-1]<m) || (i==0 && arr[1]<m))
+            sc.println(i+1);
+            
    
         } 
 
