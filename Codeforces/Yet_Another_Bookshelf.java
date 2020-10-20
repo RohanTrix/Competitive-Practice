@@ -5,11 +5,37 @@ import java.util.StringTokenizer;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.FileReader;
-public class Template 
+public class Yet_Another_Bookshelf 
 {
     static void solve(FastReader sc)
     {
-        
+        int n=sc.nextInt();
+        int arr[] = new int[n];
+        int tot = 0;
+        boolean beg = false, fin = false;
+        int start=0, end=0;
+        for(int i=0;i<n;i++)
+        {
+            arr[i] = sc.nextInt();
+            if( arr[i]==0)
+            tot+=1;
+        }
+        for(int i=0;i<n;i++)
+        {
+            if (arr[i]==1)
+            beg=true;
+            if(!beg)
+            start+=1;
+        }
+        for(int i=n-1; i>=0 ;i--)
+        {
+            if (arr[i]==1)
+            fin=true;
+            if(!fin)
+            end+=1;
+        }
+        sc.println(tot-(start+end));
+
 
         
     }
@@ -17,7 +43,7 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O    
-        FastReader sc=new FastReader(true); 
+        FastReader sc=new FastReader(); 
         //CODE BEGIN
         for(int T = sc.nextInt();T > 0;T--)solve(sc);
         //CODE END

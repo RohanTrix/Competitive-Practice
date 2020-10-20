@@ -5,11 +5,21 @@ import java.util.StringTokenizer;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.io.FileReader;
-public class Template 
+public class Boring_Apartments 
 {
     static void solve(FastReader sc)
     {
-        
+        int n = sc.nextInt();
+        int d = n%10;
+        int s = 10*(d-1);
+        int i=1;
+        while(n>0)
+        {
+            s+=i++;
+            n = (int) n/10;
+        }
+        sc.println(s);
+    
 
         
     }
@@ -17,7 +27,7 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O    
-        FastReader sc=new FastReader(true); 
+        FastReader sc=new FastReader(); 
         //CODE BEGIN
         for(int T = sc.nextInt();T > 0;T--)solve(sc);
         //CODE END

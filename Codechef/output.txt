@@ -1,2 +1,12 @@
 4
 10
+int n = sc.nextInt();
+        int d = n%10;
+        int s = 8*(d-1);
+        int i=1;
+        while(n>0)
+        {
+            s+=i++;
+            n = (int) n/10;
+        }
+        
