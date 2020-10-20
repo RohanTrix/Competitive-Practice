@@ -11,6 +11,9 @@
 ## Codeforces
 
 1. XORwice
+2. Boring Apartments
+3. Yet Another Bookshelf
+4. Dominant Piranha
 
 ## Hackerrank
 
