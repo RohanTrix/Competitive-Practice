@@ -23,7 +23,7 @@ public class Dominant_Pir
         while (itr.hasNext()) 
         { 
             int i = (Integer)itr.next();
-            if(i<)
+            if(i==n-1 && arr[n-2]
    
         } 
 
