@@ -30,15 +30,13 @@ public class Dominant_Pir
             b=true;
             break;
             }
-            elif(arr[i-1]<m && arr[i+1]< m)
+            elif(arr[i-1]<m && arr[i+1]< m){
             sc.println(i+1);
             b=true;
             break;
             }
    
         } 
-
-
         
     }
     public static void main(String[] args) 
