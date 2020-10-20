@@ -1,10 +1,10 @@
 import java.util.*;
 import java.io.*;
-public class Dominant_Pir 
+public class Dominant_Piranha
 {
     static void solve(FastReader sc)
     {
-        ArrayList al = new ArrayList<Integer>();
+        ArrayList<Integer> al = new ArrayList<Integer>();
         int n = sc.nextInt();
         int arr[] = new int[n];
         int m = 0;
@@ -30,7 +30,7 @@ public class Dominant_Pir
             b=true;
             break;
             }
-            if(arr[i-1]<m && arr[i+1]< m)
+            else if(arr[i-1]<m && arr[i+1]< m)
             {
             sc.println(i+1);
             b=true;
