@@ -14,6 +14,10 @@ def solve():
         if (i==0 and l[i+1] <m) or (i==n-1 and l[i-1] < m):
             print(i+1)
             break
+        if ( i> 0 and i< n-1 and l[i+1] < m and l[i-1]< m):
+            print(i+1)
+            break
+    print(-1)
 
 
 for t in range(int(input())):
