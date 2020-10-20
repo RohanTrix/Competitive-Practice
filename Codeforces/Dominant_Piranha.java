@@ -20,7 +20,7 @@ public class Dominant_Piranha
             al.add(i);
         }
         sc.println(al);
-        sc.println(arr.toDeepString());
+        sc.println(arr);
         Iterator<Integer> itr = al.iterator();
         boolean b = false;
         while (itr.hasNext()) 
