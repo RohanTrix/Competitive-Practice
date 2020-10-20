@@ -4,12 +4,14 @@ public class Dominant_Pir
 {
     static void solve(FastReader sc)
     {
-        ArrayL
+        ArrayList al = new ArrayList<Integer>();
         int n = sc.nextInt();
         int arr[] = new int[n];
+        int m = 0;
         for(int i = 0;i<n;i++)
         {
             arr[i] = sc.nextInt();
+
         }
 
 
