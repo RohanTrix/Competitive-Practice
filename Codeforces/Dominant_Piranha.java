@@ -17,7 +17,9 @@ public class Dominant_Pir
         for(int i = 0;i<n;i++)
         {
             if(arr[i]==m)
-            al.add()
+            al.add(i);
+        }
+        for(int i)
 
 
         
