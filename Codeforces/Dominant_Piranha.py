@@ -1,4 +1,4 @@
-for t in range(int(input())):
+def solve():
     n = int(input())
     l = list(map(int,input().split()))
     al = []
@@ -11,6 +11,11 @@ for t in range(int(input())):
         if l[i]==m:
             al.append(i)
     for i in al:
-        if i==0 and l[i+1] <m:
+        if (i==0 and l[i+1] <m) or (i==n-1 and l[i-1] < m):
             print(i+1)
+            break
+
+
+for t in range(int(input())):
+    solve()
             
