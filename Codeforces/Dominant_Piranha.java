@@ -19,6 +19,8 @@ public class Dominant_Piranha
             if(arr[i]==m)
             al.add(i);
         }
+        sc.println(al);
+        sc.println(arr.toDeepString());
         Iterator<Integer> itr = al.iterator();
         boolean b = false;
         while (itr.hasNext()) 
