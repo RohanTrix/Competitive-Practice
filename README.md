@@ -19,6 +19,4 @@
 
 ## Leetcode
 
-## Hackerrank
-
 ## SPOJ
