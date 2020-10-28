@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-public class Template 
+public class Monk_And_Champions_League 
 {
     static void solve(FastReader sc)
     {
