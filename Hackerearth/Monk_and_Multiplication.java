@@ -31,6 +31,7 @@ public class Monk_and_Multiplication
             heap.add(a);
             heap.add(b);          
         }
+        sc.close();
     }
 }
    

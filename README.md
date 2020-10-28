@@ -15,6 +15,10 @@
 3. Yet Another Bookshelf
 4. Dominant Piranha
 
+## HackerEarth
+
+1. Monk_and_Multiplication
+
 ## Hackerrank
 
 ## Leetcode
