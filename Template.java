@@ -12,10 +12,11 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        boolean flag = false
+        boolean flag = false;
         if(args.length==1)
+        flag=true;
 
-        FastReader sc=new FastReader(true); 
+        FastReader sc=new FastReader(flag); 
         //CODE BEGIN
         for(int T = sc.nextInt();T > 0;T--)solve(sc);
         //CODE END
