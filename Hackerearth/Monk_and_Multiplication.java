@@ -6,39 +6,30 @@ public class Monk_and_Multiplication
     {
         Scanner sc = new Scanner(System.in);
         int n  =sc.nextInt();
-        int arr[] = new int[n];
+        long arr[] = new long[n];
         for(int i=0;i<n;i++)
-        arr[i]= sc.nextInt();
-        long prod=1;
-        PriorityQueue<Integer> heap = new PriorityQueue<>();
-        for(int i =0; i<n;i++)
+        arr[i]= sc.nextLong();
+        PriorityQueue<Long> heap = new PriorityQueue<>();
+        if(n<2)
         {
-            if(i<3)
-            {
-                prod = prod * arr[i];
-                if(i==2)
-                System.out.println(prod);
-                else{
-                System.out.println(-1);
-                heap.add(arr[i]);
-                
-                }
-                
-                continue;
-            }
+            for(long i: arr){
+            System.out.println(-1);}
+            return;
+        }
+        heap.add(arr[0]);
+        System.out.println(-1);
+        heap.add(arr[1]);
+        System.out.println(-1);
+        for(int i =2; i<n;i++)
+        {
             heap.add(arr[i]);
-            if(heap.peek()<arr[i])
-            {
-                long temp =heap.poll();
-                prod = (prod * arr[i])/temp;
-                System.out.println(prod);
-            }
-            else
-            {
-                heap.poll();
-                System.out.println(prod);
-            }
-            
+            if(heap.size()>3)
+            heap.poll();
+            long a =heap.poll();
+            long b = heap.poll();
+            System.out.println(a*b*heap.peek());
+            heap.add(a);
+            heap.add(b);          
         }
     }
 }
