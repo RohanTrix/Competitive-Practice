@@ -4,7 +4,7 @@ public class Monk_And_Champions_League
 {
     static void solve(FastReader sc)
     {
-        PriorityQueue<Long> heap = new PriorityQueue<>();
+        PriorityQueue<Long> heap = new PriorityQueue<>(Collections.reverseOrder());
         int m = sc.nextInt();
         int n = sc.nextInt();
         for(int i=0;i<m;i++)
@@ -19,7 +19,7 @@ public class Monk_And_Champions_League
             sum+=a;
             a = a-1;
             heap.add(a);
-            sc.println(sum);
+            //sc.println(sum);
         }
         sc.println(sum);
 
