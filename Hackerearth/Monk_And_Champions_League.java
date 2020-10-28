@@ -16,8 +16,10 @@ public class Monk_And_Champions_League
         for(int i=0;i<n;i++)
         {
             long a = heap.poll();
-            sum+=a--;
+            sum+=a;
+            a = a-1;
             heap.add(a);
+            sc.println(sum);
         }
         sc.println(sum);
 
