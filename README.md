@@ -18,7 +18,8 @@
 
 ## HackerEarth
 
-1. Monk_and_Multiplication
+1. Monk and Multiplication
+2. Monk And Champions League
 
 ## Hackerrank
 
