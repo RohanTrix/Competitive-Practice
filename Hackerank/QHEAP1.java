@@ -4,10 +4,13 @@ public class QHEAP1
 {
     static void solve(FastReader sc)
     {
-        
+        int a = sc.nextInt();
+        if(a!=3)
+        long b = sc.nextLong();
         
 
         
+
     }
     public static void main(String[] args) 
     {
