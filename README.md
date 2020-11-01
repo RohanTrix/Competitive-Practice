@@ -8,6 +8,7 @@
 5. SPLITIT
 6. POLYREL
 7. ASP
+8. ANDOR
 
 ## Codeforces
 
