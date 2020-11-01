@@ -18,10 +18,7 @@ public class Boring_Apartments
             s+=i++;
             n = (int) n/10;
         }
-        sc.println(s);
-    
-
-        
+        sc.println(s);      
     }
     public static void main(String[] args) 
     {
