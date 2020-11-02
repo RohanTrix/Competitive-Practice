@@ -12,15 +12,22 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        boolean flag = false;
-        if(args.length==1)
-        flag=true;
+        if(args.length==1){
+            FastReader sc=new FastReader(true); 
+            //CODE BEGIN
+            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //CODE END
+            sc.closer();
+        }
+        else
+        {
+            FastReader sc=new FastReader(); 
+            //CODE BEGIN
+            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //CODE END
+            sc.closer();
 
-        FastReader sc=new FastReader(flag); 
-        //CODE BEGIN
-        for(int T = sc.nextInt();T > 0;T--)solve(sc);
-        //CODE END
-        sc.closer();
+        }
     }
     static class pair implements Comparable < pair >
     {
