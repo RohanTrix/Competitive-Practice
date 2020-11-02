@@ -1,26 +1,53 @@
-/*
-ID: rohanye1
-LANG: JAVA
-TASK: prob_name
-*/
 import java.io.*;
 import java.util.*;
-public class prob_name 
+public class Array_Rearrangment
 {
     static void solve(FastReader sc)
     {
-        
+        //PriorityQueue<Integer> heap = new PriorityQueue<>();
+        int n = sc.nextInt();
+        int x = sc.nextInt();
+        int a[] = new int[n];
+        int b[] = new int[n];
+        for (int i=0;i<n;i++)
+        {
+            a[i] = sc.nextInt();
+        }
+        for(int i=0;i<n;i++)
+        {
+            b[i] = sc.nextInt();
+        }
+        Arrays.sort(b);
+        sc.println("X = "+ Arrays.toString(b));
+        for (int i=0;i<n;i++)
+        {
+           if(a[i]+b[i]>x){
+           sc.println("No");
+           return;
+           }
+        }
+        sc.println("X = "+x);
+        sc.println("Yes");
 
-        
+               
     }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
+        boolean flag = false;
+        if(args.length==1)
+        flag=true;
 
-        FastReader sc=new FastReader(true); 
+        FastReader sc=new FastReader(flag); 
         //CODE BEGIN
-        for(int T = sc.nextInt();T > 0;T--)solve(sc);
+        for(int T = sc.nextInt();T > 0;T--)
+        
+        {solve(sc);
+         if(T!=1)
+         sc.nextLine();
+        }
+
         //CODE END
         sc.closer();
     }
@@ -66,8 +93,8 @@ public class prob_name
         {
             try
             {
-                br = new BufferedReader( new FileReader("prob_name.in")); 
-                pw = new PrintWriter("prob_name.out");
+                br = new BufferedReader( new FileReader("input.txt")); 
+                pw = new PrintWriter("output.txt");
             
             }
             catch(Exception e)
