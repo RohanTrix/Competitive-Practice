@@ -12,7 +12,7 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        if(args.length==1){
+        if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             for(int T = sc.nextInt();T > 0;T--)solve(sc);

@@ -1,2 +1,4 @@
-YES
-NO
+Xor 3
+Xor 2
+Xor 1
+1
