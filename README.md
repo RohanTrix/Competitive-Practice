@@ -9,6 +9,7 @@
 6. POLYREL
 7. ASP
 8. ANDOR
+9. ADADISH
 
 ## Codeforces
 
