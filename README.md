@@ -10,6 +10,7 @@
 7. ASP
 8. ANDOR
 9. ADADISH
+10. RESTORE
 
 ## Codeforces
 
