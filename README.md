@@ -30,5 +30,6 @@
 
 1. Sort Colors
 2. Maximum Subarray
+3. Last Stone Weight
 
 ## SPOJ
