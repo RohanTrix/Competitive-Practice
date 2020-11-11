@@ -31,5 +31,6 @@
 1. Sort Colors
 2. Maximum Subarray
 3. Last Stone Weight
+4. Find_The_Duplicate_Number
 
 ## SPOJ
