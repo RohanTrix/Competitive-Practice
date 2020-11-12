@@ -9,7 +9,6 @@ public class Toposort {
   public static void main(String[] args)
   {
     FastReader sc=new FastReader();
-    //Scanner sc = new Scanner(System.in);
     //System.out.println("Enter the number of nodes:");
     int n = sc.nextInt();
     //System.out.println("Enter the number of edges:");
