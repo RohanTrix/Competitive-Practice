@@ -1,37 +1,167 @@
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Scanner;
-
+import java.util.*;
+import java.io.*;
 public class Toposort {
-    private static ArrayList<Integer> toposort(ArrayList<Integer>[] adj) {
-        int used[] = new int[adj.length];
-        ArrayList<Integer> order = new ArrayList<Integer>();
-        //write your code here
-        return order;
+  // Adjaceny List
+  public Map<Integer, Set<Integer>> edges = new TreeMap<>();
+  // Visited Set
+  public static Set<Integer> visited = new HashSet<Integer>();
+  public static List<Integer> stack = new ArrayList<>();
+  public static void main(String[] args)
+  {
+    FastReader sc=new FastReader();
+    //Scanner sc = new Scanner(System.in);
+    //System.out.println("Enter the number of nodes:");
+    int n = sc.nextInt();
+    //System.out.println("Enter the number of edges:");
+    int m = sc.nextInt();
+    Toposort g = new Toposort();
+    for(int i =1; i<=n;i++)
+    {
+      g.addNode(i);
     }
+    for(int i =0; i< m;i++)
+    {
+      g.addEdge(sc.nextInt(), sc.nextInt());
+    }
+    for(int i =1; i<=n;i++)
+    {
+        if(!visited.contains(i))
+        g.dfs(i);
+    }
+    Collections.reverse(stack);
+    for(int i: stack)
+    sc.print(i+" ");
+    sc.closer();
+  }
+  void dfs(int v)
+  {
+    if(visited.contains(v))
+        return;
+    visited.add(v);
+    for(int u : edges.get(v))
+        {
+            dfs(u);
+        }
+    stack.add(v);
+  }
+  static class FastReader 
+    { 
+        BufferedReader br; 
+        StringTokenizer st;
+        PrintWriter pw;
+  
+        public FastReader() 
+        { 
+            br = new BufferedReader(new
+                     InputStreamReader(System.in));
+            pw = new PrintWriter(new OutputStreamWriter(System.out));
+        }
+        public FastReader(boolean b)
+        {
+            try
+            {
+                br = new BufferedReader( new FileReader("input.txt")); 
+                pw = new PrintWriter("output.txt");
+            
+            }
+            catch(Exception e)
+            {
 
-    private static void dfs(ArrayList<Integer>[] adj, int[] used, ArrayList<Integer> order, int s) {
-      //write your code here
-    }
+            }
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int m = scanner.nextInt();
-        ArrayList<Integer>[] adj = (ArrayList<Integer>[])new ArrayList[n];
-        for (int i = 0; i < n; i++) {
-            adj[i] = new ArrayList<Integer>();
         }
-        for (int i = 0; i < m; i++) {
-            int x, y;
-            x = scanner.nextInt();
-            y = scanner.nextInt();
-            adj[x - 1].add(y - 1);
+        String next() 
+        { 
+            while (st == null || !st.hasMoreElements()) 
+            { 
+                try
+                { 
+                    st = new StringTokenizer(br.readLine()); 
+                } 
+                catch (IOException  e) 
+                { 
+                    e.printStackTrace(); 
+                } 
+            } 
+            return st.nextToken();
+        } 
+  
+        int nextInt() 
+        { 
+            return Integer.parseInt(next()); 
+        } 
+  
+        long nextLong() 
+        { 
+            return Long.parseLong(next()); 
+        } 
+  
+        double nextDouble() 
+        { 
+            return Double.parseDouble(next()); 
+        } 
+  
+        String nextLine() 
+        { 
+            String str = ""; 
+            try
+            { 
+                str = br.readLine(); 
+            } 
+            catch (IOException e) 
+            { 
+                e.printStackTrace(); 
+            } 
+            return str; 
         }
-        ArrayList<Integer> order = toposort(adj);
-        for (int x : order) {
-            System.out.print((x + 1) + " ");
+        void print(Object...objects) {
+            for (int i = 0; i < objects.length; i++) {
+                if (i != 0)
+                    pw.print(' ');
+            pw.print(objects[i]);
+            }
+        }
+        void println(Object...objects)
+        {
+            for (int i = 0; i < objects.length; i++) {
+                if (i != 0)
+                    pw.print(' ');
+            pw.print(objects[i]);
+            }
+            pw.println();
+        }
+        void closer()
+        {
+            try{
+            br.close();
+            pw.flush();
+            pw.close();
+            }
+            catch(Exception e)
+            {
+            }
+        
         }
     }
+  public void addNode(int u) {
+    if (!edges.containsKey(u)) {
+      edges.put(u, new TreeSet<Integer>());
+    }
+  }
+  public void removeNode(int u) {
+    if (!edges.containsKey(u)) {
+      return;
+    }
+    for (int v : edges.get(u)) {
+      edges.get(v).remove(u);
+    }
+    edges.remove(u);
+  }
+  public void addEdge(int u, int v) {
+    edges.get(u).add(v);
+  }
+
+  public void removeEdge(int u, int v) {
+    edges.get(u).remove(v);
+  }
 }
-
