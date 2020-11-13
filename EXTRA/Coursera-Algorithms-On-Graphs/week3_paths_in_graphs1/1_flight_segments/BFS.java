@@ -1,16 +1,17 @@
-package Graphs;
 import java.util.*;
-public class Graph {
+public class BFS {
   // Adjaceny List
   public Map<Integer, Set<Integer>> edges = new TreeMap<>();
   // Visited Set
   public static Set<Integer> visited = new HashSet<Integer>();
   public static void main(String[] args)
   {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Enter the number of edges: ");
+    FastReader sc=new FastReader();
+    //System.out.println("Enter the number of nodes:");
     int n = sc.nextInt();
-    Graph g = new Graph();
+    //System.out.println("Enter the number of edges:");
+    int m = sc.nextInt();
+    BFS g = new BFS();
     for(int i =0; i< n;i++)
     {
       g.addEdge(sc.nextInt(), sc.nextInt());
