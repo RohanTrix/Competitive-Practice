@@ -22,12 +22,11 @@ public class BFS {
       g.addEdge(sc.nextInt(), sc.nextInt());
     }
     int start = sc.nextInt();
-    sc.print(g.bfs(start))
-    sc.close();
+    sc.print(g.bfs(start,sc.nextInt()));
+    sc.closer();
   } 
-  int bfs(int v)
+  int bfs(int v, int end)
   {
-    int end = sc.nextInt();
     Queue<Integer> q = new LinkedList<>();
     int distance[] = new int[edges.size()+1];
     Arrays.fill(distance, -1);
