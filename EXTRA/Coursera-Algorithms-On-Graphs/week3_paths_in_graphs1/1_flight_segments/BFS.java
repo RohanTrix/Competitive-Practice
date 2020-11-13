@@ -22,10 +22,10 @@ public class BFS {
       g.addEdge(sc.nextInt(), sc.nextInt());
     }
     int start = sc.nextInt();
-    g.bfs(start));
+    sc.print(g.bfs(start))
     sc.close();
   } 
-  void bfs(int v)
+  int bfs(int v)
   {
     int end = sc.nextInt();
     Queue<Integer> q = new LinkedList<>();
@@ -47,7 +47,7 @@ public class BFS {
         q.add(u);
       }
     }
-
+    return distance[end];
     //System.out.println( Arrays.toString(distance));
   }
   static class FastReader 
