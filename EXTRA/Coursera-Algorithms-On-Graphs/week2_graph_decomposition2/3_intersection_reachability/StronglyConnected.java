@@ -46,7 +46,7 @@ public class StronglyConnected {
     sc.print(cnt);
     sc.closer();
   }
-  void dfs(int v)
+  void dfs(int v) // DFS for first pass- Similar for Topological Sorting
   {
     if(visited.contains(v))
         return;
@@ -57,7 +57,7 @@ public class StronglyConnected {
         }
     stack.add(v);
   }
-  void dfs2(int v)
+  void dfs2(int v) // DFS ON Reverse Graph with popping of elemts from stack
   {
     if(visited.contains(v))
     {
