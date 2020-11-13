@@ -42,6 +42,8 @@ public class BFS {
           continue;
         visited.add(u);
         distance[u] = distance[s] + 1;
+        if(u==end)
+        
         q.add(u);
       }
     }
