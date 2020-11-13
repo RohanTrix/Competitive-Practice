@@ -46,9 +46,8 @@ public class BFS {
         return distance[end];
         q.add(u);
       }
-      return distance[end];
     }
-    //return distance[end];
+    return distance[end];
     //System.out.println( Arrays.toString(distance));
   }
   static class FastReader 
