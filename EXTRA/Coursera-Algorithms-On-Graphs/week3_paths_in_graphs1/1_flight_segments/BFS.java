@@ -1,32 +1,165 @@
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-
-public class BFS {
-    private static int distance(ArrayList<Integer>[] adj, int s, int t) {
-        //write your code here
-        return -1;
+package Graphs;
+import java.util.*;
+public class Graph {
+  // Adjaceny List
+  public Map<Integer, Set<Integer>> edges = new TreeMap<>();
+  // Visited Set
+  public static Set<Integer> visited = new HashSet<Integer>();
+  public static void main(String[] args)
+  {
+    Scanner sc = new Scanner(System.in);
+    System.out.println("Enter the number of edges: ");
+    int n = sc.nextInt();
+    Graph g = new Graph();
+    for(int i =0; i< n;i++)
+    {
+      g.addEdge(sc.nextInt(), sc.nextInt());
     }
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = scanner.nextInt();
-        int m = scanner.nextInt();
-        ArrayList<Integer>[] adj = (ArrayList<Integer>[])new ArrayList[n];
-        for (int i = 0; i < n; i++) {
-            adj[i] = new ArrayList<Integer>();
-        }
-        for (int i = 0; i < m; i++) {
-            int x, y;
-            x = scanner.nextInt();
-            y = scanner.nextInt();
-            adj[x - 1].add(y - 1);
-            adj[y - 1].add(x - 1);
-        }
-        int x = scanner.nextInt() - 1;
-        int y = scanner.nextInt() - 1;
-        System.out.println(distance(adj, x, y));
+    g.bfs(1);
+    System.out.println(g.edges);
+    sc.close();
+  } 
+  void bfs(int v)
+  {
+    Queue<Integer> q = new LinkedList<>();
+    int distance[] = new int[edges.size()+1];
+    Arrays.fill(distance, -1);
+    visited.add(v);
+    distance[v] = 0;
+    q.add(v);
+    while(q.size()!=0)
+    {
+      int s = q.poll();
+      // Process node s
+      for( int u : edges.get(s))
+      {
+        if(visited.contains(u))
+          continue;
+        visited.add(u);
+        distance[u] = distance[s] + 1;
+        q.add(u);
+      }
     }
+    //System.out.println( Arrays.toString(distance));
+  }
+  static class FastReader 
+    { 
+        BufferedReader br; 
+        StringTokenizer st;
+        PrintWriter pw;
+  
+        public FastReader() 
+        { 
+            br = new BufferedReader(new
+                     InputStreamReader(System.in));
+            pw = new PrintWriter(new OutputStreamWriter(System.out));
+        }
+        public FastReader(boolean b)
+        {
+            try
+            {
+                br = new BufferedReader( new FileReader("input.txt")); 
+                pw = new PrintWriter("output.txt");
+            
+            }
+            catch(Exception e)
+            {
+
+            }
+
+        }
+        String next() 
+        { 
+            while (st == null || !st.hasMoreElements()) 
+            { 
+                try
+                { 
+                    st = new StringTokenizer(br.readLine()); 
+                } 
+                catch (IOException  e) 
+                { 
+                    e.printStackTrace(); 
+                } 
+            } 
+            return st.nextToken();
+        } 
+  
+        int nextInt() 
+        { 
+            return Integer.parseInt(next()); 
+        } 
+  
+        long nextLong() 
+        { 
+            return Long.parseLong(next()); 
+        } 
+  
+        double nextDouble() 
+        { 
+            return Double.parseDouble(next()); 
+        } 
+  
+        String nextLine() 
+        { 
+            String str = ""; 
+            try
+            { 
+                str = br.readLine(); 
+            } 
+            catch (IOException e) 
+            { 
+                e.printStackTrace(); 
+            } 
+            return str; 
+        }
+        void print(Object...objects) {
+            for (int i = 0; i < objects.length; i++) {
+                if (i != 0)
+                    pw.print(' ');
+            pw.print(objects[i]);
+            }
+        }
+        void println(Object...objects)
+        {
+            for (int i = 0; i < objects.length; i++) {
+                if (i != 0)
+                    pw.print(' ');
+            pw.print(objects[i]);
+            }
+            pw.println();
+        }
+        void closer()
+        {
+            try{
+            br.close();
+            pw.flush();
+            pw.close();
+            }
+            catch(Exception e)
+            {
+            }
+        
+        }
+    }
+  public void addNode(int u) {
+    if (!edges.containsKey(u)) {
+      edges.put(u, new TreeSet<Integer>());
+    }
+  }
+  public void removeNode(int u) {
+    if (!edges.containsKey(u)) {
+      return;
+    }
+    for (int v : edges.get(u)) {
+      edges.get(v).remove(u);
+    }
+    edges.remove(u);
+  }
+  public void addEdge(int u, int v) {
+    edges.get(u).add(v);
+  }
+
+  public void removeEdge(int u, int v) {
+    edges.get(u).remove(v);
+  }
 }
-
