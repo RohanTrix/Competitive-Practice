@@ -12,6 +12,10 @@ public class BFS {
     //System.out.println("Enter the number of edges:");
     int m = sc.nextInt();
     BFS g = new BFS();
+    for(int i =1; i<=n;i++)
+    {
+      g.addNode(i);
+    }
     for(int i =0; i< n;i++)
     {
       g.addEdge(sc.nextInt(), sc.nextInt());
@@ -158,6 +162,8 @@ public class BFS {
   }
   public void addEdge(int u, int v) {
     edges.get(u).add(v);
+    edges.get(v).add(u);
+
   }
 
   public void removeEdge(int u, int v) {
