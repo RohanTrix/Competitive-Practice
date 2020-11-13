@@ -43,11 +43,11 @@ public class BFS {
         visited.add(u);
         distance[u] = distance[s] + 1;
         if(u==end)
-        
+        return distance[end];
         q.add(u);
       }
     }
-    return distance[end];
+    //return distance[end];
     //System.out.println( Arrays.toString(distance));
   }
   static class FastReader 
