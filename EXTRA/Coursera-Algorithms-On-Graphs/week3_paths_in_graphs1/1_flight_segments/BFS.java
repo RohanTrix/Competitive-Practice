@@ -21,7 +21,7 @@ public class BFS {
     {
       g.addEdge(sc.nextInt(), sc.nextInt());
     }
-    int start = sc.nextInt();
+    sc.nextInt();
     sc.print(g.bfs(start,sc.nextInt()));
     sc.closer();
   } 
