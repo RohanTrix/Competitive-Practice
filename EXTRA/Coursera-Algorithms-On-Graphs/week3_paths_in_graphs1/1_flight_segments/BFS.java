@@ -26,6 +26,8 @@ public class BFS {
   } 
   int bfs(int v, int end)
   {
+    if( v==end)
+    return 0;
     Queue<Integer> q = new LinkedList<>();
     int distance[] = new int[edges.size()+1];
     Arrays.fill(distance, -1);
