@@ -26,9 +26,9 @@ public class BFS {
   } 
   int bfs(int v, int end)
   {
-    if( v==end)
+    if(v==end)
     return 0;
-    Queue<Integer> q = new LinkedList<>();
+    ArrayDeque<Integer> q = new ArrayDeque<>();
     int distance[] = new int[edges.size()+1];
     Arrays.fill(distance, -1);
     //visited.add(v);
@@ -36,7 +36,7 @@ public class BFS {
     q.add(v);
     while(q.size()!=0)
     {
-      int s = q.poll();
+      int s = q.pollFirst();
       // Process node s
       for( int u : edges.get(s))
       {
@@ -46,11 +46,10 @@ public class BFS {
         distance[u] = distance[s] + 1;
         if(u==end)
         return distance[end];
-        q.add(u);
+        q.offerLast(u);
       }
     }
     return distance[end];
-    //System.out.println( Arrays.toString(distance));
   }
   static class FastReader 
     { 
