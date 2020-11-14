@@ -29,7 +29,7 @@ public class BFS {
     Queue<Integer> q = new LinkedList<>();
     int distance[] = new int[edges.size()+1];
     Arrays.fill(distance, -1);
-    visited.add(v);
+    //visited.add(v);
     distance[v] = 0;
     q.add(v);
     while(q.size()!=0)
