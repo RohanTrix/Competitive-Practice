@@ -38,9 +38,9 @@ public class BFS {
       // Process node s
       for( int u : edges.get(s))
       {
-        if(visited.contains(u))
+        if(distance[u]!=-1)
           continue;
-        visited.add(u);
+        //visited.add(u);
         distance[u] = distance[s] + 1;
         if(u==end)
         return distance[end];
