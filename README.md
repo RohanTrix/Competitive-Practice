@@ -31,6 +31,7 @@
 1. Sort Colors
 2. Maximum Subarray
 3. Last Stone Weight
-4. Find_The_Duplicate_Number
+4. Find The Duplicate Number
+5. Determine if Two Strings Are Close
 
 ## SPOJ
