@@ -1,64 +1,74 @@
+import java.io.*;
 import java.util.*;
-import  java.io.*;
-public class Bipartite {
-  // Adjaceny List
-  public Map<Integer, Set<Integer>> edges = new TreeMap<>();
-  // Visited Set
-  public static Set<Integer> visited = new HashSet<Integer>();
-  public static int color[] = new int[100000 + 1];
-  public static void main(String[] args)
-  {
-    FastReader sc=new FastReader();
-    //System.out.println("Enter the number of nodes:");
-    int n = sc.nextInt();
-    //System.out.println("Enter the number of edges:");
-    int m = sc.nextInt();
-    Bipartite g = new Bipartite();
-    for(int i =1; i<=n;i++)
+public class Add_Candies
+{
+    static void solve(FastReader sc)
     {
-      g.addNode(i);
-    }
-    for(int i =0; i< m;i++)
-    {
-      g.addEdge(sc.nextInt(), sc.nextInt());
-    }
-    int b = 0;
-    for(int i: g.edges.keySet())
-    {
-        if(color[i]== -1)
-            b = g.bfs(i);
-        if(b==1)
-          break;
-    }
-    sc.print(b);
-    sc.closer();
-  } 
-  int bfs(int v)
-  {
-    ArrayDeque<Integer> q = new ArrayDeque<>();
-    
-    Arrays.fill(color, -1);
-    color[v] = 0;
-    q.offerLast(v);
-    while(q.size()!=0)
-    {
-      int s = q.pollFirst();
-      // Process node s
-      for( int u : edges.get(s))
-      {
-        if( color[u]== -1)
+        int n = sc.nextInt();
+        int a[] = new int[n+1];
+        sc.println(n);
+        for( int i=1;i<=n;i++)
         {
-            color[u] = 1 ^ color[s];
-            q.offerLast(u); // We only add to list whenever we have find unvisited (denoted by -1)
+            sc.print(i+" ");
         }
-        else if( color[u] ==color[s])
-            return 0;
+        sc.println();
+
         
-      }
     }
-    return 1;
-  }
-  static class FastReader 
+    public static void main(String[] args) 
+    {
+        // FastReader(true)         for File I/O
+        // FastReader()             for terminal I/O
+        if(args.length>0 && args[0].equals("local")){
+            FastReader sc=new FastReader(true); 
+            //CODE BEGIN
+            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //CODE END
+            sc.closer();
+        }
+        else
+        {
+            FastReader sc=new FastReader(); 
+            //CODE BEGIN
+            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //CODE END
+            sc.closer();
+
+        }
+    }
+    static void sort(int[] a) {
+		ArrayList<Integer> l=new ArrayList<>();
+		for (int i:a) l.add(i);
+		Collections.sort(l);
+		for (int i=0; i<a.length; i++) a[i]=l.get(i);
+	}
+    static class pair implements Comparable < pair >
+    {
+        long x;
+        long y;
+        pair(long i, long j) {
+            x = i;
+            y = j;
+        }
+        public int compareTo(pair p) {
+            if (this.x != p.x) {
+                return Long.compare(this.x,p.x);
+            } else {
+                return Long.compare(this.y,p.y);
+            }
+        }
+        public int hashCode() {
+            return (x + " " + y).hashCode();
+        }
+        public String toString() {
+            return x + " " + y;
+        }
+        public boolean equals(Object o) {
+            pair x = (pair) o;
+            return (x.x == this.x && x.y == this.y);
+        }
+        }
+    static class FastReader 
     { 
         BufferedReader br; 
         StringTokenizer st;
@@ -157,27 +167,4 @@ public class Bipartite {
         
         }
     }
-  public void addNode(int u) {
-    if (!edges.containsKey(u)) {
-      edges.put(u, new TreeSet<Integer>());
-    }
-  }
-  public void removeNode(int u) {
-    if (!edges.containsKey(u)) {
-      return;
-    }
-    for (int v : edges.get(u)) {
-      edges.get(v).remove(u);
-    }
-    edges.remove(u);
-  }
-  public void addEdge(int u, int v) {
-    edges.get(u).add(v);
-    edges.get(v).add(u);
-
-  }
-
-  public void removeEdge(int u, int v) {
-    edges.get(u).remove(v);
-  }
 }

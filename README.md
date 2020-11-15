@@ -18,6 +18,8 @@
 2. Boring Apartments
 3. Yet Another Bookshelf
 4. Dominant Piranha
+5. Add Candies
+6. Numbers Box
 
 ## HackerEarth
 
