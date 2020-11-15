@@ -22,15 +22,7 @@ public class Bipartite {
     {
       g.addEdge(sc.nextInt(), sc.nextInt());
     }
-    int b = 0;
-    for(int i: g.edges.keySet())
-    {
-        if(color[i]== -1)
-            b = g.bfs(i);
-        if(b==1)
-          break;
-    }
-    sc.print(b);
+    sc.print(g.bfs(i));
     sc.closer();
   } 
   int bfs(int v)
