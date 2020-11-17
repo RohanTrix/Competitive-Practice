@@ -41,6 +41,6 @@
 8. House Robber (DP)
 9. Coin Change 2 (DP)
 10. Coin Change (DP)
-11. 
+11. Edit Distance(DP) --Hard
 
 ## SPOJ
