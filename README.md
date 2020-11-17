@@ -37,5 +37,6 @@
 5. Determine if Two Strings Are Close
 6. Design_an_Ordered_Stream
 7. Minimum Operations to Reduce X to Zero
+8. House Robber
 
 ## SPOJ

@@ -5,15 +5,12 @@ public class Add_Candies
     static void solve(FastReader sc)
     {
         int n = sc.nextInt();
-        int a[] = new int[n+1];
         sc.println(n);
         for( int i=1;i<=n;i++)
         {
             sc.print(i+" ");
         }
         sc.println();
-
-        
     }
     public static void main(String[] args) 
     {
