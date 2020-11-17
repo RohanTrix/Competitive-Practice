@@ -20,6 +20,7 @@
 4. Dominant Piranha
 5. Add Candies
 6. Numbers Box
+7. Buy the String
 
 ## HackerEarth
 
@@ -39,5 +40,7 @@
 7. Minimum Operations to Reduce X to Zero
 8. House Robber (DP)
 9. Coin Change 2 (DP)
+10. Coin Change (DP)
+11. 
 
 ## SPOJ
