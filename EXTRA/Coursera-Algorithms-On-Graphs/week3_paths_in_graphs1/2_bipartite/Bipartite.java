@@ -22,7 +22,7 @@ public class Bipartite {
     {
       g.addEdge(sc.nextInt(), sc.nextInt());
     }
-    sc.print(g.bfs(i));
+    sc.print(g.bfs(1));
     sc.closer();
   } 
   int bfs(int v)
