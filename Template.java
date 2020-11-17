@@ -34,7 +34,12 @@ public class Template
 		for (int i:a) l.add(i);
 		Collections.sort(l);
 		for (int i=0; i<a.length; i++) a[i]=l.get(i);
-	}
+    }
+    static void fill2D(int arr[][], int n)
+    {
+        for (int[] row: arr)
+            Arrays.fill(row, n);
+    }
     static class pair implements Comparable < pair >
     {
         long x;
