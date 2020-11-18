@@ -1,6 +1,3 @@
-// { Driver Code Starts
-//Initial Template for Java
-
 import java.io.*;
 import java.util.*;
 public class Maximum_sum_increasing_subsequence
@@ -18,6 +15,7 @@ public class Maximum_sum_increasing_subsequence
                     Solution ob = new Solution();
                     System.out.println(ob.maxSumIS(Arr,n));
                 }
+            sc.close();
         }
 }  
 
