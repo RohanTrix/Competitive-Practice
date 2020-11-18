@@ -36,7 +36,7 @@
 3. Last Stone Weight
 4. Find The Duplicate Number
 5. Determine if Two Strings Are Close
-6. Design_an_Ordered_Stream
+6. Design an Ordered Stream
 7. Minimum Operations to Reduce X to Zero
 8. House Robber (DP)
 9. Coin Change 2 (DP)
