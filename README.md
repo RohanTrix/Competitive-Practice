@@ -42,5 +42,6 @@
 9. Coin Change 2 (DP)
 10. Coin Change (DP)
 11. Edit Distance(DP) --Hard
+12. Longest_Common_Subsequence (DP)
 
 ## SPOJ

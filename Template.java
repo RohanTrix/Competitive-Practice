@@ -40,15 +40,6 @@ public class Template
         for (int[] row: arr)
             Arrays.fill(row, n);
     }
-    static void viewArray1D(int a[])
-    {
-        System.out.println(Arrays.toString(a));
-    }
-    static void viewArray2D(int arr[][])
-    {
-        for (int[] row: arr)
-        viewArray1D(row);
-    }
     static class pair implements Comparable < pair >
     {
         long x;
@@ -160,6 +151,15 @@ public class Template
             pw.print(objects[i]);
             }
             pw.println();
+        }
+        void viewArray1D(int a[])
+        {
+            println(Arrays.toString(a));
+        }
+        void viewArray2D(int arr[][])
+        {
+            for (int[] row: arr)
+            viewArray1D(row);
         }
         void closer()
         {
