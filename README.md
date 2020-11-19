@@ -45,5 +45,6 @@
 12. Longest_Common_Subsequence (DP)
 13. Jump Game II (DP) --Hard
 14. First Unique Character in a String
+15. Best Time to Buy and Sell Stock (DP)
 
 ## SPOJ
