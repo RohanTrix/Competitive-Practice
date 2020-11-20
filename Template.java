@@ -55,9 +55,6 @@ public class Template
                 return Long.compare(this.y,p.y);
             }
         }
-        public int hashCode() {
-            return (x + " " + y).hashCode();
-        }
         public String toString() {
             return x + " " + y;
         }
