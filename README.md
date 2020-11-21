@@ -46,5 +46,7 @@
 13. Jump Game II (DP) --Hard
 14. First Unique Character in a String
 15. Best Time to Buy and Sell Stock (DP)
+16. Best Time to Buy and Sell Stock 2 (DP)
+17. 
 
 ## SPOJ
