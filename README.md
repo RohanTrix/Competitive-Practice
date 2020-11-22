@@ -26,6 +26,9 @@
 
 1. Monk and Multiplication
 2. Monk And Champions League
+3. Minimum indexes
+4. Input expectations
+5. Minimum and maximum differences
 
 ## Hackerrank
 
