@@ -50,6 +50,6 @@
 14. First Unique Character in a String
 15. Best Time to Buy and Sell Stock (DP)
 16. Best Time to Buy and Sell Stock 2 (DP)
-17. 
+17. Jump Game (Greedy)
 
 ## SPOJ
