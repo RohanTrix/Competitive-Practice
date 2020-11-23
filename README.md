@@ -46,12 +46,13 @@
 8. House Robber (DP)
 9. Coin Change 2 (DP)
 10. Coin Change (DP)
-11. Edit Distance(DP) --Hard
+11. Edit Distance(DP) --**Hard**
 12. Longest_Common_Subsequence (DP)
-13. Jump Game II (DP) --Hard
+13. Jump Game II (DP) --**Hard**
 14. First Unique Character in a String
 15. Best Time to Buy and Sell Stock (DP)
 16. Best Time to Buy and Sell Stock 2 (DP)
-17. Jump Game (Greedy)
+17. Best Time to Buy and Sell Stock 4 (DP) --**Hard**
+18. Jump Game (Greedy)
 
 ## SPOJ
