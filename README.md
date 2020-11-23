@@ -11,6 +11,8 @@
 8. ANDOR
 9. ADADISH
 10. RESTORE
+11. Chef and IPC Certificates
+12. Flip the String
 
 ## Codeforces
 
