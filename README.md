@@ -32,6 +32,9 @@
 4. Input expectations
 5. Minimum and maximum differences
 
+## CSES
+1. Dice Combinations
+2. 
 ## Hackerrank
 
 ## Leetcode
