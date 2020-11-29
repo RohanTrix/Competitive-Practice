@@ -1,8 +1,8 @@
 import os
 import time
-prog_name = "Dice_Combinations.java"
+prog_name = "Main.java"
 os.system(f'javac -d Classes {prog_name}')
 t1 = time.time()
-os.system(f'java -cp Classes Dice_Combinations')
+os.system(f'java -cp Classes Main')
 t2 = time.time()
 print("TIME TAKEN: ",t2-t1)
