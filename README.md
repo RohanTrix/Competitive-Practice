@@ -59,5 +59,6 @@
 18. Best Time to Buy and Sell Stock 4 (DP) --**Hard**
 19. Jump Game (Greedy)
 20. Richest Customer Wealth
+21. Find the Most Competitive Subsequence (Stack) --**IMP**
 
 ## SPOJ
