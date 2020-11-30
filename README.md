@@ -1,5 +1,6 @@
 # Completed Problems
-## Codechef
+## Codechef 
+<a href="https://www.codechef.com/"><img src="https://user-images.githubusercontent.com/51106967/100235444-71eb4580-2f52-11eb-842e-a898f7eab458.png" alt="codechef" width="150px"></a>
 
 1. CHEFEZQ
 2. CVDRUN
@@ -14,7 +15,9 @@
 11. Chef and IPC Certificates
 12. Flip the String
 
-## Codeforces
+## Codeforces 
+
+![](https://user-images.githubusercontent.com/51106967/100237763-5d5c7c80-2f55-11eb-869f-e75ff69adc52.png)
 
 1. XORwice
 2. Boring Apartments
@@ -34,7 +37,8 @@
 
 ## CSES
 1. Dice Combinations
-2. 
+2. Minimizing Coins 
+
 ## Hackerrank
 
 ## Leetcode
