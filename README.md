@@ -58,5 +58,6 @@
 17. Best Time to Buy and Sell Stock 3 (DP) --**Hard**
 18. Best Time to Buy and Sell Stock 4 (DP) --**Hard**
 19. Jump Game (Greedy)
+20. Richest Customer Wealth
 
 ## SPOJ
