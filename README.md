@@ -1,6 +1,6 @@
 # Completed Problems
 ## Codechef 
-<a href="https://www.codechef.com/"><img src="https://user-images.githubusercontent.com/51106967/100235444-71eb4580-2f52-11eb-842e-a898f7eab458.png" alt="codechef" width="150px"></a>
+<a href="https://www.codechef.com/"><img src="https://user-images.githubusercontent.com/51106967/100235444-71eb4580-2f52-11eb-842e-a898f7eab458.png" alt="codechef" width="160px"></a>
 
 1. CHEFEZQ
 2. CVDRUN
@@ -17,7 +17,7 @@
 
 ## Codeforces 
 
-![](https://user-images.githubusercontent.com/51106967/100237763-5d5c7c80-2f55-11eb-869f-e75ff69adc52.png)
+<a href="https://codeforces.com/"><img src="https://user-images.githubusercontent.com/51106967/100237763-5d5c7c80-2f55-11eb-869f-e75ff69adc52.png" alt="codeforces" width="160px"></a>
 
 1. XORwice
 2. Boring Apartments
@@ -42,6 +42,8 @@
 ## Hackerrank
 
 ## Leetcode
+
+<a href="https://codeforces.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg" alt="codeforces" width="160px"></a>
 
 1. Sort Colors
 2. Maximum Subarray
