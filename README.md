@@ -31,6 +31,7 @@
 10. Unique Bid Auction
 11. Strange Functions
 12. Special Permutation
+13. Kefa and First Steps
 
 ## HackerEarth
 
