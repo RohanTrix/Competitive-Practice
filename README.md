@@ -69,5 +69,6 @@
 19. Jump Game (Greedy)
 20. Richest Customer Wealth
 21. Find the Most Competitive Subsequence (Stack) --**IMP**
+22. Maximum Depth of Binary Tree (Tree)
 
 ## SPOJ
