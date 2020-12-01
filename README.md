@@ -26,6 +26,11 @@
 5. Add Candies
 6. Numbers Box
 7. Buy the String
+8. Jumps
+9. Sequence Transformation
+10. Unique Bid Auction
+11. Strange Functions
+12. Special Permutation
 
 ## HackerEarth
 
