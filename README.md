@@ -76,6 +76,6 @@
 20. Richest Customer Wealth
 21. Find the Most Competitive Subsequence (Stack) --**IMP**
 22. Maximum Depth of Binary Tree (Tree)
-23.
+23. Shortest Word Distance (Two-pointer)
 
 ## SPOJ
