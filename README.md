@@ -78,5 +78,6 @@
 22. Maximum Depth of Binary Tree (Tree)
 23. Shortest Word Distance (Two-pointer)
 24. Linked List Random Node (Randomized Algo) --**IMP**
+25. Two Sum
 
 ## SPOJ
