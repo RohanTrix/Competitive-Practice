@@ -77,5 +77,6 @@
 21. Find the Most Competitive Subsequence (Stack) --**IMP**
 22. Maximum Depth of Binary Tree (Tree)
 23. Shortest Word Distance (Two-pointer)
+24. Linked List Random Node (Randomized Algo) --**IMP**
 
 ## SPOJ
