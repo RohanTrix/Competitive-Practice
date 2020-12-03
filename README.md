@@ -79,5 +79,6 @@
 23. Shortest Word Distance (Two-pointer)
 24. Linked List Random Node (Randomized Algo) --**IMP**
 25. Two Sum
+26. Binary Tree Inorder Traversal (Tree)
 
 ## SPOJ
