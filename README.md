@@ -82,3 +82,4 @@
 25. Two Sum
 26. Binary Tree Inorder Traversal (Tree)
 27. Increasing_Order_Search_Treetion (Tree)
+28. The kth Factor of n
