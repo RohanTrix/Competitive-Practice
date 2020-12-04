@@ -17,6 +17,7 @@
 12. Flip the String
 13. EVENPSUM
 14. VACCINE1
+15. VACCINE2
 
 
 ## ██▓▒­░⡷⠂𝙲𝚘deforces⠐⢾░▒▓██
