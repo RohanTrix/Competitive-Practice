@@ -89,3 +89,4 @@
 28. The kth Factor of n
 29. Can Place Flowers
 30. Goal Parser Interpretation
+31. Max Number of K-Sum Pairs
