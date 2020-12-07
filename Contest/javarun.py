@@ -1,8 +1,8 @@
 import os
 import time
-prog_name = "HAIL.java"
+prog_name = "HXOR.java"
 os.system(f'javac -d Classes {prog_name}')
 t1 = time.time()
-os.system(f'java -cp Classes HAIL local')
+os.system(f'java -cp Classes HXOR local')
 t2 = time.time()
 print("TIME TAKEN: ",t2-t1)

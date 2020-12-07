@@ -48,7 +48,7 @@ public class HXOR
                 x--;
                 }
                 
-                //sc.viewArray1D(arr);
+                sc.viewArray1D(arr);
                 //sc.print("el"+arr[i]+" x="+x+" ");
             }
         }

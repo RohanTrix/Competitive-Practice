@@ -4,7 +4,7 @@ public class Template
 {
     static void solve(FastReader sc)
     {
-
+        
 
         
     }
@@ -33,7 +33,6 @@ public class Template
 	{
 		if(b == 0)
 		 return a;
-		
 		else
 		return gcd(b,a%b);
     }
@@ -185,7 +184,6 @@ public class Template
             catch(Exception e)
             {
             }
-        
         }
     }
 }
