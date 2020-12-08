@@ -1,76 +1,35 @@
 import java.io.*;
 import java.util.*;
-public class HAIL
+public class Balls_of_Steel 
 {
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(); int x = sc.nextInt();
-        int bitset[][] = new int[30+1][n+1];
-        int xor =0;int k, totPair = 0;
-        int arr[] = new int[n+1];
-        for(int j=1;j<=n;j++)
+        int n = sc.nextInt();
+        int k = sc.nextInt();
+        ArrayList<pair> al = new ArrayList<pair>();
+        for( int i=0;i<n;i++)
         {
-            arr[j] = sc.nextInt();
-            xor^=arr[j];
-            k=1;
-            for(int i=30;i>=1;i--)
-                {
-                    //sc.println("k="+k+"  "+((arr[j] & (1 << (k - 1))) >> (k - 1)));
-                    bitset[i][j] = ((arr[j] & (1 << (k - 1))) >> (k - 1));
-                    k++;
-                }
+            al.add(new pair(sc.nextLong(),sc.nextLong()));
         }
-        //sc.viewArray1D(arr);
-        //sc.viewArray2D(bitset);
-        HashMap<Integer, Queue<Integer>> map = new HashMap<>();
-        int sum = 0;
-        for(int i=1;i<=30;i++)
+        boolean fin = false;
+        for( int i=0;i<n;i++)
         {
-            sum=0;
-            map.put(i, new LinkedList<Integer>());
-            for(int j =1; j<=n;j++)
+            int cnt=0;
+            for(int j=0;j<n;j++)
             {
-                if( bitset[i][j] == 1)
-                {
-                    sum++;
-                    map.get(i).offer(j);
-                }
+                
+                if (Math.abs(al.get(i).x -al.get(j).x) + Math.abs(al.get(i).y -al.get(j).y)<=k)
+                    cnt+=1;      
+
             }
-            totPair+= (sum/2) +(sum%2);
-            if( map.get(i).size()%2!=0)
-                map.get(i).offer(n);
+            if( cnt ==n) {fin= true;break;}
         }
-        if(totPair >=x)
-        {
-            for(int i=1;i<=n-1;i++)
-            {
-                arr[i] = 0;
-            }
-            arr[n]=xor;
-        }
+        if(fin)
+        sc.println(1);
         else
-        {
-            for(int j =1;j<=n;j++)
-            {
-                for(int i=1;i<=30;i++)
-                {
-                    if(x>0 && map.get(i).size()!=0 && j==map.get(i).peek())
-                    {
-                        int a = map.get(i).remove();
-                        int b = map.get(i).remove();
-                        arr[a] ^= (1 << ((30-i+1)-1));
-                        arr[b] ^= (1 << ((30-i+1)-1));
-                        x--;
-                    }
-                }
+        sc.println(-1);
+
             }
-        }
-        for(int i=1;i<=n;i++)
-        sc.print(arr[i]+" ");
-
-
-        
-    }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O

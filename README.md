@@ -37,6 +37,8 @@
 11. Strange Functions
 12. Special Permutation
 13. Kefa and First Steps
+14. Balls of Steel
+15. Avoid Trygub
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
