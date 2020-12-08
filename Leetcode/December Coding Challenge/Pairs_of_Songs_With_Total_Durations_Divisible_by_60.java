@@ -12,3 +12,4 @@ public class Pairs_of_Songs_With_Total_Durations_Divisible_by_60 {
         }
         return count;
 }
+}
