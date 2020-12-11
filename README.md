@@ -96,3 +96,5 @@
 32. Populating Next Right Pointers in Each Node II
 33. Spiral Matrix II
 34. Pairs of Songs With Total Durations Divisible by 60
+35. Binary Search Tree Iterator
+36. Valid Mountain Array
