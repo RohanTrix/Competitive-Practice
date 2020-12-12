@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.*;
 
-public class Test {
+public class STROPERS {
     /*
     static String sub_check(String p, int n) {
         StringBuilder sb = new StringBuilder(p);
