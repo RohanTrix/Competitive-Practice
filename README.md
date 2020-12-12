@@ -99,5 +99,6 @@
 35. Binary Search Tree Iterator
 36. Valid Mountain Array
 37. Remove Duplicates from Sorted Array II
-38. Count_the_Number_of_Consistent_Strings
-39. Sum_of_Absolute_Differences_in_a_Sorted_Array
+38. Count the Number of Consistent Strings
+39. Sum of Absolute Differences in a Sorted Array
+40. Smallest Subtree with all the Deepest Nodes
