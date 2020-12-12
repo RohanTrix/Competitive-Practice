@@ -1,8 +1,8 @@
 import os
 import time
-prog_name = "STROPERS.java"
+prog_name = "Test.java"
 os.system(f'javac -d Classes {prog_name}')
 t1 = time.time()
-os.system(f'java -cp Classes STROPERS local')
+os.system(f'java -cp Classes Test local')
 t2 = time.time()
 print("TIME TAKEN: ",t2-t1)
