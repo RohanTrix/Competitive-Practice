@@ -3,10 +3,8 @@ sys.stdin = open('input.txt', 'r')
 sys.stdout = open('output.txt', 'w')
 NL = lambda : list(map(int,input().split()))
 
-
 def main():
-    s = input() 
-    uni_subs = set()
+    r,p,s = map(int,input().split())
     
 
 
