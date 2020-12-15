@@ -102,3 +102,5 @@
 38. Count the Number of Consistent Strings
 39. Sum of Absolute Differences in a Sorted Array
 40. Smallest Subtree with all the Deepest Nodes
+41. Burst Baloons (DP) --**Hard**
+42. Palindrome Partitioning (Backtracking) --**IMP**
