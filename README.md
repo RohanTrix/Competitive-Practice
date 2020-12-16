@@ -106,3 +106,6 @@
 42. Palindrome Partitioning (Backtracking) --**IMP**
 43. Squares of a Sorted Array
 44. Plus One Linked List
+45. Validate Binary Search Tree
+
+Validate_Binary_Search_Tree
