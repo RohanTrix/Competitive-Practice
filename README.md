@@ -39,6 +39,7 @@
 13. Kefa and First Steps
 14. Balls of Steel
 15. Avoid Trygub
+16. Find The Array
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
