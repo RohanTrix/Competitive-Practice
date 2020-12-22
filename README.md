@@ -100,7 +100,7 @@
 32. Populating Next Right Pointers in Each Node II
 33. Spiral Matrix II
 34. Pairs of Songs With Total Durations Divisible by 60
-35. Binary Search Tree Iterator
+35. Binary Search Tree Iterator (Tree)
 36. Valid Mountain Array
 37. Remove Duplicates from Sorted Array II
 38. Count the Number of Consistent Strings
@@ -115,3 +115,4 @@
 47. Increasing Triplet Subsequence --**IMP**
 48. Cherry Pickup II
 49. Decoded String at Index --**Hard**
+50. Smallest Range II --**Tricky** --**Revise**
