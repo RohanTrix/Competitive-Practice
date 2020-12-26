@@ -1,28 +1,32 @@
 import sys
-from bisect import bisect_left
 sys.stdin = open('input.txt', 'r')  
 sys.stdout = open('output.txt', 'w')
 for t in range(int(input())):
-    n,k = map(int,input().split())
-    l = list(map(int,input().split()))
-    ll = [[i,l[i]] for i in range(n+1)]
-    zipped = sorted(ll,key = lambda x: x[1])
-    left = 0
-    right = n
-    while(left<=right):
-        if(zipped[left][1]+zipped[right][1]<k):
-            right-=1
-            print(zipped[right][0], k-zipped[right+1][1],zipped[right+1][0], 
-                        zipped[right+1][1],sep = ' ')
-            continue
-        print(*zipped[left],zipped[right][0],k-zipped[left][1], sep = ' ')
-        zipped[right][1] -= k-zipped[left][1]
-        left+=1
-        if(zipped[right][1]==0):
-            right-=1
-        if(left==right and zipped[left][1]!=0):
-            print(zipped[left][0],zipped[left][1],0,0,sep = ' ')
+    s = input()
+    d = {}
+    for i in s:
+        if i not in d:
+            d[i] = 1
+        else:
+            d[i]+=1
+    one = 0
+    two = 0
+    for i in d.values():
+        if i==1:
+            one+=1
+        else:
+            two+=i//2
+            one+=i%2
+    coins = 0
+    if one<=two:
+        coins+=one
+        two-=one
+        coins+=(2*two)//3
+    else:
+        coins+=two
+    print(coins)
 
 
 
-        
+
+
