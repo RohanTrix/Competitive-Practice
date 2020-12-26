@@ -24,7 +24,7 @@
 19. UWCOI21B
 20. UWCOI21C (Partial)
 21. SWAP10HG
-
+23. THREE
 
 ## ██▓▒­░⡷⠂𝙲𝚘deforces⠐⢾░▒▓██
 <a href="https://codeforces.com/"><img src="https://user-images.githubusercontent.com/51106967/100237763-5d5c7c80-2f55-11eb-869f-e75ff69adc52.png" alt="codeforces" width="160px"></a>
