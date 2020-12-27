@@ -125,3 +125,4 @@
 55. Determine if String Halves Are Alike
 56. Middle of the Linked List
 57. Rotate List
+58. Reverse Linked List
