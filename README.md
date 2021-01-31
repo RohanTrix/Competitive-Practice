@@ -132,3 +132,7 @@
 60. Reach a Number
 61. Partition Equal Subset Sum (DP)
 62. Maximum Number of Balls in a Box
+61. Partition Equal Subset Sum (DP)
+62. Target Sum (DP) --**IMP**
+63. Combination Sum (DP) (Backtracing) --**IMP** --**Revise**
+64. Combination Sum II (Backtracking) --**IMP** --**Revise**
