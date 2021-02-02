@@ -4,8 +4,21 @@ public class A
 {
     static void solve(FastReader sc)
     {
-        
-        
+        int n  =sc.nextInt();
+        int arr[] = sc.nextArray(n);
+        int dp[] = new int[n];
+        dp[0] =0;
+        dp[1] = Math.abs(arr[1] -arr[0]);
+
+        for(int i = 2;i<n;i++)
+        {
+            int diff1 = Math.abs(arr[i]-arr[i-1]);
+            int diff2 = Math.abs(arr[i]-arr[i-2]);
+            dp[i] = Math.min(dp[i-1]+diff1, dp[i-2]+diff2);
+            //sc.println(dp[i]);
+        }   
+        sc.println(dp[n-1]);
+
         
     }
     public static void main(String[] args) 
@@ -15,7 +28,8 @@ public class A
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //for(int T = sc.nextInt();T > 0;T--)
+            solve(sc);
             //CODE END
             sc.closer();
         }
@@ -23,7 +37,8 @@ public class A
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //for(int T = sc.nextInt();T > 0;T--)
+            solve(sc);
             //CODE END
             sc.closer();
 
