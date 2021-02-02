@@ -62,9 +62,12 @@
 1. Dice Combinations
 2. Minimizing Coins 
 
-## ██▓▒­░⡷⠂Hackerrank⠐⢾░▒▓██
+## ██▓▒­░⡷⠂Atcoder DP⠐⢾░▒▓██
 
-<a href="https://hackerrank.com/"><img src="https://upload.vectorlogo.zone/logos/hackerrank/images/7f113bba-8436-47a5-9982-af0bc4c02a8e.svg" alt="Hackerrank" width="160px"></a>
+<a href="https://hackerrank.com/"><img src="https://img.atcoder.jp/assets/logo.png" alt="Hackerrank" width="160px"></a>
+
+1. Frog 1
+2. Frog 2
 
 ## ██▓▒­░⡷⠂Leetcode⠐⢾░▒▓██
 
