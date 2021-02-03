@@ -141,3 +141,4 @@
 64. Combination Sum II (Backtracking) --**IMP** --**Revise**
 65. Maximum Number of Balls in a Box
 66. Number of 1 Bits
+67. Trim a Binary Search Tree (Tree)
