@@ -3,15 +3,41 @@ import java.util.*;
 import java.util.stream.*;
 public class C
 {
+    //REFER Erricto DP Stream
     static void solve(FastReader sc)
     {
-        int n  =sc.nextInt();
-        int arr[][] = sc.nextArray2D(n,3);
-        int dp[] = new int[n];
-        dp[0] = IntStream.of(arr[0]).max().getAsInt();
-        
+        int n = sc.nextInt();
+        int vals[][]  =new int[n][3];
+        for( int i = 0; i<n; i++)
+        {
+            for(int j = 0;j<3;j++)
+            {
+                vals[i][j] = sc.nextInt();
+            }
+        }
+        int dp1[] = new int[3];
+        int dp2[] = new int[3];
+        Arrays.fill(dp2,-1);
+        dp1 = vals[0];
+        for(int day =1;day<n;day++)
+        {
+            
+            for(int i  = 0;i<3;++i)
+            {
+                for(int j = 0; j<3; ++j)
+                {
+                    if(i!=j)
+                    {
+                        dp2[j] = Math.max(dp2[j],dp1[i] + vals[day][j]);
+                    }
+                }
+            }
+            dp1 = Arrays.copyOf(dp2,3);
+        }
+        sc.println(Math.max(dp1[0], Math.max(dp1[1], dp1[2])));
+
            
-    }   
+    }
     
     
     public static void main(String[] args) 
