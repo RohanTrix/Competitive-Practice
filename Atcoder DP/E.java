@@ -1,33 +1,10 @@
 import java.io.*;
 import java.util.*;
-public class D
+public class E
 {
     static void solve(FastReader sc)
     {
-        int n, w;
-        n = sc.nextInt();
-        w = sc.nextInt();
-        int items[] = new int[n];
-        int values[] = new int[n];
-        for(int i = 0;i<n;i++)
-        {
-            items[i] = sc.nextInt();
-            values[i] = sc.nextInt();
-        }
-        long dp[] = new long[w+1];
-        dp[0] = 0;
-        for(int numIndex = 0; numIndex<n; numIndex++)
-        {
-            for(int currSum = w; currSum>=1 ; currSum--)
-            {
-                if(items[numIndex]<=currSum)
-                {
-                    dp[currSum] = Math.max(dp[currSum],dp[currSum-items[numIndex]] + values[numIndex]);
-                }
-            }
-            //sc.println(Arrays.toString(dp));
-        }
-        sc.println(dp[w]);
+        
 
 
            

@@ -1,6 +1,6 @@
 import os
 import time
-s = "D"
+s = "E"
 prog_name = f"{s}.java"
 os.system(f'javac -d Classes {prog_name}')
 t1 = time.time()
