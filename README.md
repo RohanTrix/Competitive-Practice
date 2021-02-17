@@ -147,3 +147,4 @@
 66. Number of 1 Bits
 67. Trim a Binary Search Tree (Tree)
 68. Linked List Cycle
+69. Search in a Binary Search Tree
