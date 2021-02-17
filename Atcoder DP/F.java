@@ -16,17 +16,17 @@ public class F
 				dp[i][j] = Math.max(dp[i][j+1], dp[i+1][j]);
 			}
 		}
- 
+
 		for(int i=0,j=0; i<s.length() && j<t.length();) {
-			if(s.charAt(i) == t.charAt(j)) {
+			if(s.charAt(i) == t.charAt(j)) // Whenever letter in both string is same, we move diagonally down
+            {
 				System.out.print(s.charAt(i));
 				i++;
 				j++; 
 				continue;
 			}
-			if(dp[i][j] == dp[i+1][j]) i++;
-			else j++;
+			if(dp[i][j] == dp[i+1][j]) i++; // If this is true, it means ith letter was not taken
+			else j++; // Else jth letter was not taken
 		}
-		System.out.println();
 	}
 }
