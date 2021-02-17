@@ -68,6 +68,10 @@
 
 1. Frog 1
 2. Frog 2
+3. Vacation
+4. Knapsack 1
+5. 
+6. LCS
 
 ## ██▓▒­░⡷⠂Leetcode⠐⢾░▒▓██
 
