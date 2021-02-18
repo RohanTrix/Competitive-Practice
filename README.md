@@ -47,6 +47,7 @@
 14. Balls of Steel
 15. Avoid Trygub
 16. Find The Array
+17. Shifting Stacks
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
