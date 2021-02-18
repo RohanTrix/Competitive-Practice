@@ -1,5 +1,6 @@
 import java.util.stream.*;
 class Solution {
+    // Refer https://www.youtube.com/watch?v=rSi4MpGEz1M&ab_channel=Pepcoding
     public int numberOfArithmeticSlices(int[] A) {
         int n = A.length;
         int dp[] = new int[n];
