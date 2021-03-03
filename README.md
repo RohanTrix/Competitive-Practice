@@ -153,3 +153,4 @@
 71. Number_of_Islands (DFS on grid)
 72. Distribute Candies
 73. Set Mismatch
+74. Missing Number
