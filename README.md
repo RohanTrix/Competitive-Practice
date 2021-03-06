@@ -156,4 +156,4 @@
 74. Missing Number
 75. Intersection of Two Linked Lists
 76. Average of Levels in Binary Tree
-
+77. Short Encoding of Words --**Revise**
