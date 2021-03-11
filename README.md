@@ -94,8 +94,8 @@
 14. First Unique Character in a String
 15. Best Time to Buy and Sell Stock (DP)
 16. Best Time to Buy and Sell Stock 2 (DP)
-17. Best Time to Buy and Sell Stock 3 (DP) --**Hard**
-18. Best Time to Buy and Sell Stock 4 (DP) --**Hard**
+17. Best Time to Buy and Sell Stock 3 (DP) --**Hard** --**Revise**
+18. Best Time to Buy and Sell Stock 4 (DP) --**Hard** --**Revise**
 19. Jump Game (Greedy)
 20. Richest Customer Wealth
 21. Find the Most Competitive Subsequence (Stack) --**IMP**
