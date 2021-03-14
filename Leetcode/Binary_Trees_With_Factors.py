@@ -13,6 +13,7 @@ class Solution:
                 fact = arr[i]//arr[j];
                 if arr[i]%arr[j]==0 and fact in arrSet:
                     dp[i]+= dp[j] * dp[numIndex[fact]]  # Since if u fix left side of the tree ..you can make n different trees if there
-                                                        # n different ways of making right subtree. Thus for m such left subtrees
+                                                        # n different ways of making right subtree. Thus for m such left subtrees, you can make
+                                                        # m * n different trees
         
-        return sum(dp)%MOD
+        return sum(dp)%MOD # The sum of all the trees you can make is the answer
