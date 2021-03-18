@@ -1,3 +1,6 @@
+package Hackerearth;
+
+import java.util.*;
 public class Input_expectations {
     public static void main(String args[] ) throws Exception {
         Scanner sc=  new Scanner(System.in);
@@ -20,6 +23,7 @@ public class Input_expectations {
                 cnt+=1;
             }     
         }
+        sc.close();
         System.out.println(cnt);
     }
 }

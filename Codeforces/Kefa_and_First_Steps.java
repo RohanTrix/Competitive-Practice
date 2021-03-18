@@ -1,3 +1,5 @@
+package Codeforces;
+
 import java.io.*;
 import java.util.*;
 public class Kefa_and_First_Steps

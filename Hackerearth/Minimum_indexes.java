@@ -1,4 +1,5 @@
-import java.io.*;
+package Hackerearth;
+
 import java.util.*;
 public class Minimum_indexes
 

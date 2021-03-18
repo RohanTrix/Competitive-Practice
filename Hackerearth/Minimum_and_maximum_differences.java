@@ -1,3 +1,6 @@
+package Hackerearth;
+
+import java.util.*;
 public class Minimum_and_maximum_differences {
     public static void main(String args[] ) throws Exception {
         Scanner sc = new Scanner(System.in);
