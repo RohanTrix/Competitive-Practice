@@ -1,3 +1,7 @@
+package Leetcode;
+
+import java.util.*;
+
 public class Find_the_Most_Competitive_Subsequence {
     public int[] mostCompetitive(int[] nums, int k) {
         

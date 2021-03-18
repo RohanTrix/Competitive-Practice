@@ -1,3 +1,5 @@
+package Hackerearth;
+
 import java.io.*;
 import java.util.*;
 public class Monk_And_Champions_League 
