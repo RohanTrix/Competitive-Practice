@@ -1,3 +1,5 @@
+package Leetcode;
+
 // O(1) extra space
 class Find_The_Duplicate_Number {
     public int findDuplicate(int[] nums) {
