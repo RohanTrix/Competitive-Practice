@@ -1,3 +1,5 @@
+package Hackerearth;
+
 import java.util.*;
 import java.io.*;
 public class Monk_and_Multiplication 
