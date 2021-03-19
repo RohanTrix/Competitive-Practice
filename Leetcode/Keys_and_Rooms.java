@@ -5,7 +5,7 @@ public class Keys_and_Rooms {
     public void DFS(List<List<Integer>> rooms, int currRoom)
     {
         //Simple DFS....At the end..check if no. of visited rooms == no. of rooms
-        if(hs.contains(currRoom)) return ;
+        if(hs.contains(currRoom)) return;
         hs.add(currRoom);
         for( int i = 0;i<rooms.get(currRoom).size();++i)
         {
