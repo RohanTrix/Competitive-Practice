@@ -168,5 +168,5 @@
 86. Invert Binary Tree (Tree)
 87. Add Two Numbers
 88. Wiggle Subsequence (DP) --**Revise** --**IMP**
-89. Max Consecutive Ones III --**IMP**
+89. Max Consecutive Ones III (Slding Window) --**IMP**
 90. Keys and Rooms (DFS)

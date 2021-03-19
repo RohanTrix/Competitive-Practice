@@ -1,5 +1,3 @@
-package Leetcode;
-
 class Solution {
     //REFER Link : https://youtu.be/QPfalDbqa4A
     public int longestOnes(int[] A, int K) {
