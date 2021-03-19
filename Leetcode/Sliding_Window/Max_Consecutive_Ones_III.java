@@ -1,4 +1,6 @@
-class Solution {
+package Leetcode.Sliding_Window;
+
+class Max_Consecutive_Ones_III {
     //REFER Link : https://youtu.be/QPfalDbqa4A
     public int longestOnes(int[] A, int K) {
         //We only need to take sublists which are having at max k zeros

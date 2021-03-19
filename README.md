@@ -139,8 +139,6 @@
 59. Jump Game IV (BFS) --**IMP**
 60. Reach a Number
 61. Partition Equal Subset Sum (DP)
-62. Maximum Number of Balls in a Box
-61. Partition Equal Subset Sum (DP)
 62. Target Sum (DP) --**IMP**
 63. Combination Sum (DP) (Backtracing) --**IMP** --**Revise**
 64. Combination Sum II (Backtracking) --**IMP** --**Revise**
@@ -170,3 +168,5 @@
 88. Wiggle Subsequence (DP) --**Revise** --**IMP**
 89. Max Consecutive Ones III (Slding Window) --**IMP**
 90. Keys and Rooms (DFS)
+91. Longest Substring Without Repeating Characters (Sliding Window)
+92. Maximum Number of Balls in a Box
