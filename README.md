@@ -170,3 +170,5 @@
 90. Keys and Rooms (DFS)
 91. Longest Substring Without Repeating Characters (Sliding Window)
 92. Maximum Number of Balls in a Box
+93. Second Largest Digit in a String
+94. Design Authentication Manager
