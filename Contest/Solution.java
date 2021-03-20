@@ -5,7 +5,7 @@ public class Solution
     static void solve(FastReader sc, int t)
     {
         int ans = 0;
-
+        
         sc.println("Case #"+t+": "+ans);
 
         
