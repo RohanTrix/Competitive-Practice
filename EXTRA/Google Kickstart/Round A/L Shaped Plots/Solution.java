@@ -2,10 +2,62 @@ import java.io.*;
 import java.util.*;
 public class Solution 
 {
+    public static int count(int nums[][], int i,int j, int hor, int ver)
+    {
+        int a = nums[i][j];
+        int c = 1;
+        while(a==nums[i][j])
+        {
+            i+=hor;
+            j+=ver;
+            if(i<0 || i>=nums.length || j<0 || j>=nums[0].length) break;
+            if(nums[i][j]==1) c++;
+            else break;
+        }
+        return c;
+    }
+    public static int getans(int left, int up)
+    {  
+        int maxi = Math.max(left, up);
+        int mini = Math.min(left,up);
+        int eve1 = Math.max(0,mini/2 -1);
+        int eve2 = Math.max(0, Math.min(2*mini, maxi)/2 -1 );
+        return eve1 + eve2;
+        
+    }
     static void solve(FastReader sc, int t)
     {
+        int n = sc.nextInt(), m = sc.nextInt();
+        int matrix[][] = new int[n][m];
+
+        for( int i = 0;i<n;i++)
+        {
+            for(int j = 0;j<m;j++)
+            {
+                matrix[i][j] = sc.nextInt();
+            }
+        }
+        int left, right, up, down;
+
+
         int ans = 0;
+        for( int i = 0;i<n;i++)
+        {
+            for(int j = 0;j<m;j++)
+            {            
+                if(matrix[i][j]==0) continue;
+                left = count(matrix,i,j,0,-1);
+                down = count(matrix, i , j,1, 0);
+                right = count(matrix, i , j,0, 1);
+                up = count(matrix, i , j,-1,0);
+
+                //sc.println(i+" "+j+" ||| "+left+" "+right+" "+up+" "+down);
+                //sc.println(getans(left, down)+" " + getans(left, up) +" "+ getans(right, down) + " "+getans(right, up));
+                ans+=getans(left, down)+ getans(left, up) + getans(right, down) + getans(right, up);
+            }
+        }
         
+
         sc.println("Case #"+t+": "+ans);
 
         
@@ -17,7 +69,8 @@ public class Solution
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc, T);
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)solve(sc, T);
             //CODE END
             sc.closer();
         }
@@ -25,7 +78,8 @@ public class Solution
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc, T);
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)solve(sc, T);
             //CODE END
             sc.closer();
 

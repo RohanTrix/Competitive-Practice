@@ -1,6 +1,3 @@
-import sys
-sys.stdin = open('input.txt', 'r')  
-sys.stdout = open('output.txt', 'w')
 for t in range(int(input())):
     n, k = map(int,input().split())
     s = input()

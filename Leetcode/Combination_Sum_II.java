@@ -1,3 +1,5 @@
+package Leetcode;
+
 class Solution {
     //Refer https://www.youtube.com/watch?v=j9_qWJClp64
     //Coded Myself----Draw bactracking/recursion tree
