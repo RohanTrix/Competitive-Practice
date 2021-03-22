@@ -1,12 +1,54 @@
 import java.io.*;
 import java.util.*;
 @SuppressWarnings("all")
-public class Template 
+public class Main 
 {
+    static int dr[] = {0,1,0,-1};
+    static int dc[] = {-1,0,1,0};
+    public static void DFS(char matrix[][], int i, int j)
+    {
+        if(matrix[i][j]=='#') return;
+        matrix[i][j] = '#';
+
+        for( int idx = 0;idx <4;idx++)
+        {
+
+            if(i + dr[idx]<0 || i + dr[idx] >=matrix.length || j + dc[idx]<0 || j + dc[idx]>=matrix[0].length) continue;
+            DFS(matrix, i + dr[idx], j + dc[idx]);
+        }
+    }
     static void solve(FastReader sc)
     {
-        
-
+        int n = sc.nextInt(), m = sc.nextInt();
+        char mat[][] = new char[n][m];
+        for( int i = 0; i<n; i++)
+        {
+            char a[] = sc.next().toCharArray();
+            mat[i] = a;
+        }
+        int count = 0;
+        for(int i = 0;i<n;i++)
+        {
+            for(int j = 0; j<m;j++)
+            {
+                if(mat[i][j]=='.') 
+                {
+                    DFS(mat, i,j);
+                    count++;
+                }
+            }
+        }
+        /*
+        for(int i = 0;i<n;i++)
+        {
+            for(int j = 0; j<m;j++)
+            {
+                sc.print(mat[i][j]);
+            }
+            sc.println();
+        }
+        */
+        sc.print(count);
         
     }
     public static void main(String[] args) 
@@ -16,7 +58,8 @@ public class Template
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //for(int T = sc.nextInt();T > 0;T--)
+            solve(sc);
             //CODE END
             sc.closer();
         }
@@ -24,7 +67,8 @@ public class Template
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc);
+            //for(int T = sc.nextInt();T > 0;T--)
+            solve(sc);
             //CODE END
             sc.closer();
 

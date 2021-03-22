@@ -172,3 +172,4 @@
 92. Maximum Number of Balls in a Box
 93. Second Largest Digit in a String
 94. Design Authentication Manager
+95. Reordered Power of 2
