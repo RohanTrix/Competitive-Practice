@@ -104,7 +104,7 @@
 24. Linked List Random Node (Randomized Algo) --**IMP**
 25. Two Sum
 26. Binary Tree Inorder Traversal (Tree)
-27. Increasing_Order_Search_Treetion (Tree)
+27. Increasing_Order_Search_Tree (Tree)
 28. The kth Factor of n
 29. Can Place Flowers
 30. Goal Parser Interpretation
@@ -146,7 +146,7 @@
 66. Number of 1 Bits
 67. Trim a Binary Search Tree (Tree)
 68. Linked List Cycle
-69. Search in a Binary Search Tree
+69. Search in a Binary Search Tree (Tree)
 70. Arithmetic Slices (DP) --**IMP** --**Revise**
 71. Number_of_Islands (DFS on grid)
 72. Distribute Candies
