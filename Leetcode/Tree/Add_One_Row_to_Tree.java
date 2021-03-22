@@ -1,4 +1,4 @@
-package Leetcode;
+package Leetcode.Tree;
 
 class TreeNode {
     int val;
