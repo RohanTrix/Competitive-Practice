@@ -177,3 +177,4 @@
 97. Sum of Nodes with Even-Valued Grandparent (Tree)
 98. Deepest Leaves Sum (Tree)
 99. Range Sum of BST (Tree)
+100. Binary_Search (Binary Search)
