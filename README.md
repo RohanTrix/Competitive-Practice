@@ -178,3 +178,6 @@
 98. Deepest Leaves Sum (Tree)
 99. Range Sum of BST (Tree)
 100. Binary_Search (Binary Search)
+101. Valid Square
+102. Check if the Sentence Is Pangram
+103. Maximum Ice Cream Bars (Sorting)
