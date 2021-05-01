@@ -181,3 +181,6 @@
 101. Valid Square
 102. Check if the Sentence Is Pangram
 103. Maximum Ice Cream Bars (Sorting)
+104. Replace All Digits with Characters
+105. Seat Reservation Manager
+106. Maximum Element After Decreasing and Rearranging (Sorting)
