@@ -185,3 +185,4 @@
 105. Seat Reservation Manager
 106. Maximum Element After Decreasing and Rearranging (Sorting)
 107. Range Sum of Sorted Subarray Sums (Prefix Sum)
+108. Range Sum Query 2D - Immutable (DP)
