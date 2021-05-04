@@ -148,7 +148,7 @@
 68. Linked List Cycle
 69. Search in a Binary Search Tree (Tree)
 70. Arithmetic Slices (DP) --**IMP** --**Revise**
-71. Number_of_Islands (DFS on grid)
+71. Number of Islands (DFS on grid) (Graphs)
 72. Distribute Candies
 73. Set Mismatch
 74. Missing Number
@@ -169,7 +169,7 @@
 89. Max Consecutive Ones III (Slding Window) --**IMP**
 90. Keys and Rooms (DFS)
 91. Longest Substring Without Repeating Characters (Sliding Window)
-92. Maximum Number of Balls in a Box
+92. Course Schedule (Graphs) --**IMP**
 93. Second Largest Digit in a String
 94. Design Authentication Manager
 95. Reordered Power of 2
@@ -177,7 +177,7 @@
 97. Sum of Nodes with Even-Valued Grandparent (Tree)
 98. Deepest Leaves Sum (Tree)
 99. Range Sum of BST (Tree)
-100. Binary_Search (Binary Search)
+100. Binary Search (Binary Search)
 101. Valid Square
 102. Check if the Sentence Is Pangram
 103. Maximum Ice Cream Bars (Sorting)
@@ -189,3 +189,4 @@
 109. Minimum Distance to the Target Element
 110. Splitting a String Into Descending Consecutive Values (Backtracking)
 111. Next Permutation --**Revise** --**IMP**
+112. 
