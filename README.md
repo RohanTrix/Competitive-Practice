@@ -189,4 +189,4 @@
 109. Minimum Distance to the Target Element
 110. Splitting a String Into Descending Consecutive Values (Backtracking)
 111. Next Permutation --**Revise** --**IMP**
-112. 
+112. Non-decreasing Array --**Revise** --**Tricky**
