@@ -90,7 +90,7 @@
 10. Coin Change (DP)
 11. Edit Distance(DP) --**Hard**
 12. Longest_Common_Subsequence (DP)
-13. Jump Game II (DP) --**Hard**
+13. Jump Game II (DP) --**Revise** --**IMP**
 14. First Unique Character in a String
 15. Best Time to Buy and Sell Stock (DP)
 16. Best Time to Buy and Sell Stock 2 (DP)
