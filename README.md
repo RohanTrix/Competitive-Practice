@@ -195,3 +195,6 @@
 113. Path Sum (Tree)
 114. Search in Rotated Sorted Array (Binary Search)
 115. Climbing Stairs (DP)
+116. Convert Sorted List to Binary Search Tree (Tree) --**Revise** --**Tricky**
+117. Find First and Last Position of Element in Sorted Array (Binary Search) --**IMP**
+118. First Bad Version (Binary Search)
