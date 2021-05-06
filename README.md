@@ -48,6 +48,8 @@
 15. Avoid Trygub
 16. Find The Array
 17. Shifting Stacks
+18. Do Not Be Distracted!
+19. Ordinary Numbers
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
