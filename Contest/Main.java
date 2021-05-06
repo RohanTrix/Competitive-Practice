@@ -1,8 +1,9 @@
 import java.io.*;
 import java.util.*;
 @SuppressWarnings("all")
-public class Template 
+public class Main 
 {
+    
     static void solve(FastReader sc)
     {
         
