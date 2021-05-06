@@ -193,3 +193,4 @@
 111. Next Permutation --**Revise** --**IMP**
 112. Non-decreasing Array --**Revise** --**Tricky**
 113. Path Sum (Tree)
+114. Search in Rotated Sorted Array (Binary Search)
