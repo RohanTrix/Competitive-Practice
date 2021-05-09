@@ -202,3 +202,5 @@
 120. Delete Operation for Two Strings (DP)
 121. Capacity To Ship Packages Within D Days (Binary Search) --**Revise** --**IMP**
 122. Koko Eating Bananas (Binary Search) --**Revise**
+123. Maximum Population Year
+124. Maximum Distance Between a Pair of Values (Binary Search)
