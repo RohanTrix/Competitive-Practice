@@ -13,7 +13,8 @@ seq    =lambda: list(map(int,input().strip().split()))
 
 
 def main():
-    pass
+    a,b,c = map(int,input().split())
+    print((b+(100-a)*c)*10)
 
 for t in range(int(input())):
     main()

@@ -6,3 +6,5 @@ t1 = time.time()
 os.system(f'java -cp Classes {prog_name} local')
 t2 = time.time()
 print("TIME TAKEN: ",t2-t1)
+
+
