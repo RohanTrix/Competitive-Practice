@@ -18,3 +18,4 @@ def main():
 
 for t in range(int(input())):
     main()
+
