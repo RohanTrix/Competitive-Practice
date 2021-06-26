@@ -1,190 +1,77 @@
-import java.io.*;
-import java.util.*;
-@SuppressWarnings("all")
-public class Template 
-{
-    static void solve(FastReader sc)
-    {
-        
+import java.util.Scanner;
 
-        
-    }
-    public static void main(String[] args) 
-    {
-        // FastReader(true)         for File I/O
-        // FastReader()             for terminal I/O
-        if(args.length>0 && args[0].equals("local")){
-            FastReader sc=new FastReader(true); 
-            //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc);
-            //CODE END
-            sc.closer();
-        }
-        else
-        {
-            FastReader sc=new FastReader(); 
-            //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)solve(sc);
-            //CODE END
-            sc.closer();
+interface Dealer{
+	 String dealer_Name;
+	 String address;
+	public int getConcession();
+	
+}
 
-        }
-    }
-    static int gcd(int a, int b)
-	{
-		if(b == 0)
-		 return a;
-		else
-		return gcd(b,a%b);
-    }
-    public static int lcm(int a, int b)
+class TwoWheeler implements Dealer{
+	public String model_Name;
+	public String model_No;
+	 int price;
+	 int add_Ons;
+	public TwoWheeler(String mod, String modnum, int p, int add)
     {
-        return (a / gcd(a, b)) * b;
+        model_Name = mod;
+        model_No = modnum;
+        price = p;
+        add_Ons = add;
     }
-    static void sort(int[] a) {
-		ArrayList<Integer> l=new ArrayList<>();
-		for (int i:a) l.add(i);
-		Collections.sort(l);
-		for (int i=0; i<a.length; i++) a[i]=l.get(i);
-    }
-    static void fill2D(int arr[][], int n)
-    {
-        for (int[] row: arr)
-            Arrays.fill(row, n);
-    }
-    static class pair implements Comparable < pair >
-    {
-        long x;
-        long y;
-        pair(long i, long j) {
-            x = i;
-            y = j;
-        }
-        public int compareTo(pair p) {
-            if (this.x != p.x) {
-                return Long.compare(this.x,p.x);
-            } else {
-                return Long.compare(this.y,p.y);
-            }
-        }
-        public String toString() {
-            return x + " " + y;
-        }
-        public boolean equals(Object o) {
-            pair x = (pair) o;
-            return (x.x == this.x && x.y == this.y);
-        }
-        }
-    static class FastReader 
-    { 
-        BufferedReader br; 
-        StringTokenizer st;
-        PrintWriter pw;
-  
-        public FastReader() 
-        { 
-            br = new BufferedReader(new
-                     InputStreamReader(System.in));
-            pw = new PrintWriter(new OutputStreamWriter(System.out));
-        }
-        public FastReader(boolean b)
-        {
-            try
-            {
-                br = new BufferedReader( new FileReader("input.txt")); 
-                pw = new PrintWriter("output.txt");
-            
-            }
-            catch(Exception e)
-            {
+	public int getConcession() {
+		 
+		//5% (5/100) of basic showroom price
+		 int concession= price/20;
+		 return concession;
+	 }
+	
+	public void Printestimate() {
+		int total_Price=price+add_Ons;
+		System.out.println(total_Price);
+		
+	}
+	
+	
+}
 
-            }
-
-        }
-        String next() 
-        { 
-            while (st == null || !st.hasMoreElements()) 
-            { 
-                try
-                { 
-                    st = new StringTokenizer(br.readLine()); 
-                } 
-                catch (IOException  e) 
-                { 
-                    e.printStackTrace(); 
-                } 
-            } 
-            return st.nextToken();
-        } 
-        int[] nextArray(int n)
-        {
-            int[] a=new int[n];
-			for (int i=0; i<n; i++) a[i]=nextInt();
-			return a;
-        }
-        int nextInt() 
-        { 
-            return Integer.parseInt(next()); 
-        } 
-  
-        long nextLong() 
-        { 
-            return Long.parseLong(next()); 
-        } 
-  
-        double nextDouble() 
-        { 
-            return Double.parseDouble(next()); 
-        } 
-  
-        String nextLine() 
-        { 
-            String str = ""; 
-            try
-            { 
-                str = br.readLine(); 
-            } 
-            catch (IOException e) 
-            { 
-                e.printStackTrace(); 
-            } 
-            return str; 
-        }
-        void print(Object...objects) {
-            for (int i = 0; i < objects.length; i++) {
-                if (i != 0)
-                    pw.print(' ');
-            pw.print(objects[i]);
-            }
-        }
-        void println(Object...objects)
-        {
-            for (int i = 0; i < objects.length; i++) {
-                if (i != 0)
-                    pw.print(' ');
-            pw.print(objects[i]);
-            }
-            pw.println();
-        }
-        void viewArray1D(int a[])
-        {
-            println(Arrays.toString(a));
-        }
-        void viewArray2D(int arr[][])
-        {
-            for (int[] row: arr)
-            viewArray1D(row);
-        }
-        void closer()
-        {
-            try{
-            br.close();
-            pw.flush();
-            pw.close();
-            }
-            catch(Exception e)
-            {
-            }
-        }
+class FourWheeler implements Dealer{
+	public String model_Name;
+	public String model_No;
+	 int price;
+	 int add_Ons;
+	public String Fuel_Type; 
+	public FourWheeler(String mod, String modnum, int p, int add, String fuel)
+    {
+        model_Name = mod;
+        model_No = modnum;
+        price = p;
+        add_Ons = add;
+        Fuel_Type = fuel;
     }
+	
+	public int getConcession() {
+		 
+		//10% (10/100) of basic showroom price
+		 int concession= price/10;
+		 return concession;
+	 }
+	
+	public void Printestimate() {
+		int total_Price=price+add_Ons;
+		System.out.println(total_Price);
+		
+	}
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String modname = sc.nextLine();
+        String model_No = sc.nextLine();
+        int price = sc.nextInt();
+        int addon = sc.nextInt();
+        String f = sc.nextLine();
+
+        FourWheeler car4 = new FourWheeler(modname, model_No, price, addon, f);
+        TwoWheeler car2 = new TwoWheeler(modname, model_No, price, addon);
+    }
+	
 }

@@ -213,4 +213,5 @@
 131. Daily Temperatures( Monotonic Stack)
 132. Product of Array Except Self --**IMP**
 132. Maximum Erasure Value (Slidign Window)
-133. 
+133. Out of Boundary Paths (DP)
+134. 3Sum (Two Pointer)
