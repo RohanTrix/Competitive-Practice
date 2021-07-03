@@ -220,3 +220,4 @@
 137. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold (Sliding Window)
 138. Same Tree (Tree)
 139. Symmetric Tree (Tree)
+140. Kth Smallest Element in a BST (Tree)
