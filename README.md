@@ -217,3 +217,5 @@
 134. 3Sum (Two Pointer)
 135. Find K Closest Elements (Binary Search) --**IMP** --**Tricky** --**Revise**
 136. Maximum Product Difference Between Two Pairs (Sorting)
+137. Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold (Sliding Window)
+138. 
