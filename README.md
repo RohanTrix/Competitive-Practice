@@ -222,3 +222,4 @@
 139. Symmetric Tree (Tree)
 140. Kth Smallest Element in a BST (Tree)
 141. Eliminate Maximum Number of Monsters (Greedy) (Priority Queue) --**IMP**
+142. All Paths From Source to Target (Graphs) (DFS) --**IMP**
