@@ -130,7 +130,7 @@
 48. Cherry Pickup II
 49. Decoded String at Index --**Hard**
 50. Smallest Range II --**Tricky** --**Revise**
-51. Swap Nodes in Pairs
+51. Swap Nodes in Pairs --**Revise**
 52. Diagonal Traverse
 53. Number of Students Unable to Eat Lunch
 54. Average Waiting Time
