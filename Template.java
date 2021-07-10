@@ -1,5 +1,6 @@
 import java.io.*;
 import java.util.*;
+
 @SuppressWarnings("all")
 public class Template 
 {
@@ -30,7 +31,21 @@ public class Template
 
         }
     }
-    static int gcd(int a, int b)
+    public static long power(long x, long y, long mod)
+    {
+        long res = 1L;
+        x = x%mod;
+        while(y > 0)
+        {
+            if((y&1)==1)
+                res = (res*x)%mod;
+            
+            y>>=1;
+            x = (x*x)%mod;
+        }
+        return res;
+    }
+    public static int gcd(int a, int b)
 	{
 		if(b == 0)
 		 return a;
