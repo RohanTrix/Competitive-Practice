@@ -230,3 +230,4 @@
 147. Reduce Array Size to The Half
 148. Merge k Sorted Lists (Linked List) --**HARD** --**Revise**
 149. Merge Intervals (Greedy)
+150. Two City Scheduling (Greedy)
