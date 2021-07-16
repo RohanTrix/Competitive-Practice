@@ -1,77 +1,60 @@
-import java.util.Scanner;
+import java.io.*; import java.util.*; import java.util.stream.*;
+ 
+@SuppressWarnings("all") class Pair { long x, y; public Pair(long xi,long yi) { x = xi; y = yi; }
+ 
+} class MyComp implements Comparator { public int compare(Object o1, Object o2) { Pair p1 = (Pair) o1; 
+	Pair p2 = (Pair) o2; return Long.compare(p2.y, p1.y); } } 
+public class Solution 
+{ public static void main(String[] args)
+	 { 
+		 Scanner sc = new Scanner(System.in);
+		 int n, m,k ; n = sc.nextInt();
+		  m = sc.nextInt();; k = sc.nextInt();
 
-interface Dealer{
-	 String dealer_Name;
-	 String address;
-	public int getConcession();
+		   Long[] fact = new Long[n]; 
+		   for(int i =0; i<n; i++) fact[i] = sc.nextLong();
+ 
+	Pair mar[] = new Pair[m];
+	for(int i  =0; i<m; i++) mar[i] = new Pair(sc.nextInt(), sc.nextInt());
 	
+	Long rent[] = new Long[k];
+	for(int i = 0; i<k; i++) rent[i] = sc.nextLong();
+
+	Arrays.sort(rent, Collections.reverseOrder());
+	Arrays.sort(fact, Collections.reverseOrder());
+	Arrays.sort(mar, new MyComp());
+	
+	Long prefixSum[] = new Long[k];
+	prefixSum[0] = rent[0];
+		for (int i = 1; i < k; ++i)
+			prefixSum[i] = prefixSum[i - 1] + rent[i];
+	
+	long factNum = 0;
+	long bestAns =0;
+	for(int i =0; i<k;i++)bestAns+=rent[i];
+	for(int i = 0; i<n; ++i)
+	{
+		factNum+=fact[i].longValue();
+		long factNumCopy = factNum;
+		//Finding profit by selling
+		long p1 = 0L;
+		for(int curr = 0 ; curr<m; curr++)
+		{
+			p1 += Math.min(mar[curr].x, factNumCopy)*mar[curr].y;
+			factNumCopy-= Math.min(mar[curr].x, factNumCopy);
+			if(factNumCopy==0) break;
+		}
+		//Finding profit by rent   100 80 60 
+		int rentNum = n-i-2;
+		long p2 = (rentNum!=-1)?prefixSum[rentNum].longValue():0;
+		bestAns = Math.max(p1+p2, bestAns);
+		//System.out.println(p1+" "+p2);
+ 
+   }
+   System.out.println(bestAns);
+ 
+ 
+ 
+ 
 }
-
-class TwoWheeler implements Dealer{
-	public String model_Name;
-	public String model_No;
-	 int price;
-	 int add_Ons;
-	public TwoWheeler(String mod, String modnum, int p, int add)
-    {
-        model_Name = mod;
-        model_No = modnum;
-        price = p;
-        add_Ons = add;
-    }
-	public int getConcession() {
-		 
-		//5% (5/100) of basic showroom price
-		 int concession= price/20;
-		 return concession;
-	 }
-	
-	public void Printestimate() {
-		int total_Price=price+add_Ons;
-		System.out.println(total_Price);
-		
-	}
-	
-	
-}
-
-class FourWheeler implements Dealer{
-	public String model_Name;
-	public String model_No;
-	 int price;
-	 int add_Ons;
-	public String Fuel_Type; 
-	public FourWheeler(String mod, String modnum, int p, int add, String fuel)
-    {
-        model_Name = mod;
-        model_No = modnum;
-        price = p;
-        add_Ons = add;
-        Fuel_Type = fuel;
-    }
-	
-	public int getConcession() {
-		 
-		//10% (10/100) of basic showroom price
-		 int concession= price/10;
-		 return concession;
-	 }
-	
-	public void Printestimate() {
-		int total_Price=price+add_Ons;
-		System.out.println(total_Price);
-		
-	}
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        String modname = sc.nextLine();
-        String model_No = sc.nextLine();
-        int price = sc.nextInt();
-        int addon = sc.nextInt();
-        String f = sc.nextLine();
-
-        FourWheeler car4 = new FourWheeler(modname, model_No, price, addon, f);
-        TwoWheeler car2 = new TwoWheeler(modname, model_No, price, addon);
-    }
-	
 }
