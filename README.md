@@ -234,3 +234,4 @@
 151. Minimum Number of Arrows to Burst Balloons (Greedy)
 152. Find Bottom Left Tree Value (Tree)
 153. Combination Sum III (Backtracking)
+154. Smallest Range I
