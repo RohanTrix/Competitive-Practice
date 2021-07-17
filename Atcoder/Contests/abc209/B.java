@@ -3,7 +3,7 @@ import java.util.*;
 
 
 @SuppressWarnings("all")
-public class Main 
+public class B 
 {
     static void solve(FastReader sc)
     {
