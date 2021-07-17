@@ -56,10 +56,12 @@ public class Template
     {
         return (a / gcd(a, b)) * b;
     }
-    static void sort(int[] a) {
+    static void sort(int[] a, boolean... rev) {
 		ArrayList<Integer> l=new ArrayList<>();
 		for (int i:a) l.add(i);
-		Collections.sort(l);
+		if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
+        else Collections.sort(l);
+
 		for (int i=0; i<a.length; i++) a[i]=l.get(i);
     }
     static void fill2D(int arr[][], int n)
