@@ -12,8 +12,7 @@ public class Main
         int s = 0;
         for(int i =0; i<n; i++)
         {
-            s+=arr[i];
-            if(i%2!=0) s--;      
+            
         }
         if(s<=x) sc.print("Yes");
         else sc.print("No");
