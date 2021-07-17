@@ -21,7 +21,7 @@ mod = int(1e9)+7
  
  
 ni = lambda : int(stdin.readline()) # nextInt 
-na = lambda: map(int,stdin.readline().split()) # nextArr
+na = lambda: map(int,stdin.readline().split()) # nextArray
 nline = lambda: stdin.readline().rstrip()
 out = lambda x : stdout.write(str(x)+"\n")
 
