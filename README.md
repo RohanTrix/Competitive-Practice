@@ -240,3 +240,4 @@
 157. Remove Nth Node From End of List
 158. Maximum Profit in Job Scheduling (DP + Binary Search) --**Hard** --**IMP**
 159. Surrounded Regions (DFS)
+160. Nearest Exit from Entrance in Maze (BFS)
