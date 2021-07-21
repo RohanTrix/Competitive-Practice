@@ -7,6 +7,7 @@ import java.util.*;
         * If we choose to select an item, we might as well pick up all occurences of that item.
         * Hence we build a frequency map for all the items
         * Next we can think of dp, and following are the states of the dp
+        * We will traverse uptil the MAX(freq map's keys).
         *The dp states will depend on which element we take and whether we take it or not
 
             -> dp[i][0] denotes the maximum points we can acheive by not deleting the ith element
@@ -23,7 +24,7 @@ import java.util.*;
 
             --> meaning if ith element is deleted, we first add points we get from 
                 the number of i's present(i*freq(i)).....and then add i-1's dp value when we do not delete i-1.
-
+                Also, if i was not present in the original array, then freq(i) would be 0.
 
 */
 
