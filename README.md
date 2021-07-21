@@ -243,4 +243,6 @@
 160. Nearest Exit from Entrance in Maze (BFS)
 161. Course Schedule II (Graphs) (Topsort)
 163. Nim Game
-164. Delete and Earn (DP)
+164. Delete and Earn (DP) --**IMP** --**Revise** --**Tricky**
+165. Contains Duplicate
+166. Maximum Difference Between Node and Ancestor (Tree) --**IMP**
