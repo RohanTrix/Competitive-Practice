@@ -1,4 +1,6 @@
+package Leetcode.DP;
 import java.util.stream.*;
+import java.util.*;
 class Solution {
     // Refer https://www.youtube.com/watch?v=rSi4MpGEz1M&ab_channel=Pepcoding
     public int numberOfArithmeticSlices(int[] A) {
