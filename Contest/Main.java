@@ -5,17 +5,13 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
+   
+    }
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), x = sc.nextInt();
-        int arr[] = sc.nextArray(n);
-        int s = 0;
-        for(int i =0; i<n; i++)
-        {
-            
-        }
-        if(s<=x) sc.print("Yes");
-        else sc.print("No");
+        int n = sc.nextInt();
+        int nums[] = sc.nextArray(n);
+        int firstSmallerToRight[] = new int[nums.length];
         
     }
     public static void main(String[] args) 

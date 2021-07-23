@@ -1,3 +1,5 @@
+package Leetcode.Binary_Search;
+
 class Find_First_and_Last_Position_of_Element_in_Sorted_Array {
     public int[] searchRange(int[] nums, int target) {
         int n = nums.length;

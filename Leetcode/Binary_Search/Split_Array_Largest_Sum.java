@@ -1,3 +1,5 @@
+import java.util.*;
+import java.util.stream.*;
 class Split_Array_Largest_Sum {
     public boolean possible(int nums[], int maxCap, int maxSubArrNum)
     {

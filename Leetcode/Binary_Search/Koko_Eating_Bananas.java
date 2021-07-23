@@ -1,4 +1,4 @@
-package Binary_Search;
+package Leetcode.Binary_Search;
 
 /*
 The idea is to use Binary Search. We assume a capacity(in our case, the mid of binary search) and calculate the
