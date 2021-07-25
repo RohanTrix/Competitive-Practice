@@ -90,7 +90,7 @@
 8. House Robber (DP)
 9. Coin Change 2 (DP)
 10. Coin Change (DP)
-11. Edit Distance(DP) --**Hard**
+11. Edit Distance(DP) --**IMP** --**Hard**
 12. Longest_Common_Subsequence (DP)
 13. Jump Game II (DP) --**Revise** --**IMP**
 14. First Unique Character in a String
@@ -248,3 +248,4 @@
 166. Maximum Difference Between Node and Ancestor (Tree) --**IMP**
 167. Unique Paths (DP)
 168. Binary Tree Pruning (Tree)
+169. Minimum ASCII Delete Sum for Two Strings (DP)
