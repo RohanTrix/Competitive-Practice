@@ -1,17 +1,53 @@
 import java.io.*;
 import java.util.*;
 
-
 @SuppressWarnings("all")
+class Pair
+{
+    int numOfBoxes, numofUnitsPerBox;
+    public Pair(int n1, int n2)
+    {
+        numOfBoxes = n1;
+        numofUnitsPerBox = n2;
+    }
+}
 public class Main 
 {
-   
+    public long maximumUnits(int num, ArrayList<Integer> boxes, int unitSize, ArrayList<Integer> unitPerBox ,
+    long truckSize) {
+        Long boxTypes[][] = new Long[num][2];
+        for(int i = 0; i<num; i++){ boxTypes[i][0] = (long)boxes.get(i); boxTypes[i][1] = (long)unitPerBox.get(i);}
+
+        Arrays.sort(boxTypes, (a,b) -> Long.compare(b[1], a[1]));
+        long sboxes = 0;
+        for (Long[] box : boxTypes) {
+            if (truckSize >= box[0]) {
+                sboxes += (box[0] * box[1]);
+                truckSize -= box[0];
+            }else {
+                sboxes += truckSize * box[1];
+                return sboxes;
+            }
+        }
+        return sboxes;
     }
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int nums[] = sc.nextArray(n);
-        int firstSmallerToRight[] = new int[nums.length];
+        public int maximumUnits(int[][] boxTypes, int truckSize) {
+        Arrays.sort(boxTypes, (a, b) -> b[1] - a[1]);
+        int boxes = 0;
+        for (int[] box : boxTypes) {
+            if (truckSize >= box[0]) {
+                boxes += box[0] * box[1];
+                truckSize -= box[0];
+            }else {
+                boxes += truckSize * box[1];
+                return boxes;
+            }
+        }
+        return boxes;
+    }
+
         
     }
     public static void main(String[] args) 
@@ -21,8 +57,7 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            //for(int T = sc.nextInt();T > 0;T--)
-            solve(sc);
+            for(int T = sc.nextInt();T > 0;T--)solve(sc);
             //CODE END
             sc.closer();
         }
@@ -30,8 +65,7 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            //for(int T = sc.nextInt();T > 0;T--)
-            solve(sc);
+            for(int T = sc.nextInt();T > 0;T--)solve(sc);
             //CODE END
             sc.closer();
 
