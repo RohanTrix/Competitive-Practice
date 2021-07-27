@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class D 
 {
     public static Map<Integer, Set<Integer>> edges = new TreeMap<>();
     public static long dist[];
