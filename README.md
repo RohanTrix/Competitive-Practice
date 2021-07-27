@@ -249,3 +249,5 @@
 167. Unique Paths (DP)
 168. Binary Tree Pruning (Tree)
 169. Minimum ASCII Delete Sum for Two Strings (DP)
+170. 3Sum Closest (Two Pointer)
+171. Matrix Block Sum (Prefix Sum)
