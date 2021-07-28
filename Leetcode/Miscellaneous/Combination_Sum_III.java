@@ -1,4 +1,5 @@
-class Solution {
+import java.util.*;
+class Combination_Sum_III {
     
     List<List<Integer>> res = new ArrayList();
     
@@ -9,7 +10,6 @@ class Solution {
             res.add(new ArrayList(curr));
             return;
         }
-        
         if(k==0) return;
         
         for(int i = ind; i<10; i++)
