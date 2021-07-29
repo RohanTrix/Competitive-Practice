@@ -1,9 +1,9 @@
 package Leetcode.DP;
-
+import java.util.*;
 public class Coin_Change_2 {
     public int change(int amount, int[] coins) {
         
-        int n = coins.length;
+        
         int ways[] = new int[amount+1];
         Arrays.fill(ways, 0);
         ways[0] = 1;

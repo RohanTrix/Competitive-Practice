@@ -253,3 +253,4 @@
 171. Matrix Block Sum (Prefix Sum)
 172. Decrease Elements To Make Array Zigzag --**Revise**
 173. Reverse Words in a String III
+174. Find Minimum Time to Finish All Jobs (Binary Search) (DFS) --**Revise** --**IMP** --**Hard**

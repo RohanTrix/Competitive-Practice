@@ -1,8 +1,10 @@
+package Leetcode.DP;
+import java.util.*;
 class Coin_Change {
     // (Max_Value - 1 ) is used instead of Max_Value to avoid overflow
     public int coinChange(int[] coins, int amount) {
         
-        int n = coins.length;
+        
         int minCoin[] = new int[amount+1];
         Arrays.fill(minCoin, Integer.MAX_VALUE-1);
         minCoin[0] = 0;
