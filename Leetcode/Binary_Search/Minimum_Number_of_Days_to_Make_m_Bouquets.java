@@ -13,6 +13,9 @@ Else, we need to find a valid answer and hence search in the right part of the a
 
 */
 
+
+package Leetcode.Binary_Search;
+import java.util.stream.*;
 class Minimum_Number_of_Days_to_Make_m_Bouquets {
     public boolean possible(int[] days, int m, int k, int currDay)
     {
@@ -50,5 +53,4 @@ class Minimum_Number_of_Days_to_Make_m_Bouquets {
         }
         return bestans;
     }
-}
 }

@@ -1,3 +1,5 @@
+package Leetcode.DP;
+
 class Best_Time_to_Buy_and_Sell_Stock {
     public int maxProfit(int[] prices) {
         int lowest = Integer.MAX_VALUE;

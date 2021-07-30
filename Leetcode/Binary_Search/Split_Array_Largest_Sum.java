@@ -1,4 +1,6 @@
-import java.util.*;
+package Leetcode.Binary_Search;
+
+
 import java.util.stream.*;
 class Split_Array_Largest_Sum {
     public boolean possible(int nums[], int maxCap, int maxSubArrNum)
@@ -18,7 +20,7 @@ class Split_Array_Largest_Sum {
     }
     public int splitArray(int[] nums, int m) {
         int bestans = -1;
-        int n = nums.length;
+        
         int l = IntStream.of(nums).max().getAsInt();
         int r = IntStream.of(nums).sum();
         

@@ -1,4 +1,6 @@
-class Solution {
+package Leetcode.DP;
+
+class Best_Time_to_Buy_and_Sell_Stock_with_Transaction_Fee {
     // REFER video link for explanation: https://youtu.be/pTQB9wbIpfU
     public int maxProfit(int[] prices, int fee) {
         int n = prices.length;

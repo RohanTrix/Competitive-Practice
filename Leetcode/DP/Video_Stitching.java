@@ -1,3 +1,5 @@
+package Leetcode.DP;
+
 import java.util.*;
 class Video_Stitching {
     public int videoStitching(int[][] clips, int time) {
@@ -6,7 +8,7 @@ class Video_Stitching {
         
         int dp[] = new int[101]; // dp[i] => Min intervals needed to cover till ith time
         Arrays.fill(dp,Integer.MAX_VALUE-1);
-        int n = clips.length;
+        
         dp[0] = 0; // At T=0, we do not need any intervals
         
         for(int c[] : clips)

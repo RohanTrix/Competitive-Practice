@@ -1,6 +1,6 @@
 package Leetcode.DP;
 
-class Solution {
+class Wiggle_Subsequence {
     //REFER Here: https://youtu.be/iJIAPtd9Z9s
         public int wiggleMaxLength(int[] nums) {
         if (nums.length == 0) return 0;

@@ -1,3 +1,7 @@
+package Leetcode.DP;
+
+import java.util.Arrays;
+
 class Longest_Common_Subsequence {
     public int longestCommonSubsequence(String text1, String text2) {
         int n1 = text1.length();

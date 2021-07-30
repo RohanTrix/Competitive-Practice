@@ -1,4 +1,6 @@
-class Solution {
+package Leetcode.Binary_Search;
+
+class Maximum_Distance_Between_a_Pair_of_Values {
     // MY SOLUTION : 
     // https://leetcode.com/problems/maximum-distance-between-a-pair-of-values/discuss/1198795/Java-Binary-Search-O(len2-*-log(len1))
     public boolean possible(int val1,int val2)

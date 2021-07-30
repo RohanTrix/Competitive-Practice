@@ -1,3 +1,7 @@
+package Leetcode.DP;
+
+import java.util.Arrays;
+
 class Best_Time_to_Buy_and_Sell_Stock_4 {
     // Refer Tushar Roy Video for explanation
     public int maxProfit(int k, int[] prices) {
