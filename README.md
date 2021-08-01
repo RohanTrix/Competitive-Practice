@@ -255,3 +255,5 @@
 173. Reverse Words in a String III
 174. Find Minimum Time to Finish All Jobs (Binary Search) (DFS) --**Revise** --**IMP** --**Hard**
 175. Minimum Limit of Balls in a Bag (Binary Search) --**Tricky** --**Revise**
+176. Longest Happy Prefix (KMP)
+177. Shortest Palindrome (KMP)
