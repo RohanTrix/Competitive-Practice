@@ -2,12 +2,26 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Template 
+public class Cut_Ribbon 
 {
-    static void solve(FastReader sc)
+    static int dp[];
+    static int recur(int rem, int a, int b, int c)
     {
         
-
+        if(rem<0) return Integer.MIN_VALUE;
+        if(dp[rem]!=-1) return dp[rem];
+        dp[rem] = Math.max( recur(rem-a, a, b, c), recur(rem-b, a, b, c)) + 1;
+        dp[rem] = Math.max(dp[rem], recur(rem-c, a, b, c) +1);
+        return dp[rem];
+         
+    }
+    static void solve(FastReader sc)
+    {
+        int rem = sc.nextInt(), a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt();
+        dp = new int[rem+1];
+        Arrays.fill(dp, -1);
+        dp[0]=0;
+        sc.println(recur(rem, a, b, c));
         
     }
     public static void main(String[] args) 
@@ -17,7 +31,7 @@ public class Template
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -26,7 +40,7 @@ public class Template
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();

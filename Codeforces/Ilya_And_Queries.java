@@ -2,12 +2,24 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Template 
+public class Ilya_And_Queries 
 {
+    
     static void solve(FastReader sc)
     {
-        
-
+        char s[] = sc.next().toCharArray();
+        int arr[] = new int[s.length];
+        for(int i =0; i<s.length-1; i++)
+        arr[i] = (s[i]==s[i+1])?1:0;
+        int pref[] = new int[arr.length+1];
+        for(int i =1; i<=arr.length; i++)
+            pref[i] = pref[i-1] + arr[i-1];
+        int q = sc.nextInt();
+        for(int i =0; i<q; i++)
+        {
+            int l = sc.nextInt(), r = sc.nextInt();
+        sc.println(pref[r-1] - pref[l-1]);
+        }
         
     }
     public static void main(String[] args) 
@@ -17,7 +29,7 @@ public class Template
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -26,7 +38,7 @@ public class Template
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();

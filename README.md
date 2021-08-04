@@ -50,6 +50,9 @@
 17. Shifting Stacks
 18. Do Not Be Distracted!
 19. Ordinary Numbers
+20. Kefa and First Steps
+21. Cut Ribbon
+22. Ilya and Queries
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
@@ -257,4 +260,4 @@
 175. Minimum Limit of Balls in a Bag (Binary Search) --**Tricky** --**Revise**
 176. Longest Happy Prefix (KMP)
 177. Shortest Palindrome (KMP)
-178. Stone Game
+178. Stone Game (Greedy)
