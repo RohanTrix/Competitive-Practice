@@ -2,13 +2,18 @@ import java.io.*;
 import java.util.*;
 
 /*
-The tree itself is bipartite so we can run a BFS to partition the tree into the 2 sets (called bicoloring), We can't add an edge between any 2 nodes in the same set but we can add an edge between every 2 nodes in different sets, so let the number of nodes in the left set be c0 and the number of nodes in the right set be c1, The maximum number of edges that can exist is c0 * c1, but n - 1 edges already exist so the maximum number of edges to be added is c0 * c1 - (n - 1).
-
+The tree itself is bipartite so we can run a BFS to partition 
+the tree into the 2 sets (called bicoloring), We can't add an 
+edge between any 2 nodes in the same set but we can add an edge 
+between every 2 nodes in different sets, so let the number of nodes 
+in the left set be c0 and the number of nodes in the right set be c1, The 
+maximum number of edges that can exist is c0 * c1, but n - 1 edges already 
+exist so the maximum number of edges to be added is c0 * c1 - (n - 1).
 */
 
 
 @SuppressWarnings("all")
-public class Main 
+public class Mahmoud_and_Ehab_and_the_bipartiteness 
 {
     Map<Integer, ArrayList<Integer>> edges = new HashMap<>();
     int color[];

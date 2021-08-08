@@ -53,6 +53,7 @@
 20. Kefa and First Steps
 21. Cut Ribbon
 22. Ilya and Queries
+23. Mahmoud and Ehab and the bipartiteness
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
