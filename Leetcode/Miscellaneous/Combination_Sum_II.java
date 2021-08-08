@@ -1,6 +1,6 @@
-package Leetcode;
-
-class Solution {
+package Leetcode.Miscellaneous;
+import java.util.*;
+class Combination_Sum_II {
     //Refer https://www.youtube.com/watch?v=j9_qWJClp64
     //Coded Myself----Draw bactracking/recursion tree
     public List<List<Integer>> combinationSum2(int[] cand, int target) {
