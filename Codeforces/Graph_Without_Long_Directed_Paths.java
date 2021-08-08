@@ -1,6 +1,6 @@
 import java.io.*;
 import java.util.*;
-
+ 
 /*
 What if the given graph will contain a cycle of odd length?
  It will mean that some two consecutive edges of this cycle 
@@ -15,11 +15,10 @@ What if the given graph will contain a cycle of odd length?
  fix all edges with a value 0 or 1 depending whether starting node is
  color 0 or 1 (All edges go from a color 0 to a color 1... or vice versa).
 */
-
-
+ 
+ 
 @SuppressWarnings("all")
-public class Main 
-{
+public class Graph_Without_Long_Directed_Paths {
     Map<Integer, ArrayList<Integer>> edges = new HashMap<>();
     int color[];
     void addNode(int u)
@@ -67,7 +66,7 @@ public class Main
                 {
                     sc.println("NO");
                     return;
-
+ 
                 }
             }
         }
@@ -107,7 +106,7 @@ public class Main
             solve(sc);
             //CODE END
             sc.closer();
-
+ 
         }
     }
     public static long power(long x, long y, long mod)
@@ -140,7 +139,7 @@ public class Main
 		for (int i:a) l.add(i);
 		if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
         else Collections.sort(l);
-
+ 
 		for (int i=0; i<a.length; i++) a[i]=l.get(i);
     }
     static void fill2D(int arr[][], int n)
@@ -193,9 +192,9 @@ public class Main
             }
             catch(Exception e)
             {
-
+ 
             }
-
+ 
         }
         String next() 
         { 

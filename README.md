@@ -54,6 +54,7 @@
 21. Cut Ribbon
 22. Ilya and Queries
 23. Mahmoud and Ehab and the bipartiteness
+24. Graph Without Long Directed Paths
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
