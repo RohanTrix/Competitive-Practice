@@ -1,4 +1,4 @@
-package Leetcode;
+package Leetcode.Miscellaneous;
 import java.util.*;
 class AuthenticationManager {
     int livetime;
