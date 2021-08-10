@@ -55,6 +55,7 @@
 22. Ilya and Queries
 23. Mahmoud and Ehab and the bipartiteness
 24. Graph Without Long Directed Paths
+25. Spanning Tree with Maximum Degree
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 

@@ -3,8 +3,7 @@ import java.util.*;
 
 
 @SuppressWarnings("all")
-public class Main 
-{
+public class Spanning_Tree_with_Maximum_Degree {
     HashMap<Integer, Set<Integer>> edges = new HashMap<>();
     ArrayList<pair> res = new ArrayList<>();
     HashSet<Integer> vis = new HashSet<>();
@@ -23,7 +22,7 @@ public class Main
     }
     static void solve(FastReader sc)
     {
-        Main g = new Main();
+        Spanning_Tree_with_Maximum_Degree g = new Spanning_Tree_with_Maximum_Degree();
         int n = sc.nextInt();
         int m = sc.nextInt();
         int indeg[] = new int[n+1];
@@ -251,3 +250,4 @@ public class Main
         }
     }
 }
+
