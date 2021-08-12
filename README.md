@@ -56,6 +56,7 @@
 23. Mahmoud and Ehab and the bipartiteness
 24. Graph Without Long Directed Paths
 25. Spanning Tree with Maximum Degree
+26. Minimal Diameter Forest (HARD) Heavy Implementation!!
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
@@ -269,3 +270,4 @@
 181. Plus One
 182. Critical Connections in a Network (Graphs) (Bridges) --**Hard** --**Revise**
 183. Minimum Height Trees (Graphs) (Center of Tree) --**IMP**
+184. Kth Ancestor of a Tree Node (Graphs) (Binary Lifting) --**IMP** --**Hard**

@@ -1,9 +1,11 @@
+package Codeforces;
+
 import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
 
-public class Main 
+public class Minimal_Diameter_Forest 
 {
     static class TreeCenter
 {
@@ -75,7 +77,7 @@ public class Main
     int bestLen = -1, bestNode = -1, maxlen = -1, maxNode = -1;
     static void solve(FastReader sc)
     {
-        Main ob = new Main();
+        Minimal_Diameter_Forest ob = new Minimal_Diameter_Forest();
         // GRAPH CREATION : START
         
         //System.out.println("Enter the number of nodes: ");

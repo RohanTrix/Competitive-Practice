@@ -1,3 +1,5 @@
+package Codeforces;
+
 import java.io.*;
 import java.util.*;
  
@@ -35,7 +37,7 @@ public class Graph_Without_Long_Directed_Paths {
     static void solve(FastReader sc)
     {
         
-        Main g = new Main();
+        Graph_Without_Long_Directed_Paths g = new Graph_Without_Long_Directed_Paths();
         int n = sc.nextInt();
         int m = sc.nextInt();
         g.color = new int[n+1];

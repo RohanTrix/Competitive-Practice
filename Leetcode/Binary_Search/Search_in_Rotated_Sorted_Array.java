@@ -1,4 +1,4 @@
-class Solution {
+class Search_in_Rotated_Sorted_Array {
     /*  Idea: If a array has a monotonic space (i.e, it can be converted to a YYYYY...YN...NNNN or NNN...NY....YYYY), 
     *   then Binary Search can be applied on it. In our case, region is YYYY...YN...NNNN
     *   check() function is the function used to find a Yes/No answer wrt to an array element. Here
