@@ -272,3 +272,5 @@
 183. Minimum Height Trees (Graphs) (Center of Tree) --**IMP**
 184. Kth Ancestor of a Tree Node (Graphs) (Binary Lifting) --**IMP** --**Hard**
 185. Design Add and Search Words Data Structure (Trie)
+186. Last Day Where You Can Still Cross (Binary Search) (BFS)
+186. Array With Elements Not Equal to Average of Neighbors
