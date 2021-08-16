@@ -1,12 +1,28 @@
+
 import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class Karen_and_Coffee 
 {
     static void solve(FastReader sc)
     {
-        
+        int arr[] = new int[200000+1];
+        int n = sc.nextInt(), k = sc.nextInt(), q = sc.nextInt();
+        for(int i =0; i<n; i++)
+        {
+            int l = sc.nextInt(), r = sc.nextInt();
+            arr[l]++;
+            if(r+1<=200000)arr[r+1]--;
+        }
+        for(int i=1; i<=200000; i++) arr[i]+=arr[i-1];
+        for(int i=1; i<=200000; i++) arr[i] = (arr[i]>=k)?1:0;
+        for(int i=1; i<=200000; i++) arr[i]+=arr[i-1];
+        for(int i  = 0; i<q; i++)
+        {
+            int a = sc.nextInt(), b = sc.nextInt();
+            sc.println(arr[b] - arr[a-1]);
+        }
 
         
     }
@@ -17,7 +33,7 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -26,7 +42,7 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();

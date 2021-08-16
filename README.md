@@ -57,6 +57,10 @@
 24. Graph Without Long Directed Paths
 25. Spanning Tree with Maximum Degree
 26. Minimal Diameter Forest (HARD) Heavy Implementation!!
+27. Mocha and Diana Easy
+28. Mocha and Hiking
+29. Mocha and Red and Blue
+30. Mocha and Math 
 
 ## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
 
