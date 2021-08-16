@@ -1,13 +1,54 @@
-n = int(input())
-s = list(map(int,input().split()))
-t = list(map(int,input().split()))
+import math
+
+def main():
+    n = int(input())
+    l = list(input())
+    ans = []
+        
+    for i in range(n):
+        if l[i]=="?":
+            ans.append(-1)
+        else:
+            ans.append(l[i])
+    
+        
+    
+    d = {"B": "R", "R":"B"}
+    i = 0
+    pos1 = -1
+    while(i<n):
+        if l[i]!='?':
+            pos1= i
+            break
+        i+=1
+    i = pos1-1
+    if pos1 == -1:
+        ans = ["B"]
+        for i in range(1,n):
+            ans.append(d[ans[i-1]])
+        print(*ans, sep = '')
+        return
+    while(i>=0):
+        ans[i] = d[ans[i+1]]
+        i-=1
+    i = pos1+1
+    while(i<n):
+        if l[i]!="?":
+            ans[i] = l[i]
+        else:
+            ans[i] = d[ans[i-1]]
+        i+=1
+    print(*ans, sep='')
+
+
+
+
+
+
+
+
+t = int(input())
+for _ in range(t):
+    main()
  
  
- 
-ans = [t[i] for i in range(n)]
- 
-for i in range(2*n):
-    ans[(i+1)%n] = min(ans[(i+1)%n], ans[i%n] + s[i%n])
-#print(club)
- 
-print(*ans, sep = '\n')
