@@ -278,3 +278,4 @@
 185. Design Add and Search Words Data Structure (Trie)
 186. Last Day Where You Can Still Cross (Binary Search) (BFS)
 186. Array With Elements Not Equal to Average of Neighbors
+187. Group the People Given the Group Size They Belong To
