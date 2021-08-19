@@ -1,19 +1,32 @@
 import java.io.*;
 import java.util.*;
 
+
 @SuppressWarnings("all")
 public class Main 
 {
+    
     static void solve(FastReader sc)
     {
-        
+       long a = sc.nextLong(), b = sc.nextLong(), c = sc.nextLong();
+       long maxi = Math.max(a,b);
+       
+       long diff = Math.abs(a-b);
+       if((maxi> diff*2 )|| c>diff*2)
+       {
+           sc.println(-1);
+           return;
+       }
+       long n = diff*2;
+       if(c>n/2)sc.println(c-diff);
+       else sc.println(c+diff);
 
-        
     }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
+        
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN

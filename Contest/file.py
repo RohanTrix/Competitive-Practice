@@ -1,50 +1,35 @@
 import math
 
+def nextPerfectSquare(N):
+ 
+    nextN = math.floor(math.sqrt(N)) + 1
+ 
+    return nextN * nextN
+
+def isperf(x):
+
+    return math.ceil(math.sqrt(x)) == math.floor(math.sqrt(x))
+     
 def main():
-    n = int(input())
-    l = list(input())
-    ans = []
-        
-    for i in range(n):
-        if l[i]=="?":
-            ans.append(-1)
-        else:
-            ans.append(l[i])
-    
-        
-    
-    d = {"B": "R", "R":"B"}
-    i = 0
-    pos1 = -1
-    while(i<n):
-        if l[i]!='?':
-            pos1= i
-            break
-        i+=1
-    i = pos1-1
-    if pos1 == -1:
-        ans = ["B"]
-        for i in range(1,n):
-            ans.append(d[ans[i-1]])
-        print(*ans, sep = '')
+    k = int(input())
+    if k==1:
+        print(1,1)
         return
-    while(i>=0):
-        ans[i] = d[ans[i+1]]
-        i-=1
-    i = pos1+1
-    while(i<n):
-        if l[i]!="?":
-            ans[i] = l[i]
-        else:
-            ans[i] = d[ans[i-1]]
-        i+=1
-    print(*ans, sep='')
+    up = nextPerfectSquare(k)
+    if(isperf(k)):
+        print(int(k**0.5),1)
+        return
 
-
-
-
-
-
+    sqrt_up = int(up**0.5)
+    low = (sqrt_up - 1)*(sqrt_up - 1) +1
+    if(up-k==k-low):
+        print(sqrt_up, sqrt_up)
+    elif up-k<k-low:
+        val = up-k+1
+        print(sqrt_up, val)
+    else:
+        val = k-low+1
+        print(val, sqrt_up)
 
 
 t = int(input())
