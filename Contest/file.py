@@ -1,35 +1,26 @@
 import math
+import sys 
+sys.stdin = open('input.txt', 'r')  
+sys.stdout = open('output.txt', 'w+')
 
-def nextPerfectSquare(N):
- 
-    nextN = math.floor(math.sqrt(N)) + 1
- 
-    return nextN * nextN
 
 def isperf(x):
 
     return math.ceil(math.sqrt(x)) == math.floor(math.sqrt(x))
      
 def main():
-    k = int(input())
-    if k==1:
-        print(1,1)
+    x,y = map(int,input().split())
+    if x==1 and y==1:
+        print(1)
         return
-    up = nextPerfectSquare(k)
-    if(isperf(k)):
-        print(int(k**0.5),1)
-        return
-
-    sqrt_up = int(up**0.5)
-    low = (sqrt_up - 1)*(sqrt_up - 1) +1
-    if(up-k==k-low):
-        print(sqrt_up, sqrt_up)
-    elif up-k<k-low:
-        val = up-k+1
-        print(sqrt_up, val)
+    maxi = max(x,y)
+    mini = min(x,y)
+    ans = (maxi-2)*(mini-1) + mini
+    if x==y:
+        print(ans)
     else:
-        val = k-low+1
-        print(val, sqrt_up)
+        print(ans-1)
+
 
 
 t = int(input())
