@@ -282,3 +282,4 @@
 188. Number of Substrings With Only 1s
 189. Binary Tree Maximum Path Sum --**Revise** --**IMP**
 190. Count Vowels Permutation (DP)
+191. Sum of Even Numbers After Queries
