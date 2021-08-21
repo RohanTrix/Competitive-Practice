@@ -283,3 +283,4 @@
 189. Binary Tree Maximum Path Sum --**Revise** --**IMP**
 190. Count Vowels Permutation (DP)
 191. Sum of Even Numbers After Queries
+192. Palindromic Substrings (DP)
