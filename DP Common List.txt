@@ -3,3 +3,4 @@
 3. Edit Distance
 4. Minimum Partition
 5. Count Palindromic Substrings
+6. Longest Palindromic Substring

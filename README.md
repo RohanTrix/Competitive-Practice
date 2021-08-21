@@ -284,3 +284,4 @@
 190. Count Vowels Permutation (DP)
 191. Sum of Even Numbers After Queries
 192. Palindromic Substrings (DP)
+193. Longest Palindromic Substring (DP) 
