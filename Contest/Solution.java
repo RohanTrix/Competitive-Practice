@@ -1,37 +1,44 @@
 import java.io.*;
 import java.util.*;
 
-
 @SuppressWarnings("all")
-public class Main 
+public class Solution 
 {
-    
     static void solve(FastReader sc)
     {
-       long a = sc.nextLong(), b = sc.nextLong(), c = sc.nextLong();
-       long maxi = Math.max(a,b);
-       
-       long diff = Math.abs(a-b);
-       if((maxi> diff*2 )|| c>diff*2)
-       {
-           sc.println(-1);
-           return;
-       }
-       long n = diff*2;
-       if(c>n/2)sc.println(c-diff);
-       else sc.println(c+diff);
+        String st = sc.nextLine();
+        char str[] = st.toCharArray();
+        Stack<Character> s = new Stack<>();
 
+        for( int i = 0; i< str.length; i++)
+        {
+            if(!s.isEmpty() && str[i]==s.peek())
+            {
+                int cnt_of_slash = 0;
+                while(!s.isEmpty() && cnt_of_slash!=2)
+                {
+                    if(s.peek()=='/')cnt_of_slash++;
+                        s.pop();
+                }
+            }
+            else
+            s.add(str[i]);
+            
+        }
+        String ans = "";
+        for(int i =0; i<s.size(); i++)
+            sc.print(s.get(i));
+        
     }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
-            solve(sc);
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)solve(sc);
             //CODE END
             sc.closer();
         }
@@ -39,8 +46,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            for(int T = sc.nextInt();T > 0;T--)
-            solve(sc);
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)solve(sc);
             //CODE END
             sc.closer();
 
