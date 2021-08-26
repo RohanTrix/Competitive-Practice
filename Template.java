@@ -18,7 +18,7 @@ public class Template
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)solve(sc, T);
+            for(int T = 1;T <=t ;T++)solve(sc);
             //CODE END
             sc.closer();
         }
@@ -27,7 +27,7 @@ public class Template
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)solve(sc, T);
+            for(int T = 1;T <=t ;T++)solve(sc);
             //CODE END
             sc.closer();
 
