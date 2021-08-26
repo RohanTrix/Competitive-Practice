@@ -284,4 +284,7 @@
 190. Count Vowels Permutation (DP)
 191. Sum of Even Numbers After Queries
 192. Palindromic Substrings (DP)
-193. Longest Palindromic Substring (DP) 
+193. Longest Palindromic Substring (DP)
+194. Minimum Number of Vertices to Reach All Nodes (Graph) --**Revise**
+195. Redundant Connection (DSU)
+196. Binary Tree Zigzag Level Order Traversal (Tree) (BFS)

@@ -1,32 +1,25 @@
 import math
-import sys
-from typing import Counter 
-sys.stdin = open('input.txt', 'r')  
-sys.stdout = open('output.txt', 'w+')
+# import sys
+# sys.stdin = open('input.txt', 'r')  
+# sys.stdout = open('output.txt', 'w+')
 
+     
 for t in range(int(input())):
-    s = input()
-    l = ['' for i in range(len(s))]
-    freq = Counter(s)
-    ans = "IMPOSSIBLE"
-    if max(freq.values())>len(s)//2:
-        print(f"Case #{t+1}: {ans}")
-        continue
+    n = int(input())
+    arr = [(el, i+1) for i,el in enumerate(list(map(int,input().split())))]
+    arr.sort()
+    cnt, limit = 0, 2*n
     
-    i = 0
-    #print(freq)
-    for k in sorted(freq.keys()):
-        i = 0
-        v = freq[k]
-        #print("Curr key" , k)
-        while(v>0):
-            if(k!=s[i] and l[i]==''):
-                l[i] = k
-                v-=1
-            i+=1
-            if(i==len(s)): break
-            #print(l)
-            
+    limReached = False
+    for i in range(n-1):
+        for j in range(i+1, n):
+            mul = arr[i][0]*arr[j][0]
+            if(mul>limit):
+                
+                break
+            if(mul==arr[i][1]+arr[j][1]):
+                #print(arr[i], arr[j])
+                cnt+=1
+        
+    print(cnt)
 
-    ans = ''.join(l)
-    print(f"Case #{t+1}: {ans}")

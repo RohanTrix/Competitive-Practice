@@ -13,7 +13,8 @@
  *     }
  * }
  */
-class Solution {
+import java.util.*;
+class Average_of_Levels_in_Binary_Tree {
     public List<Double> averageOfLevels(TreeNode root) {
         ArrayList<Double> curr = new ArrayList<Double>();
         Queue<TreeNode> q = new LinkedList<TreeNode>();;
