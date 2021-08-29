@@ -1,43 +1,50 @@
 import java.io.*;
 import java.util.*;
+import java.util.concurrent.LinkedBlockingDeque;
 @SuppressWarnings("all")
 public class Main 
 {
-    static int dr[] = {0,1,0,-1};
-    static int dc[] = {-1,0,1,0};
-    public static void DFS(char matrix[][], int i, int j)
-    {
-        if(matrix[i][j]=='#') return;
-        matrix[i][j] = '#';
-
-        for( int idx = 0;idx <4;idx++)
-        {
-
-            if(i + dr[idx]<0 || i + dr[idx] >=matrix.length || j + dc[idx]<0 || j + dc[idx]>=matrix[0].length) continue;
-            DFS(matrix, i + dr[idx], j + dc[idx]);
-        }
-    }
+    static int dr[] = {0,0,1,-1};
+    static int dc[] = {-1,1,0,0};
+    static String fin = "-1";
+    static int endi,endj;
+   
     static void solve(FastReader sc)
     {
         int n = sc.nextInt(), m = sc.nextInt();
         char mat[][] = new char[n][m];
+        char path[] = new char[n][m];
+        int si = 0 ,sj = 0;
+        Queue<pair> q = new LinkedList<>();
         for( int i = 0; i<n; i++)
         {
             char a[] = sc.next().toCharArray();
+            for(int j = 0; j<m; j++) 
+            {
+                if(a[j]=='A')
+                q.offer(new pair(i,j));
+                if(a[j]=='B')
+                {endi = i; endj = j;}
+            }
             mat[i] = a;
         }
-        int count = 0;
-        for(int i = 0;i<n;i++)
+        
+        while(!q.isEmpty())
         {
-            for(int j = 0; j<m;j++)
+            pair tmp = q.poll();
+            if(tmp.x==endi && tmp.y==endj)
             {
-                if(mat[i][j]=='.') 
-                {
-                    DFS(mat, i,j);
-                    count++;
-                }
+                
             }
         }
+        
+
+
+        if(fin.equals("-1"))
+        {
+            sc.println("NO");
+            return;
+        }            
         /*
         for(int i = 0;i<n;i++)
         {
@@ -48,7 +55,9 @@ public class Main
             sc.println();
         }
         */
-        sc.print(count);
+        sc.println("YES");
+        sc.println(fin.length());
+        sc.print(fin);
         
     }
     public static void main(String[] args) 
@@ -98,17 +107,17 @@ public class Main
     }
     static class pair implements Comparable < pair >
     {
-        long x;
-        long y;
-        pair(long i, long j) {
+        int x;
+        int y;
+        pair(int i, int j) {
             x = i;
             y = j;
         }
         public int compareTo(pair p) {
             if (this.x != p.x) {
-                return Long.compare(this.x,p.x);
+                return Integer.compare(this.x,p.x);
             } else {
-                return Long.compare(this.y,p.y);
+                return Integer.compare(this.y,p.y);
             }
         }
         public String toString() {
@@ -118,7 +127,7 @@ public class Main
             pair x = (pair) o;
             return (x.x == this.x && x.y == this.y);
         }
-        }
+    }
     static class FastReader 
     { 
         BufferedReader br; 

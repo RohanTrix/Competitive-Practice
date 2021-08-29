@@ -4,31 +4,20 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    static class pair implements Comparable<pair>
-    {
-        long el;
-        int idx;
-        public pair(long e, int i)
-        {
-            idx = i;
-            el = e;
-        }
-        public int compareTo(pair o)
-        {
-            return Long.compare(el, o.el);
-        }
-    }
+    
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        pair arr[] = new pair[n+1];
-
-        for (int i = 1; i <= arr.length; i++) 
+        int n = sc.nextInt(), mini = Integer.MAX_VALUE/2;
+        int arr[] = sc.nextArray(n);
+        int pos = -1;
+        for(int i  = 0; i<n; i++)
         {
-            arr[i] = new pair(sc.nextInt(), i);
+            if(mini>arr[i])
+                {mini = arr[i]; pos = i;}
         }
+        int arr
+        for(int i = pos-1; i)
         
-
         
     }
     public static void main(String[] args) 
