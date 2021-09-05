@@ -4,20 +4,10 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), mini = Integer.MAX_VALUE/2;
-        int arr[] = sc.nextArray(n);
-        int pos = -1;
-        for(int i  = 0; i<n; i++)
-        {
-            if(mini>arr[i])
-                {mini = arr[i]; pos = i;}
-        }
-        int arr
-        for(int i = pos-1; i)
         
+
         
     }
     public static void main(String[] args) 
