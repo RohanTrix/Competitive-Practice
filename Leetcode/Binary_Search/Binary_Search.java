@@ -1,4 +1,3 @@
-package Leetcode.Binary_Search;
 
 class Solution {
     public int search(int[] nums, int target) {
