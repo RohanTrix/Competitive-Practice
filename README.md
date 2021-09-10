@@ -297,3 +297,4 @@
 203. Top K Frequent Elements (Bucket Sort) --**IMP concept**
 204. Unique Paths II (DP)
 205. Number of Operations to Make Network Connected (DSU)
+206. Find Minimum in Rotated Sorted Array (Binary Search)
