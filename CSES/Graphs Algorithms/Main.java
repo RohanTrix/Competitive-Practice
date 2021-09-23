@@ -4,38 +4,46 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main {
-    public ArrayList<ArrayList<Integer>> edges = new ArrayList<>();
-    boolean visited[];
-    
-    void dfs(int u) {
-        
-    }
 
+public class Main {
+    public Map<Integer, Set<Integer>> edges = new HashMap<>();
+    int visited[], parent[];
+   
+    
     void solver(FastReader sc) throws IOException{
-        BufferedWriter output = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringTokenizer st;
+        
 
         int n = sc.nextInt();
         int m = sc.nextInt();
-        for (int i = 0; i <= n; i++)
+        for (int i = 1; i <= n; i++)
             addNode(i);
         for (int i = 0; i < m; i++)
             addEdge(sc.nextInt(), sc.nextInt());
+        
+        visited = new int[n+1];
+        
+        Arrays.fill(visited, 0);
+        for(int i = 1; i<=n; i++)
+        {
+            if(f)break;
+            if(visited[i]==0)
+            {
+                dfs(i,-1);
+            }
+        }
+        if(!f)
+            sc.println("IMPOSSIBLE");
+        else
+            {
+                sc.println(count+1);
+                sc.println(path);
+            }
 
-        
-        
-        visited = new boolean[n + 1];
-        
-        Arrays.fill(visited, false);
 
-       
-       
-        output.flush();
     }
 
     void addNode(int u) {
-        edges.add(new ArrayList<>());
+        edges.put(u, new TreeSet<>());
     }
 
     void addEdge(int u, int v) {

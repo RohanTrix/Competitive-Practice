@@ -1,14 +1,66 @@
 import java.io.*;
 import java.util.*;
-
+import java.util.stream.*;
+import java.util.stream.IntStream;
 @SuppressWarnings("all")
 public class Main 
 {
     static void solve(FastReader sc)
     {
+        int n = sc.nextInt();
+        long arr[] = new long[n];
+        long orsum=0;
+        for(int i =0; i<n; i++){arr[i] = sc.nextLong();orsum+=arr[i];}
+        long sum = orsum;
+        Arrays.sort(arr);
         
-
-        
+        int m = sc.nextInt();
+        for(int i = 0; i<m; i++)
+        {
+            long def = sc.nextLong(), att = sc.nextLong();
+            
+            int l = 0,r = n-1, pos1 = -1, pos2 = -1;
+            while(l<=r)
+            {
+                int mid = l +(r-l)/2;
+                if(arr[mid]>= def)
+                {
+                    pos1 = mid;
+                    r = mid - 1;
+                }
+                else
+                    l = mid+1;
+            }
+            long res = Long.MAX_VALUE;
+            if(pos1!=-1)
+            {
+                long def_inc = Math.max(0L, def-arr[pos1]);
+                long att_inc = Math.max(0L, att- (sum-arr[pos1]));
+                res = def_inc+att_inc;
+            }
+            l = 0;r = n-1;
+            while(l<=r)
+            {
+                int mid = l + (r-l)/2;
+                if(arr[mid]<=def)
+                {
+                    pos2 = mid;
+                    l = mid+1;
+                }
+                else
+                    r = mid -1;
+            }
+            
+            if(pos2!=-1)
+            {
+                long def_inc = Math.max(0L, def-arr[pos2]);
+                long att_inc = Math.max(0L, att- (sum-arr[pos2]));
+                res = Math.min(res, def_inc+att_inc); 
+            }
+            sc.println(res);
+            sum = orsum;
+            
+        }
     }
     public static void main(String[] args) 
     {
@@ -17,8 +69,9 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)solve(sc);
+            //int t = sc.nextInt();
+            //for(int T = 1;T <=t ;T++)
+            solve(sc);
             //CODE END
             sc.closer();
         }
@@ -26,8 +79,9 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)solve(sc);
+            //int t = sc.nextInt();
+            //for(int T = 1;T <=t ;T++)
+            solve(sc);
             //CODE END
             sc.closer();
 
