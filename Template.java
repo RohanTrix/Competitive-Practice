@@ -18,7 +18,8 @@ public class Template
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)solve(sc);
+            for(int T = 1;T <=t ;T++)
+            solve(sc);
             //CODE END
             sc.closer();
         }
@@ -27,7 +28,8 @@ public class Template
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)solve(sc);
+            for(int T = 1;T <=t ;T++)
+            solve(sc);
             //CODE END
             sc.closer();
 
@@ -93,7 +95,43 @@ public class Template
             pair x = (pair) o;
             return (x.x == this.x && x.y == this.y);
         }
+    }
+    static int upper_bound(int arr[], int key)
+    {
+        // Smallest vales greater than or equal to key
+        int left = 0, right = arr.length-1;
+        int pos = -1;
+        while(left<=right)
+        {
+                int mid = left +(right-left)/2;
+                if(arr[mid]>= key)
+                {
+                    pos = mid;
+                    right = mid - 1;
+                }
+                else
+                    left = mid + 1;
         }
+        return pos;
+    }
+    static int lower_bound(int arr[], int key)
+    {
+        // Largest value less than or equal to key
+        int left = 0, right = arr.length-1;
+        int pos = -1;
+        while(left<=right)
+        {
+                int mid = left +(right-left)/2;
+                if(arr[mid] <= key)
+                {
+                    pos = mid;
+                    left = mid + 1;
+                }
+                else
+                    right = mid - 1;
+        }
+        return pos;
+    }
     static class FastReader 
     { 
         BufferedReader br; 
