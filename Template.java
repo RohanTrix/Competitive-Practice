@@ -4,10 +4,10 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Template 
 {
+    
     static void solve(FastReader sc)
     {
         
-
         
     }
     public static void main(String[] args) 
@@ -35,6 +35,8 @@ public class Template
 
         }
     }
+    static final int INTMAX = Integer.MAX_VALUE/2;
+    static final int INTMIN = Integer.MIN_VALUE/2;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;
