@@ -60,7 +60,7 @@ public class Stone_Game_VII {
             // and send the remaining array to Alice
             int ch2 = maxScore(i,j-1,0) - (pref[j-1+1]-pref[i+1-1]);
 
-            // Bob will try to minimize the difference, so he will send the smaller score
+            // Bob will try to minimize the difference, so he will send the smaller sc
             return dp[i][j][p] = Math.min(ch1,ch2);
         }
     }
