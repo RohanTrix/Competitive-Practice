@@ -4,11 +4,38 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
+    static long dp[][];
+    static long pref[];
+    static long mod = 998244353;
+    static long numSeq(int ind, int m, int a[], int b[])
+    {
+        long cnt = 0;
+        m = Math.min(m,b[ind]);
+        if(dp[ind][m]!=-1)return dp[ind][m];
+        if(ind == 0)
+        {
+            for(int i = a[ind]; i<=m; i++)
+            {
+                cnt++;
+            }
+            return dp[ind][m] = cnt;
+        }
+        for(int i = a[ind]; i<=m; i++)
+        {
+            cnt+=numSeq(ind-1,i, a, b)%mod;
+        }
+
+        return dp[ind][m] = cnt%mod;
+    }
     static void solve(FastReader sc)
     {
-        
-
-        
+        int n = sc.nextInt();
+        int a[] = sc.nextArray(n);
+        int b[] = sc.nextArray(n);
+        dp = new long[n][3005];
+        for(long arr[]:dp)Arrays.fill(arr, -1);
+        long val = numSeq(n-1, b[n-1], a, b);
+        sc.println(val);
     }
     public static void main(String[] args) 
     {
@@ -17,8 +44,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            //int t = sc.nextInt();
+            //for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -27,8 +54,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            //int t = sc.nextInt();
+            //for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();

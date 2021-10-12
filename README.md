@@ -305,3 +305,5 @@
 211. Maximal Square (DP)
 212. Word Break (DP)
 213. Palindrome Partitioning II (DP) (DnC DP)
+214. Stone Game II (DP) (Game Theory)
+215. Stone Game VII (DP) (Game Theory)
