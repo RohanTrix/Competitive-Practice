@@ -1,24 +1,44 @@
+//package Atcoder.Contests.abc211;
+
 import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class D 
 {
-    static final int INTMAX = Integer.MAX_VALUE/2;
-    static final int INTMIN = Integer.MIN_VALUE/2;
+    static long dp[][];
+    static long mod = 998244353;
+    static long numSeq(int ind, int m, int a[], int b[])
+    {
+        int cnt = 0;
+        if(dp[ind][m]!=-1)return dp[ind][m];
+        if(ind == 0)
+        {
+            for(int i = a[ind]; i<=b[ind]; i++)
+            {
+                if(i<=m)
+                    cnt++;
+            }
+            return dp[ind][m] = cnt;
+        }
+        for(int i = a[ind]; i<=b[ind]; i++)
+        {
+            if(i<=m)
+                cnt+=numSeq(ind-1,i)%mod;
+        }
 
+        return dp[ind][m] = cnt%mod;
+    }
     static void solve(FastReader sc)
     {
-        int mini = INTMAX;
         int n = sc.nextInt();
         int a[] = sc.nextArray(n);
-        int min=a[0];
-        for (int i:a) min=Math.min(min, i);
-        int gcd=0;
-        for (int i:a) gcd=gcd(gcd, i-min);
-        System.out.println(gcd==0?-1:gcd);
+        int b[] = sc.nextArray(n);
+        dp = new long[n][n];
+        for(long arr[]:dp)Arrays.fill(arr, -1);
+
     }
-    
+
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
@@ -26,8 +46,7 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -36,8 +55,7 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            //for(int T = sc.nextInt();T > 0;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -104,43 +122,7 @@ public class Main
             pair x = (pair) o;
             return (x.x == this.x && x.y == this.y);
         }
-    }
-    static int upper_bound(int arr[], int key)
-    {
-        // Smallest vales greater than or equal to key
-        int left = 0, right = arr.length-1;
-        int pos = -1;
-        while(left<=right)
-        {
-                int mid = left +(right-left)/2;
-                if(arr[mid]>= key)
-                {
-                    pos = mid;
-                    right = mid - 1;
-                }
-                else
-                    left = mid + 1;
         }
-        return pos;
-    }
-    static int lower_bound(int arr[], int key)
-    {
-        // Largest value less than or equal to key
-        int left = 0, right = arr.length-1;
-        int pos = -1;
-        while(left<=right)
-        {
-                int mid = left +(right-left)/2;
-                if(arr[mid] <= key)
-                {
-                    pos = mid;
-                    left = mid + 1;
-                }
-                else
-                    right = mid - 1;
-        }
-        return pos;
-    }
     static class FastReader 
     { 
         BufferedReader br; 

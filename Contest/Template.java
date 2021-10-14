@@ -2,23 +2,14 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class Template 
 {
-    static final int INTMAX = Integer.MAX_VALUE/2;
-    static final int INTMIN = Integer.MIN_VALUE/2;
-
+    
     static void solve(FastReader sc)
     {
-        int mini = INTMAX;
-        int n = sc.nextInt();
-        int a[] = sc.nextArray(n);
-        int min=a[0];
-        for (int i:a) min=Math.min(min, i);
-        int gcd=0;
-        for (int i:a) gcd=gcd(gcd, i-min);
-        System.out.println(gcd==0?-1:gcd);
+        
+        
     }
-    
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
@@ -44,6 +35,8 @@ public class Main
 
         }
     }
+    static final int INTMAX = Integer.MAX_VALUE/2;
+    static final int INTMIN = Integer.MIN_VALUE/2;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;
