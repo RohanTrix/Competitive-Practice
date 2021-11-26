@@ -37,6 +37,7 @@ public class Template
     }
     static final int INTMAX = Integer.MAX_VALUE/2;
     static final int INTMIN = Integer.MIN_VALUE/2;
+    static final long mod = 1000000000+7;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;
@@ -55,7 +56,6 @@ public class Template
 	{
 		if(b == 0)
 		 return a;
-		else
 		return gcd(b,a%b);
     }
     public static int lcm(int a, int b)

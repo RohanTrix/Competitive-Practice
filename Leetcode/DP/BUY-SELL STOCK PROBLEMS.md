@@ -165,6 +165,5 @@ Same as Q2 ...just subtract fee when buying stock
 ---
 Idea :
 
-Same as Q2 ...just subtract fee when buying stock
 
 ---
