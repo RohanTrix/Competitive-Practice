@@ -1,5 +1,5 @@
 package Leetcode.DP;
-
+// Idea : Keep finding the min uptil ith index...subtract it from prices[i]...update profit is better than previous
 class Best_Time_to_Buy_and_Sell_Stock {
     public int maxProfit(int[] prices) {
         int lowest = Integer.MAX_VALUE;
