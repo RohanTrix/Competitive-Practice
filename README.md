@@ -313,3 +313,4 @@
 219. Complete Binary Tree Inserter (Tree)
 220. Construct K Palindrome Strings
 221. Cherry Pickup (DP) (Grid DP) --**IMP concept**
+222. Decode Ways (DP)
