@@ -4,40 +4,22 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main {
     static void solve(FastReader sc) {
-        int n = sc.nextInt();
-        long arr[] = new long[n];
-        for (int i = 0; i < n; i++)
-            arr[i] = sc.nextLong();
-
-        long g_even = arr[0], g_odd = arr[1];
-        for (int i = 0; i < n; i += 2) {
-            g_even = gcd(g_even, arr[i]);
+        int n = sc.nextInt(), k = sc.nextInt();
+        long arr[] = sc.nextArray(n);
+        Arrays.sort(arr);
+        long sum = 0;
+        int pos = n-1;
+        for(int i = 0; i<k;i++)
+        {
+            
+            sum+=(arr[pos-k]/arr[pos]);
+            pos--;
         }
-        for (int i = 1; i < n; i += 2) {
-            g_odd = gcd(g_odd, arr[i]);
-        }
-
-        boolean f1 = false;
-        for (int i = 1; i < n; i += 2) {
-            if (arr[i] % g_even == 0)
-                f1 = true;
-        }
-
-        boolean f2 = false;
-        for (int i = 0; i < n; i += 2) {
-            if (arr[i] % g_odd == 0)
-                f2 = true;
-        }
-
-        if (f1 == true && f2 == true)
-            sc.println(0);
-        else {
-            if (f1)
-                sc.println(g_odd);
-            else
-                sc.println(g_even);
-
-        }
+        pos = pos - k;
+        for(int i =0; i<n-2*k;i++)sum+=arr[i];
+        sc.println(sum);
+        
+        
     }
 
     public static void main(String[] args) {
@@ -197,10 +179,10 @@ public class Main {
             return st.nextToken();
         }
 
-        int[] nextArray(int n) {
-            int[] a = new int[n];
+        long[] nextArray(int n) {
+            long[] a = new long[n];
             for (int i = 0; i < n; i++)
-                a[i] = nextInt();
+                a[i] = nextLong();
             return a;
         }
 
