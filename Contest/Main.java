@@ -4,24 +4,55 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-
+    String digs[];
+    int dp[][];
+    public int count(char num[], int ind, int restrict)
+    {
+        if(ind == num.length)return 1;
+        
+        if(dp[ind][restrict]!=-1)return dp[ind][restrict];
+        int sum = 0;
+        if(restrict==1)
+        {
+            int i = 0;
+            while(i<digs.length && digs[i].charAt(0)<=num[ind])
+            {
+                if(digs[i].charAt(0)==num[ind])
+                {sum+=count(num, ind+1, 1);break;}
+                
+                sum+=count(num, ind+1, 0);
+                i++;
+            }
+        }
+        else
+        {
+            sum = (int)Math.pow(digs.length, num.length-ind);
+        }
+        System.out.println(Arrays.toString(dp));
+        return dp[ind][restrict] = sum;
+    }
+    public int atMostNGivenDigitSet(String[] digits, int n) {
+        digs = digits;
+        
+        char num[] = String.valueOf(n).toCharArray();
+        dp  = new int[num.length][2];
+        
+        int finsum = 0;
+        for(int i =1; i<num.length; i++)
+        finsum+=(int)Math.pow(digs.length, num.length-i);
+        
+        for(int[] d:dp) Arrays.fill(d, -1);
+        finsum += count(num, 0,1);
+        
+        //System.out.println(Arrays.toString(dp));
+        return finsum;
+    }
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), q = sc.nextInt();
-        int arr[] = sc.nextArray(n);
-        Arrays.sort(arr);
-        int l = 0, r = n-1;
-        
-        for(int i = 0 ; i<q; i++)
-        {
-            int key = sc.nextInt();
-            int ind = upper_bound(arr, key);
-            int ans = 0;
-            if(ind==-1)sc.println(ans);
-            else sc.println(n-ind);
-
-        }
-        
+        String digits[] = {"7"};
+        int n = 8;
+        Main ob = new Main();
+        sc.println(ob.atMostNGivenDigitSet(digits, n));
 
     }
     public static void main(String[] args) 
