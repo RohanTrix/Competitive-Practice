@@ -322,3 +322,5 @@
 228. Decode String
 229. Stone Game III (DP) (Game Theory) --**HARD** --**IMP**
 230. Decode XORed Array
+231. Maximum XOR With an Element From Array (Sorting + BIT Trie) --**HARD** --**IMP**
+232. Maximum XOR of Two Numbers in an Array (BIT Trie) --**Revise**
