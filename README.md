@@ -318,3 +318,7 @@
 224. Binary Tree Level Order Traversal II
 225. Word Ladder (BFS)
 226. Numbers At Most N Given Digit Set (Digit DP) --**IMP Concept** --**HARD**
+227. Word Ladder II (BFS) --**Hard**
+228. Decode String
+229. Stone Game III (DP) (Game Theory) --**HARD** --**IMP**
+230. Decode XORed Array
