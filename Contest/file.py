@@ -4,10 +4,12 @@ import sys
 sys.stdin = open('input.txt', 'r')  
 sys.stdout = open('output.txt', 'w+')
 
-def findMSB()
+def dfs(m,s):
+    
 
 for t in range(int(input())):
-    n = int(input())
-    if n%2==0:
-        print(0)
+    m, s = map(int, input().split())
+
+
+    
     
