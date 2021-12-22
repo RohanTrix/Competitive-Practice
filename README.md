@@ -327,3 +327,4 @@
 233. Merge In Between Linked Lists (Linked List)
 234. Maximum Score from Performing Multiplication Operations (DP)
 235. Binary Subarrays With Sum (Sliding Window + HashMap) --**IMP** --**Tricky** --**Revise**
+236. Subarray Sum Equals K (Sliding Window + HashMap) --**IMP** --**Tricky** --**Revise**
