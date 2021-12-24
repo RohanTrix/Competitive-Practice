@@ -329,3 +329,4 @@
 235. Binary Subarrays With Sum (Sliding Window + HashMap) --**IMP** --**Tricky** --**Revise**
 236. Subarray Sum Equals K (Sliding Window + HashMap) --**IMP** --**Tricky** --**Revise**
 237. Graph Connectivity With Threshold (DSU + Seive) --**Hard**
+238. Balance a Binary Search Tree (BST)
