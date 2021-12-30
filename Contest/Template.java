@@ -75,6 +75,28 @@ public class Template
         for (int[] row: arr)
             Arrays.fill(row, n);
     }
+    static List<List<Integer>> perms = new ArrayList<>();
+    static void generatePermutations(int[] p, int depth) {
+
+        // To generate all permuations of 1...n, 
+        // call generatePermutations(int[n] p, 1)
+        // Results stored in perms
+        int n = p.length;
+        if (depth == n) {
+            List<Integer> tmp = new ArrayList<>();
+            for(int i : p)tmp.add(i);
+            
+            perms.add(tmp);
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (p[i] == 0) {
+                p[i] = depth;
+                generatePermutations(p, depth + 1);
+                p[i] = 0;
+            }
+        }
+    }
     static class pair implements Comparable < pair >
     {
         long x;
