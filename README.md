@@ -131,7 +131,7 @@
 38. Count the Number of Consistent Strings
 39. Sum of Absolute Differences in a Sorted Array
 40. Smallest Subtree with all the Deepest Nodes
-41. Burst Baloons (DP) --**Hard**
+41. Burst Baloons (LR DP) --**IMP Concept** --**Hard**
 42. Palindrome Partitioning (Backtracking) --**IMP**
 43. Squares of a Sorted Array
 44. Plus One Linked List
