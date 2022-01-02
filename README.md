@@ -331,3 +331,4 @@
 237. Graph Connectivity With Threshold (DSU + Seive) --**Hard**
 238. Balance a Binary Search Tree (BST)
 239. Furthest Building You Can Reach (Greedy) (Priority Queue) --**IMP**
+240. Network Delay Time (Graphs) (Dijkstra)

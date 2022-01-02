@@ -248,7 +248,7 @@ public class Main {
     void solver(FastReader sc) throws IOException{
         
         int n = sc.nextInt(), m = sc.nextInt();
-        MinIndexedDHeap<pair> ipq = new MinIndexedDHeap(2, n);
+        
         visited = new boolean[n+1];
         for(int i =1; i<=n;i++)
             addNode(i);
@@ -263,34 +263,39 @@ public class Main {
     }
     long[] dijkstra_lazy(int numNodes, int start)
     {
-        //prev = new int[numNodes+1];
-        Arrays.fill(prev,-1);
+        // prev = new int[numNodes+1];
+        // Arrays.fill(prev,-1);
         long dist[] = new long[numNodes+1];
         Arrays.fill(dist, Long.MAX_VALUE/2);
 
         long newDist = 0L;
         dist[start] = (long) 0;
-
-        PriorityQueue<pair> pq = new PriorityQueue<>();
-        pq.add(new pair(start,0));
-        while(pq.size()!=0)
+        MinIndexedDHeap ipq = new MinIndexedDHeap(2, numNodes);
+        ipq.insert(start-1, 0L);
+        //PriorityQueue<pair> pq = new PriorityQueue<>();
+        
+        while(ipq.size()!=0)
         {
-            pair currNode = pq.poll();
-            visited[currNode.neighbour] = true;
-            
-            if(dist[currNode.neighbour] < currNode.weight) continue;
+            int currNode = ipq.peekMinKeyIndex();
+            visited[currNode] = true;
 
-            for(pair to : edges.get(currNode.neighbour))
+            long weight = (long)ipq.pollMinValue();
+            if(dist[currNode] <weight) continue;
+
+            for(pair to : edges.get(currNode+1))
             {
-                if(visited[to.neighbour]) continue;
+                if(visited[to.neighbour-1]) continue;
 
-                newDist = dist[currNode.neighbour] + to.weight;
+                newDist = dist[currNode] + to.weight;
                 
-                if(newDist < dist[to.neighbour])
+                if(newDist < dist[to.neighbour-1])
                 {
                     //prev[to.neighbour] = currNode.neighbour;
-                    dist[to.neighbour] = newDist;
-                    pq.offer(new pair(to.neighbour, newDist));
+                    dist[to.neighbour-1] = newDist;
+                    if(!ipq.contains(to.neighbour-1))
+                        ipq.insert(to.neighbour-1, newDist);
+                    else
+                        ipq.decrease(to.neighbour-1, newDist);
                 }
             }
             
