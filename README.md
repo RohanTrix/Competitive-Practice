@@ -332,3 +332,4 @@
 238. Balance a Binary Search Tree (BST)
 239. Furthest Building You Can Reach (Greedy) (Priority Queue) --**IMP**
 240. Network Delay Time (Graphs) (Dijkstra)
+241. Longest Substring with At Least K Repeating Characters (Sliding Window) --**New CONCEPT** --**IMP**
