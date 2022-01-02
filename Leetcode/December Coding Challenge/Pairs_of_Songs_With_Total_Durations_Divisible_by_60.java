@@ -1,15 +1,21 @@
 public class Pairs_of_Songs_With_Total_Durations_Divisible_by_60 {
+    // REFER : https://youtu.be/wxqN1HX4Djk
     public int numPairsDivisibleBy60(int[] time) {
-        int remainders[] = new int[60];
-        int count = 0;
-        for (int t: time) {
-            if (t % 60 == 0) { // check if a%60==0 && b%60==0
-                count += remainders[0];
-            } else { // check if a%60+b%60==60
-                count += remainders[60 - t % 60];
-            }
-            remainders[t % 60]++; // remember to update the remainders
+        int n = time.length;
+        for (int i = 0; i < n; i++)
+            time[i] = time[i] % 60;
+
+        int freq[] = new int[60];
+        for (int i = 0; i < n; i++)
+            freq[time[i] % 60]++;
+
+        int cnt = 0;
+        for (int i = 0; i <= 30; i++) {
+            if (i == 0 || i == 30)
+                cnt += (freq[i] * (freq[i] - 1)) / 2;
+            else
+                cnt += freq[i] * freq[60 - i];
         }
-        return count;
-}
+        return cnt;
+    }
 }

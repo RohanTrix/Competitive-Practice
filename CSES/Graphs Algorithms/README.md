@@ -4,3 +4,4 @@
 4. [Message Route](http://p.ip.fi/_kVA)
 5. [Building Teams](http://p.ip.fi/dgDB)
 6. [Round Trip](http://p.ip.fi/2kjk)
+7. [Monsters](http://p.ip.fi/K8HZ)

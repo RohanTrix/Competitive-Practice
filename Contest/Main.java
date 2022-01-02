@@ -3,47 +3,48 @@ import java.util.*;
 
 @SuppressWarnings("all")
 public class Main {
-    public static ArrayList<Long> factorize(long n) {
-        ArrayList<Long> ans = new ArrayList<>();
-
-        for (long i = 2; i * i <= n; i++) {
-            if (n % i == 0) {
-                ans.add(i);
-                n /= i;
+   
+    static void solve(FastReader sc) {
+        char s[] = sc.nextLine().toCharArray();
+        int n = s.length;
+        for (int i=0;i<n;i++)
+        {
+            if (s[i]=='0' || s[i]=='8')
+            {
+                sc.println("YES\n"+s[i]);
+                return;
             }
         }
-        if (n > 1)
-            ans.add(n);
-        return ans;
-    }
-
-    static void solve(FastReader sc) {
-        long n = sc.nextLong();
-        long copy = n;
-        ArrayList<Long> res = factorize(n);
-
-        if (res.size() < 3) {
-            sc.println("NO");
-            return;
+        for (int i=0;i<n;i++)
+        {
+            for (int j=i+1;j<n;j++)
+            {
+                for (int k=j+1;k<n;k++)
+                {
+                    int x=((int)s[i]-'0' )* 100 + ((int)s[j]-'0' )* 10 + ((int)s[k]-'0' );
+                    if (x%8==0)
+                    {
+                        sc.println("YES");
+                        sc.println(x);
+                        return;
+                    }
+                }
+            }
         }
-
-        long a = res.get(0);
-        n /= a;
-        long b = 1;
-        int i = 1;
-        while (i<res.size() && b <= a) {
-            n /= res.get(i);
-            b *= res.get(i);
-            i++;
+         for (int i=0;i<n;i++)
+        {
+            for (int j=i+1;j<n;j++)
+            {
+                    int x=((int)s[i]-'0' )* 10 + ((int)s[j]-'0' );
+                    if (x%8==0)
+                    {
+                        sc.println("YES");
+                        sc.println(x); return;
+                    }
+            }
         }
-        if (n == a || n == b) {
-
-            sc.println("NO");
-            return;
-        }
-        sc.println("YES");
-        sc.println(a+" "+b+" "+n);
-
+        sc.println("NO");
+    
     }
 
     public static void main(String[] args) {
@@ -52,16 +53,16 @@ public class Main {
         if (args.length > 0 && args[0].equals("local")) {
             FastReader sc = new FastReader(true);
             // CODE BEGIN
-            int t = sc.nextInt();
-            for (int T = 1; T <= t; T++)
+            // int t = sc.nextInt();
+            // for (int T = 1; T <= t; T++)
                 solve(sc);
             // CODE END
             sc.closer();
         } else {
             FastReader sc = new FastReader();
             // CODE BEGIN
-            int t = sc.nextInt();
-            for (int T = 1; T <= t; T++)
+            // int t = sc.nextInt();
+            // for (int T = 1; T <= t; T++)
                 solve(sc);
             // CODE END
             sc.closer();
