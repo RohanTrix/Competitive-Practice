@@ -8,10 +8,7 @@ import sys
 for t in range(int(input())):
     n = int(input())
     l = list(map(int.input().split()))
-    pref = [0]
-    for in
-    for i in range(n):
-
+    
     
     
     
