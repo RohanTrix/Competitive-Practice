@@ -4,11 +4,77 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    static Map<Integer, Set<Integer>> edges = new HashMap<>();
     static void solve(FastReader sc)
     {
+        int n = sc.nextInt(), k = sc.nextInt();
         
+        int arr[] =new int[n];
+        int copy[] = new int[n];
+        for(int i =0; i<n; i++) {copy[i] = arr[i] = sc.nextInt()+sc.nextInt()+sc.nextInt();}
         
+        sort(arr, true);
+        int limit = arr[k-1];
+        ArrayList<String> al = new ArrayList<>();
+        for(int i = 0; i<n; i++)
+        {
+            al.add(copy[i]+300>=limit?"Yes":"No");
+        }
+        for(String s: al) sc.println(s);
+
+
+        
+
+
+    }
+    static class DSU 
+    {
+        public int parent[];
+        public int rank[];
+        public DSU(int num)
+        {
+            parent = new int[num];
+            rank = new int[num];
+            Arrays.fill(rank,1);
+            Arrays.fill(parent,-1);
+        }
+        public int find( int i)
+        {
+            if(parent[i]== -1)
+            {
+                return i;
+            }
+            return parent[i] = find(parent[i]); // Path Compression
+        }
+        public boolean union(int a, int b)
+        {
+            int s1 = find(a);
+            int s2 = find(b);
+            if( s1!= s2)
+            {
+                if( rank[s1] < rank[s2] )
+                {
+                    parent[s1] = s2;
+                    rank[s2] += rank[s1];
+                }
+                else
+                {
+                    parent[s2] = s1;
+                    rank[s1] += rank[s2]; 
+                }
+                return true;
+            }
+            return false;
+        }
+    }
+    static void addNode(int n)
+    {
+        edges.put(n, new HashSet<>());
+    }
+    static void addEdge(int u, int v)
+    {
+        edges.get(u).add(v);
+        edges.get(v).add(u);
     }
     public static void main(String[] args) 
     {
@@ -17,8 +83,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -27,8 +93,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -106,10 +172,10 @@ public class Main
             y = j;
         }
         public int compareTo(pair p) {
-            if (this.x != p.x) {
-                return Long.compare(this.x,p.x);
-            } else {
+            if (this.y != p.y) {
                 return Long.compare(this.y,p.y);
+            } else {
+                return Long.compare(this.x,p.x);
             }
         }
         public String toString() {
