@@ -17,8 +17,8 @@ public class Template
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            
+            for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -27,8 +27,8 @@ public class Template
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            
+            for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();

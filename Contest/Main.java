@@ -4,77 +4,34 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    static Map<Integer, Set<Integer>> edges = new HashMap<>();
+    static boolean isSet(int n, int k)
+    {
+        return (n&(1<<(k-1)))!=0;
+    }
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), k = sc.nextInt();
+        int n = sc.nextInt();
+        int arr[] = sc.nextArray(n);
+
+        int bit[] = new int[32];
         
-        int arr[] =new int[n];
-        int copy[] = new int[n];
-        for(int i =0; i<n; i++) {copy[i] = arr[i] = sc.nextInt()+sc.nextInt()+sc.nextInt();}
-        
-        sort(arr, true);
-        int limit = arr[k-1];
-        ArrayList<String> al = new ArrayList<>();
         for(int i = 0; i<n; i++)
         {
-            al.add(copy[i]+300>=limit?"Yes":"No");
-        }
-        for(String s: al) sc.println(s);
-
-
-        
-
-
-    }
-    static class DSU 
-    {
-        public int parent[];
-        public int rank[];
-        public DSU(int num)
-        {
-            parent = new int[num];
-            rank = new int[num];
-            Arrays.fill(rank,1);
-            Arrays.fill(parent,-1);
-        }
-        public int find( int i)
-        {
-            if(parent[i]== -1)
+            for(int k = 1;k<=31;k++)
             {
-                return i;
+                bit[k]+=(isSet(arr[i], k))?1:0;
             }
-            return parent[i] = find(parent[i]); // Path Compression
         }
-        public boolean union(int a, int b)
+        int res = 0;
+        int twopow = 1;
+        for(int k = 1; k<=31; k++)
         {
-            int s1 = find(a);
-            int s2 = find(b);
-            if( s1!= s2)
-            {
-                if( rank[s1] < rank[s2] )
-                {
-                    parent[s1] = s2;
-                    rank[s2] += rank[s1];
-                }
-                else
-                {
-                    parent[s2] = s1;
-                    rank[s1] += rank[s2]; 
-                }
-                return true;
-            }
-            return false;
+            bit[k] = bit[k]<=1?0:1;
+            // sc.println(bit[k]);
+            if(bit[k]==1) res+=twopow;
+            twopow*=2;
         }
-    }
-    static void addNode(int n)
-    {
-        edges.put(n, new HashSet<>());
-    }
-    static void addEdge(int u, int v)
-    {
-        edges.get(u).add(v);
-        edges.get(v).add(u);
+        sc.println(res);
     }
     public static void main(String[] args) 
     {
@@ -83,8 +40,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
+            
+            for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -93,8 +50,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
+            
+            for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -172,10 +129,10 @@ public class Main
             y = j;
         }
         public int compareTo(pair p) {
-            if (this.y != p.y) {
-                return Long.compare(this.y,p.y);
-            } else {
+            if (this.x != p.x) {
                 return Long.compare(this.x,p.x);
+            } else {
+                return Long.compare(this.y,p.y);
             }
         }
         public String toString() {

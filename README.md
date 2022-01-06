@@ -338,3 +338,6 @@
 244. Car Pooling (Partial and Prefix Sums) --**Revise**
 245. Maximum Fruits Harvested After at Most K Steps (Prefix Sums) --**HARD** --**IMP** --**Revise**
 246. Count Servers that Communicate
+247. Maximum Score Words Formed by Letters
+248. Number of Laser Beams in a Bank
+249. Destroying Asteroids (Sorting)
