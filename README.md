@@ -336,3 +336,5 @@
 242. Longest Increasing Path in a Matrix (DP + DFS on matrix) --**Concept** --**IMP** --**HARD**
 243. Max Increase to Keep City Skyline
 244. Car Pooling (Partial and Prefix Sums) --**Revise**
+245. Maximum Fruits Harvested After at Most K Steps (Prefix Sums) --**HARD** --**IMP** --**Revise**
+246. Count Servers that Communicate
