@@ -341,3 +341,6 @@
 247. Maximum Score Words Formed by Letters
 248. Number of Laser Beams in a Bank
 249. Destroying Asteroids (Sorting)
+250. Execution of All Suffix Instructions Staying in a Grid
+251. Intervals Between Identical Elements (Prefix Sum) --**IMP** --**Revise**
+252. Evaluate Reverse Polish Notation (Stack)
