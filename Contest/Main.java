@@ -6,32 +6,61 @@ public class Main
 {
     static boolean isSet(int n, int k)
     {
-        return (n&(1<<(k-1)))!=0;
+        return (n&(1<<(k)))!=0;
+    }
+    static int setBit(int n, int k)
+    {
+        return n | (1<<k);
     }
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int arr[] = sc.nextArray(n);
+        int n = sc.nextInt(), x = sc.nextInt();
+        if(n==1)
+        {
+            sc.println(x); return;
+        }
+        if(n==2)
+        {
+            sc.println(x+" 0");
+            return;
+        }
 
-        int bit[] = new int[32];
+        int xor = 0;
+        for(int i=1; i<=n-3; i++){sc.print(i+" "); xor^=i;}
+
+        int msb = 16;
+        int a = 0,b = 0, c = 0;
+        if(x==xor)
+        {
+             a = 1<<17;
+             b = 1<<18;
+             c = 3<<17;
+        }
+        else
+        {
+            int y = xor^x;
+            int lastBit = y&(1<<18);
+            int seclast = y&(1<<17);
+
+            if(lastBit==0&&seclast==0)
+                
+            //sc.println(Integer.toString(a,2));
+            
+        }
+        sc.print(a+" "+b+" "+c);
         
-        for(int i = 0; i<n; i++)
-        {
-            for(int k = 1;k<=31;k++)
-            {
-                bit[k]+=(isSet(arr[i], k))?1:0;
-            }
-        }
-        int res = 0;
-        int twopow = 1;
-        for(int k = 1; k<=31; k++)
-        {
-            bit[k] = bit[k]<=1?0:1;
-            // sc.println(bit[k]);
-            if(bit[k]==1) res+=twopow;
-            twopow*=2;
-        }
-        sc.println(res);
+        // for(int i : arr) sc.print(i+" ");
+         sc.println();
+
+    }
+    static int getMSB(int n)
+    {
+        n|=n>>1;
+        n|=n>>2;
+        n|=n>>4;
+        n|=n>>8;
+        n|=n>>16;
+        return n^(n>>1);
     }
     public static void main(String[] args) 
     {

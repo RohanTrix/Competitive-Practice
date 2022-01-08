@@ -6,8 +6,12 @@ import sys
  
 
 for t in range(int(input())):
-    n = int(input())
-    l = list(map(int.input().split()))
+    n = input()
+    b = "11" in n or "10" in n
+    if b:
+        print('Yes')
+    else:
+        print('NO')
     
     
     
