@@ -4,63 +4,15 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    static boolean isSet(int n, int k)
-    {
-        return (n&(1<<(k)))!=0;
-    }
-    static int setBit(int n, int k)
-    {
-        return n | (1<<k);
-    }
+    
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), x = sc.nextInt();
-        if(n==1)
-        {
-            sc.println(x); return;
-        }
-        if(n==2)
-        {
-            sc.println(x+" 0");
-            return;
-        }
-
-        int xor = 0;
-        for(int i=1; i<=n-3; i++){sc.print(i+" "); xor^=i;}
-
-        int msb = 16;
-        int a = 0,b = 0, c = 0;
-        if(x==xor)
-        {
-             a = 1<<17;
-             b = 1<<18;
-             c = 3<<17;
-        }
-        else
-        {
-            int y = xor^x;
-            int lastBit = y&(1<<18);
-            int seclast = y&(1<<17);
-
-            if(lastBit==0&&seclast==0)
-                
-            //sc.println(Integer.toString(a,2));
-            
-        }
-        sc.print(a+" "+b+" "+c);
+        int n = sc.nextInt(), m = sc.nextInt();
+        int arr1[] = sc.nextArray(n);
+        int arr2[] = sc.nextArray(m);
+        sort(arr2, );
+        for(int i )
         
-        // for(int i : arr) sc.print(i+" ");
-         sc.println();
-
-    }
-    static int getMSB(int n)
-    {
-        n|=n>>1;
-        n|=n>>2;
-        n|=n>>4;
-        n|=n>>8;
-        n|=n>>16;
-        return n^(n>>1);
     }
     public static void main(String[] args) 
     {
@@ -70,7 +22,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -80,7 +32,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();

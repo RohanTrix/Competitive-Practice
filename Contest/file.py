@@ -5,14 +5,11 @@ import sys
 # sys.stdout = open('output.txt', 'w+')
  
 
-for t in range(int(input())):
-    n = input()
-    b = "11" in n or "10" in n
-    if b:
-        print('Yes')
-    else:
-        print('NO')
-    
+# for t in range(int(input())):
+
+n = int(input())
+
+print(*bin(n)[2:].replace('1','2'), sep = '')
     
     
     

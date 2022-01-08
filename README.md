@@ -344,3 +344,5 @@
 250. Execution of All Suffix Instructions Staying in a Grid
 251. Intervals Between Identical Elements (Prefix Sum) --**IMP** --**Revise**
 252. Evaluate Reverse Polish Notation (Stack)
+253. Maximum Twin Sum of a Linked List
+254. Longest Palindrome by Concatenating Two Letter Words
