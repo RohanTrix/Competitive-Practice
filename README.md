@@ -346,3 +346,6 @@
 252. Evaluate Reverse Polish Notation (Stack)
 253. Maximum Twin Sum of a Linked List
 254. Longest Palindrome by Concatenating Two Letter Words
+255. Robot Bounded In Circle --**Tricky** --**Revise**
+256. Minimum Swaps to Group All 1's Together II (Sliding Window) --**IMP** --**Revise**
+257. Count Words Obtained After Adding a Letter (Trie) --**Revise**
