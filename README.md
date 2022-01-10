@@ -351,3 +351,5 @@
 257. Count Words Obtained After Adding a Letter (Trie) --**Revise**
 258. Increasing Subsequences (Backtrack) --**Tricky** --**Revise** --**IMP**
 259. Sliding Window Maximum (Monotonic Queue) --**IMP**
+260. Max Value of Equation (Monotonic Queue) --**Tricky for Monoque**
+261. Maximal Network Rank (Graphs)

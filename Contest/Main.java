@@ -1,29 +1,21 @@
 import java.io.*;
 import java.util.*;
-import java.util.stream.IntStream;
 
 @SuppressWarnings("all")
 public class Main 
 {
+    
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int arr[] = sc.nextArray(n);
-        int mini = IntStream.of(arr).min().getAsInt();
-        //Arrays.sort(arr);
-        int last = -1;
-        int b[] = m
-        boolean f = true;
-        Arrays.sort(a);
-        for(int i = 0; i<n; i++)
-        {
-            if(arr[i]%mini!=0)
-            {
-                if(arr[i]>=arr[i-1]) last = arr[i];
-                else f = false;
-            }
-        }
-        sc.println(f?"YES":"NO");
+       int n = sc.nextInt();
+       int arr[] = sc.nextArray(n);
+       Arrays.sort(arr);
+       int odd = 0;
+       
+       for(int i =n; i>=0; i--)
+       {
+           for()
+       }
         
     }
     public static void main(String[] args) 
