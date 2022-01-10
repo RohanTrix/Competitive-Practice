@@ -350,3 +350,4 @@
 256. Minimum Swaps to Group All 1's Together II (Sliding Window) --**IMP** --**Revise**
 257. Count Words Obtained After Adding a Letter (Trie) --**Revise**
 258. Increasing Subsequences (Backtrack) --**Tricky** --**Revise** --**IMP**
+259. Sliding Window Maximum (Monotonic Queue) --**IMP**
