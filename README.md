@@ -353,3 +353,5 @@
 259. Sliding Window Maximum (Monotonic Queue) --**IMP**
 260. Max Value of Equation (Monotonic Queue) --**Tricky for Monoque**
 261. Maximal Network Rank (Graphs)
+262. Trapping Rain Water (Greedy) --**IMP**
+263. Count Good Meals --**Tricky**
