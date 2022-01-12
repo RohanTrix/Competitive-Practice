@@ -355,3 +355,5 @@
 261. Maximal Network Rank (Graphs)
 262. Trapping Rain Water (Greedy) --**IMP**
 263. Count Good Meals --**Tricky**
+264. Maximum Number of Coins You Can Get (Sorting) (Greedy)
+265. Palindrome Partitioning III (DP) --**IMP** --**Revise**
