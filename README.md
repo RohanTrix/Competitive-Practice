@@ -357,3 +357,4 @@
 263. Count Good Meals --**Tricky**
 264. Maximum Number of Coins You Can Get (Sorting) (Greedy)
 265. Palindrome Partitioning III (DP) --**IMP** --**Revise**
+266. Palindrome Partitioning IV (DP) --**IMP** --**Revise**
