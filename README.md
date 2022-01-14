@@ -363,3 +363,4 @@
 269. Stone Game V (DnC DP)
 270. Stone Game VI (Greedy) --**IMP** --**Revise**
 271. Maximum Level Sum of a Binary Tree (BFS)
+272. Stone Game VIII (Game Theory DP) --**Tricky Optimization** --**Revise**
