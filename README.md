@@ -366,3 +366,4 @@
 272. Stone Game VIII (Game Theory DP) --**Tricky Optimization** --**Revise**
 273. Sum of Subarray Ranges (MonoStack) --**Tricky** --**V IMP**
 274. Sum of Subarray Minimums (MonoStack)
+275. Maximize Distance to Closest Person (Two Pointer)
