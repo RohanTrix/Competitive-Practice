@@ -367,3 +367,5 @@
 273. Sum of Subarray Ranges (MonoStack) --**Tricky** --**V IMP**
 274. Sum of Subarray Minimums (MonoStack)
 275. Maximize Distance to Closest Person (Two Pointer)
+276. Dungeon Game (Grid DP) --**Very IMP** --**Tricky**
+277. Solving Questions With Brainpower (Knapsack DP)

@@ -4,21 +4,10 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    static int t = 1;
+    
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        if(n==0){sc.println("Case "+(t++)+": "+0);return;}
-        long arr[] = new long[n];
-        for(int i = 0; i<n; i++) arr[i] = sc.nextLong();
-        if(arr.length==1) {sc.println("Case "+(t++)+": "+arr[n-1]);;return;}
-        long dp[] = new long[n];
-        dp[0] = arr[0];
-        dp[1] = Math.max(arr[0],arr[1]);
-        for(int i =2; i<n; i++)
-        dp[i] = Math.max(dp[i-1], arr[i]+dp[i-2]);
-
-        sc.println("Case "+(t++)+": "+dp[n-1]);
+        
         
     }
     public static void main(String[] args) 

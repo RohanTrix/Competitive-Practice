@@ -1,1 +1,3 @@
-Case 1: 0
+ehllo
+aabbccd
+ac
