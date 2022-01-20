@@ -7,7 +7,36 @@ public class Main
     
     static void solve(FastReader sc)
     {
+        int n = sc.nextInt();
+        int arr[] = sc.nextArray(n);
         
+        int pos = 0, mini = arr[0];
+        for(int i = 0; i<n; i++)
+        {
+            if(arr[i]<mini){mini = arr[i];pos = i;}
+        }
+        sc.println(n-1);
+        int k =1;
+        for(int i = pos- 1; i>=0; i--)
+        {
+            int ii = pos+1;
+            int jj = i+1;
+            int x = mini;
+            int y = mini+k;
+            k++;
+            sc.println(ii+" "+jj+" "+x+" "+y);
+        }
+        k = 1;
+        for(int i =pos+1; i<n; i++)
+        {
+            int ii = pos+1;
+            int jj = i+1;
+            int x = mini;
+            int y = mini+k;
+            k++;
+            sc.println(ii+" "+jj+" "+x+" "+y);
+        }
+
         
     }
     public static void main(String[] args) 

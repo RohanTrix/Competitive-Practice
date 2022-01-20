@@ -375,3 +375,5 @@
 281. Minimum Swaps To Make Sequences Increasing (DP) --**IMP**
 282. Closest Divisors
 283. Constrained Subsequence Sum (DP + MonoQueue) --**New Concept** --**TOUGH** --**IMP** --**Revise**
+284. Remove Sub-Folders from the Filesystem (Trie)
+285. Count Primes (Seive of Eratothenes)

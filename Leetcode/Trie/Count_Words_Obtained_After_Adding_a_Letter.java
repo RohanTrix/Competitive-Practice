@@ -1,5 +1,5 @@
 /*
-        IDEA: We can use a Trie as a lookup dictionary and also cehck if a word exists in it.
+        IDEA: We can use a Trie as a lookup dictionary and also check if a word exists in it.
               But since Trie cannot handle permutations of letters, we store everything in Trie
               in a sorted manner. Moreover, every word is less than equal to length of 26.
 
