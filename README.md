@@ -377,3 +377,5 @@
 283. Constrained Subsequence Sum (DP + MonoQueue) --**New Concept** --**TOUGH** --**IMP** --**Revise**
 284. Remove Sub-Folders from the Filesystem (Trie)
 285. Count Primes (Seive of Eratothenes)
+286. Number of Pairs of Interchangeable Rectangles
+287. Maximum Height by Stacking Cuboids (DP) --**TOUGH** --**IMP** --**Revise**
