@@ -7,34 +7,16 @@ public class Main
     
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int arr[] = sc.nextArray(n);
+        int n = sc.nextInt(), q = sc.nextInt();
+        HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
+        for(int i =1; i<=n; i++)
+            map.computeIfAbsent(sc.nextInt(), a -> new ArrayList<>()).add(i);
         
-        int pos = 0, mini = arr[0];
-        for(int i = 0; i<n; i++)
+        for(int i = 0; i<q; i++)
         {
-            if(arr[i]<mini){mini = arr[i];pos = i;}
-        }
-        sc.println(n-1);
-        int k =1;
-        for(int i = pos- 1; i>=0; i--)
-        {
-            int ii = pos+1;
-            int jj = i+1;
-            int x = mini;
-            int y = mini+k;
-            k++;
-            sc.println(ii+" "+jj+" "+x+" "+y);
-        }
-        k = 1;
-        for(int i =pos+1; i<n; i++)
-        {
-            int ii = pos+1;
-            int jj = i+1;
-            int x = mini;
-            int y = mini+k;
-            k++;
-            sc.println(ii+" "+jj+" "+x+" "+y);
+            ArrayList<Integer> al = map.getOrDefault(sc.nextInt(), new ArrayList<>());
+            int k = sc.nextInt();
+            sc.println(al.size()<k?-1:al.get(k-1));
         }
 
         
@@ -47,7 +29,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            //for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();
@@ -57,7 +39,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            //for(int T = sc.nextInt();T>0 ;T--)
             solve(sc);
             //CODE END
             sc.closer();

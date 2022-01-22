@@ -379,3 +379,7 @@
 285. Count Primes (Seive of Eratothenes)
 286. Number of Pairs of Interchangeable Rectangles
 287. Maximum Height by Stacking Cuboids (DP) --**TOUGH** --**IMP** --**Revise**
+288. Gas Station (Two Pointer) --**Tricky**
+289. Closest Dessert Cost (Backtracking) --**Concept** **Revise**
+290. Shortest Subarray with Sum at Least K (Monoqueue+Prefix Sum) --**V.V.IMP** --**Must Revise**
+291. Count Good Nodes in Binary Tree (DFS)
