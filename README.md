@@ -386,3 +386,4 @@
 292. Count the Hidden Sequences (Math) --**Read editorial**
 293. Path with Maximum Gold (Backtracking)
 294. Sequential Digits
+295. Partition Labels (Two Pointer)

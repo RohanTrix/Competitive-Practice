@@ -7,17 +7,27 @@ public class Main
     
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), q = sc.nextInt();
-        HashMap<Integer, ArrayList<Integer>> map = new HashMap<>();
-        for(int i =1; i<=n; i++)
-            map.computeIfAbsent(sc.nextInt(), a -> new ArrayList<>()).add(i);
-        
-        for(int i = 0; i<q; i++)
+        int n = sc.nextInt(), m = sc.nextInt();
+        int arr1[] = sc.nextArray(n);
+        int arr2[] = sc.nextArray(m);
+        sort(arr1, false);
+        sort(arr2, false);
+        int bestAns = Integer.MAX_VALUE;
+        for(int num : arr1)
         {
-            ArrayList<Integer> al = map.getOrDefault(sc.nextInt(), new ArrayList<>());
-            int k = sc.nextInt();
-            sc.println(al.size()<k?-1:al.get(k-1));
+            int l = 0, r = m-1;
+            while(l<=r)
+            {
+                int mid = l+(r-l)/2;
+                bestAns = Math.min(bestAns, Math.abs(num - arr2[mid]));
+                if(num - arr2[mid]<0)
+                    r = mid-1;
+                else if(num - arr2[mid]>0)
+                    l = mid+1;
+                else break;
+            }
         }
+        sc.println(bestAns);
 
         
     }
