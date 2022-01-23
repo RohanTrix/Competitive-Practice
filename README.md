@@ -384,3 +384,5 @@
 290. Shortest Subarray with Sum at Least K (Monoqueue+Prefix Sum) --**V.V.IMP** --**Must Revise**
 291. Count Good Nodes in Binary Tree (DFS)
 292. Count the Hidden Sequences (Math) --**Read editorial**
+293. Path with Maximum Gold (Backtracking)
+294. Sequential Digits
