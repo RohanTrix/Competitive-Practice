@@ -6,9 +6,4 @@ import sys
  
 
 for t in range(int(input())):
-    
-            
-
-
-    
-    
+    pass
