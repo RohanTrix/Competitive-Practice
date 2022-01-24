@@ -388,4 +388,7 @@
 294. Sequential Digits
 295. Partition Labels (Two Pointer)
 296. Maximum Length of Subarray With Positive Product (DP) --**IMP** --**Must Revise**
-287. Range Sum Query - Mutable (Segment Tree)
+297. Range Sum Query - Mutable (Segment Tree)
+298. Perfect Rectangle (Observation Based)
+299. Watering Plants
+300. Longest Word in Dictionary through Deleting (Two Pointer)
