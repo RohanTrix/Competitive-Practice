@@ -395,3 +395,4 @@
 301. The Skyline Problem (SweepLine) --**Must Revise**
 302. Number of Provinces (DSU)
 303. K Closest Points to Origin (PriorityQueue)
+304. Integer Replacement (DP)
