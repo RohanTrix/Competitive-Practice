@@ -397,3 +397,6 @@
 303. K Closest Points to Origin (PriorityQueue)
 304. Integer Replacement (DP)
 305. All Elements in Two Binary Search Trees (BST) --**Concept** --**Revise**
+306. Print Words Vertically
+307. Minimum Number of Taps to Open to Water a Garden (Greedy) --**Concept**
+308. The k-th Lexicographical String of All Happy Strings of Length n
