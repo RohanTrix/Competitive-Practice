@@ -7,27 +7,7 @@ public class Main
     
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), m = sc.nextInt();
-        int arr1[] = sc.nextArray(n);
-        int arr2[] = sc.nextArray(m);
-        sort(arr1, false);
-        sort(arr2, false);
-        int bestAns = Integer.MAX_VALUE;
-        for(int num : arr1)
-        {
-            int l = 0, r = m-1;
-            while(l<=r)
-            {
-                int mid = l+(r-l)/2;
-                bestAns = Math.min(bestAns, Math.abs(num - arr2[mid]));
-                if(num - arr2[mid]<0)
-                    r = mid-1;
-                else if(num - arr2[mid]>0)
-                    l = mid+1;
-                else break;
-            }
-        }
-        sc.println(bestAns);
+        int a
 
         
     }
