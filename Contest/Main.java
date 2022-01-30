@@ -4,12 +4,86 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    static int arr[];
+    static int tree[] = new int[400400];
     static void solve(FastReader sc)
     {
-        int a
-
+        int n = sc.nextInt(), k = sc.nextInt();
+        arr = sc.nextArray(n);
+        buildTree(1, 0, n-1);
+        for(int i = 0; i<k; i++)
+        {
+            if(sc.next().charAt(0)=='C')
+            {
+                int ind = sc.nextInt()-1;
+                int val = sc.nextInt();
+                // System.out.println("C: "+ind+" "+val);
+                update(1, 0, n-1, ind, val);
+            }
+            else
+            {
+                int lq = sc.nextInt()-1, rq = sc.nextInt()-1;
+                // System.out.println("P: "+lq+" "+rq);
+                int val = query(1, 0, n-1, lq, rq);
+                if(val==0)
+                    sc.print(0);
+                else
+                    sc.print(val>0?"+":"-");
+            }
+        }
+        sc.println();
         
+    }
+    static int query(int index, int l, int r, int lquery, int rquery)
+    {
+        if(l>rquery || lquery > r) 
+            return 1;
+        if(lquery<=l && r<=rquery)
+            return tree[index];
+        
+        int mid = (l+r)/2;
+        int leftAns = query(2*index, l, mid, lquery, rquery);
+        int rightAns = query(2*index+1, mid+1, r, lquery, rquery);
+        return leftAns*rightAns;
+    }
+    static void update(int index, int l, int r, int pos, int val)
+    {
+        /* 
+         * @param index Index of the current node in Tree
+         * @param l     Left boundary current node represents
+         * @param r     Right boundary current node represents
+         * @param pos   Index of val in actual array
+         * @param val   Value to be replaced at pos position
+         */
+        if(pos<l || pos>r) return;
+        if(l == r)
+        {
+            tree[index] = (int)Math.signum(val);
+            return;
+        }
+        
+        int mid = (l+r)/2;
+        update(2*index, l, mid, pos, val);
+        update(2*index+1, mid + 1, r, pos, val);
+        tree[index] = tree[2*index] * tree[2*index + 1];
+    }
+    static void buildTree(int index, int l, int r){
+
+        /* 
+         * @param index Index of the current node in Tree
+         * @param l     Left boundary current node represents
+         * @param r     Right boundary current node represents
+         */
+
+        if(l == r)
+        {
+            tree[index] = (int)Math.signum(arr[l]);
+            return;
+        }
+        int mid = (l+r)/2;
+        buildTree(2*index, l, mid);
+        buildTree(2*index+1, mid + 1, r);
+        tree[index] = tree[2*index] * tree[2*index + 1];
     }
     public static void main(String[] args) 
     {
@@ -20,6 +94,7 @@ public class Main
             //CODE BEGIN
             
             //for(int T = sc.nextInt();T>0 ;T--)
+            while(sc.hasNext())
             solve(sc);
             //CODE END
             sc.closer();
@@ -30,6 +105,7 @@ public class Main
             //CODE BEGIN
             
             //for(int T = sc.nextInt();T>0 ;T--)
+            while(sc.hasNext())
             solve(sc);
             //CODE END
             sc.closer();
@@ -162,7 +238,7 @@ public class Main
         BufferedReader br; 
         StringTokenizer st;
         PrintWriter pw;
-  
+        
         public FastReader() 
         { 
             br = new BufferedReader(new
@@ -183,6 +259,15 @@ public class Main
             }
 
         }
+        boolean hasNext()
+        {
+            try{
+                return br.ready();
+            }
+            catch(Exception e)
+            {}
+            return true;
+        }
         String next() 
         { 
             while (st == null || !st.hasMoreElements()) 
@@ -191,7 +276,7 @@ public class Main
                 { 
                     st = new StringTokenizer(br.readLine()); 
                 } 
-                catch (IOException  e) 
+                catch(IOException  e) 
                 { 
                     e.printStackTrace(); 
                 } 

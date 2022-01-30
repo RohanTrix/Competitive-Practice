@@ -401,3 +401,5 @@
 307. Minimum Number of Taps to Open to Water a Garden (Greedy) --**Concept**
 308. The k-th Lexicographical String of All Happy Strings of Length n
 309. Minimize Maximum Pair Sum in Array (Greedy)
+310. Rotate Array --**Tricky** --**Revise** --**IMP**
+311. Shortest Common Supersequence (DP)
