@@ -403,3 +403,4 @@
 309. Minimize Maximum Pair Sum in Array (Greedy)
 310. Rotate Array --**Tricky** --**Revise** --**IMP**
 311. Shortest Common Supersequence (DP)
+312. Partitioning Into Minimum Number Of Deci-Binary Numbers
