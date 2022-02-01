@@ -404,3 +404,5 @@
 310. Rotate Array --**Tricky** --**Revise** --**IMP**
 311. Shortest Common Supersequence (DP)
 312. Partitioning Into Minimum Number Of Deci-Binary Numbers
+313. Task Scheduler (Priority Queue) --**Revise** --**Imp** --**Tricky**
+314. Number of Enclaves (DFS on grid)
