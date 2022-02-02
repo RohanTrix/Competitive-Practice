@@ -409,3 +409,5 @@
 315. Number of Closed Islands (DFS on Grid) --**Revise**
 316. Check If Array Pairs Are Divisible by k --**Tricky** --**V. IMP** --**CONCEPT** --**Revise**
 317. Find All Anagrams in a String (Fixed Sliding Window)
+318. Count Number of Teams (Prefix and Suffix Count) --**V.IMP** --**Concept** -- **Revise**
+319. Minimum Number of Increments on Subarrays to Form a Target Array --**V. V. Tricky**
