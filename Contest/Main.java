@@ -5,9 +5,9 @@ import java.util.*;
 public class Main 
 {
     
+
     static void solve(FastReader sc)
     {
-        
         
     }
     public static void main(String[] args) 
@@ -17,8 +17,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -27,8 +27,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -175,10 +175,10 @@ public class Main
             } 
             return st.nextToken();
         } 
-        int[] nextArray(int n)
+        long[] nextArray(int n)
         {
-            int[] a=new int[n];
-            for (int i=0; i<n; i++) a[i]=nextInt();
+            long[] a=new long[n];
+            for (int i=0; i<n; i++) a[i]=nextLong();
             return a;
         }
         int nextInt() 
