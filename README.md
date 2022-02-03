@@ -411,3 +411,6 @@
 317. Find All Anagrams in a String (Fixed Sliding Window)
 318. Count Number of Teams (Prefix and Suffix Count) --**V.IMP** --**Concept** -- **Revise**
 319. Minimum Number of Increments on Subarrays to Form a Target Array --**V. V. Tricky**
+320. Numbers With Same Consecutive Differences (Recursion)
+321. Reducing Dishes (Knapsack Type DP)
+322. Predict the Winner (Game Theory DP)

@@ -1,15 +1,59 @@
 import java.io.*;
 import java.util.*;
 
+import javax.swing.event.InternalFrameAdapter;
+
 @SuppressWarnings("all")
 public class Main 
 {
     
-
+    static Map<Integer, Set<Integer>> edges = new HashMap<>();
     static void solve(FastReader sc)
     {
         
+        int n = sc.nextInt();
+        char s[] = sc.nextLine().toCharArray();
+        if(s.length%2!=0)
+        {
+            sc.println("NO");
+            return;
+        }
+        HashMap<Character, Integer> map = new HashMap<>();
+        
+        for(int i = 0; i<n; i++)
+        {
+            map.put(s[i], map.getOrDefault(s[i], 0)+1);
+        }
+        int maxi = 0;
+        char key = '\0';
+        for(char k : map.keySet())
+        {
+            maxi = Math.max(map.get(k), maxi);
+        }
+        if(maxi>s.length/2)
+        {
+            sc.println("NO");return;
+        }
+        Arrays.sort(s);
+
+        sc.println("YES");
+        for(int i =0; i<s.length/2; i++)
+            sc.print(s[i]);
+        for(int i = s.length-1; i>=n/2; i--)
+            sc.print(s[i]);
+        sc.println();
+
+
     }
+    // static void addEdge(int u)
+    // {
+    //     if(!edges.containsKey(u))
+    //         edges.add(u, new HashSet<>());
+    // }
+    // static void addNode(int u, int v)
+    // {
+        
+    // }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
@@ -17,8 +61,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -27,8 +71,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
