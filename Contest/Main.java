@@ -10,38 +10,32 @@ public class Main
     static Map<Integer, Set<Integer>> edges = new HashMap<>();
     static void solve(FastReader sc)
     {
-        
-        int n = sc.nextInt();
-        char s[] = sc.nextLine().toCharArray();
-        if(s.length%2!=0)
-        {
-            sc.println("NO");
-            return;
-        }
-        HashMap<Character, Integer> map = new HashMap<>();
-        
-        for(int i = 0; i<n; i++)
-        {
-            map.put(s[i], map.getOrDefault(s[i], 0)+1);
-        }
-        int maxi = 0;
-        char key = '\0';
-        for(char k : map.keySet())
-        {
-            maxi = Math.max(map.get(k), maxi);
-        }
-        if(maxi>s.length/2)
-        {
-            sc.println("NO");return;
-        }
-        Arrays.sort(s);
+        int n = sc.nextInt(), k = sc.nextInt();
+        int nums[] = sc.nextArray(n);
 
-        sc.println("YES");
-        for(int i =0; i<s.length/2; i++)
-            sc.print(s[i]);
-        for(int i = s.length-1; i>=n/2; i--)
-            sc.print(s[i]);
-        sc.println();
+        int left = 0, maxlen = 0;
+        int cnt = 0;
+        int bl = -1, br=-1;
+        for(int right = 0; right<n; right++)
+        {
+            int ch = nums[right];
+            if(ch==0) cnt++;
+            while(left<right && cnt>k)
+            {
+                if(nums[left++]==0)cnt--;
+            }
+            if(cnt<=k && (right-left+1)>maxlen)
+            {
+                maxlen = right-left+1;
+                bl = left;br = right;
+            }
+        }
+        if(bl!=-1)
+        {for(int i = bl; i<=br; i++)
+            nums[i] = 1;}
+        sc.println(maxlen);
+        for(int i: nums)
+            sc.print(i+" ");
 
 
     }
@@ -61,8 +55,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -71,8 +65,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -219,10 +213,10 @@ public class Main
             } 
             return st.nextToken();
         } 
-        long[] nextArray(int n)
+        int[] nextArray(int n)
         {
-            long[] a=new long[n];
-            for (int i=0; i<n; i++) a[i]=nextLong();
+            int[] a=new int[n];
+            for (int i=0; i<n; i++) a[i]=nextInt();
             return a;
         }
         int nextInt() 
