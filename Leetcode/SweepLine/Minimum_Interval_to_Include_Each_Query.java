@@ -26,7 +26,7 @@ public class Minimum_Interval_to_Include_Each_Query {
         Collections.sort(events, new EventComp());
 
         Arrays.fill(queries, -1); // We will save final answer in queries array
-
+        
         for(int i = 0; i<events.size(); i++)
         {
             int j = i;
