@@ -1,7 +1,6 @@
 import java.io.*;
 import java.util.*;
 
-import javax.swing.event.InternalFrameAdapter;
 
 @SuppressWarnings("all")
 public class Main 
@@ -10,32 +9,86 @@ public class Main
     static Map<Integer, Set<Integer>> edges = new HashMap<>();
     static void solve(FastReader sc)
     {
-        int n = sc.nextInt(), k = sc.nextInt();
-        int nums[] = sc.nextArray(n);
-
-        int left = 0, maxlen = 0;
-        int cnt = 0;
-        int bl = -1, br=-1;
-        for(int right = 0; right<n; right++)
+        int odd = -1, even = -1;
+        int n = sc.nextInt();
+        int arr[] = sc.nextArray(n);
+        
+        for(int i = 0; i<n ; i++){
+            if(arr[i]%2!=0)
+            odd = i;
+            else
+            even = i;
+        }
+        if(odd==-1)
         {
-            int ch = nums[right];
-            if(ch==0) cnt++;
-            while(left<right && cnt>k)
+            sc.println(-1);
+            return;
+        }
+        int moves1 = 0, moves2 = 0;
+        List<String> list1 = new ArrayList<>();
+        List<String> list2 = new ArrayList<>();
+        //odd eve
+        for(int i = 0; i<n; i++)
+        {   
+            //int b1 = (arr[i-1]&1), b2 = (arr[i]&1)
+            int b = (arr[i]&1);
+            if(i%2==0)
             {
-                if(nums[left++]==0)cnt--;
+                if(b==0)
+                {
+                    list1.add((i+1)+" "+(odd+1));
+                    moves1++;
+                }
             }
-            if(cnt<=k && (right-left+1)>maxlen)
+            else
             {
-                maxlen = right-left+1;
-                bl = left;br = right;
+                if(b==1)
+                {
+                    // i, i-1
+                    list1.add((i+1)+" "+(odd+1));
+                    moves1++;
+                }
             }
         }
-        if(bl!=-1)
-        {for(int i = bl; i<=br; i++)
-            nums[i] = 1;}
-        sc.println(maxlen);
-        for(int i: nums)
-            sc.print(i+" ");
+
+       
+        // eve odd
+        for(int i = 0; i<n; i++)
+        {   
+            int b = (arr[i]&1);
+            if(i%2==0)
+            {
+                if(b==1)
+                {
+                    if(odd==i)moves2 = Integer.MAX_VALUE/2;
+                    else{
+                        list2.add((i+1)+" "+(odd+1));
+                        moves2++;
+                    }
+                }
+            }
+            else
+            {
+                if(b==0)
+                {
+                    list2.add((i+1)+" "+(odd+1));
+                    moves2++;
+                }
+            }
+        }
+        if(moves1<moves2)
+        {
+            sc.println(moves1);
+            for(String s : list1)
+                sc.println(s);
+        }
+        else
+        {
+            sc.println(moves2);
+            for(String s : list2)
+                sc.println(s);
+        }
+        
 
 
     }
@@ -55,8 +108,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -65,8 +118,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
+            int t = sc.nextInt();
+            for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();

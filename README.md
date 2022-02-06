@@ -415,3 +415,9 @@
 321. Reducing Dishes (Knapsack Type DP)
 322. Predict the Winner (Game Theory DP)
 323. Word Search (DFS)
+324. Relative Sort Array (Coordinate Compression)
+325. Maximum Area of a Piece of Cake After Horizontal and Vertical Cuts (Greedy) --**IMP** --**Revise**
+326. Grid Game (Prefix Sum) 
+327. Map Sum Pairs (Trie)
+328. Minimum Interval to Include Each Query (Line Sweep) --**Tough** --**Concept**
+329. Partition Array According to Given Pivot
