@@ -424,3 +424,4 @@
 330. Remove K Digits (Monotonic Queue)
 331. Majority Element (Majority Vote Algorithm) --**IMP** --**Revise**
 332. Number of Orders in the Backlog (2 Heaps) --**Solved in One go**
+333. K-diff Pairs in an Array (HashMap)
