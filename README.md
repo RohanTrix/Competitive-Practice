@@ -426,3 +426,6 @@
 332. Number of Orders in the Backlog (2 Heaps) --**Solved in One go**
 333. K-diff Pairs in an Array (HashMap)
 334. Letter-case Permutation
+335. Distribute Coins in Binary Tree (DFS) --**Tricky** --**IMP**
+336. Delete Leaves With a Given Value (PostOrder)
+337. Candy (Greedy) --**CONCEPT** --**Tricky**  --**IMP** --**REVISE**
