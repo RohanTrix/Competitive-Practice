@@ -431,3 +431,6 @@
 337. Candy (Greedy) --**CONCEPT** --**Tricky**  --**IMP** --**REVISE**
 338. Meeting Rooms II (Sweep Line) (Solved on InterviewBit)
 339. Shortest Path with Alternating Colors (BFS) --**CONCEPT** --**Tricky** 
+340. Unique Binary Search Trees II (DnC algorithm) --**IMP** --**REVISE**
+341. Minimize Hamming Distance After Swap Operations (Union Find) --**Concept with implementation heavy**
+342. Permutation in String (Fixed Sliding Window)
