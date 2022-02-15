@@ -436,3 +436,4 @@
 342. Permutation in String (Fixed Sliding Window)
 343. Subsets
 344. Largest Divisible Subset (DP) --**Tricky**
+345. Maximum Number of Vowels in a Substring of Given Length (Fixed Sliding Window)
