@@ -29,6 +29,6 @@ public class Removing_Minimum_Number_of_Magic_Beans {
             long rightCost = (pref[n] - pref[i-1]) - 1L*(n-i+1)*beans[i-1];
             mini = Math.min(mini, leftCost+rightCost);
         }
-        return mini;     
+        return mini;
     }
 }
