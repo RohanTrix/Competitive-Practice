@@ -439,3 +439,4 @@
 345. Maximum Number of Vowels in a Substring of Given Length (Fixed Sliding Window)
 346. Min Cost to Connect All Points (Kruskal MST) --**Revise** --**IMP**
 347. Smallest String With Swaps (DSU) --**IMP**
+348. Minimum Operations to Make the Array Alternating
