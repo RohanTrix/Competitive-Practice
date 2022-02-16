@@ -440,3 +440,6 @@
 346. Min Cost to Connect All Points (Kruskal MST) --**Revise** --**IMP**
 347. Smallest String With Swaps (DSU) --**IMP**
 348. Minimum Operations to Make the Array Alternating
+349. Removing Minimum Number of Magic Beans (Prefix Sum) --**CONCEPT** --**IMP**
+350. Permutations (Backtracking) 
+351. Additive Number (Backtracking) --**Crazy Tricky level**
