@@ -443,3 +443,6 @@
 349. Removing Minimum Number of Magic Beans (Prefix Sum) --**CONCEPT** --**IMP**
 350. Permutations (Backtracking) 
 351. Additive Number (Backtracking) --**Crazy Tricky level**
+352. Max Chunks To Make Sorted (Greedy) --**IMP**
+353. Minimum Elements to Add to Form a Given Sum
+354. Max Chunks To Make Sorted II (Greedy) --**CONCEPT** --**IMP**
