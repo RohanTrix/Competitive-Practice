@@ -446,3 +446,4 @@
 352. Max Chunks To Make Sorted (Greedy) --**IMP**
 353. Minimum Elements to Add to Form a Given Sum
 354. Max Chunks To Make Sorted II (Greedy) --**CONCEPT** --**IMP**
+355. Minimize Deviation in Array (Greedy) --**IMP** --**HARD** --**Revise** --**Tricky**
