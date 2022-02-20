@@ -25,24 +25,47 @@ package Leetcode.Tree;
  *     }
  * }
  */
+
+ /*
+        IDEA : To convert the LinkedList into the a Balaanced BST....we can think of a divide and conquer 
+                approach to divide the linkedlist at a middle node, convert the remaining left part into
+                a balanced BST, convert the remaining right part into a balanced BST and make both of these
+                the children of the mid node where we partitioned.
+ */
 class Solution {
-    // REFER :- 
-    public TreeNode sortedListToBST(ListNode head) {
-        if(head==null) return null;
-        if(head.next==null) return new TreeNode(head.val);
-        ListNode slow = head;
-        ListNode fast = head;
-        ListNode last = null;
+    public TreeNode convertToBST(ListNode start, ListNode end)
+    {
+        if(start == null) return null;
+        if(start==end) return new TreeNode(start.val);
+
+        ListNode slow = start;
+        ListNode prev = null;
+        ListNode fast = start;
         while(fast!=null && fast.next!=null)
         {
-            last = slow;
+            prev = slow;
             slow = slow.next;
             fast = fast.next.next;
         }
-        last.next = null;
-        TreeNode newNode = new TreeNode(slow.val);
-        newNode.left = sortedListToBST(head);
-        newNode.right = sortedListToBST(slow.next);
-        return newNode;
+        if(prev!=null)
+            prev.next = null;
+
+        TreeNode leftSubTree, rightSubTree;
+        leftSubTree = convertToBST(start, prev);
+        if(slow != end)
+            rightSubTree = convertToBST(slow.next, end);
+        else
+            rightSubTree = null;
+        TreeNode mid = new TreeNode(slow.val);
+        mid.left = leftSubTree;
+        mid.right = rightSubTree;
+        return mid;
+    }
+    public TreeNode sortedListToBST(ListNode head) {
+        ListNode end = head;
+        if(head==null) return null;
+        while(end.next!=null)
+            end = end.next;
+        return convertToBST(head, end);
     }
 }

@@ -206,7 +206,7 @@
 113. Path Sum (Tree)
 114. Search in Rotated Sorted Array (Binary Search)
 115. Climbing Stairs (DP)
-116. Convert Sorted List to Binary Search Tree (Tree) --**Revise** --**Tricky**
+116. Convert Sorted List to Binary Search Tree (DnC) (Tree) --**Revise** --**Tricky**
 117. Find First and Last Position of Element in Sorted Array (Binary Search) --**IMP**
 118. First Bad Version (Binary Search)
 119. Rotting Oranges (BFS)
@@ -447,3 +447,7 @@
 353. Minimum Elements to Add to Form a Given Sum
 354. Max Chunks To Make Sorted II (Greedy) --**CONCEPT** --**IMP**
 355. Minimize Deviation in Array (Greedy) --**IMP** --**HARD** --**Revise** --**Tricky**
+356. Insert Delete GetRandom O(1) --**Tricky**
+357. Find Three Consecutive Integers That Sum to a Given Number
+358. Maximum Split of Positive Even Integers
+359. Remove Covered Intervals (Greedy)

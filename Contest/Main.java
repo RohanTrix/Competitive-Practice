@@ -1,35 +1,55 @@
 import java.io.*;
 import java.util.*;
 
-
 @SuppressWarnings("all")
 public class Main 
 {
-    
-    static Map<Integer, Set<Integer>> edges = new HashMap<>();
+    static boolean[] prime;
+    static void genPrimes()
+    {
+        int n = 200+5;
+        prime = new boolean[n];
+        Arrays.fill(prime, 2, n, false);
+
+        for(int i = 2; i*i<=n; i++)
+        {
+            if(prime[i])
+            {
+                for(int j = i*i; j<=n; j+=i)
+                    prime[j] = false;
+            }
+        }
+    }
     static void solve(FastReader sc)
     {
+        int a = sc.nextInt(), b = sc.nextInt(), c = sc.nextInt(), d = sc.nextInt();
+        boolean f = true;
+        for(int i = a; i<=b; i++)
+        {
+            f = false;
+            for(int j = c; j<=d; j++)
+            {
+                int sum = i+j;
+                if(prime[sum])
+                    f = true;
+            }
+            if(f) break;
+        }
+        if(f) sc.print("Takahashi");
+        else sc.print("Aoki");
         
-
+        
     }
-    // static void addEdge(int u)
-    // {
-    //     if(!edges.containsKey(u))
-    //         edges.add(u, new HashSet<>());
-    // }
-    // static void addNode(int u, int v)
-    // {
-        
-    // }
     public static void main(String[] args) 
     {
+        genPrimes();
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -38,8 +58,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
