@@ -455,3 +455,5 @@
 361. Merge Nodes in Between Zeros
 362. Construct String With Repeat Limit (Greedy)
 363. Sum of Distances in Tree (Tree DP) --**HARD** --**Tricky** --**IMP** --**REVISE** --**Concept**
+364. Longest ZigZag Path in a Binary Tree (Tree DP) --**IMP**
+365. Minimum Remove to Make Valid Parentheses (Stack) --**Tricky** --**Revise**
