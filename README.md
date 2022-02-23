@@ -460,3 +460,5 @@
 366. Find K-th Smallest Pair Distance (Binary Search + Sliding Window) --**V Tough** --**Concept**
 367. Count Array Pairs Divisible by K (HashMap + Math) --**Concept** --**IMP**
 368. Minimum Deletions to Make String Balanced (DP) --**IMP** --**Revise**
+369. Longest Repeating Character Replacement (Sliding Window)
+370. Number of Sub-arrays With Odd Sum (Prefix Sum) --**IMP** --**REVISE**
