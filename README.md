@@ -457,3 +457,6 @@
 363. Sum of Distances in Tree (Tree DP) --**HARD** --**Tricky** --**IMP** --**REVISE** --**Concept**
 364. Longest ZigZag Path in a Binary Tree (Tree DP) --**IMP**
 365. Minimum Remove to Make Valid Parentheses (Stack) --**Tricky** --**Revise**
+366. Find K-th Smallest Pair Distance (Binary Search + Sliding Window) --**V Tough** --**Concept**
+367. Count Array Pairs Divisible by K (HashMap + Math) --**Concept** --**IMP**
+368. Minimum Deletions to Make String Balanced (DP) --**IMP** --**Revise**
