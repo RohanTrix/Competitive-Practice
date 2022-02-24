@@ -463,3 +463,5 @@
 369. Longest Repeating Character Replacement (Sliding Window)
 370. Number of Sub-arrays With Odd Sum (Prefix Sum) --**IMP** --**REVISE**
 371. Subarray Sums Divisible by K (Prefix Sum) --**IMP** --**REVISE**
+372. Max Sum of Rectangle No Larger Than K (Prefix Sum + TreeSet)
+373. Sort List (Merge Sort) --**IMP**
