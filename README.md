@@ -465,3 +465,5 @@
 371. Subarray Sums Divisible by K (Prefix Sum) --**IMP** --**REVISE**
 372. Max Sum of Rectangle No Larger Than K (Prefix Sum + TreeSet)
 373. Sort List (Merge Sort) --**IMP**
+374. Maximum Sum Obtained of Any Permutation (Partial Sums)
+375. Reverse Substrings Between Each Pair of Parentheses (Stack + Queue)
