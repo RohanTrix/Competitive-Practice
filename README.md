@@ -467,3 +467,6 @@
 373. Sort List (Merge Sort) --**IMP**
 374. Maximum Sum Obtained of Any Permutation (Partial Sums)
 375. Reverse Substrings Between Each Pair of Parentheses (Stack + Queue)
+376. Reverse Nodes in k-Group --**Implementation Heavy**
+377. Longest Consecutive Sequence (DSU) --**IMP** --**Revise**
+378. Shortest Path Visiting All Nodes (Graphs + DP) --**Tricky** --**HARD**

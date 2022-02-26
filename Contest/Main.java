@@ -4,15 +4,40 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
     static void solve(FastReader sc)
     {
-        int array[] = new int [5];
-        for(int i = 5; i>0; i--)
-            array[5-i] = i;
-        Arrays.sort(array);
-        for(int i = 0; i<5; i++)
-            System.out.print(array[i]+ " ");
+        int n = sc.nextInt();
+        Stack<pair> st = new Stack<>();
+        int cnt = 0;
+        for(int i = 0; i<n; i++)
+        {
+            long curr = sc.nextLong();
+            cnt++;
+            
+            if(!st.empty())
+            {
+                pair prev = st.peek();
+                if(prev.val != curr)
+                {
+                    st.push(new pair(curr, 1));
+                }
+                else
+                {
+                    prev.cnt++;
+                    
+                    if(prev.cnt==prev.val)
+                    {
+                        cnt-=prev.cnt;
+                        st.pop();
+                    }
+                }
+            }
+            else
+            {
+                st.push(new pair(curr, 1));
+            }
+            sc.println(cnt);
+        }
     }
     public static void main(String[] args) 
     {
@@ -21,8 +46,8 @@ public class Main
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -31,8 +56,8 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
+            // int t = sc.nextInt();
+            // for(int T = 1;T <=t ;T++)
             solve(sc);
             //CODE END
             sc.closer();
@@ -79,28 +104,28 @@ public class Main
         for (int[] row: arr)
             Arrays.fill(row, n);
     }
-    static class pair implements Comparable < pair >
+    static class pair 
     {
-        long x;
-        long y;
+        long val;
+        long cnt;
         pair(long i, long j) {
-            x = i;
-            y = j;
+            val = i;
+            cnt = j;
         }
-        public int compareTo(pair p) {
-            if (this.x != p.x) {
-                return Long.compare(this.x,p.x);
-            } else {
-                return Long.compare(this.y,p.y);
-            }
-        }
+        // public int compareTo(pair p) {
+        //     if (this.x != p.x) {
+        //         return Long.compare(this.x,p.x);
+        //     } else {
+        //         return Long.compare(this.y,p.y);
+        //     }
+        // }
         public String toString() {
-            return x + " " + y;
+            return val + " " + cnt;
         }
-        public boolean equals(Object o) {
-            pair x = (pair) o;
-            return (x.x == this.x && x.y == this.y);
-        }
+        // public boolean equals(Object o) {
+        //     pair x = (pair) o;
+        //     return (x.x == this.x && x.y == this.y);
+        // }
     }
     static int upper_bound(int arr[], int key)
     {
