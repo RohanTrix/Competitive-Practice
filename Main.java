@@ -2,10 +2,10 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Template 
+public class Main 
 {
     
-    static void solve(FastReader sc)
+    void solve(FastReader sc)
     {
         
         
@@ -14,12 +14,13 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
+        Main ob = new Main();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
-            solve(sc);
+            
+            for(int T = sc.nextInt();T>0 ;T--)
+            ob.solve(sc);
             //CODE END
             sc.closer();
         }
@@ -27,16 +28,17 @@ public class Template
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            int t = sc.nextInt();
-            for(int T = 1;T <=t ;T++)
-            solve(sc);
+            
+            for(int T = sc.nextInt();T>0 ;T--)
+            ob.solve(sc);
             //CODE END
             sc.closer();
 
         }
     }
-    static final int INTMAX = Integer.MAX_VALUE/2;
-    static final int INTMIN = Integer.MIN_VALUE/2;
+    final int INTMAX = Integer.MAX_VALUE/2;
+    final int INTMIN = Integer.MIN_VALUE/2;
+    final long mod = 1000000000+7;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;
@@ -55,7 +57,6 @@ public class Template
 	{
 		if(b == 0)
 		 return a;
-		else
 		return gcd(b,a%b);
     }
     public static int lcm(int a, int b)
@@ -74,6 +75,28 @@ public class Template
     {
         for (int[] row: arr)
             Arrays.fill(row, n);
+    }
+    static List<List<Integer>> perms = new ArrayList<>();
+    static void generatePermutations(int[] p, int depth) {
+
+        // To generate all permuations of 1...n, 
+        // call generatePermutations(int[n] p, 1)
+        // Results stored in perms
+        int n = p.length;
+        if (depth == n) {
+            List<Integer> tmp = new ArrayList<>();
+            for(int i : p)tmp.add(i);
+            
+            perms.add(tmp);
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (p[i] == 0) {
+                p[i] = depth;
+                generatePermutations(p, depth + 1);
+                p[i] = 0;
+            }
+        }
     }
     static class pair implements Comparable < pair >
     {
