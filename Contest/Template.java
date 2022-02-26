@@ -2,10 +2,10 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Template 
+public class Main 
 {
     
-    static void solve(FastReader sc)
+    void solve(FastReader sc)
     {
         
         
@@ -14,12 +14,13 @@ public class Template
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
+        Main ob = new Main();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
             for(int T = sc.nextInt();T>0 ;T--)
-            solve(sc);
+            ob.solve(sc);
             //CODE END
             sc.closer();
         }
@@ -29,15 +30,15 @@ public class Template
             //CODE BEGIN
             
             for(int T = sc.nextInt();T>0 ;T--)
-            solve(sc);
+            ob.solve(sc);
             //CODE END
             sc.closer();
 
         }
     }
-    static final int INTMAX = Integer.MAX_VALUE/2;
-    static final int INTMIN = Integer.MIN_VALUE/2;
-    static final long mod = 1000000000+7;
+    final int INTMAX = Integer.MAX_VALUE/2;
+    final int INTMIN = Integer.MIN_VALUE/2;
+    final long mod = 1000000000+7;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;

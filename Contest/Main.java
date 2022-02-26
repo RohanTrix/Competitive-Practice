@@ -4,51 +4,23 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    static void solve(FastReader sc)
+    
+    void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        Stack<pair> st = new Stack<>();
-        int cnt = 0;
-        for(int i = 0; i<n; i++)
-        {
-            long curr = sc.nextLong();
-            cnt++;
-            
-            if(!st.empty())
-            {
-                pair prev = st.peek();
-                if(prev.val != curr)
-                {
-                    st.push(new pair(curr, 1));
-                }
-                else
-                {
-                    prev.cnt++;
-                    
-                    if(prev.cnt==prev.val)
-                    {
-                        cnt-=prev.cnt;
-                        st.pop();
-                    }
-                }
-            }
-            else
-            {
-                st.push(new pair(curr, 1));
-            }
-            sc.println(cnt);
-        }
+        
+        
     }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
+        Main ob = new Main();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
-            solve(sc);
+            
+            for(int T = sc.nextInt();T>0 ;T--)
+            ob.solve(sc);
             //CODE END
             sc.closer();
         }
@@ -56,17 +28,17 @@ public class Main
         {
             FastReader sc=new FastReader(); 
             //CODE BEGIN
-            // int t = sc.nextInt();
-            // for(int T = 1;T <=t ;T++)
-            solve(sc);
+            
+            for(int T = sc.nextInt();T>0 ;T--)
+            ob.solve(sc);
             //CODE END
             sc.closer();
 
         }
     }
-    static final int INTMAX = Integer.MAX_VALUE/2;
-    static final int INTMIN = Integer.MIN_VALUE/2;
-    static final long mod = 1000000000+7;
+    final int INTMAX = Integer.MAX_VALUE/2;
+    final int INTMIN = Integer.MIN_VALUE/2;
+    final long mod = 1000000000+7;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;
@@ -82,50 +54,72 @@ public class Main
         return res;
     }
     public static int gcd(int a, int b)
-    {
-        if(b == 0)
-         return a;
-        return gcd(b,a%b);
+	{
+		if(b == 0)
+		 return a;
+		return gcd(b,a%b);
     }
     public static int lcm(int a, int b)
     {
         return (a / gcd(a, b)) * b;
     }
     static void sort(int[] a, boolean... rev) {
-        ArrayList<Integer> l=new ArrayList<>();
-        for (int i:a) l.add(i);
-        if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
+		ArrayList<Integer> l=new ArrayList<>();
+		for (int i:a) l.add(i);
+		if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
         else Collections.sort(l);
 
-        for (int i=0; i<a.length; i++) a[i]=l.get(i);
+		for (int i=0; i<a.length; i++) a[i]=l.get(i);
     }
     static void fill2D(int arr[][], int n)
     {
         for (int[] row: arr)
             Arrays.fill(row, n);
     }
-    static class pair 
+    static List<List<Integer>> perms = new ArrayList<>();
+    static void generatePermutations(int[] p, int depth) {
+
+        // To generate all permuations of 1...n, 
+        // call generatePermutations(int[n] p, 1)
+        // Results stored in perms
+        int n = p.length;
+        if (depth == n) {
+            List<Integer> tmp = new ArrayList<>();
+            for(int i : p)tmp.add(i);
+            
+            perms.add(tmp);
+            return;
+        }
+        for (int i = 0; i < n; i++) {
+            if (p[i] == 0) {
+                p[i] = depth;
+                generatePermutations(p, depth + 1);
+                p[i] = 0;
+            }
+        }
+    }
+    static class pair implements Comparable < pair >
     {
-        long val;
-        long cnt;
+        long x;
+        long y;
         pair(long i, long j) {
-            val = i;
-            cnt = j;
+            x = i;
+            y = j;
         }
-        // public int compareTo(pair p) {
-        //     if (this.x != p.x) {
-        //         return Long.compare(this.x,p.x);
-        //     } else {
-        //         return Long.compare(this.y,p.y);
-        //     }
-        // }
+        public int compareTo(pair p) {
+            if (this.x != p.x) {
+                return Long.compare(this.x,p.x);
+            } else {
+                return Long.compare(this.y,p.y);
+            }
+        }
         public String toString() {
-            return val + " " + cnt;
+            return x + " " + y;
         }
-        // public boolean equals(Object o) {
-        //     pair x = (pair) o;
-        //     return (x.x == this.x && x.y == this.y);
-        // }
+        public boolean equals(Object o) {
+            pair x = (pair) o;
+            return (x.x == this.x && x.y == this.y);
+        }
     }
     static int upper_bound(int arr[], int key)
     {
@@ -207,8 +201,8 @@ public class Main
         int[] nextArray(int n)
         {
             int[] a=new int[n];
-            for (int i=0; i<n; i++) a[i]=nextInt();
-            return a;
+			for (int i=0; i<n; i++) a[i]=nextInt();
+			return a;
         }
         int nextInt() 
         { 
