@@ -52,7 +52,7 @@ public class S
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        Main ob = new Main();
+        S ob = new S();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN

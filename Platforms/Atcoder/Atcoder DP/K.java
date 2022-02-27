@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class K 
 {
     int nums[];
     Boolean dp[][];
@@ -39,8 +39,7 @@ public class Main
         Arrays.sort(nums);
         dp = new Boolean[k+1][2];
         boolean ans = isWinner(k, 0);
-        //sc.println("Taro\tJiro");  
-        //for(Boolean a[] : dp) sc.println(Arrays.toString(a));
+
         if(ans)
             sc.println("First");
         else
@@ -51,7 +50,7 @@ public class Main
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        Main ob = new Main();
+        K ob = new K();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
