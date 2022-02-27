@@ -473,3 +473,4 @@
 379. Minimum Number of Steps to Make Two Strings Anagram II
 380. Minimum Time to Complete Trips (Binary Search)
 381. Numbers With Repeated Digits (Digit DP) --**IMP** --**Revise**
+382. Maximum Width of Binary Tree (Tree)

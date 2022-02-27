@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class S 
 {
     Long dp[][][];
     char NUM[];
