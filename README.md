@@ -470,3 +470,6 @@
 376. Reverse Nodes in k-Group --**Implementation Heavy**
 377. Longest Consecutive Sequence (DSU) --**IMP** --**Revise**
 378. Shortest Path Visiting All Nodes (Graphs + DP) --**Tricky** --**HARD**
+379. Minimum Number of Steps to Make Two Strings Anagram II
+380. Minimum Time to Complete Trips (Binary Search)
+381. Numbers With Repeated Digits (Digit DP) --**IMP** --**Revise**

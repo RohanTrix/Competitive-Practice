@@ -4,22 +4,59 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    boolean prime[];
+    void genPrime()
+    {
+        prime = new boolean[200+1];
+        Arrays.fill(prime, 2, 200+1,true);
+
+        for(int i = 2; i*i<=200; i++)
+        {
+            if(prime[i])
+            {
+                for(int j = i*i; j<=200; j+=i)
+                {
+                    prime[j] = false;
+                }
+            }
+        }
+        
+    }
     void solve(FastReader sc)
     {
-        
-        
+        int a = sc.nextInt(), b = sc.nextInt();
+        int c = sc.nextInt(), d = sc.nextInt();
+        boolean finwin = false;
+        for(int i = a; i<=b; i++)
+        {
+            boolean win = true;
+
+            for(int j = c; j<=d; j++)
+            {
+                if(prime[i+j])
+                {
+                    win = false;
+                }
+            }
+            finwin = finwin || win;
+        }
+        if(finwin)
+            sc.println("Takahashi");
+        else
+            sc.println("Aoki");
+
     }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
         Main ob = new Main();
+        ob.genPrime();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -29,7 +66,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
