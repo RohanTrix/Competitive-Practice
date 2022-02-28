@@ -2,128 +2,130 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
-{
-    int nums[];
-    Boolean dp[][];
-    boolean isWinner(int k, int p)
-    {
-        if(k == 0) return (p == 0)?false:true;
-        if(dp[k][p] != null) return dp[k][p];
-        boolean ans;
-        if(p == 0)
-        {
-            ans = false;
-            for(int i = 0; i<nums.length; i++)
-                {
-                    if(k-nums[i]>=0)
-                    ans = ans || isWinner(k-nums[i], 1);
-                }
+public class Main {
+    HashMap<Integer, Set<Integer>> edges = new HashMap<>();
+    List<Integer> ans = new ArrayList<>();
+    // Set<Integer> vis = new HashSet<>();
+    void dfs(int u, int par, FastReader sc) {
+        // sc.println(u);
+        ans.add(u);
+
+        for (int to : edges.get(u)) {
+            // sc.println(u+" to " +to);
+            if (to != par) {
+                dfs(to, u, sc);
+                ans.add(u);
+            }
+
         }
-        else
-        {
-            ans = true;
-            for(int i = 0; i<nums.length; i++)
-               {
-                   if(k-nums[i]>=0)
-                    ans = ans && isWinner(k-nums[i], 0);
-               } 
-        }
-        return dp[k][p] = ans;
+
     }
-    void solve(FastReader sc)
-    {
+
+    void solve(FastReader sc) {
         int n = sc.nextInt();
-        int k = sc.nextInt();
-        nums = sc.nextArray(n);
-        Arrays.sort(nums);
-        dp = new Boolean[k+1][2];
-        boolean ans = isWinner(k, 0);
-        //sc.println("Taro\tJiro");  
-        //for(Boolean a[] : dp) sc.println(Arrays.toString(a));
-        if(ans)
-            sc.println("First");
-        else
-            sc.println("Second");
-        
+        for (int i = 1; i <= n; ++i)
+            addNode(i);
+
+        for (int i = 0; i < n - 1; i++)
+            addEdge(sc.nextInt(), sc.nextInt());
+
+        // System.out.println(edges);
+        dfs(1, -1, sc);
+        for(int i : ans)
+            sc.print(i+" ");
     }
-    public static void main(String[] args) 
-    {
-        // FastReader(true)         for File I/O
-        // FastReader()             for terminal I/O
+
+    public void addNode(int u) {
+        edges.put(u, new TreeSet<>());
+    }
+
+    public void addEdge(int u, int v) {
+        edges.get(u).add(v);
+        edges.get(v).add(u);
+    }
+
+    public static void main(String[] args) {
+        // FastReader(true) for File I/O
+        // FastReader() for terminal I/O
         Main ob = new Main();
-        if(args.length>0 && args[0].equals("local")){
-            FastReader sc=new FastReader(true); 
-            //CODE BEGIN
-            
+        if (args.length > 0 && args[0].equals("local")) {
+            FastReader sc = new FastReader(true);
+            // CODE BEGIN
+
             // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
-            //CODE END
+            // CODE END
             sc.closer();
-        }
-        else
-        {
-            FastReader sc=new FastReader(); 
-            //CODE BEGIN
-            
+        } else {
+            FastReader sc = new FastReader();
+            // CODE BEGIN
+
             // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
-            //CODE END
+            // CODE END
             sc.closer();
 
         }
     }
-    final int INTMAX = Integer.MAX_VALUE/2;
-    final int INTMIN = Integer.MIN_VALUE/2;
-    final long mod = 1000000000+7;
-    public static long power(long x, long y, long mod)
-    {
+
+    final int INTMAX = Integer.MAX_VALUE / 2;
+    final int INTMIN = Integer.MIN_VALUE / 2;
+    final long mod = 1000000000 + 7;
+
+    public static long power(long x, long y, long mod) {
         long res = 1L;
-        x = x%mod;
-        while(y > 0)
-        {
-            if((y&1)==1)
-                res = (res*x)%mod;
-            
-            y>>=1;
-            x = (x*x)%mod;
+        x = x % mod;
+        while (y > 0) {
+            if ((y & 1) == 1)
+                res = (res * x) % mod;
+
+            y >>= 1;
+            x = (x * x) % mod;
         }
         return res;
     }
-    public static int gcd(int a, int b)
-    {
-        if(b == 0)
-         return a;
-        return gcd(b,a%b);
+
+    public static int gcd(int a, int b) {
+        if (b == 0)
+            return a;
+        return gcd(b, a % b);
     }
-    public static int lcm(int a, int b)
-    {
+
+    public static int lcm(int a, int b) {
         return (a / gcd(a, b)) * b;
     }
-    static void sort(int[] a, boolean... rev) {
-        ArrayList<Integer> l=new ArrayList<>();
-        for (int i:a) l.add(i);
-        if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
-        else Collections.sort(l);
 
-        for (int i=0; i<a.length; i++) a[i]=l.get(i);
+    static void sort(int[] a, boolean... rev) {
+        ArrayList<Integer> l = new ArrayList<>();
+        for (int i : a)
+            l.add(i);
+        if (rev.length > 0 && rev[0] == true)
+            Collections.sort(l, Collections.reverseOrder());
+        else
+            Collections.sort(l);
+
+        for (int i = 0; i < a.length; i++)
+            a[i] = l.get(i);
     }
-    static void fill2D(int arr[][], int n)
-    {
-        for (int[] row: arr)
+
+    static void fill2D(int arr[][], int n) {
+        for (int[] row : arr)
             Arrays.fill(row, n);
     }
+
     static List<List<Integer>> perms = new ArrayList<>();
+
     static void generatePermutations(int[] p, int depth) {
 
-        // To generate all permuations of 1...n, 
+        // To generate all permuations of 1...n,
         // call generatePermutations(int[n] p, 1)
         // Results stored in perms
         int n = p.length;
         if (depth == n) {
             List<Integer> tmp = new ArrayList<>();
-            for(int i : p)tmp.add(i);
-            
+            for (int i : p)
+                tmp.add(i);
+
             perms.add(tmp);
             return;
         }
@@ -135,174 +137,157 @@ public class Main
             }
         }
     }
-    static class pair implements Comparable < pair >
-    {
+
+    static class pair implements Comparable<pair> {
         long x;
         long y;
+
         pair(long i, long j) {
             x = i;
             y = j;
         }
+
         public int compareTo(pair p) {
             if (this.x != p.x) {
-                return Long.compare(this.x,p.x);
+                return Long.compare(this.x, p.x);
             } else {
-                return Long.compare(this.y,p.y);
+                return Long.compare(this.y, p.y);
             }
         }
+
         public String toString() {
             return x + " " + y;
         }
+
         public boolean equals(Object o) {
             pair x = (pair) o;
             return (x.x == this.x && x.y == this.y);
         }
     }
-    static int upper_bound(int arr[], int key)
-    {
+
+    static int upper_bound(int arr[], int key) {
         // Smallest vales greater than or equal to key
-        int left = 0, right = arr.length-1;
+        int left = 0, right = arr.length - 1;
         int pos = -1;
-        while(left<=right)
-        {
-                int mid = left +(right-left)/2;
-                if(arr[mid]>= key)
-                {
-                    pos = mid;
-                    right = mid - 1;
-                }
-                else
-                    left = mid + 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] >= key) {
+                pos = mid;
+                right = mid - 1;
+            } else
+                left = mid + 1;
         }
         return pos;
     }
-    static int lower_bound(int arr[], int key)
-    {
+
+    static int lower_bound(int arr[], int key) {
         // Largest value less than or equal to key
-        int left = 0, right = arr.length-1;
+        int left = 0, right = arr.length - 1;
         int pos = -1;
-        while(left<=right)
-        {
-                int mid = left +(right-left)/2;
-                if(arr[mid] <= key)
-                {
-                    pos = mid;
-                    left = mid + 1;
-                }
-                else
-                    right = mid - 1;
+        while (left <= right) {
+            int mid = left + (right - left) / 2;
+            if (arr[mid] <= key) {
+                pos = mid;
+                left = mid + 1;
+            } else
+                right = mid - 1;
         }
         return pos;
     }
-    static class FastReader 
-    { 
-        BufferedReader br; 
+
+    static class FastReader {
+        BufferedReader br;
         StringTokenizer st;
         PrintWriter pw;
-  
-        public FastReader() 
-        { 
-            br = new BufferedReader(new
-                     InputStreamReader(System.in));
+
+        public FastReader() {
+            br = new BufferedReader(new InputStreamReader(System.in));
             pw = new PrintWriter(new OutputStreamWriter(System.out));
         }
-        public FastReader(boolean b)
-        {
-            try
-            {
-                br = new BufferedReader( new FileReader("input.txt")); 
+
+        public FastReader(boolean b) {
+            try {
+                br = new BufferedReader(new FileReader("input.txt"));
                 pw = new PrintWriter("output.txt");
-            
-            }
-            catch(Exception e)
-            {
+
+            } catch (Exception e) {
 
             }
 
         }
-        String next() 
-        { 
-            while (st == null || !st.hasMoreElements()) 
-            { 
-                try
-                { 
-                    st = new StringTokenizer(br.readLine()); 
-                } 
-                catch (IOException  e) 
-                { 
-                    e.printStackTrace(); 
-                } 
-            } 
+
+        String next() {
+            while (st == null || !st.hasMoreElements()) {
+                try {
+                    st = new StringTokenizer(br.readLine());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
             return st.nextToken();
-        } 
-        int[] nextArray(int n)
-        {
-            int[] a=new int[n];
-            for (int i=0; i<n; i++) a[i]=nextInt();
+        }
+
+        int[] nextArray(int n) {
+            int[] a = new int[n];
+            for (int i = 0; i < n; i++)
+                a[i] = nextInt();
             return a;
         }
-        int nextInt() 
-        { 
-            return Integer.parseInt(next()); 
-        } 
-  
-        long nextLong() 
-        { 
-            return Long.parseLong(next()); 
-        } 
-  
-        double nextDouble() 
-        { 
-            return Double.parseDouble(next()); 
-        } 
-  
-        String nextLine() 
-        { 
-            String str = ""; 
-            try
-            { 
-                str = br.readLine(); 
-            } 
-            catch (IOException e) 
-            { 
-                e.printStackTrace(); 
-            } 
-            return str; 
+
+        int nextInt() {
+            return Integer.parseInt(next());
         }
-        void print(Object...objects) {
+
+        long nextLong() {
+            return Long.parseLong(next());
+        }
+
+        double nextDouble() {
+            return Double.parseDouble(next());
+        }
+
+        String nextLine() {
+            String str = "";
+            try {
+                str = br.readLine();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return str;
+        }
+
+        void print(Object... objects) {
             for (int i = 0; i < objects.length; i++) {
                 if (i != 0)
                     pw.print(' ');
-            pw.print(objects[i]);
+                pw.print(objects[i]);
             }
         }
-        void println(Object...objects)
-        {
+
+        void println(Object... objects) {
             for (int i = 0; i < objects.length; i++) {
                 if (i != 0)
                     pw.print(' ');
-            pw.print(objects[i]);
+                pw.print(objects[i]);
             }
             pw.println();
         }
-        void viewArray1D(int a[])
-        {
+
+        void viewArray1D(int a[]) {
             println(Arrays.toString(a));
         }
-        void viewArray2D(int arr[][])
-        {
-            for (int[] row: arr)
-            viewArray1D(row);
+
+        void viewArray2D(int arr[][]) {
+            for (int[] row : arr)
+                viewArray1D(row);
         }
-        void closer()
-        {
-            try{
-            br.close();
-            pw.flush();
-            pw.close();
-            }
-            catch(Exception e)
-            {
+
+        void closer() {
+            try {
+                br.close();
+                pw.flush();
+                pw.close();
+            } catch (Exception e) {
             }
         }
     }
