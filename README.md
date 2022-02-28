@@ -475,3 +475,4 @@
 381. Numbers With Repeated Digits (Digit DP) --**IMP** --**Revise**
 382. Maximum Width of Binary Tree (Tree)
 383. Evaluate Division (Graphs)
+384. Vowels of All Substrings --**Concept**
