@@ -477,3 +477,5 @@
 383. Evaluate Division (Graphs)
 384. Vowels of All Substrings --**Concept**
 385. Most Stones Removed with Same Row or Column (DSU)
+386. Largest Component Size by Common Factor (DSU + Number Theory) --**Concept** --**IMP** --**Revise**
+387. Queens That Can Attack the King
