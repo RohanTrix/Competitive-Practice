@@ -480,3 +480,4 @@
 386. Largest Component Size by Common Factor (DSU + Number Theory) --**Concept** --**IMP** --**Revise**
 387. Queens That Can Attack the King
 388. Combination Sum IV (DP) --**IMP** --**REVISE**
+389. Maximum Alternating Subsequence Sum (DP) --**IMP** --**REVISE**
