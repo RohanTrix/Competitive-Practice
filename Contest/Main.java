@@ -4,18 +4,40 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    int dp[];
+    // public int count(int sum, int nums[])
+    // {
+    //     if(sum == 0) return 1;
+    //     if(dp[sum]!=null) return dp[sum];
+        
+    //     int cnt = 0;
+    //     for(int i = 0; i<nums.length; i++)
+    //     {
+
+    //         if(sum-nums[i]<0) break;
+    //             cnt+=count(sum-nums[i], nums);
+    //             if(cnt>mod) cnt-= mod;
+    //     }
+    //     return dp[sum] = cnt;
+    // }
     void solve(FastReader sc)
     {
-        int n = sc.nextInt(), q = sc.nextInt();
-        long arr[] = new long[n];
-        for(int i = 0; i<n; i++) arr[i] = sc.nextLong();
-        long pref[] = new long[n+1];
-        for(int i = 1; i<=n; i++)
-            pref[i] = pref[i-1] + arr[i-1];
+        int n = sc.nextInt(), target = sc.nextInt();
+        dp = new int[target+1];
 
-        for(int i = 0; i<q; i++)
-            sc.println(-pref[sc.nextInt()-1]+pref[sc.nextInt()]);
+        int nums[] = sc.nextArray(n);
+        Arrays.sort(nums);
+        dp[0] = 1;
+        for(int tar = 1; tar<=target; tar++)
+        {
+            for(int coin : nums)
+            {
+                if(coin>tar) break;
+                dp[tar]+=dp[tar-coin];
+                if(dp[tar]>mod) dp[tar]-= mod;
+            }
+        }
+        sc.println(dp[target]);
         
     }
     public static void main(String[] args) 
