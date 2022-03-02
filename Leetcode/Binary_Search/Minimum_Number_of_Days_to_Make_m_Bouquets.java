@@ -1,6 +1,6 @@
 /* Algorithm:
 
-We need to use a Binary Search Algorithm as our search space is the number of days and the upper limit for the day is 10^9. 
+We need to use a Binary Search as our search space is the number of days and the upper limit for the day is 10^9. 
 We binary search from l = min(days) to r = max(days) as flowers will bloom within this range only. 
 Now, we pass our mid from binary search to a possible function which returns 
 whether we can make >=m bouquets or not. This is implemented greedily by adding

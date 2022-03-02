@@ -483,3 +483,4 @@
 389. Maximum Alternating Subsequence Sum (DP) --**IMP** --**REVISE**
 390. Group Anagrams
 391. Least Number of Unique Integers after K Removals (Greedy) --**Revise**
+392. Maximum Score of a Good Subarray (Two Pointers) --**Tricky Implementation**
