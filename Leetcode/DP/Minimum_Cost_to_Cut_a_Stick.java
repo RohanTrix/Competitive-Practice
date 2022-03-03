@@ -79,7 +79,7 @@ public class Minimum_Cost_to_Cut_a_Stick1
     }
     public int minCost(int n, int[] cuts) {
         
-        Arrays.sort(cuts);
+        //Arrays.sort(cuts);
         dp = new Integer[n+1][n+1];
         int ans = minCostToCut(0, n, cuts);
         //for(Integer a[] : dp) System.out.println(Arrays.toString(a));
