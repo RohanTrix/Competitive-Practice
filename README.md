@@ -486,3 +486,4 @@
 392. Maximum Score of a Good Subarray (Two Pointers) --**Tricky Implementation**
 393. Minimum Cost to Cut a Stick (DnC DP) --**Tricy** --**Concept**
 394. Minimum Time to Collect All Apples in a Tree (DFS) --**Revise**
+395. XOR Queries of a Subarray
