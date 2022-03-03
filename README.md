@@ -487,3 +487,4 @@
 393. Minimum Cost to Cut a Stick (DnC DP) --**Tricy** --**Concept**
 394. Minimum Time to Collect All Apples in a Tree (DFS) --**Revise**
 395. XOR Queries of a Subarray
+396. Count of Smaller Numbers After Self (Segment Tree)
