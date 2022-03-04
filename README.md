@@ -488,3 +488,5 @@
 394. Minimum Time to Collect All Apples in a Tree (DFS) --**Revise**
 395. XOR Queries of a Subarray
 396. Count of Smaller Numbers After Self (Segment Tree)
+397. Minimum Flips to Make a OR b Equal to c
+398. Maximum XOR for Each Query
