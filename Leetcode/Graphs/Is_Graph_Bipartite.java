@@ -1,5 +1,5 @@
 /*
-    IDEA : Perform 
+    IDEA : Perform DFS from each node and go on marking their colors
 */
 public class Is_Graph_Bipartite {
     Set<Integer> vis = new HashSet<>();
