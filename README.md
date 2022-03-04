@@ -492,3 +492,4 @@
 398. Maximum XOR for Each Query
 399. Find Duplicate Subtrees (Tree)
 400. Binary String With Substrings Representing 1 To N
+401. Is Graph Bipartite (Graphs)

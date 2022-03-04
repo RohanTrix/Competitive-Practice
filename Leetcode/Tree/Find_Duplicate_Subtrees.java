@@ -1,7 +1,10 @@
 
 /*
 
-
+    IDEA : To store a subtree, we instead store its postorder traversal as a String.
+           I have created a map counter to map String to the count of times it occurs.
+           And I also map the String to a TreeNode whose subtree gives the postorderr traversal as that
+           particular string.
 */
 
 public class Find_Duplicate_Subtrees {
