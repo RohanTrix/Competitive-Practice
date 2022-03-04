@@ -490,3 +490,5 @@
 396. Count of Smaller Numbers After Self (Segment Tree)
 397. Minimum Flips to Make a OR b Equal to c
 398. Maximum XOR for Each Query
+399. Find Duplicate Subtrees (Tree)
+400. Binary String With Substrings Representing 1 To N
