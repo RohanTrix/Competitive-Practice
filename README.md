@@ -487,10 +487,13 @@
 393. Minimum Cost to Cut a Stick (DnC DP) --**Tricy** --**Concept**
 394. Minimum Time to Collect All Apples in a Tree (DFS) --**Revise**
 395. XOR Queries of a Subarray
-396. Count of Smaller Numbers After Self (Segment Tree)
+396. Count of Smaller Numbers After Self (Segment Tree) --**IMP** --**REVISE**
 397. Minimum Flips to Make a OR b Equal to c
 398. Maximum XOR for Each Query
 399. Find Duplicate Subtrees (Tree)
 400. Binary String With Substrings Representing 1 To N
 401. Is Graph Bipartite (Graphs)
 402. Champagne Tower (DP)
+403. Sort the Jumbled Numbers 
+404. All Ancestors of a Node in a Directed Acyclic Graph (Graphs) --**IMP** --**Revise**
+405. Minimum Number of Moves to Make Palindrome (Two Pointers) --**Hard** --**IMP** -**Reivise**
