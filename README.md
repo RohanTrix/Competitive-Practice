@@ -150,7 +150,7 @@
 57. Rotate List
 58. Reverse Linked List
 59. Jump Game IV (BFS) --**IMP**
-60. Reach a Number
+60. Reach a Number --**Tricky** --**IMP**
 61. Partition Equal Subset Sum (DP)
 62. Target Sum (DP) --**IMP**
 63. Combination Sum (DP) (Backtracing) --**IMP** --**Revise**
@@ -497,4 +497,4 @@
 403. Sort the Jumbled Numbers 
 404. All Ancestors of a Node in a Directed Acyclic Graph (Graphs) --**IMP** --**Revise**
 405. Minimum Number of Moves to Make Palindrome (Two Pointers) --**Hard** --**IMP** -**Revise**
-406. Count Complete Tree Nodes (Tree)
+406. Count Complete Tree Nodes (Tree) --**Revise** --**IMP**
