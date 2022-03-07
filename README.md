@@ -496,4 +496,5 @@
 402. Champagne Tower (DP)
 403. Sort the Jumbled Numbers 
 404. All Ancestors of a Node in a Directed Acyclic Graph (Graphs) --**IMP** --**Revise**
-405. Minimum Number of Moves to Make Palindrome (Two Pointers) --**Hard** --**IMP** -**Reivise**
+405. Minimum Number of Moves to Make Palindrome (Two Pointers) --**Hard** --**IMP** -**Revise**
+406. Count Complete Tree Nodes (Tree)

@@ -4,30 +4,49 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    void solve(FastReader sc)
+    Long dp[][][];
+    char NUM[];
+    int d;
+    long count(int ind, int restrict, int sum)
     {
-        int m = sc.nextInt(), n = sc.nextInt();
-        char grid[][] = new char[m][n];
-        
-        for(int i = 0; i<m; i++)
+        if(ind == NUM.length) return sum==0?1L:0;
+        if(dp[ind][restrict][sum]!=null) return dp[ind][restrict][sum];
+        long cnt = 0;
+        if(restrict == 1)
         {
-            grid[i] = sc.nextLine().toCharArray();
-        }
-        long dp[][] = new long[m][n];
-        dp[0][0] = 1L;
-        for(int i = 0; i<m; i++)
-        {
-            for(int j = 0; j<n; j++)
+            for(int i = '0'; i<=NUM[ind]; i++)
             {
-                if(i == 0 && j == 0 || grid[i][j] == '#') continue;
-                if(i-1>=0 && grid[i-1][j]!='#') dp[i][j] += dp[i-1][j];
-                if(j-1>=0 && grid[i][j-1]!='#') dp[i][j] += dp[i][j-1];
-                dp[i][j]%=mod;
+                if(i == NUM[ind])
+                    cnt+=count(ind+1, 1, (sum + (i-'0')) % d );
+                else
+                    cnt+=count(ind+1, 0,  (sum + (i-'0')) % d);
+                cnt%=mod;
             }
         }
-        sc.println(dp[m-1][n-1]);
-            
+        else
+        {
+            for(int i = '0'; i<='9'; i++)
+            {
+                cnt+=count(ind+1, 0 , (sum + (i-'0')) % d);
+                cnt%=mod;
+            }
+        }
+        return dp[ind][restrict][sum] = cnt;
+    }
+    void solve(FastReader sc)
+    {
+        NUM = sc.nextLine().toCharArray();
+        d = sc.nextInt();
+        dp = new Long[NUM.length][2][d+1];
+
+        long ans = count(0, 1, 0) - 1;
+        if(ans==-1)
+        {
+            ans = mod -1;
+        }
+        sc.println(ans);
         
+        // for(Long aa[][]:dp) for(Long a[]: aa) sc.println(Arrays.toString(a));
     }
     public static void main(String[] args) 
     {
