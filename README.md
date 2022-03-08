@@ -1,91 +1,6 @@
 # Completed Problems
-## ██▓▒­░⡷⠂𝙲𝚘𝚍𝚎𝚌𝚑𝚎𝚏⠐⢾░▒▓██
-<a href="https://www.codechef.com/"><img src="https://user-images.githubusercontent.com/51106967/100235444-71eb4580-2f52-11eb-842e-a898f7eab458.png" alt="codechef" width="160px"></a>
 
-
-1. CHEFEZQ
-2. CVDRUN
-3. DECREM
-4. POSAND
-5. SPLITIT
-6. POLYREL
-7. ASP
-8. ANDOR
-9. ADADISH
-10. RESTORE
-11. Chef and IPC Certificates
-12. Flip the String
-13. EVENPSUM
-14. VACCINE1
-15. VACCINE2
-16. POSPREFS
-17. HXOR
-18. UWCOI21A
-19. UWCOI21B
-20. UWCOI21C (Partial)
-21. SWAP10HG
-23. THREE
-24. DREDIV
-25. BINSUBS
-
-## ██▓▒­░⡷⠂𝙲𝚘deforces⠐⢾░▒▓██
-<a href="https://codeforces.com/"><img src="https://user-images.githubusercontent.com/51106967/100237763-5d5c7c80-2f55-11eb-869f-e75ff69adc52.png" alt="codeforces" width="160px"></a>
-
-1. XORwice
-2. Boring Apartments
-3. Yet Another Bookshelf
-4. Dominant Piranha
-5. Add Candies
-6. Numbers Box
-7. Buy the String
-8. Jumps
-9. Sequence Transformation
-10. Unique Bid Auction
-11. Strange Functions
-12. Special Permutation
-13. Kefa and First Steps
-14. Balls of Steel
-15. Avoid Trygub
-16. Find The Array
-17. Shifting Stacks
-18. Do Not Be Distracted!
-19. Ordinary Numbers
-20. Kefa and First Steps
-21. Cut Ribbon
-22. Ilya and Queries
-23. Mahmoud and Ehab and the bipartiteness
-24. Graph Without Long Directed Paths
-25. Spanning Tree with Maximum Degree
-26. Minimal Diameter Forest (HARD) Heavy Implementation!!
-27. Mocha and Diana Easy
-28. Mocha and Hiking
-29. Mocha and Red and Blue
-30. Mocha and Math 
-
-## ██▓▒­░⡷⠂Hackerearth⠐⢾░▒▓██
-
-<a href="https://hackerearth.com/"><img src="https://static-fastly.hackerearth.com/static/hackerearth/images/logo/HE_logo.png" alt="codeforces" width="160px"></a>
-
-1. Monk and Multiplication
-2. Monk And Champions League
-3. Minimum indexes
-4. Input expectations
-5. Minimum and maximum differences
-
-## ██▓▒­░⡷⠂CSES⠐⢾░▒▓██
-1. Dice Combinations
-2. Minimizing Coins 
-
-## ██▓▒­░⡷⠂Atcoder DP⠐⢾░▒▓██
-
-<a href="https://hackerrank.com/"><img src="https://img.atcoder.jp/assets/logo.png" alt="Hackerrank" width="160px"></a>
-
-1. Frog 1
-2. Frog 2
-3. Vacation
-4. Knapsack 1
-5. 
-6. LCS
+---
 
 ## ██▓▒­░⡷⠂Leetcode⠐⢾░▒▓██
 
@@ -94,7 +9,7 @@
 1. Sort Colors
 2. Maximum Subarray
 3. Last Stone Weight
-4. Find The Duplicate Number
+4. Find The Duplicate Number --**IMP** --**Revise**
 5. Determine if Two Strings Are Close
 6. Design an Ordered Stream
 7. Minimum Operations to Reduce X to Zero
