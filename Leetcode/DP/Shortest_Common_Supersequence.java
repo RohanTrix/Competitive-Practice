@@ -1,6 +1,7 @@
 package Leetcode.DP;
 
 /*
+    // Some visulalizations in OneNote too.
     IDEA: If both the strings end with the same char, then we only need to append that character once
           from the end.
           If the ending chars are not same, then we try appending one of them and then finding the
