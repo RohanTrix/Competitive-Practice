@@ -4,49 +4,33 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    Long dp[][][];
-    char NUM[];
-    int d;
-    long count(int ind, int restrict, int sum)
+    int n;
+    int dp[][];
+    int ways(int i, int dig)
     {
-        if(ind == NUM.length) return sum==0?1L:0;
-        if(dp[ind][restrict][sum]!=null) return dp[ind][restrict][sum];
-        long cnt = 0;
-        if(restrict == 1)
-        {
-            for(int i = '0'; i<=NUM[ind]; i++)
-            {
-                if(i == NUM[ind])
-                    cnt+=count(ind+1, 1, (sum + (i-'0')) % d );
-                else
-                    cnt+=count(ind+1, 0,  (sum + (i-'0')) % d);
-                cnt%=mod;
-            }
-        }
-        else
-        {
-            for(int i = '0'; i<='9'; i++)
-            {
-                cnt+=count(ind+1, 0 , (sum + (i-'0')) % d);
-                cnt%=mod;
-            }
-        }
-        return dp[ind][restrict][sum] = cnt;
+        if(dp[i][dig]!=-1) return dp[i][dig];
+        if(i == n-1) return dp[i][dig] = 1;
+        int cnt = 0;
+        if(dig != 1) cnt+= ways(i+1, dig-1);
+        cnt%=mod;
+        if(dig != 9) cnt+= ways(i+1, dig+1);
+        cnt%=mod;
+        cnt+=ways(i+1, dig);
+        cnt%=mod;
+        return dp[i][dig] = cnt;
     }
     void solve(FastReader sc)
     {
-        NUM = sc.nextLine().toCharArray();
-        d = sc.nextInt();
-        dp = new Long[NUM.length][2][d+1];
-
-        long ans = count(0, 1, 0) - 1;
-        if(ans==-1)
-        {
-            ans = mod -1;
-        }
-        sc.println(ans);
+        n = sc.nextInt();
+        dp = new int[n][10];
+        for(int a[]: dp) Arrays.fill(a, -1);
+        long tot = 0;
+        for(int i = 1; i<10; i++)
+            tot=(tot + ways(0, i))%mod;
         
-        // for(Long aa[][]:dp) for(Long a[]: aa) sc.println(Arrays.toString(a));
+        sc.println(tot);
+        
+        
     }
     public static void main(String[] args) 
     {
@@ -76,7 +60,7 @@ public class Main
     }
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
-    final long mod = 1000000000+7;
+    final int mod = 998244353;
     public static long power(long x, long y, long mod)
     {
         long res = 1L;

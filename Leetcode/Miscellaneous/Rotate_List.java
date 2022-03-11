@@ -8,7 +8,32 @@
  *     ListNode(int val, ListNode next) { this.val = val; this.next = next; }
  * }
  */
-class Solution {
+
+// Rotate by dividing the list into two halves and reversing
+// their occurences.
+class Rotate_List {
+    public ListNode rotateRight(ListNode head, int k) {
+        if(head == null || head.next==null) return head;
+        int n = 0;
+        ListNode tmp = head;
+        ListNode prev = null; 
+        while(tmp!=null){prev = tmp;tmp = tmp.next; n++;}
+        k%=n;
+        
+        tmp = head; prev.next = head;
+        prev = null;
+        for(int i = 0; i<(n-k); i++)
+        {
+            prev = tmp;
+            tmp = tmp.next;
+        }
+        prev.next = null;
+        return tmp;
+    }
+}
+
+ // K times rotate by rotating once for k times
+class Solution1 {
     public ListNode rotateRight(ListNode node, int k) {
         if(k==0) return node;
         if(node==null) return node;
