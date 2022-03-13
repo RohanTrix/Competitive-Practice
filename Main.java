@@ -54,22 +54,22 @@ public class Main
         return res;
     }
     public static int gcd(int a, int b)
-	{
-		if(b == 0)
-		 return a;
-		return gcd(b,a%b);
+    {
+        if(b == 0)
+         return a;
+        return gcd(b,a%b);
     }
     public static int lcm(int a, int b)
     {
         return (a / gcd(a, b)) * b;
     }
     static void sort(int[] a, boolean... rev) {
-		ArrayList<Integer> l=new ArrayList<>();
-		for (int i:a) l.add(i);
-		if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
+        ArrayList<Integer> l=new ArrayList<>();
+        for (int i:a) l.add(i);
+        if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
         else Collections.sort(l);
 
-		for (int i=0; i<a.length; i++) a[i]=l.get(i);
+        for (int i=0; i<a.length; i++) a[i]=l.get(i);
     }
     static void fill2D(int arr[][], int n)
     {
@@ -201,8 +201,8 @@ public class Main
         int[] nextArray(int n)
         {
             int[] a=new int[n];
-			for (int i=0; i<n; i++) a[i]=nextInt();
-			return a;
+            for (int i=0; i<n; i++) a[i]=nextInt();
+            return a;
         }
         int nextInt() 
         { 
