@@ -419,3 +419,5 @@
 410. Copy List with Random Pointer --**Tricky**
 411. Next Greater Element II (Monotonic Stack) --**IMP**
 412. Next Greater Element III (Greedy)
+413. Minimum Insertion Steps to Make a String Palindrome (DP) -**IMP**
+414. Simplify Path (Stack)
