@@ -1,5 +1,6 @@
 /*
-    IDEA : We want the leftmost index for a value at ith index to 
+    REFER : https://leetcode.com/problems/maximum-width-ramp/discuss/208659/Simple-java-solution-with-TreeMap
+            https://leetcode.com/problems/maximum-width-ramp/discuss/265765/Detailed-Explaination-of-all-the-three-approaches
 */
 public class Maximum_Width_Ramp
 {
