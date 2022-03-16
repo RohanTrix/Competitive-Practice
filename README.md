@@ -425,3 +425,4 @@
 416. HTML Entity Parser
 417. Maximum Width Ramp (TreeMap) --**IMP** --**Revise**
 418. Remove Max Number of Edges to Keep Graph Fully Traversable (2 DSU approach) --**IMP** --**Revise**
+419. Validate Stack Sequences (Stack)
