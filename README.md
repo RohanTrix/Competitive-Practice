@@ -427,3 +427,5 @@
 418. Remove Max Number of Edges to Keep Graph Fully Traversable (2 DSU approach) --**IMP** --**Revise**
 419. Validate Stack Sequences (Stack)
 420. Score of Parentheses (Stack) **Tough** --**Revise**
+421. Find Two Non-overlapping Sub-arrays Each With Target Sum (Prefix Sum, Suffix Min) --**CONCEPT** --**IMP** --**Hard**
+422. Parsing A Boolean Expression (Stack)
