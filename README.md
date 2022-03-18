@@ -431,3 +431,5 @@
 422. Parsing A Boolean Expression (Stack)
 423. Remove Duplicate Letters (Monostack) --**Tricky** --**IMP** --**Revise**
 424. Reverse Integer
+425. Smallest Subsequence of Distinct Characters (Monostack)
+426. Evaluate the Bracket Pairs of a String (Stack)
