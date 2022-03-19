@@ -433,3 +433,5 @@
 424. Reverse Integer
 425. Smallest Subsequence of Distinct Characters (Monostack)
 426. Evaluate the Bracket Pairs of a String (Stack)
+427. Binary Tree Right Side View (BFS)
+428. Maximum Frequency Stack (Stack + Design) --**HARD** --**Revise**
