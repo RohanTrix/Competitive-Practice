@@ -439,3 +439,4 @@
 430. 2 Keys Keyboard (DP)
 431. Simplified Fractions
 432. Smallest String With A Given Numeric Value (Greedy)
+433. Ways to Split Array Into Three Subarrays (Prefix Sum + Binary Search) --**Tricky** --Revise** --**IMP**
