@@ -437,3 +437,4 @@
 428. Maximum Frequency Stack (Stack + Design) --**HARD** --**Revise**
 429. Minimum Domino Rotations For Equal Row (Greedy) --**Tricky** --**Revise**
 430. 2 Keys Keyboard (DP)
+431. Simplified Fractions
