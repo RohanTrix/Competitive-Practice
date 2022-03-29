@@ -1,28 +1,15 @@
 import java.io.*;
 import java.util.*;
 
+
 @SuppressWarnings("all")
+
+
 public class Main 
 {
     
     void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int A[] = sc.nextArray(n);
-        int B[] = sc.nextArray(n);
-
-        List<pair> a = new ArrayList<>();
-        for(int i = 0; i<n; i++)
-        {
-            a.add(new pair(A[i], i));
-        }
-        Collections.sort(a);
-        TreeSet<Integer> ts = new TreeSet<>();
-        
-        for(int i = n-1; i>=0; i--)
-        {
-            while(i>=0 && a.get(i))
-        }
         
     }
     public static void main(String[] args) 

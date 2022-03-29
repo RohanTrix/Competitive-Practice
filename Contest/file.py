@@ -21,4 +21,4 @@ for i in range(n):
     if(k<=0):
         ans = i+1
         break
-print(ans) 
+print(ans)
