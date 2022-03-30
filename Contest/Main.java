@@ -10,7 +10,21 @@ public class Main
     
     void solve(FastReader sc)
     {
-        
+        TreeMap<Integer, String> tm = new TreeMap<>(Collections.reverseOrder());
+
+        int n = sc.nextInt();
+        for(int i = 0; i<n; i++)
+        {
+            int num = sc.nextInt();
+            String name = sc.nextLine();
+            tm.put(num, name);
+        }
+        System.out.println("The ranks based on their marks:");
+        int i = 1;
+        for(int key : tm.keySet())
+        {
+            System.out.println("Rank "+(i++)+": "+tm.get(key));
+        }
     }
     public static void main(String[] args) 
     {
@@ -21,7 +35,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -31,7 +45,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
