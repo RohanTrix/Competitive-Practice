@@ -447,4 +447,6 @@
 438. Flatten Binary Tree to Linked List (Binary Tree) --**IMP** --**TRICKY** --**HARD**
 439. Design a Stack With Increment Operation
 440. Guess Number Higher or Lower II (DP) --**Revise**
-441. Minimum Deletions to Make Character Frequencies Unique (Greedy) --**Revise** --**IMP**
+441. Minimum Deletions to Make Character Frequencies Unique (Greedy) --**Revise** --**IMP
+442. Continuous Subarray Sum (HashMap + Prefix Sum) --**Logic similar to Subarray Sums Divisible by K** 
+443. 3Sum With Multiplicity (HashMap) --**IMP** --**Revise**
