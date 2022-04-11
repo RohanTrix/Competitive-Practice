@@ -18,7 +18,7 @@ public class Frog_Jump {
         int move1 = stones[i]+k; // k jump
         int move2 = move1+1;     // k+1 jump
         int move3 = move1-1;     // k-1 jump
-        boolean ans = false;
+        boolean ans = false;  // If any of the moves returns true, then final answer to be able to reach from here is YES
         // We loop forwards to check
         for(int p = i+1; p<stones.length; p++)
         {
