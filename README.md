@@ -453,3 +453,5 @@
 444. Count Triplets That Can Form Two Arrays of Equal XOR (Prefix Xor) --**CONCEPT** --**IMP** --**Revise**
 445. Find the Longest Substring Containing Vowels in Even Counts (Bitmask + HashMap) --**Concept**
 446. Longest Word in Dictionary (Trie)
+447. LRU Cache (Double Linked List + HashMap) --**Popular** --**Must Revise**
+448. Game of Life
