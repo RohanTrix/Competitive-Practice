@@ -6,16 +6,16 @@
 
                 1) There are cells with locks which we can only pass through if we have collected the key at
                    that position. By collected, we do not mean to remove it from its place, but we only want to 
-                   maintain the face that we have passed over that cell.
+                   maintain the fact that we have passed over that cell.
                 
                 2) The following situation can happen where we might have to traverse a cell more than once.
                     Image : https://ibb.co/ZLNB9gd
 
             Thus, this gives us the hint that making a state/node as only the coordinates x,y is not enough
-            to mark visited in BFS.
+            to mark visited states in BFS.
 
             We also need to know which keys have we taken till now, so that we stop as soon as we get all keys.
-            So we can take benefit of the constraint on the keys and create a bitmask for keys taken till now.
+            So we can take benefit of the constraint on the keys(upto 6) and create a bitmask for keys taken till now.
 
             So a node in BFS for us will be (x,y, MASK of keys taken till now, COST to reach this state)
 
