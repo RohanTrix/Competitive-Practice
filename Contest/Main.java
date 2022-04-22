@@ -1,30 +1,27 @@
 import java.io.*;
 import java.util.*;
 
-
 @SuppressWarnings("all")
-
-
 public class Main 
 {
     
     void solve(FastReader sc)
     {
-        TreeMap<Integer, String> tm = new TreeMap<>(Collections.reverseOrder());
+        int m  =sc.nextInt(), n = sc.nextInt();
+        char grid[][] = new char[m][];
 
-        int n = sc.nextInt();
-        for(int i = 0; i<n; i++)
+        for(int i = 0; i<m; i++)
+            grid[i] = sc.nextLine().toCharArray();
+        
+        for(int j = 0; j<n; j++)
         {
-            int num = sc.nextInt();
-            String name = sc.nextLine();
-            tm.put(num, name);
+            int k = 
+            for(int i = 0; i>=0; i--)
+            {
+
+            }
         }
-        System.out.println("The ranks based on their marks:");
-        int i = 1;
-        for(int key : tm.keySet())
-        {
-            System.out.println("Rank "+(i++)+": "+tm.get(key));
-        }
+        
     }
     public static void main(String[] args) 
     {
@@ -35,7 +32,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -45,7 +42,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -123,12 +120,18 @@ public class Main
             y = j;
         }
         public int compareTo(pair p) {
-            
-            return Long.compare(this.x,p.x);
-            
+            if (this.x != p.x) {
+                return Long.compare(this.x,p.x);
+            } else {
+                return Long.compare(this.y,p.y);
+            }
         }
         public String toString() {
             return x + " " + y;
+        }
+        public boolean equals(Object o) {
+            pair x = (pair) o;
+            return (x.x == this.x && x.y == this.y);
         }
     }
     static int upper_bound(int arr[], int key)
@@ -258,13 +261,13 @@ public class Main
             }
             pw.println();
         }
-        void viewArray1D(int a[])
+        void viewArray1D(char a[])
         {
             println(Arrays.toString(a));
         }
-        void viewArray2D(int arr[][])
+        void viewArray2D(char arr[][])
         {
-            for (int[] row: arr)
+            for (char[] row: arr)
             viewArray1D(row);
         }
         void closer()

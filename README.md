@@ -157,7 +157,7 @@
 148. Merge k Sorted Lists (Linked List) --**HARD** --**Revise**
 149. Merge Intervals (Greedy)
 150. Two City Scheduling (Greedy)
-151. Minimum Number of Arrows to Burst Balloons (Greedy)
+151. Minimum Number of Arrows to Burst Balloons (Greedy) (Line Sweep)
 152. Find Bottom Left Tree Value (Tree)
 153. Combination Sum III (Backtracking)
 154. Smallest Range I
