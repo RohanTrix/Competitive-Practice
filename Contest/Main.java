@@ -7,20 +7,7 @@ public class Main
     
     void solve(FastReader sc)
     {
-        int m  =sc.nextInt(), n = sc.nextInt();
-        char grid[][] = new char[m][];
-
-        for(int i = 0; i<m; i++)
-            grid[i] = sc.nextLine().toCharArray();
         
-        for(int j = 0; j<n; j++)
-        {
-            int k = 
-            for(int i = 0; i>=0; i--)
-            {
-
-            }
-        }
         
     }
     public static void main(String[] args) 
@@ -261,13 +248,13 @@ public class Main
             }
             pw.println();
         }
-        void viewArray1D(char a[])
+        void viewArray1D(int a[])
         {
             println(Arrays.toString(a));
         }
-        void viewArray2D(char arr[][])
+        void viewArray2D(int arr[][])
         {
-            for (char[] row: arr)
+            for (int[] row: arr)
             viewArray1D(row);
         }
         void closer()
