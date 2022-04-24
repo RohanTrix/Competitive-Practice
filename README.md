@@ -469,3 +469,6 @@
 460. Minimum Sideway Jumps (DP)
 461. All Possible Full Binary Trees (DP) --**Tricky** --**IMP**
 462. Number of Ways to Stay in the Same Place After Some Steps (DP)
+463. Adding Spaces to a String
+464. Number of Smooth Descent Periods of a Stock (DP)
+465. Minimum Operations to Make the Array K-Increasing (Binary Search LIS variation) --**Concept** --**IMP** --**Tricky** --**Revise**
