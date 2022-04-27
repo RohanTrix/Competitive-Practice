@@ -458,7 +458,7 @@
 449. Maximum Product After K Increments (Priority Queue)
 450. Find Players With Zero or One Losses
 451. Path Sum III (Subarray sum = k technique on Tree) --**IMP**
-452. Can I Win (DP + Bitmask) --**Tight Constraints**
+452. Can I Win (Bitmask DP) --**Tight Constraints**
 453. Minimum Number of Operations to Reinitialize a Permutation
 454. Shortest Path to Get All Keys (BFS + Bitmask) --**CONCEPT** --**Revise**
 455. Groups of Special-Equivalent Strings (DSU + Implementation Heavy)
@@ -475,3 +475,5 @@
 466. Allocate Mailboxes (DP) --**Tough** --**Revise** --**Concept**
 467. Best Sightseeing Pair (TreeSet/PriorityQueue/DP)
 468. Number of Ways to Split a String (Combinatorics + Prefix Sum) --**IMP** --**Revise** 
+467. Minimum Cost to Connect Two Groups of Points (Bitmask DP) --**Tricky Optimization** --**Tough**
+468. Change Minimum Characters to Satisfy One of Three Conditions --**IMP** --**Tricky Brute Force**
