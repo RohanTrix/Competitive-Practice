@@ -479,3 +479,4 @@
 468. Change Minimum Characters to Satisfy One of Three Conditions --**IMP** --**Tricky Brute Force**
 469. Path With Minimum Effort (Binary Search + DFS) --**Concept**
 470. Heaters (Binary Search)
+471. Most Profit Assigning Work (Greedy+Sorting) --**Revise** --**IMP**
