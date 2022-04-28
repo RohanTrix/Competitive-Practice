@@ -477,4 +477,5 @@
 468. Number of Ways to Split a String (Combinatorics + Prefix Sum) --**IMP** --**Revise** 
 467. Minimum Cost to Connect Two Groups of Points (Bitmask DP) --**Tricky Optimization** --**Tough**
 468. Change Minimum Characters to Satisfy One of Three Conditions --**IMP** --**Tricky Brute Force**
-469. Path With Minimum Effort (Binary Search + DFS)
+469. Path With Minimum Effort (Binary Search + DFS) --**Concept**
+470. Heaters (Binary Search)
