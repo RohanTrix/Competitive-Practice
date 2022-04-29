@@ -480,3 +480,4 @@
 469. Path With Minimum Effort (Binary Search + DFS) --**Concept**
 470. Heaters (Binary Search)
 471. Most Profit Assigning Work (Greedy+Sorting) --**Revise** --**IMP**
+472. Ways to Make a Fair Array (Prefix Sum)
