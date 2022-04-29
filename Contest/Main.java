@@ -4,21 +4,21 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    long arr[];
-    long tree[], lazy[];
+    int arr[];
+    int tree[], lazy[];
     void solve(FastReader sc)
     {
         int n = sc.nextInt(), q = sc.nextInt();
-        tree = new long[4*n + 5];
-        lazy = new long[4*n + 5];
-        arr = new long[n];
-        for(int i = 0; i<n; i++) arr[i] = sc.nextLong();
+        tree = new int[4*n + 5];
+        lazy = new int[4*n + 5];
+        arr = new int[n];
+        for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
         buildTree(1, 0, n-1);
         for(int i = 0; i<q; i++)
         {
             int type = sc.nextInt();
             if(type == 1)
-                increase(1, 0, n-1, sc.nextInt()-1, sc.nextInt()-1, sc.nextLong());
+                increase(1, 0, n-1, sc.nextInt()-1, sc.nextInt()-1, sc.nextInt());
             if(type == 2)
             {
                 int k = sc.nextInt();
@@ -33,7 +33,7 @@ public class Main
     // 3. Range Query----   DONE
  
  
-    public long query(int id, int l, int r, int lquery, int rquery)
+    public int query(int id, int l, int r, int lquery, int rquery)
     {
         if(r<lquery || l>rquery)
         return Integer.MAX_VALUE;
@@ -42,11 +42,11 @@ public class Main
         
         int mid = (l+r)/2;
         propogate(id, l, r);
-        long left_ans = query(2*id, l, mid, lquery, rquery);
-        long right_ans = query(2*id+1, mid+1, r, lquery, rquery);
+        int left_ans = query(2*id, l, mid, lquery, rquery);
+        int right_ans = query(2*id+1, mid+1, r, lquery, rquery);
         return Math.min(left_ans,right_ans);
     }
-    public void increase(int id, int l, int r, int lquery, int rquery, long val)
+    public void increase(int id, int l, int r, int lquery, int rquery, int val)
     {
         if(l>rquery || r<lquery) return;
         if(l>=lquery && r<=rquery)
@@ -61,7 +61,7 @@ public class Main
         increase(2*id+1, mid+1, r, lquery,rquery, val);
         tree[id] = Math.min(tree[2*id], tree[2*id+1]);
     }
-    public void lazyUpdateNode(int id, int l, int r, long val)
+    public void lazyUpdateNode(int id, int l, int r, int val)
     {
         tree[id]+=val;
         lazy[id]+=val;

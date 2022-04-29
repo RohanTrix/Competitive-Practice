@@ -481,3 +481,5 @@
 470. Heaters (Binary Search)
 471. Most Profit Assigning Work (Greedy+Sorting) --**Revise** --**IMP**
 472. Ways to Make a Fair Array (Prefix Sum)
+473. Range Frequency Queries (Binary Search) --**Revise** --**IMP** --**Concept**
+474. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K (Greedy) --**Revise**
