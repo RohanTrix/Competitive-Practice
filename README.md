@@ -483,3 +483,6 @@
 472. Ways to Make a Fair Array (Prefix Sum)
 473. Range Frequency Queries (Binary Search) --**Revise** --**IMP** --**Concept**
 474. Find the Minimum Number of Fibonacci Numbers Whose Sum Is K (Greedy) --**Revise**
+475. Minimum Average Difference (Prefix Sum)
+476. Count Unguarded Cells in the Grid (Simulation)
+477. Escape the Spreading Fire (Binary Search + Multi Source BFS) --**CONCEPT** --**Implementation Heavy** 

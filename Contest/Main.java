@@ -1,92 +1,17 @@
 import java.io.*;
 import java.util.*;
- 
+
 @SuppressWarnings("all")
 public class Main 
 {
-    int arr[];
-    int tree[], lazy[];
+    
     void solve(FastReader sc)
     {
-        int n = sc.nextInt(), q = sc.nextInt();
-        tree = new int[4*n + 5];
-        lazy = new int[4*n + 5];
-        arr = new int[n];
-        for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
-        buildTree(1, 0, n-1);
-        for(int i = 0; i<q; i++)
-        {
-            int type = sc.nextInt();
-            if(type == 1)
-                increase(1, 0, n-1, sc.nextInt()-1, sc.nextInt()-1, sc.nextInt());
-            if(type == 2)
-            {
-                int k = sc.nextInt();
-                sc.println(query(1, 0, n-1, k-1, k-1));
-            }
-            
-        }
+        long a = sc.nextLong(), b = sc.nextLong();
+        long lcm = lcm(a, b);
+        sc.println((lcm/a)+" "+(lcm/b));
         
     }
-    // 1. Build Tree-----   DONE
-    // 2. Update Query---   DONE
-    // 3. Range Query----   DONE
- 
- 
-    public int query(int id, int l, int r, int lquery, int rquery)
-    {
-        if(r<lquery || l>rquery)
-        return Integer.MAX_VALUE;
-        if(l>=lquery && r<=rquery)
-            return tree[id];
-        
-        int mid = (l+r)/2;
-        propogate(id, l, r);
-        int left_ans = query(2*id, l, mid, lquery, rquery);
-        int right_ans = query(2*id+1, mid+1, r, lquery, rquery);
-        return Math.min(left_ans,right_ans);
-    }
-    public void increase(int id, int l, int r, int lquery, int rquery, int val)
-    {
-        if(l>rquery || r<lquery) return;
-        if(l>=lquery && r<=rquery)
-        {
-            lazyUpdateNode(id, l, r, val);
-            return;
-        }
- 
-        int mid = (l+r)/2;
-        propogate(id, l, r);
-        increase(2*id, l, mid, lquery, rquery, val);
-        increase(2*id+1, mid+1, r, lquery,rquery, val);
-        tree[id] = Math.min(tree[2*id], tree[2*id+1]);
-    }
-    public void lazyUpdateNode(int id, int l, int r, int val)
-    {
-        tree[id]+=val;
-        lazy[id]+=val;
-    }
-    public void propogate(int id, int l, int r)
-    {
-        if(lazy[id]==0) return;
-        int mid = (l+r)/2;
-        lazyUpdateNode(2*id, l, mid, lazy[id]);
-        lazyUpdateNode(2*id+1, mid+1, r, lazy[id]);
-        lazy[id] = 0;
-    }
-    public void buildTree(int id, int l, int r)
-    {
-        if(l == r)
-        {
-            tree[id] = arr[l];
-            return;
-        }
-        int mid = (l+r)/2;
-        buildTree(2*id, l, mid);
-        buildTree(2*id+1, mid + 1, r);
-        tree[id] = Math.min(tree[2*id], tree[2*id+1]);
-    }
- 
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
@@ -96,7 +21,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -106,11 +31,11 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
- 
+
         }
     }
     final int INTMAX = Integer.MAX_VALUE/2;
@@ -130,13 +55,13 @@ public class Main
         }
         return res;
     }
-    public static int gcd(int a, int b)
+    public static long gcd(long a, long b)
     {
         if(b == 0)
          return a;
         return gcd(b,a%b);
     }
-    public static int lcm(int a, int b)
+    public static long lcm(long a, long b)
     {
         return (a / gcd(a, b)) * b;
     }
@@ -145,7 +70,7 @@ public class Main
         for (int i:a) l.add(i);
         if(rev.length>0 && rev[0]==true) Collections.sort(l, Collections.reverseOrder());
         else Collections.sort(l);
- 
+
         for (int i=0; i<a.length; i++) a[i]=l.get(i);
     }
     static void fill2D(int arr[][], int n)
@@ -155,7 +80,7 @@ public class Main
     }
     static List<List<Integer>> perms = new ArrayList<>();
     static void generatePermutations(int[] p, int depth) {
- 
+
         // To generate all permuations of 1...n, 
         // call generatePermutations(int[n] p, 1)
         // Results stored in perms
@@ -256,9 +181,9 @@ public class Main
             }
             catch(Exception e)
             {
- 
+
             }
- 
+
         }
         String next() 
         { 
