@@ -486,3 +486,4 @@
 475. Minimum Average Difference (Prefix Sum)
 476. Count Unguarded Cells in the Grid (Simulation)
 477. Escape the Spreading Fire (Binary Search + Multi Source BFS) --**CONCEPT** --**Implementation Heavy** 
+478. Count Number of Homogenous Substrings
