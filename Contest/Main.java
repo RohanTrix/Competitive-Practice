@@ -2,14 +2,12 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class Main
 {
     
     void solve(FastReader sc)
     {
-        long a = sc.nextLong(), b = sc.nextLong();
-        long lcm = lcm(a, b);
-        sc.println((lcm/a)+" "+(lcm/b));
+        
         
     }
     public static void main(String[] args) 
@@ -38,6 +36,7 @@ public class Main
 
         }
     }
+    
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
     final long mod = 1000000000+7;
@@ -55,13 +54,13 @@ public class Main
         }
         return res;
     }
-    public static long gcd(long a, long b)
+    public static int gcd(int a, int b)
     {
         if(b == 0)
          return a;
         return gcd(b,a%b);
     }
-    public static long lcm(long a, long b)
+    public static int lcm(int a, int b)
     {
         return (a / gcd(a, b)) * b;
     }
@@ -125,7 +124,7 @@ public class Main
     }
     static int upper_bound(int arr[], int key)
     {
-        // Smallest vales greater than or equal to key
+        // Smallest values greater than or equal to key
         int left = 0, right = arr.length-1;
         int pos = -1;
         while(left<=right)
