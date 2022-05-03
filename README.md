@@ -487,3 +487,5 @@
 476. Count Unguarded Cells in the Grid (Simulation)
 477. Escape the Spreading Fire (Binary Search + Multi Source BFS) --**CONCEPT** --**Implementation Heavy** 
 478. Count Number of Homogenous Substrings
+479. Shortest Unsorted Continuous Subarray (Prefix Max + Suffix Min) --**CONCEPT**
+480. Different Ways to Add Parentheses (DnC DP) --**Revise** --**IMP**
