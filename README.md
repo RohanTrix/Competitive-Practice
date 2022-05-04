@@ -489,3 +489,6 @@
 478. Count Number of Homogenous Substrings
 479. Shortest Unsorted Continuous Subarray (Prefix Max + Suffix Min) --**CONCEPT**
 480. Different Ways to Add Parentheses (DnC DP) --**Revise** --**IMP**
+481. Maximum Score From Removing Stones (PriorityQueue)
+482. All O`one Data Structure
+483. Word Subsets --**IMP** --**REVISE** --**Tricky**
