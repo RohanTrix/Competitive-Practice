@@ -492,3 +492,6 @@
 481. Maximum Score From Removing Stones (PriorityQueue)
 482. All O`one Data Structure
 483. Word Subsets --**IMP** --**REVISE** --**Tricky**
+484. Number of Substrings Containing All Three Characters (Sliding Window) --**IMP** --**Revise**
+485. Longest Subarray of 1's After Deleting One Element
+486. Remove All Adjacent Duplicates in String II (Stack)
