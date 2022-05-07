@@ -495,3 +495,5 @@
 484. Number of Substrings Containing All Three Characters (Sliding Window) --**IMP** --**Revise**
 485. Longest Subarray of 1's After Deleting One Element
 486. Remove All Adjacent Duplicates in String II (Stack)
+487. Count Number of Nice Subarrays (Sliding Window) --**IMP** --**REVISE** --**CONCEPT**
+488. 132 Pattern (Prefix Min + TreeMap) --**IMP** --REVISE**
