@@ -497,3 +497,5 @@
 486. Remove All Adjacent Duplicates in String II (Stack)
 487. Count Number of Nice Subarrays (Sliding Window) --**IMP** --**REVISE** --**CONCEPT**
 488. 132 Pattern (Prefix Min + TreeMap) --**IMP** --REVISE**
+489. Flatten Nested List Iterator (Recursion)
+490. Knight Probability in Chessboard (DP)
