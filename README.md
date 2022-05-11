@@ -498,4 +498,5 @@
 487. Count Number of Nice Subarrays (Sliding Window) --**IMP** --**REVISE** --**CONCEPT**
 488. 132 Pattern (Prefix Min + TreeMap) --**IMP** --REVISE**
 489. Flatten Nested List Iterator (Recursion)
-490. Knight Probability in Chessboard (DP)
+490. Knight Probability in Chessboard (DP) --**IMP**
+491. Count Sorted Vowel Strings
