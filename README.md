@@ -4,7 +4,7 @@
 
 ## ██▓▒­░⡷⠂Leetcode⠐⢾░▒▓██
 
-<a href="https://codeforces.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg" alt="codeforces" width="160px"></a>
+<a href="https://leetcode.com/"><img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/LeetCode_Logo_black_with_text.svg" alt="Leetcode" width="160px"></a>
 
 1. Sort Colors
 2. Maximum Subarray
@@ -500,3 +500,5 @@
 489. Flatten Nested List Iterator (Recursion)
 490. Knight Probability in Chessboard (DP) --**IMP**
 491. Count Sorted Vowel Strings
+492. Permutations II (Backtracking) --**IMP** --**REVISE**
+493. Corporate Flight Bookings (Partial Sum)
