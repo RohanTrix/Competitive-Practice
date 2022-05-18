@@ -503,3 +503,7 @@
 492. Permutations II (Backtracking) --**IMP** --**REVISE**
 493. Corporate Flight Bookings (Partial Sum)
 494. Shortest Path in Binary Matrix (BFS)
+495. Queries on Number of Points Inside a Circle (Brute Force)
+496. Rank Teams by Votes
+497. RLE Iterator
+498. Find Largest Value in Each Tree Row
