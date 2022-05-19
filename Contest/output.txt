@@ -1,1 +1,5 @@
-unknown topology
+6
+5
+5
+1
+0

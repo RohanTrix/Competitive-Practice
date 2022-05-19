@@ -4,42 +4,72 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
+
+    void solve(FastReader sc)
+    {
+        int left = 1, right = arr.length;
+        int ans = -1;
+        while(left<=right)
+        {
+            int mid = left + (right - left)/2;
+            if(arr[mid] > arr[mid-1])
+            {
+                ans = mid;
+                right = mid - 1;
+            }
+            else if( )
+            {
+                left = mid + 1;
+            }
+        }
+    }
+
     static class DSU
     {
-        int parent[], rank[];
-        public DSU(int n)
+        int parent[];
+        long rank[], maxSum[], maxi;
+        Set<Integer> vis = new HashSet<>();
+        public DSU(int n, long nums[])
         {
             parent = new int[n];
-            rank = new int[n];
+            rank = new long[n];
+            maxSum = new long[n];
             Arrays.fill(parent, -1);
             Arrays.fill(rank, 1);
+            for(int i = 0; i<n; i++) maxSum[i] = (long)nums[i];
+            maxi = 0;
+        }
+        public void activate(int u)
+        {
+            vis.add(u);
         }
         public int find(int s)
         {
             if(parent[s]==-1) return s;
             return parent[s]=find(parent[s]);
         }
-        public void union(int u, int v)
+        public long union(int u, int v)
         {
             int s1 = find(u);
             int s2 = find(v);
-            if(s1==s2)return;
-            if(s1>s2)
+            if(s1==s2)return maxSum[s1];
+            
+            if(rank[s1]>rank[s2])
             {
                 parent[s2]=s1;
                 rank[s1]+=rank[s2];
+                maxSum[s1]+=maxSum[s2];
+                maxi = Math.max(maxi, maxSum[s1]);
             }
             else
             {
                 parent[s1] = s2;
                 rank[s2]+=rank[s1];
+                maxSum[s2]+=maxSum[s1];
+                maxi = Math.max(maxi, maxSum[s2]);
             }
+            return maxi;
         }
-    }
-    void solve(FastReader sc)
-    {
-        
-        
     }
     public static void main(String[] args) 
     {
@@ -50,7 +80,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -60,7 +90,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
