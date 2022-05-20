@@ -508,3 +508,5 @@
 497. RLE Iterator
 498. Find Largest Value in Each Tree Row
 499. Making A Large Island (DSU) 
+500. Delete Columns to Make Sorted II --**Revise** --**Tricky**
+501. Check if Number is a Sum of Powers of Three
