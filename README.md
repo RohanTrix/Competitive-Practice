@@ -510,3 +510,6 @@
 499. Making A Large Island (DSU) 
 500. Delete Columns to Make Sorted II --**Revise** --**Tricky**
 501. Check if Number is a Sum of Powers of Three
+502. Maximum Bags With Full Capacity of Rocks
+503. Minimum Lines to Represent a Line Chart
+504. Sum of Total Strength of Wizards (Prefix Sum + Monotonic Stack) --**IMP** --**HARD** --**Implementation Heavy** 
