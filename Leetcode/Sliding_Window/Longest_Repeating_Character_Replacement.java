@@ -1,11 +1,11 @@
 import java.util.stream.*;
 
 /*
-        IDEA : We need longest subarray. We have a k replacements allowed. This twells us that we need
+        IDEA : We need the longest subarray length. We have k replacements allowed. This tells us that we need
                to apply sliding window technique. We traverse on each element, increase its freq.
                Now, we want to make all the other characters equal to the max freq character. And we can
                only change upto k characters, so we need to shrink our window size till the no. of
-               other characters becomes <=k. We can take the max length across all such windows.
+               other characters becomes <=k. We can take the max length across all such windows that end at 'right'.
 */
 public class Longest_Repeating_Character_Replacement
 {
