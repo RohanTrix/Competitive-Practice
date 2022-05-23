@@ -514,3 +514,4 @@
 503. Minimum Lines to Represent a Line Chart
 504. Sum of Total Strength of Wizards (Prefix Sum + Monotonic Stack) --**IMP** --**HARD** --**Implementation Heavy** 
 505. Ones and Zeroes (DP)
+506. Minimize Malware Spread (DSU) --**IMP** --**Revise**
