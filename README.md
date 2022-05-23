@@ -513,3 +513,4 @@
 502. Maximum Bags With Full Capacity of Rocks
 503. Minimum Lines to Represent a Line Chart
 504. Sum of Total Strength of Wizards (Prefix Sum + Monotonic Stack) --**IMP** --**HARD** --**Implementation Heavy** 
+505. Ones and Zeroes (DP)

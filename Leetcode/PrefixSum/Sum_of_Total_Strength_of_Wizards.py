@@ -20,7 +20,7 @@ class Solution:
         stack = []
         for i in range(n):
             while stack and nums[stack[-1]] > nums[i]:
-                firstSmallerToRight[stack.pop()] = i;
+                firstSmallerToRight[stack.pop()] = i
             stack.append(i)
         
         pref = list(accumulate(nums, initial = 0))
