@@ -515,3 +515,4 @@
 504. Sum of Total Strength of Wizards (Prefix Sum + Monotonic Stack) --**IMP** --**HARD** --**Implementation Heavy** 
 505. Ones and Zeroes (DP)
 506. Minimize Malware Spread (DSU) --**IMP** --**Revise**
+507. Longest Valid Parathesis (Stack) --**IMP** --**Revise** --**CONCEPT**

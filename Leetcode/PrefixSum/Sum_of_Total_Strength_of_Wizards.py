@@ -3,7 +3,7 @@ class Solution:
 
     # REFER : https://youtu.be/HYCMvFxWO7w
 
-    # Similar idea...math part done on my own hence the formulas derived there will not match mine.
+    # My explanation : Explained in OneNote
     def totalStrength(self, nums: List[int]) -> int:
         stack = []
         mod = 10**9+7
