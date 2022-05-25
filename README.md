@@ -522,4 +522,4 @@
 511. Flower Planting With No Adjacent (Graphs Coloring)
 512. Triples with Bitwise AND Equal To Zero (Brute Force)
 513. Minimum Area Rectangle (HashMap) --**Revise** --**IMP**
-514. Reorder List ()
+514. Reorder List (LinkedList)
