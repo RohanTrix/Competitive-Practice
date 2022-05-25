@@ -516,3 +516,4 @@
 505. Ones and Zeroes (DP)
 506. Minimize Malware Spread (DSU) --**IMP** --**Revise**
 507. Longest Valid Parathesis (Stack) --**IMP** --**Revise** --**CONCEPT**
+508. 4Sum (Two Pointers) --**IMP** --**Revise**
