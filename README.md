@@ -517,3 +517,9 @@
 506. Minimize Malware Spread (DSU) --**IMP** --**Revise**
 507. Longest Valid Parathesis (Stack) --**IMP** --**Revise** --**CONCEPT**
 508. 4Sum (Two Pointers) --**IMP** --**Revise**
+509. Russian Doll Envelopes (Binary Search LIS) --**V.IMP** --**Revise** --**Concept**
+510. Letter Tile Possibilities (Backtacking)
+511. Flower Planting With No Adjacent (Graphs Coloring)
+512. Triples with Bitwise AND Equal To Zero (Brute Force)
+513. Minimum Area Rectangle (HashMap) --**Revise** --**IMP**
+514. Reorder List ()
