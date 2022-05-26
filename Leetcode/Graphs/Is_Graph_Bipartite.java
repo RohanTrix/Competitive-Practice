@@ -1,35 +1,30 @@
 /*
-    IDEA : Perform DFS from each node and go on marking their colors
+    IDEA : Perform DFS from each unvisited node and go on marking their colors alternatively during recursion
+    
+    Alternate IDEA : BFS
 */
 public class Is_Graph_Bipartite {
-    Set<Integer> vis = new HashSet<>();
     int color[];
-    public boolean dfs(int u, int col, int graph[][])
+    public boolean dfs(int u, int par, int currCol, int[][] graph)
     {
-        if(vis.contains(u))
-        {
-            return color[u] == col;
-        }
-        vis.add(u);
-        color[u] = col;
+        if(color[u]!=-1)
+            return color[u] ==currCol;
         boolean ans = true;
+        color[u] = currCol;
         for(int to : graph[u])
-        {
-            ans = dfs(to,1^col, graph) && ans;
-        }
+                ans = ans && dfs(to, u, 1^currCol, graph);
         return ans;
     }
     public boolean isBipartite(int[][] graph) {
-        color = new int[graph.length];
+        int n = graph.length;
+        color = new int[n];
         Arrays.fill(color, -1);
-        boolean ans = true;
-        for(int i = 0; i<graph.length; i++)
+        
+        for(int i = 0; i<n; i++)
         {
-            if(!vis.contains(i))
-            {
-                ans = dfs(i,0,graph) && ans;
-            }
+            if(color[i] == -1)
+                if(!dfs(i,-1, 0, graph)) return false;
         }
-        return ans;
+        return true;
     }
 }
