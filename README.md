@@ -523,3 +523,5 @@
 512. Triples with Bitwise AND Equal To Zero (Brute Force)
 513. Minimum Area Rectangle (HashMap) --**Revise** --**IMP**
 514. Reorder List (LinkedList)
+515. Minimum Area Rectangle II (HashMap) --**Revise** --**IMP**
+416. Partition List (LinkedList)
