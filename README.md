@@ -524,4 +524,6 @@
 513. Minimum Area Rectangle (HashMap) --**Revise** --**IMP**
 514. Reorder List (LinkedList)
 515. Minimum Area Rectangle II (HashMap) --**Revise** --**IMP**
-416. Partition List (LinkedList)
+516. Partition List (LinkedList)
+517. Rotate Image --**IMP** --**Revise**
+518. Number of Dice Rolls With Target Sum (DP)
