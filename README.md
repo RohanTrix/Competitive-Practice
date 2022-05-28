@@ -529,3 +529,4 @@
 518. Number of Dice Rolls With Target Sum (DP)
 519. Maximum Length of a Concatenated String with Unique Characters (Backtracking)
 520. Minimum Number of Work Sessions to Finish the Tasks (Bitmask DP)
+521. Word Search II (Backtracking + Trie)
