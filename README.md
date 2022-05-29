@@ -530,3 +530,9 @@
 519. Maximum Length of a Concatenated String with Unique Characters (Backtracking)
 520. Minimum Number of Work Sessions to Finish the Tasks (Bitmask DP)
 521. Word Search II (Backtracking + Trie)
+522. Maximum Product of Word Lengths (Bitmask)
+523. Count Nodes Equal to Average of Subtree
+524. Maximum Absolute Sum of Any Subarray (Kadanes)
+525. Cutting Ribbons (Binary Search) (Premium Qs solved on binarysearch.com) --**IMP** --**Revise**
+526. Break a Palindrome (Greedy) --**IMP** --**Revise**
+527. Implement Trie (Prefix Tree)
