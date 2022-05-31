@@ -535,4 +535,7 @@
 524. Maximum Absolute Sum of Any Subarray (Kadanes)
 525. Cutting Ribbons (Binary Search) (Premium Qs solved on binarysearch.com) --**IMP** --**Revise**
 526. Break a Palindrome (Greedy) --**IMP** --**Revise**
-527. Implement Trie (Prefix Tree)
+527. Implement Trie (Prefix Tree) (Trie)
+528. Replace Words (Trie)
+529. Permutation Sequence (Greedy) --**IMP** --**Revise**
+530. Factorial Trailing Zeroes (Math) --**IMP** --**Revise**
