@@ -539,3 +539,5 @@
 528. Replace Words (Trie)
 529. Permutation Sequence (Greedy) --**IMP** --**Revise**
 530. Factorial Trailing Zeroes (Math) --**IMP** --**Revise**
+531. Sum Root to Leaf Numbers
+532. Spiral Matrix
