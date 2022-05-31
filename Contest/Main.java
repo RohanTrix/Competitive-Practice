@@ -7,13 +7,29 @@ public class Main
     
     void solve(FastReader sc)
     {
-        int n =  sc.nextInt();
-        int h = sc.nextInt();
-        int w = 0;
-        for(int i = 0; i<n; i++)
+        int n = sc.nextInt(), q = sc.nextInt();
+        int mat[][] = new int[n][n];
+        int pref[][] = new int[n+1][n+1];
+
+        for(int i = 1; i<=n; i++)
         {
-            if()
+            char s[] = sc.nextLine().toCharArray();
+            for(int j = 1; j<=n; j++)
+                pref[i][j] =  (s[j-1] == '.'?0:1) + pref[i][j-1] + pref[i-1][j] - pref[i-1][j-1];
         }
+
+        // for(int i = 1; i<=n; i++)
+        //     for(int j = 1; j<=n; j++)
+        //         pref[i][j] =  mat[i-1][j-1] + pref[i][j-1] + pref[i-1][j] - pref[i-1][j-1];
+
+        for(int i = 0; i<q; i++)
+        {
+            int r1 = sc.nextInt(), c1 = sc.nextInt(), r2 = sc.nextInt(), c2 = sc.nextInt();
+            int val = pref[r2][c2] - pref[r2][c1-1] - pref[r1-1][c2] + pref[r1-1][c1-1];
+            sc.println(val);
+        }
+
+        
     }
     public static void main(String[] args) 
     {
@@ -24,7 +40,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -34,7 +50,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
