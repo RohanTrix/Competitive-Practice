@@ -543,3 +543,5 @@
 532. Spiral Matrix
 533. Set Matrix Zeroes --**IMP** --**Tricky**
 534. Number of Good Ways to Split a String (Prefix and Suffix)
+535. Restore The Array (DP)
+536. Single Element in a Sorted Array (Binary Search) --**V. IMP** --**Revise** --**Tricky**
