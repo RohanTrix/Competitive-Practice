@@ -545,3 +545,5 @@
 534. Number of Good Ways to Split a String (Prefix and Suffix)
 535. Restore The Array (DP)
 536. Single Element in a Sorted Array (Binary Search) --**V. IMP** --**Revise** --**Tricky**
+537. Lowest Common Ancestor of Deepest Leaves (Tree)
+538. Strange Printer (DP) --**V. HARD**
