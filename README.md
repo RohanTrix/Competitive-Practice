@@ -547,3 +547,4 @@
 536. Single Element in a Sorted Array (Binary Search) --**V. IMP** --**Revise** --**Tricky**
 537. Lowest Common Ancestor of Deepest Leaves (Tree)
 538. Strange Printer (DP) --**V. HARD**
+539. Find Critical and Pseudo Critical Edges in Minimum Spanning Tree (Graphs) --**CONCEPT** --**Revise**
