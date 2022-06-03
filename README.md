@@ -548,3 +548,6 @@
 537. Lowest Common Ancestor of Deepest Leaves (Tree)
 538. Strange Printer (DP) --**V. HARD**
 539. Find Critical and Pseudo Critical Edges in Minimum Spanning Tree (Graphs) --**CONCEPT** --**Revise**
+540. Avoid Flood in The City (Binary Search/TreeSet) --**IMP** --**Tricky** --**Revise**
+541. Making File Names Unique
+542. Number of Subsequences That Satisfy the Given Sum Condition (Two Pointers)
