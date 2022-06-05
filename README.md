@@ -552,3 +552,4 @@
 541. Making File Names Unique
 542. Number of Subsequences That Satisfy the Given Sum Condition (Two Pointers)
 543. N-Queens (Backtracking)
+544. N-Queens II (Backtracking)
