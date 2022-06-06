@@ -10,8 +10,9 @@ import sys
 
 # for t in range(int(input())):
 
-n,k = map(int, input().split())
-l = list(map(int,input().split()))
-t = int(input())
-for _ in range(t):
-    pass
+n = int(input())
+prev = [1]
+nl = []
+print(*l)
+for i in range(n-1):
+    
