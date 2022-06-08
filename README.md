@@ -560,3 +560,5 @@
 549. Cat and Mouse II (Game Theory DP)
 550. Insert Delete GetRandom O(1) - Duplicates allowed (Design) --**Revise** --**IMP**
 551. Largest Values From Labels (Greedy)
+552. Reorder Routes to Make All Paths Lead to the City Zero (Graphs)
+553. Minimize Malware Spread II (Graphs+DSU) --**Revise**
