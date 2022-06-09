@@ -568,3 +568,5 @@
 557. Regular Expression Matching (DP) --**IMP** --**REVISE**
 558. Sum of Beauty in the Array (PrefixMin + Suffix Max)
 559. Partition Array into Disjoint Intervals (PrefMin + Suffix Max)
+560. Design Front Middle Back Queue (Deque Design)
+561. Time Based Key-Value Store (Binary Search)
