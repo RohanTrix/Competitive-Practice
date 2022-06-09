@@ -566,3 +566,5 @@
 555. Loud and Rich (Graphs/DFS)
 556. Minimum Cost Tree From Leaf Values (DP) --**IMP** --**Revise**
 557. Regular Expression Matching (DP) --**IMP** --**REVISE**
+558. Sum of Beauty in the Array (PrefixMin + Suffix Max)
+559. Partition Array into Disjoint Intervals (PrefMin + Suffix Max)
