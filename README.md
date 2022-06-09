@@ -562,5 +562,7 @@
 551. Largest Values From Labels (Greedy)
 552. Reorder Routes to Make All Paths Lead to the City Zero (Graphs)
 553. Minimize Malware Spread II (Graphs+DSU) --**Revise**
-554. Checking Existence of Edge Length Limited Paths (MST + Sorting)
+554. Checking Existence of Edge Length Limited Paths ( Graphs MST + Sorting)
 555. Loud and Rich (Graphs/DFS)
+556. Minimum Cost Tree From Leaf Values (DP) --**IMP** --**Revise**
+557. Regular Expression Matching (DP) --**IMP** --**REVISE**
