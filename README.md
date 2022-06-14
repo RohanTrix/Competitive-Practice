@@ -570,3 +570,5 @@
 559. Partition Array into Disjoint Intervals (PrefMin + Suffix Max)
 560. Design Front Middle Back Queue (Deque Design)
 561. Time Based Key-Value Store (Binary Search)
+562. Find Median from Data Stream (Priority Queue) --*V.IMP** --**Revise**
+563. Sliding Window Median (2 TreeSets) --**V.IMP** --**Revise**
