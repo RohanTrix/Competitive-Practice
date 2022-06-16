@@ -572,3 +572,10 @@
 561. Time Based Key-Value Store (Binary Search)
 562. Find Median from Data Stream (Priority Queue) --*V.IMP** --**Revise**
 563. Sliding Window Median (2 TreeSets) --**V.IMP** --**Revise**
+564. Longest String Chain (LIS DP)
+565. Longest Happy String (Greedy/ PriorityQueue) --**V.IMP** --**Revise**
+566. Boundary of Binary Tree (Tree) (Solved on LintCode) --**IMP** --**Revise**
+567. Construct Binary Tree from Inorder and Postorder Traversal (Tree / DnC) --**REVISE** --**V.IMP**
+568. Construct Binary Tree from Preorder and Inorder Traversal (Tree / DnC) --**REVISE** --**V.IMP**
+569. Count and Say (DP / Simulation)
+570. Construct Binary Search Tree from Preorder Traversal (Tree / DnC) --**REVISE** --**V.IMP**
