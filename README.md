@@ -582,3 +582,5 @@
 571. Restore IP Addresses (Backtracking)
 572. Largest BST Subtree (Tree) (Solved on binarysearch.com) --**IMP** --**Revise**
 573. Binary Tree Cameras (Tree DP) --**HARD** --**REVISE**
+574. Lexicographically Smallest Equivalent String (DSU) (Solved on binarysearch.com as String Equivalence Relations)
+575. Prefix and Suffix Search (Trie) --**CONCEPT** --**IMP**
