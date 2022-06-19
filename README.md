@@ -584,3 +584,5 @@
 573. Binary Tree Cameras (Tree DP) --**HARD** --**REVISE**
 574. Lexicographically Smallest Equivalent String (DSU) (Solved on binarysearch.com as String Equivalence Relations)
 575. Prefix and Suffix Search (Trie) --**CONCEPT** --**IMP**
+576. Search a 2D Matrix II (Matrix) --**V.IMP** --**Revise**
+577. Kth Largest Element in an Array (QuickSelect) --**IMP** --**Revise**
