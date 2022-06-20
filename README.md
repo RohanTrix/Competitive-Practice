@@ -586,3 +586,4 @@
 575. Prefix and Suffix Search (Trie) --**CONCEPT** --**IMP**
 576. Search a 2D Matrix II (Matrix) --**V.IMP** --**Revise**
 577. Kth Largest Element in an Array (QuickSelect) --**IMP** --**Revise**
+578. Search Suggestions System (Trie) --**Revise**
