@@ -587,3 +587,6 @@
 576. Search a 2D Matrix II (Matrix) --**V.IMP** --**Revise**
 577. Kth Largest Element in an Array (QuickSelect) --**IMP** --**Revise**
 578. Search Suggestions System (Trie) --**Revise**
+579. Maximum Number of Events That Can Be Attended (Sweep Line) --**Tricky**  --**V.IMP**
+580. Maximum Number of Events That Can Be Attended II (Binary Search + DP)
+581. Course Schedule III (Greedy) --**Concept** --**HARD**
