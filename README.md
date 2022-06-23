@@ -590,3 +590,5 @@
 579. Maximum Number of Events That Can Be Attended (Sweep Line) --**Tricky**  --**V.IMP**
 580. Maximum Number of Events That Can Be Attended II (Binary Search + DP)
 581. Course Schedule III (Greedy) --**Concept** --**HARD**
+582. Course Schedule IV (Graphs)
+583. Fruit Into Baskets (Sliding Window)
