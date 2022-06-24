@@ -592,3 +592,5 @@
 581. Course Schedule III (Greedy) --**Concept** --**HARD**
 582. Course Schedule IV (Graphs)
 583. Fruit Into Baskets (Sliding Window)
+584. Delete Nodes And Return Forest (Tree)
+585. Reverse Pairs
