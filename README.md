@@ -595,3 +595,6 @@
 584. Delete Nodes And Return Forest (Tree)
 585. Reverse Pairs (Merge Sort)
 586. Number of Longest Increasing Subsequence (DP) --**V. IMP** **Revise**
+587. Random Pick with Weight (Randomized Algo -- Binary Search) --**IMP** --**Revise**
+588. Serialize and Deserialize Binary Tree (BFS)
+589. Parallel Courses II (Bitmask DP) --**HARD** 
