@@ -598,3 +598,6 @@
 587. Random Pick with Weight (Randomized Algo -- Binary Search) --**IMP** --**Revise**
 588. Serialize and Deserialize Binary Tree (BFS)
 589. Parallel Courses II (Bitmask DP) --**HARD** 
+590. Longest Subarray of 1's After Deleting One Element (Prefix/SUffix Processing)
+591. Largest Number (Sorting with Custom Comparator)
+592. Maximum Score Of Spliced Array (Prefix Sum) --**IMP** --**REVISE**
