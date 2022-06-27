@@ -601,3 +601,5 @@
 590. Longest Subarray of 1's After Deleting One Element (Prefix/SUffix Processing)
 591. Largest Number (Sorting with Custom Comparator)
 592. Maximum Score Of Spliced Array (Prefix Sum) --**IMP** --**REVISE**
+593. Pacific Atlantic Water Flow (Graphs)
+594. Stock Price Fluctuation (TreeMap)
