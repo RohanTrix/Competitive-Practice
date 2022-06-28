@@ -1,40 +1,26 @@
 public class Minimum_Deletions_to_Make_Character_Frequencies_Unique
 {
     // IDEA : https://youtu.be/QvzPHt8ngkg
+    class Solution {
     public int minDeletions(String s) {
-        Map<Character, Integer> map = new HashMap<>();
+        int freq[] = new int[26];
         for(char ch : s.toCharArray())
-            map.put(ch, map.getOrDefault(ch,0)+1);
-        
-        List<pair> list = new ArrayList<>(); 
-        for(char key : map.keySet())
-            list.add(new pair(key, map.get(key)));
-        
-        Collections.sort(list, (a,b) -> b.cnt - a.cnt);
-        Set<Integer> hs = new HashSet<>();
+            freq[ch-'a']++;
+        Set<Integer> set = new HashSet<>();
+        Arrays.sort(freq);
         int moves = 0;
-        for(int i = 0; i<list.size(); i++)
+        for(int num : freq)
         {
-            char ch = list.get(i).ch;
-            int cnt = list.get(i).cnt;
-            while(hs.contains(cnt))
+            if(num == 0)
+                continue;
+            while(num!=0 && set.contains(num))
             {
-                cnt--;
+                num--;
                 moves++;
-                if(cnt == 0) break;
             }
-            hs.add(cnt);
+            set.add(num);            
         }
         return moves;
     }
-    class pair
-    {
-        char ch;
-        int cnt;
-        public pair(char ch, int cnt)
-        {
-            this.ch = ch;
-            this.cnt = cnt;
-        }
-    }
+}
 }

@@ -603,3 +603,6 @@
 592. Maximum Score Of Spliced Array (Prefix Sum) --**IMP** --**REVISE**
 593. Pacific Atlantic Water Flow (Graphs)
 594. Stock Price Fluctuation (TreeMap)
+595. Minimum Difference Between Largest and Smallest Value in Three Moves (Greedy) --**IMP** --**REVISE
+596. Asteroid Collision (Stack) --**Tricky Edge cases**
+597. Count Square Submatrices with All Ones (DP)
