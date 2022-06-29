@@ -12,7 +12,7 @@ class MedianFinder {
     }
     
     public void addNum(int num) {
-        cnt++;
+        cnt++;  
         if(maxpq.isEmpty() || maxpq.peek()>num)
             maxpq.add(num);
         else

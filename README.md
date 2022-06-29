@@ -606,3 +606,5 @@
 595. Minimum Difference Between Largest and Smallest Value in Three Moves (Greedy) --**IMP** --**REVISE
 596. Asteroid Collision (Stack) --**Tricky Edge cases**
 597. Count Square Submatrices with All Ones (DP)
+598. Odd Even Jump (DP + TreeMap) --**IMP** --**Revise**
+599. Queue Reconstruction by Height (Sorting) --**Tricky**

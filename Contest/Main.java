@@ -4,44 +4,55 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    Map<Integer,List<Integer>> edges = new HashMap<>();
-    // returns matching with curr...without current
-    int[] dfs(int u, int par)
-    {
-        int with = 0, without = 0;
-        List<int[]> list = new ArrayList<>();
-        for(int to : edges.get(u))
-        {
-            if(to == par) continue;
-            list.add(dfs(to, u));
-        }
-        for(int pair[] : list)
-        {
-            without+=pair[1]; // without any childre
-            with+=pair[0];
-        }
-        int withCurr = 0;
-        for(int pair[] : list)
-        {
-            withCurr = Math.max(withCurr, with-pair[0] + 1);
-        }
-        System.out.println("Node "+u+"\t"+withCurr+" "+without);
-        return new int[]{withCurr, without};
-
-    }
+    
     void solve(FastReader sc)
     {
         int n = sc.nextInt();
-        for(int i = 0; i<n; i++)
-            edges.put(i, new ArrayList<>());
-        for(int i = 0; i<n-1; i++)
+        int nums[] = sc.nextArray(n);
+        // Arrays.sort(nums);
+        int pos = 0, neg = 0, zero = 0;
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int num : nums)
         {
-            int a = sc.nextInt() -1, b = sc.nextInt() -1;
-            edges.get(a).add(b);
-            edges.get(b).add(a);
+            if(num>0)
+                pos++;
+            else if(num<0)
+                neg++;
         }
-        int ans[] = dfs(0,-1);
-        sc.println(Math.max(ans[0], ans[1]));
+        if(pos>=3 || neg>=3)
+            sc.println("NO");
+        else
+        {
+            HashSet<Integer> hs = new HashSet<>();
+            List<Integer> list = new ArrayList<>();
+            for(int num : nums)
+            {
+
+                if(num == 0 && zero==3)
+                {
+                    continue;
+                }
+                if(num == 0) zero++;
+                list.add(num);
+                hs.add(num);
+            }
+            boolean ans = true;
+            for(int i = 0; i<list.size(); i++)
+            {
+                for(int j = i+1; j<list.size(); j++)
+                {
+                    for(int k = j+1; k<list.size(); k++)
+                        if(!hs.contains(list.get(i) + list.get(j) + list.get(k)))
+                            ans = false;
+                }
+            }
+            if(ans)
+                sc.println("YES");
+            else
+                sc.println("NO");
+        }
+        
+        
     }
     public static void main(String[] args) 
     {
@@ -52,7 +63,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -62,7 +73,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
