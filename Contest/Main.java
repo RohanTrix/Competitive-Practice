@@ -7,12 +7,7 @@ public class Main
     
     void solve(FastReader sc)
     {
-        int r = sc.nextInt()-1, c = sc.nextInt()-1;
-        int arr[][] = new int[2][2];
-        for(int i = 0; i<2; i++)
-            for(int j = 0; j<2; j++)
-                arr[i][j] = sc.nextInt();
-        sc.println(arr[r][c]);
+        Map<Integer, Stack> map = new HashMap<>();
         
     }
     public static void main(String[] args) 
@@ -24,7 +19,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -34,7 +29,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            // for(int T = sc.nextInt();T>0 ;T--)
+            for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
