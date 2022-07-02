@@ -613,3 +613,6 @@
 602. Last Moment Before All Ants Fall Out of a Plank --**CONCEPT**
 603. Count Submatrices With All Ones (DP) --**HARD** --**TRICKY**
 604. Bulls and Cows
+605. Single Number III (Bit Manipulation)
+606. Maximum Gap (Bucket Approach) --**CONCEPT** --**HARD**
+607. Longest Arithmetic Subsequence (LIS Type DP)
