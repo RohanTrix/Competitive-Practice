@@ -616,3 +616,5 @@
 605. Single Number III (Bit Manipulation)
 606. Maximum Gap (Bucket Approach) --**CONCEPT** --**HARD**
 607. Longest Arithmetic Subsequence (LIS Type DP)
+608. Vertical Order Traversal of a Binary Tree (DFS + HashMap)
+609. Sum of Square Numbers (Math)

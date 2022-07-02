@@ -7,7 +7,10 @@ public class Main
     
     void solve(FastReader sc)
     {
-        Map<Integer, Stack> map = new HashMap<>();
+        int n = sc.nextInt(), x = sc.nextInt(), a = sc.nextInt(), b = sc.nextInt();
+        int mini = Math.min(a,b), maxi = Math.max(a,b);
+        int dist = maxi - mini + Math.min(n-maxi+mini-1, x);
+        sc.println(dist);
         
     }
     public static void main(String[] args) 
