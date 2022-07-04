@@ -619,3 +619,6 @@
 608. Vertical Order Traversal of a Binary Tree (DFS + HashMap)
 609. Sum of Square Numbers (Math)
 610. Maximum Product of Splitted Binary Tree (Tree DP)
+611. Spiral Matrix IV
+612. Number of People Aware of a Secret (DP) --**HARD**
+613. Number of Increasing Paths in a Grid (DP)
