@@ -623,4 +623,6 @@
 612. Number of People Aware of a Secret (DP) --**HARD**
 613. Number of Increasing Paths in a Grid (DP)
 614. Queries on a Permutation With Key (Fenwick Tree) --**CONCEPT** --**IMP**
-615. Domino and Tromino Tiling (DP) --**IMP** 
+615. Domino and Tromino Tiling (DP) --**IMP**
+616. Shifting Letters
+617. Minimum Time to Make Rope Colorful (Greedy)
