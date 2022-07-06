@@ -6,13 +6,13 @@ public class Main
 {
     private class Fenwick
     {
-        int bit[], size;
+        long bit[]; int size;
         public Fenwick(int n)
         {
             size = n;
-            bit = new int[n+1];
+            bit = new long[n+1];
         }
-        public void update(int pos, int val)
+        public void update(int pos, long val)
         {
             while(pos<=size)
             {
@@ -20,9 +20,9 @@ public class Main
                 pos+=Integer.lowestOneBit(pos);
             }
         }
-        public int sum(int pos)
+        public long sum(int pos)
         {
-            int s = 0;
+            long s = 0;
             while(pos>0)
             {
                 s+=bit[pos];
@@ -30,40 +30,35 @@ public class Main
             }
             return s;
         }
-        public int rangeSum(int l, int r)
-        {
-            if(l>r)
-                return 0;
-            return sum(r) - sum(l-1);
-        }
     }
     void solve(FastReader sc)
     {
         int n = sc.nextInt();
-        int nums[] = new int[n];
-        for(int i = 0; i<n; i++)
-            nums[i] = sc.nextInt();
-        
+        int nums[] = sc.nextArray(n);
         Fenwick ft = new Fenwick(n);
         for(int i = 1; i<=n; i++)
             ft.update(i, 1);
-        Map<Integer, List<Integer>> map = new HashMap<>();
-        long swaps = 0;
+        
         for(int i = 0; i<n; i++)
         {
-            map.computeIfAbsent(nums[i], k-> new ArrayList<>()).add(i+1);
+            int p = sc.nextInt();
+            int l = 1, r = n;
+            int ind = -1;
+            while(l<=r)
+            {
+                int mid = l+(r-l)/2;
+                if(ft.sum(mid) >= p)
+                {
+                    ind = mid;
+                    r = mid - 1;
+                }
+                else
+                    l = mid + 1;
+            }
+            sc.print(nums[ind-1]+" ");
+            ft.update(ind, -1);
         }
-
-        for(int num : nums)
-        {
-            if(!map.containsKey(num))
-                continue;
-            List<Integer> list = map.get(num);
-            swaps+=ft.rangeSum(list.get(0)+1, list.get(1)-1);
-            ft.update(list.get(1), -1);
-            map.remove(num);
-        }
-        sc.println(swaps);
+        
     }
     public static void main(String[] args) 
     {
