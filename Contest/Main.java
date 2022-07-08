@@ -7,47 +7,15 @@ public class Main
     
     void solve(FastReader sc)
     {
-        int m = sc.nextInt(), s = sc.nextInt();
-        char smaller[] = new char[m], larger = new char[m];
-        int sum = s;
-        for(int i = 0; i<m; i++)
-        {
-            boolean f = false;
-            for(int dig = 0; dig<10; dig++)
-            {
-                if(i == 0 && dig == 0) continue;
-                if(sum-dig<=9*(m-i-1))
-                {
-                    f = true;
-                    smaller[i] = (char)(dig+'0');
-                    break;
-                }
-            }
-            if(!f)
-            {
-                sc.println("-1 -1");
-                return;
-            }
-        }
-        for(int i = 0; i<m; i++)
-        {
-            boolean f = false;
-            for(int dig = 9; dig>=0; dig--)
-            {
-                if(i == 0 && dig == 0) continue;
-                if(sum-dig<=9*(m-i-1))
-                {
-                    f = true;
-                    smaller[i] = (char)(dig+'0');
-                    break;
-                }
-            }
-            if(!f)
-            {
-                sc.println("-1 -1");
-                return;
-            }
-        }
+        String s = sc.nextLine();
+        int ab1 = s.indexOf("AB");
+        int ba2 = s.indexOf("BA", ab1+2);
+        int ba1 = s.indexOf("BA");
+        int ab2 = s.indexOf("AB", ba1+2);
+
+        if((ab1!=1 && ba2!=-1) || (ba1!=-1 && ab2!=-1))
+            sc.println("YES");
+        else sc.println("NO");
         
     }
     public static void main(String[] args) 

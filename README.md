@@ -630,3 +630,4 @@
 619. Minimum Possible Integer After at Most K Adjacent Swaps On Digits (Fenwick Tree + Greedy) --**IMP** --**REVISE**
 620. Online Majority Element In Subarray (Segment Tree) --**CONCEPT** --**REVISE**
 621. Design Circular Deque (Design) --**IMP** --**Popular** --**Revise**
+622. Paint house III (DP)
