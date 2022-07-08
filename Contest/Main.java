@@ -4,59 +4,49 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    private class Fenwick
-    {
-        long bit[]; int size;
-        public Fenwick(int n)
-        {
-            size = n;
-            bit = new long[n+1];
-        }
-        public void update(int pos, long val)
-        {
-            while(pos<=size)
-            {
-                bit[pos]+=val;
-                pos+=Integer.lowestOneBit(pos);
-            }
-        }
-        public long sum(int pos)
-        {
-            long s = 0;
-            while(pos>0)
-            {
-                s+=bit[pos];
-                pos-=Integer.lowestOneBit(pos);
-            }
-            return s;
-        }
-    }
+    
     void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int nums[] = sc.nextArray(n);
-        Fenwick ft = new Fenwick(n);
-        for(int i = 1; i<=n; i++)
-            ft.update(i, 1);
-        
-        for(int i = 0; i<n; i++)
+        int m = sc.nextInt(), s = sc.nextInt();
+        char smaller[] = new char[m], larger = new char[m];
+        int sum = s;
+        for(int i = 0; i<m; i++)
         {
-            int p = sc.nextInt();
-            int l = 1, r = n;
-            int ind = -1;
-            while(l<=r)
+            boolean f = false;
+            for(int dig = 0; dig<10; dig++)
             {
-                int mid = l+(r-l)/2;
-                if(ft.sum(mid) >= p)
+                if(i == 0 && dig == 0) continue;
+                if(sum-dig<=9*(m-i-1))
                 {
-                    ind = mid;
-                    r = mid - 1;
+                    f = true;
+                    smaller[i] = (char)(dig+'0');
+                    break;
                 }
-                else
-                    l = mid + 1;
             }
-            sc.print(nums[ind-1]+" ");
-            ft.update(ind, -1);
+            if(!f)
+            {
+                sc.println("-1 -1");
+                return;
+            }
+        }
+        for(int i = 0; i<m; i++)
+        {
+            boolean f = false;
+            for(int dig = 9; dig>=0; dig--)
+            {
+                if(i == 0 && dig == 0) continue;
+                if(sum-dig<=9*(m-i-1))
+                {
+                    f = true;
+                    smaller[i] = (char)(dig+'0');
+                    break;
+                }
+            }
+            if(!f)
+            {
+                sc.println("-1 -1");
+                return;
+            }
         }
         
     }
@@ -148,13 +138,20 @@ public class Main
             }
         }
     }
-    static class pair
+    static class pair implements Comparable < pair >
     {
-        int x;
-        int y;
-        pair(int i, int j) {
+        long x;
+        long y;
+        pair(long i, long j) {
             x = i;
             y = j;
+        }
+        public int compareTo(pair p) {
+            if (this.x != p.x) {
+                return Long.compare(this.x,p.x);
+            } else {
+                return Long.compare(this.y,p.y);
+            }
         }
         public String toString() {
             return x + " " + y;
@@ -162,10 +159,6 @@ public class Main
         public boolean equals(Object o) {
             pair x = (pair) o;
             return (x.x == this.x && x.y == this.y);
-        }
-        public int hashCode()
-        {
-            return Objects.hash(x,y);
         }
     }
     static int upper_bound(int arr[], int key)
