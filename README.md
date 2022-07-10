@@ -631,3 +631,7 @@
 620. Online Majority Element In Subarray (Segment Tree) --**CONCEPT** --**REVISE**
 621. Design Circular Deque (Design) --**IMP** --**Popular** --**Revise**
 622. Paint house III (DP)
+623. Minimum Numbers of Function Calls to Make Target Array (Math/ Bit Manipulation)
+624. Smallest Number in Infinite Set
+625. Move Pieces to Obtain a String (Prefix Sum)
+626. Jump Game VI (DP + Monotonic Queue) --**CONCEPT** --**Tricky**
