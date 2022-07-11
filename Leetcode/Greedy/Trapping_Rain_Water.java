@@ -33,3 +33,53 @@ class Trapping_Rain_Water {
         return water;
     }
 }
+
+public int trap(int[] height) {
+        int n = height.length;
+        Integer leftMax[] = new Integer[n+2], rightMax[] = new Integer[n+2];
+        leftMax[1] = height[0];
+        for(int i = 2; i<=n; i++)
+            leftMax[i] = Math.max(leftMax[i-1], height[i-1]);
+        
+        rightMax[n] = height[n-1];
+        for(int i = n-1; i>=1; i--)
+            rightMax[i] = Math.max(rightMax[i+1], height[i-1]);
+        
+        int water = 0;
+        for(int i = 1; i<=n; i++)
+        {
+            Integer left = leftMax[i-1];
+            Integer right = rightMax[i+1];
+            if(left == null || right == null)
+                continue;
+            water+=Math.max(0, Math.min(left, right) - height[i-1]);
+        }
+        return water;
+    }
+
+class Trapping_Rain_Water1
+{
+    // SAME LOGIC AS ABOVE...BUT WITH SHORTER CODE
+    public int trap(int[] height) {
+        int n = height.length;
+        Integer leftMax[] = new Integer[n+2], rightMax[] = new Integer[n+2];
+        leftMax[1] = height[0];
+        for(int i = 2; i<=n; i++)
+            leftMax[i] = Math.max(leftMax[i-1], height[i-1]);
+        
+        rightMax[n] = height[n-1];
+        for(int i = n-1; i>=1; i--)
+            rightMax[i] = Math.max(rightMax[i+1], height[i-1]);
+        
+        int water = 0;
+        for(int i = 1; i<=n; i++)
+        {
+            Integer left = leftMax[i-1];
+            Integer right = rightMax[i+1];
+            if(left == null || right == null)
+                continue;
+            water+=Math.max(0, Math.min(left, right) - height[i-1]);
+        }
+        return water;
+    }
+}

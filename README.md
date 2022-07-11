@@ -635,3 +635,5 @@
 624. Smallest Number in Infinite Set
 625. Move Pieces to Obtain a String (Prefix Sum)
 626. Jump Game VI (DP + Monotonic Queue) --**CONCEPT** --**Tricky**
+627. Find Smallest Common Element in All Rows (TreeMap+HashSet) (Solved on binarysearch.com)
+628. Maximum of Minimum Values in All Subarrays (MonoStack + Suffix Max) (Solved on GFG) --**HARD** __**CONCEPT**
