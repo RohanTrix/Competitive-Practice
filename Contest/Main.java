@@ -4,18 +4,34 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    public int solve(int[] nums) {
+        int n = nums.length;
+        int inc[] = new int[n]; Arrays.fill(inc, 1); // Longest inc sublist len ending at i
+        int dec[] = new int[n]; Arrays.fill(dec, 1); // Longest dec sublist len from back ending at i
+        for(int i = n-2;i>=0; i--)
+            if(nums[i] < nums[i+1])
+                dec[i] = dec[i+1]+1;
+        for(int i = 1; i<n; i++)
+            if(nums[i]> nums[i-1])
+                inc[i] = inc[i-1]+1;
+        int maxi = 0, incLen = 0;
+        for(int i = 0; i<n; i++)
+        {
+            maxi = Math.max(maxi, Math.max(inc[i],dec[i]));
+            if(i == 0 || i == n-1) continue;
+            else
+            {
+                if(nums[i-1] < nums[i+1])
+                    maxi = Math.max(maxi, inc[i-1] + dec[i+1]);
+            }
+        }
+        return maxi;
+    }
     void solve(FastReader sc)
     {
-        String s = sc.nextLine();
-        int ab1 = s.indexOf("AB");
-        int ba2 = s.indexOf("BA", ab1+2);
-        int ba1 = s.indexOf("BA");
-        int ab2 = s.indexOf("AB", ba1+2);
-
-        if((ab1!=1 && ba2!=-1) || (ba1!=-1 && ab2!=-1))
-            sc.println("YES");
-        else sc.println("NO");
+        int n = sc.nextInt();
+        int nums[] = sc.nextArray(n);
+        sc.println(solve(nums));
         
     }
     public static void main(String[] args) 

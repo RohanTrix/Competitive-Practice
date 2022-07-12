@@ -636,4 +636,7 @@
 625. Move Pieces to Obtain a String (Prefix Sum)
 626. Jump Game VI (DP + Monotonic Queue) --**CONCEPT** --**Tricky**
 627. Find Smallest Common Element in All Rows (TreeMap+HashSet) (Solved on binarysearch.com)
-628. Maximum of Minimum Values in All Subarrays (MonoStack + Suffix Max) (Solved on GFG) --**HARD** __**CONCEPT**
+628. Maximum of Minimum Values in All Subarrays (MonoStack + Suffix Max) (Solved on GFG) --**HARD** --**CONCEPT**
+629. 01 Matrix (Multi-Source BFS)
+630. Push Dominoes (Two Pointer) --**IMP**
+631. Non-negative Integers without Consecutive Ones (Digit DP)
