@@ -641,3 +641,10 @@
 630. Push Dominoes (Two Pointer) --**IMP**
 631. Non-negative Integers without Consecutive Ones (Digit DP)
 632. Count Unique Characters of All Substrings of a Given String --**IMP**
+633. Kth Smallest Element in a Sorted Matrix (Binary Search and other approaches) --**POPULAR** --**IMP** --**REVISE**
+634. Number of Nodes in the Sub-Tree With the Same Label
+635. Minimum Number of Swaps to Make the Binary String Alternating --**IMP**
+636. Check Completeness of a Binary Tree (BFS) --**IMP**
+637. Even Odd Tree (BFS)
+638. Number of Good Leaf Nodes Pairs (Tree)
+639. Minimum Suffix Flips
