@@ -649,3 +649,5 @@
 638. Number of Good Leaf Nodes Pairs (Tree)
 639. Minimum Suffix Flips
 640. String Compression II (DP) --**HARD** --Runtime Strict**
+641. Selling Pieces of Wood (DP) --**IMP**
+642. Maximize the Confusion of an Exam (Sliding Window)
