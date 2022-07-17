@@ -651,3 +651,9 @@
 640. String Compression II (DP) --**HARD** --Runtime Strict**
 641. Selling Pieces of Wood (DP) --**IMP**
 642. Maximize the Confusion of an Exam (Sliding Window)
+643. Lexicographical Numbers (Backtracking)
+644. Find the Winner of an Array Game (Simulation)
+645. Max Sum of a Pair With Equal Sum of Digits
+646. Query Kth Smallest Trimmed Number
+647. Minimum Deletions to Make Array Divisible (GCD + Sorting)
+648. Count of Range Sum (Fenwick Tree + Binary Search)
