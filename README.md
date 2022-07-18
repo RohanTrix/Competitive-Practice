@@ -657,3 +657,4 @@
 646. Query Kth Smallest Trimmed Number
 647. Minimum Deletions to Make Array Divisible (GCD + Sorting)
 648. Count of Range Sum (Fenwick Tree + Binary Search)
+649. Minimum Swaps to Arrange a Binary Grid (Greedy) --**IMP** --**REVISE**
