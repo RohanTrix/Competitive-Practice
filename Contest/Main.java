@@ -4,10 +4,57 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    int maxMatVal(int pref[][], int len)
+    {
+        int maxi = Integer.MIN_VALUE;
+        int n = pref.length-1;
+        for(int i = 1; i<=n; i++)
+        {
+            for(int j = 1; j<=n; j++)
+            {
+                int x1 = i, y1 = j;
+                int x2 = i+len, y2 = j+len;
+                if(x2>n || y2>n) continue;
+                int val = pref[x2][y2] - pref[x2][y1-1] - pref[x1-1][y2] + pref[x1-1][x2-1];
+                maxi = Math.max(maxi, val);
+            }
+        }
+        return maxi;
+    }
     void solve(FastReader sc)
     {
+        int n = sc.nextInt();
+        int mat[][] = new int[n][n];
+        for(int i = 0; i<n; i++)
+        {
+            for(int j = 0; j<n; j++)
+            {
+                mat[i][j] = sc.nextInt();
+            }
+        }
+        int pref[][] = new int[n+1][n+1];
+        int maxSum = sc.nextInt();
+        int l = 0, r = n-1;
+        for(int i = 1; i<=n;i++)
+        {
+            for(int j = 1; j<=n;j++)
+            {
+                pref[i][j] = pref[i-1][j] + pref[i][j-1] - pref[i-1][j-1] + mat[i-1][j-1];
+            }
+        }
         
+        int ans = 0;
+        while(l<=r)
+        {
+            int len = (l+r)/2;
+            if(maxMatVal(pref, len) <= maxSum)
+            {
+                ans = len;
+                l =  len + 1;
+            }
+            else r = len - 1;
+        }
+        sc.print(ans+1);
         
     }
     public static void main(String[] args) 
@@ -19,7 +66,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -29,7 +76,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();

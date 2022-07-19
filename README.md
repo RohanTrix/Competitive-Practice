@@ -667,3 +667,6 @@
 656. Minimum Insertions to Balance a Parentheses String (Stack) --**HARD** --**TRICKY**
 657. Minimum Add to Make Parentheses Valid (Stack)
 658. Find Longest Awesome Substring (Prefix Bitmask) --**CONCEPT** --**IMP**
+659. Maximum Side Length of a Square with Sum Less than or Equal to Threshold (Sliding Window) (2D Prefix Sum + Binary Search)
+660. Design Circular Queue
+661. Sliding Puzzle (BFS) --**IMPLEMENTATION HEAVY**
