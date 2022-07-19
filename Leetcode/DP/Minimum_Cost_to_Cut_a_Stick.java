@@ -26,7 +26,7 @@
                       dp[i][j] = Minimum cost to make all cuts in cuts[i...j];
 
            DP TRANSITION:
-                      dp[i][j] = Min cost across all cuts + (j-i)
+                      dp[i][j] = Min cost across all cuts + (rightBound - leftBound)
 
 */
 

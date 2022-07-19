@@ -658,3 +658,12 @@
 647. Minimum Deletions to Make Array Divisible (GCD + Sorting)
 648. Count of Range Sum (Fenwick Tree + Binary Search)
 649. Minimum Swaps to Arrange a Binary Grid (Greedy) --**IMP** --**REVISE**
+650. Get the Maximum Score (DP) --**IMP**
+651. Find Kth Bit in Nth Binary String
+652. Maximum Number of Non-Overlapping Subarrays With Sum Equals Target (Prefix Sum) (DP) (Greedy) --**IMP**
+653. Recover Binary Search Tree (BST) --**IMP** --**POPULAR**
+654. Can Convert String in K Moves (Greedy) --**IMP**
+655. Count Substrings That Differ by One Character (Counting Problem) --**IMP** --**CONCEPT**
+656. Minimum Insertions to Balance a Parentheses String (Stack) --**HARD** --**TRICKY**
+657. Minimum Add to Make Parentheses Valid (Stack)
+658. Find Longest Awesome Substring (Prefix Bitmask) --**CONCEPT** --**IMP**
