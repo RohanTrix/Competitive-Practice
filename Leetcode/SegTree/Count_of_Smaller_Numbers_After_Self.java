@@ -63,3 +63,57 @@ public class Count_of_Smaller_Numbers_After_Self {
         tree[index] = tree[2*index] + tree[2*index+1];
     }
 }
+
+class Solution { // Fenwick Tree
+    class Fenwick
+    {
+        int size, bit[];
+        public Fenwick(int n)
+        {
+            size = n;
+            bit = new int[n+1];
+        }
+        public void update(int pos, int v)
+        {
+            while(pos<=size)
+            {
+                bit[pos]+=v;
+                pos+=(pos&(-pos));
+            }
+        }
+        public int sum(int pos)
+        {
+            int res = 0;
+            while(pos>0)
+            {
+                res+=bit[pos];
+                pos-=(pos&(-pos));
+            }
+            return res;
+        }
+    }
+    public List<Integer> countSmaller(int[] nums) {
+        // Coordinate Compression
+        int n = nums.length;
+        int tmp[] = nums.clone();
+        Arrays.sort(tmp);
+        Map<Integer, Integer> compress = new HashMap<>();
+        int compVal = 1;
+        for(int num : tmp)
+            if(!compress.containsKey(num))
+                compress.put(num, compVal++);
+        
+        int ans[] = new int[n];
+        Fenwick ft = new Fenwick(compVal);
+        for(int i = n-1; i>=0; i--)
+        {
+            int val = compress.get(nums[i]);
+            ans[i] = ft.sum(val-1);
+            ft.update(val, 1);
+        }
+        List<Integer> res = new ArrayList<>();
+        for(int num : ans) res.add(num);
+        return res;
+        
+    }
+}

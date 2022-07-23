@@ -670,3 +670,7 @@
 659. Maximum Side Length of a Square with Sum Less than or Equal to Threshold (Sliding Window) (2D Prefix Sum + Binary Search)
 660. Design Circular Queue
 661. Sliding Puzzle (BFS) --**IMPLEMENTATION HEAVY**
+662. Magnetic Force Between Two Balls (Binary Search) --**IMP**
+663. Minimum Number of Days to Eat N Oranges (DP) --**Tricky** --**Math**
+664. Reverse Linked List II
+665. Find Latest Group of Size M (DSU) --**Tricky** --**Unable to Implement without WA**
