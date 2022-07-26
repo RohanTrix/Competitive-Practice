@@ -674,3 +674,6 @@
 663. Minimum Number of Days to Eat N Oranges (DP) --**Tricky** --**Math**
 664. Reverse Linked List II
 665. Find Latest Group of Size M (DSU) --**Tricky** --**Unable to Implement without WA**
+666. Detect Cycles in 2D Grid (DSU)
+667. Minimum Number of Days to Disconnect Island (DSU) --**Observation Based**
+668. Number of Ways to Reorder Array to Get Same BST (Divide And Conquer) --**CONCEPT** --**IMP** --**Revise**

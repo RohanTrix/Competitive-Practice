@@ -24,7 +24,6 @@ public class Minimum_Numbers_of_Function_Calls_to_Make_Target_Array {
             maxi = Math.max(maxi,Integer.numberOfTrailingZeros(Integer.highestOneBit(num)));
             ops+=Integer.bitCount(num);
         }
-        ops+=maxi;
-        return ops;
+        return ops + maxi;
     }
 }
