@@ -1,6 +1,6 @@
 public class Number_of_Ways_to_Reorder_Array_to_Get_Same_BST
 {
-    // Explained in OneNote
+    // IDEA : Explained in OneNote
     long fact[], ifact[];
     int mod = (int)1e9+7;
     public long binpow(long a, long b)
