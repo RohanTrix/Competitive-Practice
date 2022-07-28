@@ -77,7 +77,7 @@ public class Remove_Max_Number_of_Edges_to_Keep_Graph_Fully_Traversable
         {
             if(edge[0] == 3)
             {
-                // If both ndoes connected in both DSUs, then remove the edge
+                // If both nodes connected in both DSUs, then remove the edge
                 if(alice.isCon(edge[1], edge[2]) && bob.isCon(edge[1], edge[2]))
                     cnt++;
                 else // Else add common edge to both graphs

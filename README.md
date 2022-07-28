@@ -677,3 +677,4 @@
 666. Detect Cycles in 2D Grid (DSU)
 667. Minimum Number of Days to Disconnect Island (DSU) --**Observation Based**
 668. Number of Ways to Reorder Array to Get Same BST (Divide And Conquer) --**CONCEPT** --**IMP** --**Revise**
+669. Number of Ways Where Square of Number Is Equal to Product of Two Numbers (Counting)
