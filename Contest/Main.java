@@ -1,53 +1,46 @@
-import java.io.File;
-abstract class ILogger
+import java.util.*;
+public class Main
 {
-    public ILogger()
+    public boolean check(int f1[], int f2[])
     {
+        for(int i = 0; i<26; i++) if(f1[i]!=f2[i]) return false;
+        return true;
+    }
+    public boolean isAnagram(String str, String ttr)
+    {
+        char s[] = str.toCharArray();
+        char t[] = ttr.toCharArray();
         
+        int freqT[] = new int[26];
+        int freqS[] = new int[26];
+        for(char ch : t) freqT[ch-'a']++;
+
+        int slen = s.length, tlen = t.length;
+        int left = 0;
+        for(int right = 0; right<slen; right++)
+        {
+            
+            freqS[s[right]-'a']++;
+            if(right>=tlen)
+            {
+                freqS[s[left++]-'a']--;
+            }
+            if(right>=tlen-1)
+            {
+                if (check(freqS, freqT)) return true;
+            }
+        }
+        return false;
     }
-    void Log(String d, String msg, String type)
-    {}
-    String msgConcat(String d, String msg, String type)
-    {
-        StringBuilder str = new StringBuilder();
-        str.append(d);
-        str.append(", ");
-        str.append(msg);
-        str.append(", ");
-        str.append(type);
-        return str.toString();
-    }
-}
-class FileLogger extends ILogger
-{
-    public FileLogger()
-    {
-        super();
-    }
-    void Log(String d, String msg, String ty pe)
-    {
-        System.out.println(msgConcat(d,msg, type));
-    }
-}
-class DBLogger implements ILogger
-{
-    public DBLogger()
-    {
-        super();
-    }
-    void Log(String d, String msg, String type)
-    {
-        System.out.println(msgConcat(d,msg, type));
-    }
-}
-class EventLogger implements ILogger
-{
-    public EventLogger()
-    {
-        super();
-    }
-    void Log(String d, String msg, String type)
-    {
-        System.out.println(msgConcat(d,msg, type));
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String s = "abcdefg";
+        String t = "dc";
+        Main ob = new Main();
+        if(ob.isAnagram(s, t))
+            System.out.println("Substring is Anagram");
+        else
+            System.out.println("Substrng is NOT Anagram");
+
     }
 }

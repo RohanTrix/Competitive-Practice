@@ -678,3 +678,8 @@
 667. Minimum Number of Days to Disconnect Island (DSU) --**Observation Based**
 668. Number of Ways to Reorder Array to Get Same BST (Divide And Conquer) --**CONCEPT** --**IMP** --**Revise**
 669. Number of Ways Where Square of Number Is Equal to Product of Two Numbers (Counting)
+670. Find and Replace Pattern (HashMap)
+671. Shortest Subarray to be Removed to Make Array Sorted (Two Pointer) --**TRICKY** --**HARD**
+672. Count All Possible Routes (DP)
+673. Count Unhappy Friends (Brute Force) --**Bad problem**
+674. Check If String Is Transformable With Substring Sort Operations (Greedy) --**IMP**
