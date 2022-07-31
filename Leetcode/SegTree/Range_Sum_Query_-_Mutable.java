@@ -1,4 +1,10 @@
-class NumArray {
+ /**
+  * Your NumArray object will be instantiated and called as such:
+  * NumArray obj = new NumArray(nums);
+  * obj.update(index,val);
+  * int param_2 = obj.sumRange(left,right);
+  */
+class NumArray { // Segment Tree
     // CP AlgoZenith 
     int n;
     int tree[] = new int[400400];
