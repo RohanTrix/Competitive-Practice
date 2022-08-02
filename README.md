@@ -683,3 +683,7 @@
 672. Count All Possible Routes (DP)
 673. Count Unhappy Friends (Brute Force) --**Bad problem**
 674. Check If String Is Transformable With Substring Sort Operations (Greedy) --**IMP**
+675. Maximum Product Subarray (DP) --**IMP** --**REVISE**
+676. Maximum Non Negative Product in a Matrix (DP) --**IMP** --**REVISE**
+677. Split a String Into the Max Number of Unique Substrings (Backtracking)
+678. Last Stone Weight II (DP) --**Revise** --**V.IMP**

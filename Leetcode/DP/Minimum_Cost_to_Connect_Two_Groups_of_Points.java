@@ -10,7 +10,7 @@
                        nodes in group 2. After connecting, we update the bitmask and call for the i+1.
                        
                        Tricky Base Case : After we have connected each node i in Group 1, there might be some nodes in group 2 that did
-                       not connect to any node in the Group 1. So at this time, we try to attack each of these un-attached 
+                       not connect to any node in the Group 1. So at this time, we try to attach each of these un-attached 
                        nodes in Group 2 with the min Edge to one of the nodes in Group 1. 
                        
                        This will ensure that each node in Group 2 is now connected, and since we have reached i==size1, we know that
