@@ -689,3 +689,4 @@
 678. Last Stone Weight II (DP) --**Revise** --**V.IMP**
 679. My Calendar I (TreeMap/ Binary Search) --**IMP** --**Revise**
 680. Strange Printer II (Topological Sort/ Check for DAG) --**Tough To Come up With** --**Revise**
+681. Make Sum Divisible by P
