@@ -690,3 +690,7 @@
 679. My Calendar I (TreeMap/ Binary Search) --**IMP** --**Revise**
 680. Strange Printer II (Topological Sort/ Check for DAG) --**Tough To Come up With** --**Revise**
 681. Make Sum Divisible by P
+682. Maximum Profit of Operating a Centennial Wheel
+683. Throne Inheritance (Design)
+684. Maximum Number of Achievable Transfer Requests (Bitmask) --**IMP**
+685. Number of Different Subsequences GCDs (Math) --**TRICKY** --**REVISE** --**CONCEPT**

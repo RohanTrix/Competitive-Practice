@@ -1,4 +1,44 @@
+from functools import lru_cache
 class Solution:
+    '''
+        IDEA : You need to try to make every element the root and then recursively calculate
+               the count of ways for making left subtree and rightsubtree....and multiply them to 
+               make all combinations.
+
+               Main observation : Suppose you place 10 at the root, now try to place a number
+                                  from the set as the root of leftSubtree and correspondingly
+                                  rightsubtree
+
+                                  The key observation is for a given node, we should store all possible
+                                  trees count since this no. can be a factor for other numbers as well
+                                  and we can avoid repeated work using DP
+    '''
+    def numFactoredBinaryTrees(self, arr: List[int]) -> int:
+        mod = 10**9+7
+        nums = set(arr)
+
+        @lru_cache(None)
+        def count(root):
+            if root not in nums:
+                return 0
+            c = 1
+            
+            for left in nums:
+                if root%left == 0 and root!=left:
+                    leftCount = count(left)
+                    rightCount = count(root//left)
+                    v=leftCount*rightCount
+                    c+=v
+            return c%mod
+        
+        ans = 0
+        for val in nums:
+            ans+=count(val)
+            ans%=mod
+        return ans
+
+    
+class Solution1:
     def numFactoredBinaryTrees(self, arr: List[int]) -> int:
         # Refer Explanation Link: https://youtu.be/vzjMGYUG7qY
         # Important Problem
