@@ -694,3 +694,5 @@
 683. Throne Inheritance (Design)
 684. Maximum Number of Achievable Transfer Requests (Bitmask) --**IMP**
 685. Number of Different Subsequences GCDs (Math) --**TRICKY** --**REVISE** --**CONCEPT**
+686. Maximum Number of Visible Points (Sliding Window + Geometry) --**IMP** --**TRICKY** --**CONCEPT**
+687. Minimum One Bit Operations to Make Integers Zero (Bit Manipulation + DP) --**HARD** --**TRICKY**
