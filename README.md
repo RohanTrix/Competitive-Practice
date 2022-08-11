@@ -696,3 +696,6 @@
 685. Number of Different Subsequences GCDs (Math) --**TRICKY** --**REVISE** --**CONCEPT**
 686. Maximum Number of Visible Points (Sliding Window + Geometry) --**IMP** --**TRICKY** --**CONCEPT**
 687. Minimum One Bit Operations to Make Integers Zero (Bit Manipulation + DP) --**HARD** --**TRICKY**
+688. Find Valid Matrix Given Row and Column Sums --**Tricky**
+689. Alert Using Same Key-Card Three or More Times in a One Hour Period
+690. Find Servers That Handled Most Number of Requests (TreeSet/BinarySearch + SweepLine) --**REVISE** --**CONCEPT**
