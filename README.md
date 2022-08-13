@@ -699,3 +699,4 @@
 688. Find Valid Matrix Given Row and Column Sums --**Tricky**
 689. Alert Using Same Key-Card Three or More Times in a One Hour Period
 690. Find Servers That Handled Most Number of Requests (TreeSet/BinarySearch + SweepLine) --**REVISE** --**CONCEPT**
+691. Number of Times Binary String Is Prefix_Aligned --**REVISE** --**TRICKY** --**IMP**
