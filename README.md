@@ -700,3 +700,6 @@
 689. Alert Using Same Key-Card Three or More Times in a One Hour Period
 690. Find Servers That Handled Most Number of Requests (TreeSet/BinarySearch + SweepLine) --**REVISE** --**CONCEPT**
 691. Number of Times Binary String Is Prefix_Aligned --**REVISE** --**TRICKY** --**IMP**
+692. Node With Highest Edge Score (Graphs)
+693. Construct Smallest Number From DI String (Two Pointer + Greedy) --**IMP**
+694. Count Special Integers ( Digit DP + Bitmask) --**REVISE**
