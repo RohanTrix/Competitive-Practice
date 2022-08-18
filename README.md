@@ -703,3 +703,8 @@
 692. Node With Highest Edge Score (Graphs)
 693. Construct Smallest Number From DI String (Two Pointer + Greedy) --**IMP**
 694. Count Special Integers ( Digit DP + Bitmask) --**REVISE**
+695. Split Two Strings to Make Palindrome (Greedy) --**IMP** --**REVISE** --**CONCEPT**
+696. Count Subtrees With Max Distance Between Cities (Graph + Bitmask) --**IMP**
+697. Best Team With No Conflicts (DP) --**IMP** --**Revise**
+698. Lexicographically Smallest String After Applying Operations (Brute Force)
+699. Watering Plants II
