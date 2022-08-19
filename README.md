@@ -708,3 +708,5 @@
 697. Best Team With No Conflicts (DP) --**IMP** --**Revise**
 698. Lexicographically Smallest String After Applying Operations (Brute Force)
 699. Watering Plants II
+700. Split Array into Consecutive Subsequences (Greedy + PriorityQueue) --**IMP** --**Revise** --**Tricky**
+701. Find Peak Element (Binary Search)
