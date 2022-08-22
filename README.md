@@ -710,3 +710,8 @@
 699. Watering Plants II
 700. Split Array into Consecutive Subsequences (Greedy + PriorityQueue) --**IMP** --**Revise** --**Tricky**
 701. Find Peak Element (Binary Search)
+702. Fancy Sequence (Linear Functions) --**V. V. HARD** --**CONCEPT**
+703. Coordinate With Maximum Network Quality (Brute Force)
+704. Number of Sets of K Non-Overlapping Line Segments (DP) --**Revise**
+705. Minimum Number of Refueling Stops (Greedy/PQ) --**Revise** --**V. IMP**
+706. Stamping The Sequence ( Greedy) --**TOUGH** --**HEAVY GREEDY**
