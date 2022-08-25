@@ -16,7 +16,7 @@
  *                               since if any bit NOT SET in the mask but SET in prereq[i]...it will result in 0 when ANDing....and so this AND value will never equal
  *                               to prereq of i.
  *                  
- *                  3) Now we use the technique of Submask Enumeration( https://cp-algorithms.com/algebra/all-submasks.html ). This will give us a
+ *                  3) Now we use the technique of Submask Enumeration( https://cp-algorithms.com/algebra/all-submasks.html ). This will give us
  *                     all the subsets of canTake. Out of all the subsets of canTake...we only consider the subsets where the courses taken are <=k.
  *                     This is simply done by counting the bits in the submask. `take` denotes the current subset of doable courses we take in 1 sem together.
  *                     

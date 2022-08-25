@@ -717,3 +717,5 @@
 706. Stamping The Sequence ( Greedy) --**TOUGH** --**HEAVY GREEDY**
 707. Unique Paths III (Bitmask)
 708. Accounts Merge
+709. Maximum Sum BST in Binary Tree --**V.IMP** --**REVISE**
+710. Count Nice Pairs in an Array
