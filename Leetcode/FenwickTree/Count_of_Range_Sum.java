@@ -1,6 +1,6 @@
 public class Count_of_Range_Sum {
     // EXPLANATION TO BE WRITTEN IN ONENOTE
-    // FENWICK TREE OVER SORTED PREFIX SUMS.
+    /w
     // Deduce from low <= sum(i,j) <= high
     class Fenwick
     {

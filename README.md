@@ -720,3 +720,5 @@
 709. Maximum Sum BST in Binary Tree --**V.IMP** --**REVISE**
 710. Count Nice Pairs in an Array
 711. Unique Binary Search Trees (DnC DP)
+712. Sort the Matrix Diagonally (Count Sort)
+713. Kth Smallest Instructions (Greedy) --**IMP** --**Revise**

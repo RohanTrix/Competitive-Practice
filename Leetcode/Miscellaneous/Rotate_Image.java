@@ -1,26 +1,21 @@
 public class Rotate_Image {
     // IDEA : https://youtu.be/uB0RgD4p3LY
-    public void rotate(int[][] matrix) {
-        int n = matrix.length;
-        // Transpose matrix
+    public void rotate(int[][] mat) {
+        int n = mat.length;
         for(int i = 0; i<n; i++)
-        {
-            for(int j = i+1; j<n; j++)
+            for(int j = 0; j<i; j++)
             {
-                int tmp = matrix[i][j];
-                matrix[i][j] = matrix[j][i];
-                matrix[j][i] = tmp;
+                int tmp = mat[i][j];
+                mat[i][j] = mat[j][i];
+                mat[j][i] = tmp;
             }
-        }
-        // Reverse each row
-        for(int row[] : matrix)
-        {
-            for(int i = 0; i<n/2; i++)
+        
+        for(int i = 0; i<n; i++)
+            for(int j = 0; j<n/2; j++)
             {
-                int tmp = row[i];
-                row[i] = row[n-i-1];
-                row[n-i-1] = tmp;
+                int tmp = mat[i][j];
+                mat[i][j] = mat[i][n-j-1];
+                mat[i][n-j-1] = tmp;
             }
-        }
     }
 }
