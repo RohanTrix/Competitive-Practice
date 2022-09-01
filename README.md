@@ -723,3 +723,4 @@
 712. Sort the Matrix Diagonally (Count Sort)
 713. Kth Smallest Instructions (Greedy) --**IMP** --**Revise**
 714. Number of Ways to Form a Target String Given a Dictionary (DP) --**IMP** --**Revise**
+715. Shuffle an Array (Randomized Algo - Fisher Yates Shuffle Algorithm) --**V.V.IMP**
