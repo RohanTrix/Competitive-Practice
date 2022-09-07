@@ -1,8 +1,8 @@
 package Leetcode.Binary_Search;
 // IDEA : For a key's given timestamps, binary search the timestamp's floor
-class TimeMap {
+class Time_Based_Key_Value_Store {
     Map<String, TreeSet<pair>> map;
-    public TimeMap() {
+    public Time_Based_Key_Value_Store() {
         map = new HashMap<>();
     }
     
