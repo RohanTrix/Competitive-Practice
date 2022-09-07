@@ -4,39 +4,9 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    public boolean dup(Map<Character, Integer> map)
-    {
-        for(char key : map.keySet())
-            if(map.get(key) > 1)
-                return true;
-        return false;
-    }
-    public int findStr(String s)
-    {
-        Map<Character, Integer> map = new HashMap<>();
-        int left = 0;
-        s = s+s;
-        char str[] = s.toCharArray();
-        int left = 0;
-        int maxi = 0;
-        for(int right = 0; right<str.length; right++)
-        {
-            map.put(str[right], map.getOrDefault(str[right],0)+1);
-
-            while(left< right && dup(map))
-            {
-                map.put(str[left], map.get(str[left]) - 1);
-                if(map.get(str[left]) ==0)
-                    map.remove(str[left]);
-                left++;
-            }
-            maxi = Math.max(maxi, right - left + 1);
-        }
-        return n - maxi;
-    }
+    
     void solve(FastReader sc)
     {
-        
         
     }
     public static void main(String[] args) 

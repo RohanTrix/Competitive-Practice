@@ -724,3 +724,6 @@
 713. Kth Smallest Instructions (Greedy) --**IMP** --**Revise**
 714. Number of Ways to Form a Target String Given a Dictionary (DP) --**IMP** --**Revise**
 715. Shuffle an Array (Randomized Algo - Fisher Yates Shuffle Algorithm) --**V.V.IMP**
+716. Strictly Palindromic Number
+717. Maximum Rows Covered by Columns (Bitmask)
+718. Maximum Number of Robots Within Budget (MonoQueue + Binary Search) --**V.IMP --**Revise**
