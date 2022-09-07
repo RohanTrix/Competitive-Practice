@@ -7,6 +7,7 @@ class TimeMap {
     }
     
     public void set(String key, String value, int timestamp) {
+        
         map.computeIfAbsent(key, k-> new TreeSet<>()).add(new pair(value, timestamp));
     }
     
