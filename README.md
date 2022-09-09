@@ -388,7 +388,7 @@
 379. Minimum Number of Steps to Make Two Strings Anagram II
 380. Minimum Time to Complete Trips (Binary Search)
 381. Numbers With Repeated Digits (Digit DP) --**IMP** --**Revise**
-382. Maximum Width of Binary Tree (Tree)
+382. Maximum Width of Binary Tree (Tree) --**V.V IMP**
 383. Evaluate Division (Graphs)
 384. Vowels of All Substrings --**Concept**
 385. Most Stones Removed with Same Row or Column (DSU)
@@ -727,3 +727,7 @@
 716. Strictly Palindromic Number
 717. Maximum Rows Covered by Columns (Bitmask)
 718. Maximum Number of Robots Within Budget (MonoQueue + Binary Search) --**V.IMP --**Revise**
+719. Longest Nice Subarray (Sliding Window) --**Revise**
+720. Number of Ways to Reach a Position After Exactly k Steps (DP)
+721. Subarray With Elements Greater Than Varying Threshold (MonoStack) --**Tricky** --**V IMP**
+722. The Number of Weak Characters in the Game (Sorting + Two Pointer + SuffixMax)
