@@ -731,4 +731,12 @@
 720. Number of Ways to Reach a Position After Exactly k Steps (DP)
 721. Subarray With Elements Greater Than Varying Threshold (MonoStack) --**Tricky** --**V IMP**
 722. The Number of Weak Characters in the Game (Sorting + Two Pointer + SuffixMax)
-723. Longest Chunked Palindrome Decomposition (String Hashing) --**TOUGH**
+723. Longest Chunked Palindrome Decomposition (String Hashing) --**TOUGH** --**Implementation Heavy**
+724. Longest Duplicate Substring (String Hashing + Binary Search) --**V.IMP**
+725. Repeated DNA Sequences
+726. Distinct Echo Substrings (String Hashing)
+727. Maximum Length of Repeated Subarray (String Hashing + Binary Search)
+728. Optimal Partition of String (Greedy)
+729. Divide Intervals Into Minimum Number of Groups (SweepLine / PQ)
+730. Longest Increasing Subsequence II (DP + Segment Tree) --**IMP** --**CONCEPT**
+731. Bag of Tokens (Greedy + Two Pointer)
