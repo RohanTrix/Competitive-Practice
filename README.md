@@ -741,4 +741,5 @@
 730. Longest Increasing Subsequence II (DP + Segment Tree) --**IMP** --**CONCEPT**
 731. Bag of Tokens (Greedy + Two Pointer)
 732. Pseudo-Palindromic Paths in a Binary Tree
-
+733. Product of the Last K Numbers (Prefix Products) --**CONCEPT** --**REVISE**
+734. Number of Ways to Wear Different Hats to Each Other (Bitmask DP) --**Tricky** --**CONCEPT**
