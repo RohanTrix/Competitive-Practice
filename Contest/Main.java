@@ -7,7 +7,20 @@ public class Main
     
     void solve(FastReader sc)
     {
-        
+        int n = sc.nextInt();
+        int arr[] = sc.nextArray(n);
+        Arrays.sort(arr);
+        int nums[] = new int[2*n];
+        for(int i = 0; i<2*n; i++) nums[i] = arr[i%n];
+        long maxi = Long.MIN_VALUE;
+        for(int i = 0; i<(2*n)-5+1; i++)
+        {
+            long prod = 1L;
+            for(int j = i; j<i+5; j++)
+                prod*=nums[j];
+            maxi = Math.max(maxi, prod);
+        }
+        sc.println(maxi);
     }
     public static void main(String[] args) 
     {
@@ -38,6 +51,7 @@ public class Main
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
     final long mod = 1000000000+7;
+    void debug(Object... o) { System.out.println(Arrays.deepToString(o));}
     public static long power(long x, long y, long mod)
     {
         long res = 1L;

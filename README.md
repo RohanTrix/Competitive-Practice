@@ -740,3 +740,5 @@
 729. Divide Intervals Into Minimum Number of Groups (SweepLine / PQ)
 730. Longest Increasing Subsequence II (DP + Segment Tree) --**IMP** --**CONCEPT**
 731. Bag of Tokens (Greedy + Two Pointer)
+732. Pseudo-Palindromic Paths in a Binary Tree
+
