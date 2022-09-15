@@ -1,8 +1,7 @@
 package Leetcode.DP;
 
 public class Minimum_ASCII_Delete_Sum_for_Two_Strings {
-    // Variant of Edit Distance
-    // REFER Algoexpert for Edit Distance
+    // Variant of Edit Distance/ LCS
     public int minimumDeleteSum(String w1, String w2) {
         int m = w1.length();
         int n = w2.length();
