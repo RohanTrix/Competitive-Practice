@@ -10,8 +10,8 @@
 
             Since for m = 0, j-i = n-1
             we can form the relation:
-                                         m = (n-1) - (j - i)
-                                      ==> j = (n-1) + (i - m)
+                                        (i+1) denotes the 
+                                      ==> right = (n-1) - (i - left)
             
             DP TRANSITIONS:
 
@@ -21,26 +21,23 @@
             
 */
 class Maximum_Score_from_Performing_Multiplication_Operations {
-    int mul[];
-    int dp[][];
-
-    public int maxScore(int nums[], int i, int m) {
-        if (m == mul.length)
-            return 0;
-        if (dp[i][m] != -1)
-            return dp[i][m];
-        int j = nums.length - 1 + (i - m);
-        int left = nums[i] * mul[m] + maxScore(nums, i + 1, m + 1);
-        int right = nums[j] * mul[m] + maxScore(nums, i, m + 1);
-        return dp[i][m] = Math.max(left, right);
-
+    Integer dp[][];
+    int nums[], muls[];
+    public int maxScore(int left, int i)
+    {
+        if(i == muls.length) return 0;
+        if(dp[left][i]!=null) return dp[left][i];
+        
+        int right = nums.length - 1 - (i - left);
+        
+        int ch1 = muls[i]*nums[left] + maxScore(left+1, i+1);
+        int ch2 = muls[i]*nums[right]+ maxScore(left, i+1);
+        return dp[left][i] = Math.max(ch1, ch2);
     }
-
     public int maximumScore(int[] nums, int[] multipliers) {
-        mul = multipliers;
-        dp = new int[mul.length][mul.length];
-        for (int a[] : dp)
-            Arrays.fill(a, -1);
-        return maxScore(nums, 0, 0);
+        this.nums = nums; this.muls = multipliers;
+        int m = multipliers.length;
+        dp = new Integer[m+1][m+1];
+        return maxScore(0, 0);
     }
 }

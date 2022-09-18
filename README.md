@@ -744,3 +744,7 @@
 733. Product of the Last K Numbers (Prefix Products) --**CONCEPT** --**REVISE**
 734. Number of Ways to Wear Different Hats to Each Other (Bitmask DP) --**Tricky** --**CONCEPT**
 735. Find Original Array From Doubled Array (Sorting + Two Pointer) --**IMP**
+736. Palindrome Pairs --**Implementation Heavy** --**Tight Constraint**
+737. Length of the Longest Alphabetical Continuous Substring
+738. Reverse Odd Levels of Binary Tree (Tree)
+739. Sum of Prefix Scores of Strings (Trie)
