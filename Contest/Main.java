@@ -4,24 +4,37 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    long reduce(int arr[])
+    {
+        TreeMap<Long, Integer> tm = new TreeMap<>();
+        for(int num : arr)
+            tm.put(1L*num, tm.getOrDefault(1L*num, 0) + 1);
+        int cost = 0;
+        while(tm.size()!=0)
+        {
+            long mini = tm.firstKey();
+            tm.put(mini, tm.get(mini) - 1);
+            if(tm.get(mini) == 0) tm.remove(mini);
+
+            if(tm.size() == 0) break;
+
+            long maxi = tm.lastKey();
+            tm.put(maxi, tm.get(maxi) - 1);
+            if(tm.get(maxi) == 0)
+                tm.remove(maxi);
+            
+            cost+=( 2*maxi)/(maxi - mini + 1);
+            long newval = mini + maxi;
+            tm.put(newval, tm.getOrDefault(newval, 0) + 1);
+        }
+        return cost;
+    }
     void solve(FastReader sc)
     {
         int n = sc.nextInt();
         int arr[] = sc.nextArray(n);
-        Arrays.sort(arr);
-        int nums[] = new int[2*n];
-        for(int i = 0; i<2*n; i++) nums[i] = arr[i%n];
-        long maxi = Long.MIN_VALUE;
-        for(int i = 0; i<(2*n)-5+1; i++)
-        {
-            long prod = 1L;
-            for(int j = i; j<i+5; j++)
-                prod*=nums[j];
-            maxi = Math.max(maxi, prod);
-        }
-        sc.println(maxi);
-    }
+        sc.println(reduce(arr));
+    }    
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O

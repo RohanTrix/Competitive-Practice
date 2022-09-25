@@ -748,3 +748,6 @@
 737. Length of the Longest Alphabetical Continuous Substring
 738. Reverse Odd Levels of Binary Tree (Tree)
 739. Sum of Prefix Scores of Strings (Trie)
+740. Find Duplicate File in System
+741. Longest Subarray With Maximum Bitwise AND
+742. Find All Good Indices (Prefix/Suffix)
