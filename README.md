@@ -753,3 +753,9 @@
 742. Find All Good Indices (Prefix/Suffix)
 743. Number of Good Paths (DSU+Sorting) --**CONCEPT** --**IMP**
 744. Longest Arithmetic Subsequence of Given Difference (DP)
+745. Maximum Sum of an Hourglass
+746. Minimize XOR (Bit Manipulation + Greedy)
+757. Maximum Deletions on a String (String Hashing + DP) --**IMP**
+758. Longest Uploaded Prefix
+759. Bitwise XOR of All Pairings (Bit Manipulation)
+760. Number of Pairs Satisfying Inequality (Fenwick Tree) --**IMP** --**Revise**
