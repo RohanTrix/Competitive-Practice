@@ -760,3 +760,4 @@
 759. Bitwise XOR of All Pairings (Bit Manipulation)
 760. Number of Pairs Satisfying Inequality (Fenwick Tree) --**IMP** --**Revise**
 761. Erect The Fence ( Geometry - Convex Hull) --**IMP** --**Revise**
+762. Binary Search Tree to Greater Sum Tree (Tree)
