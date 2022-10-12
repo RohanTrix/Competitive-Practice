@@ -761,3 +761,5 @@
 760. Number of Pairs Satisfying Inequality (Fenwick Tree) --**IMP** --**Revise**
 761. Erect The Fence ( Geometry - Convex Hull) --**IMP** --**Revise**
 762. Binary Search Tree to Greater Sum Tree (Tree)
+763. Reaching Points (Greedy + Math) --**IMP CONCEPT** --**HARD** --**Tricky**
+764. Find the Index of the First Occurrence in a String

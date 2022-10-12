@@ -11,8 +11,5 @@ import sys
 # for t in range(int(input())):
 
 n = int(input())
-prev = [1]
-nl = []
-print(*l)
-for i in range(n-1):
+l = list(map(int, int))
     

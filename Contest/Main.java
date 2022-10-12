@@ -4,37 +4,37 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    long reduce(int arr[])
+    int binarySearch(int l, int r, int arr[], int key)
     {
-        TreeMap<Long, Integer> tm = new TreeMap<>();
-        for(int num : arr)
-            tm.put(1L*num, tm.getOrDefault(1L*num, 0) + 1);
-        int cost = 0;
-        while(tm.size()!=0)
+        int ans = -1;
+        while(l<=r)
         {
-            long mini = tm.firstKey();
-            tm.put(mini, tm.get(mini) - 1);
-            if(tm.get(mini) == 0) tm.remove(mini);
-
-            if(tm.size() == 0) break;
-
-            long maxi = tm.lastKey();
-            tm.put(maxi, tm.get(maxi) - 1);
-            if(tm.get(maxi) == 0)
-                tm.remove(maxi);
-            
-            cost+=( 2*maxi)/(maxi - mini + 1);
-            long newval = mini + maxi;
-            tm.put(newval, tm.getOrDefault(newval, 0) + 1);
+            int mid = (l+r)/2;
+            if(arr[mid]<=key)
+            {
+                ans = mid;
+                l = mid + 1;
+            }
+            else r = mid - 1;
         }
-        return cost;
+        return ans+1;
     }
     void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        int arr[] = sc.nextArray(n);
-        sc.println(reduce(arr));
-    }    
+        int n = s.nextInt();
+        int arr[] = new int[n];
+        for(int i = 0; i<n; i++)
+            arr[i] = sc.nextInt();
+        
+        int L = sc.nextInt(), R = sc.nextInt();
+        sort(arr);
+        long cnt = 0;
+        for(int i = 1; i<n; i++)
+        {
+            cnt+= binarySearch(0,i-1, arr, R) - binarySearch(0, i-1, arr, L-1);
+        }
+        sc.println(cnt);
+    }
     public static void main(String[] args) 
     {
         // FastReader(true)         for File I/O
