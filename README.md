@@ -763,3 +763,4 @@
 762. Binary Search Tree to Greater Sum Tree (Tree)
 763. Reaching Points (Greedy + Math) --**IMP CONCEPT** --**HARD** --**Tricky**
 764. Find the Index of the First Occurrence in a String
+765. Delete the Middle Node of a Linked List

@@ -16,19 +16,19 @@ public class Main
             sum+=nums[i];
         }
             
-        int S = sum/3;
+        long S = sum/3;
         long suffSum = 0;
         long suffSumCnt[] = new long[n];
         for(int i = n-1; i>=0; i--)
         {
-            suffSum+=nums[i]''
+            suffSum+=nums[i];
             if(suffSum == S)
                 suffSumCnt[i] = 1;
             if(i!=n-1)
                 suffSumCnt[i]+=suffSumCnt[i+1];
         }
         
-        if(pref[n]%3!=0 || n<=2)
+        if(sum%3!=0 || n<=2)
         {
             sc.println(0);
             return;
