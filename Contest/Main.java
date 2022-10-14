@@ -4,36 +4,46 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    int binarySearch(int l, int r, int arr[], int key)
-    {
-        int ans = -1;
-        while(l<=r)
-        {
-            int mid = (l+r)/2;
-            if(arr[mid]<=key)
-            {
-                ans = mid;
-                l = mid + 1;
-            }
-            else r = mid - 1;
-        }
-        return ans+1;
-    }
+    
     void solve(FastReader sc)
     {
-        int n = s.nextInt();
-        int arr[] = new int[n];
+        int n = sc.nextInt();
+        long nums[] = new long[n];
+        long sum = 0;
         for(int i = 0; i<n; i++)
-            arr[i] = sc.nextInt();
-        
-        int L = sc.nextInt(), R = sc.nextInt();
-        sort(arr);
-        long cnt = 0;
-        for(int i = 1; i<n; i++)
         {
-            cnt+= binarySearch(0,i-1, arr, R) - binarySearch(0, i-1, arr, L-1);
+            nums[i] = sc.nextLong();
+            sum+=nums[i];
+        }
+            
+        int S = sum/3;
+        long suffSum = 0;
+        long suffSumCnt[] = new long[n];
+        for(int i = n-1; i>=0; i--)
+        {
+            suffSum+=nums[i]''
+            if(suffSum == S)
+                suffSumCnt[i] = 1;
+            if(i!=n-1)
+                suffSumCnt[i]+=suffSumCnt[i+1];
+        }
+        
+        if(pref[n]%3!=0 || n<=2)
+        {
+            sc.println(0);
+            return;
+        }
+        long prefSum = 0, cnt = 0;
+        for(int i = 0; i<n-2; i++)
+        {
+            prefSum+=nums[i];
+            if(prefSum == S)
+                cnt+=suffSumCnt[i+2];
         }
         sc.println(cnt);
+
+        
+        
     }
     public static void main(String[] args) 
     {
@@ -44,7 +54,7 @@ public class Main
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
@@ -54,7 +64,7 @@ public class Main
             FastReader sc=new FastReader(); 
             //CODE BEGIN
             
-            for(int T = sc.nextInt();T>0 ;T--)
+            // for(int T = sc.nextInt();T>0 ;T--)
             ob.solve(sc);
             //CODE END
             sc.closer();
