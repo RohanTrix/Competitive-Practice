@@ -43,7 +43,6 @@ public class Main
         sc.println(cnt);
 
         
-        
     }
     public static void main(String[] args) 
     {

@@ -764,3 +764,7 @@
 763. Reaching Points (Greedy + Math) --**IMP CONCEPT** --**HARD** --**Tricky**
 764. Find the Index of the First Occurrence in a String
 765. Delete the Middle Node of a Linked List
+766. Count Number of Distinct Integers After Reverse Operations
+767. Sum of Number and Its Reverse
+768. Count Subarrays With Fixed Bounds (Sliding Window) --**CONCEPT** --**HARD**
+769. Minimum Difficulty of a Job Schedule (DP)
