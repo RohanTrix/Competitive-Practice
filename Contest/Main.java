@@ -4,44 +4,58 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
+    class DSU
+    {
+        int parent[], rank[];
+        public DSU(int n)
+        {
+            parent = new int[n];
+            rank = new int[n];
+            Arrays.fill(parent, -1);
+            Arrays.fill(rank, 1);
+        }
+        public int find(int u)
+        {
+            if(parent[u] == -1) return u;
+            return parent[u] = find(parent[u]);
+        }
+        public void union(int a, int b)
+        {
+            int s1 = find(a);
+            int s2 = find(b);
+            if(s1!=s2)
+            {
+                if(rank[s1]>rank[s2])
+                {
+                    rank[s1]+=rank[s2];
+                    parent[s2] = s1;
+                }
+                else
+                {
+                    rank[s2]+=rank[s1];
+                    parent[s1] = s2;
+                }
+            }
+        }
+    }
     
     void solve(FastReader sc)
     {
         int n = sc.nextInt();
-        long nums[] = new long[n];
-        long sum = 0;
+        // int k = sc.nextInt();
+        DSU d = new DSU(n);
         for(int i = 0; i<n; i++)
         {
-            nums[i] = sc.nextLong();
-            sum+=nums[i];
+            int to = sc.nextInt() - 1;
+            d.union(i, to); 
         }
-            
-        long S = sum/3;
-        long suffSum = 0;
-        long suffSumCnt[] = new long[n];
-        for(int i = n-1; i>=0; i--)
-        {
-            suffSum+=nums[i];
-            if(suffSum == S)
-                suffSumCnt[i] = 1;
-            if(i!=n-1)
-                suffSumCnt[i]+=suffSumCnt[i+1];
-        }
-        
-        if(sum%3!=0 || n<=2)
-        {
-            sc.println(0);
-            return;
-        }
-        long prefSum = 0, cnt = 0;
-        for(int i = 0; i<n-2; i++)
-        {
-            prefSum+=nums[i];
-            if(prefSum == S)
-                cnt+=suffSumCnt[i+2];
-        }
+        long cnt = 0;
+        for(int i = 0; i<n; i++)
+            if(d.parent[i] == -1)
+                cnt++;
+        // long ans = binpow(n, k) - cnt;
+        // ans = ((ans%mod)+mod)%mod;
         sc.println(cnt);
-
         
     }
     public static void main(String[] args) 
@@ -72,7 +86,7 @@ public class Main
     }
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
-    final long mod = 1000000000+7;
+    
     void debug(Object... o) { System.out.println(Arrays.deepToString(o));}
     public static long power(long x, long y, long mod)
     {
