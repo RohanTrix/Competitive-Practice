@@ -4,58 +4,59 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    class DSU
+    class DSU 
     {
-        int parent[], rank[];
-        public DSU(int n)
+        public int parent[];
+        public int rank[];
+        public DSU(int num)
         {
-            parent = new int[n];
-            rank = new int[n];
-            Arrays.fill(parent, -1);
-            Arrays.fill(rank, 1);
+            parent = new int[num];
+            rank = new int[num];
+            Arrays.fill(rank,1);
+            Arrays.fill(parent,-1);
         }
-        public int find(int u)
+        public int find( int i)
         {
-            if(parent[u] == -1) return u;
-            return parent[u] = find(parent[u]);
+            if(parent[i]== -1)
+            {
+                return i;
+            }
+            return parent[i] = find(parent[i]); // Path Compression
         }
-        public void union(int a, int b)
+        public boolean union(int a, int b)
         {
             int s1 = find(a);
             int s2 = find(b);
-            if(s1!=s2)
+            if( s1!= s2)
             {
-                if(rank[s1]>rank[s2])
+                if( rank[s1] < rank[s2] )
                 {
-                    rank[s1]+=rank[s2];
-                    parent[s2] = s1;
+                    parent[s1] = s2;
+                    rank[s2] += rank[s1];
                 }
                 else
                 {
-                    rank[s2]+=rank[s1];
-                    parent[s1] = s2;
+                    parent[s2] = s1;
+                    rank[s1] += rank[s2]; 
                 }
+                return true;
             }
+            return false;
         }
     }
-    
     void solve(FastReader sc)
     {
-        int n = sc.nextInt();
-        // int k = sc.nextInt();
+        int n = sc.nextInt(), k = sc.nextInt();
         DSU d = new DSU(n);
-        for(int i = 0; i<n; i++)
+        int maxi = 1;
+        for(int i = 0; i<k; i++)
         {
-            int to = sc.nextInt() - 1;
-            d.union(i, to); 
+            int a = sc.nextInt() - 1, b = sc.nextInt() - 1;
+            d.union(a, b);
+            int size = d.rank[d.find(a)];
+            maxi = Math.max(maxi, size);
+            sc.println(maxi - 1);
         }
-        long cnt = 0;
-        for(int i = 0; i<n; i++)
-            if(d.parent[i] == -1)
-                cnt++;
-        // long ans = binpow(n, k) - cnt;
-        // ans = ((ans%mod)+mod)%mod;
-        sc.println(cnt);
         
     }
     public static void main(String[] args) 
@@ -86,7 +87,7 @@ public class Main
     }
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
-    
+    final long mod = 1000000000+7;
     void debug(Object... o) { System.out.println(Arrays.deepToString(o));}
     public static long power(long x, long y, long mod)
     {
