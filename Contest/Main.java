@@ -46,17 +46,27 @@ public class Main
     }
     void solve(FastReader sc)
     {
-        int n = sc.nextInt(), k = sc.nextInt();
+
+        int n = sc.nextInt(), m = sc.nextInt();
         DSU d = new DSU(n);
-        int maxi = 1;
-        for(int i = 0; i<k; i++)
+        List<int[]> list = new ArrayList<>();
+        for(int i = 0; i<m; i++)
         {
-            int a = sc.nextInt() - 1, b = sc.nextInt() - 1;
-            d.union(a, b);
-            int size = d.rank[d.find(a)];
-            maxi = Math.max(maxi, size);
-            sc.println(maxi - 1);
+            int edge[] = {sc.nextInt()-1, sc.nextInt()-1, sc.nextInt()};
+            list.add(edge);
         }
+        Collections.sort(list, (a,b) -> Integer.compare(a[2], b[2]));
+        long cost = 0;
+        for(int edge[] : list)
+        {
+            if(edge[2] < 0)
+                d.union(edge[0], edge[1]);
+            else if(d.find(edge[0]) == d.find(edge[1]))
+                cost+=1L*edge[2];
+            else
+                d.union(edge[0], edge[1]);
+        }
+        sc.println(cost);
         
     }
     public static void main(String[] args) 

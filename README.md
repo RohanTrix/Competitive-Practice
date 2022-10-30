@@ -774,3 +774,6 @@
 773. Single-Threaded CPU (Greedy) --**V.IMP**
 774. Find XOR Sum of All Pairs Bitwise AND (Bit manipulation) --**CONCEPT** --**IMP**
 775. Max Points on a Line (Geometry)
+776. Words Within Two Edits of Dictionary
+777. Destroy Sequential Targets
+778. Next Greater Element IV (Monotstack + Binary Search + Segment Tree) --*CONCEPT** --**IMP**
