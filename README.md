@@ -777,3 +777,6 @@
 776. Words Within Two Edits of Dictionary
 777. Destroy Sequential Targets
 778. Next Greater Element IV (Monotstack + Binary Search + Segment Tree) --*CONCEPT** --**IMP**
+779. Most Popular Video Creator
+780. Minimum Addition to Make Integer Beautiful (Greedy) --**IMP** --**REVISE**
+781. Height of Binary Tree After Subtree Removal Queries (Euler Tour + Tree DP + Prefix Suffix) --**V.V.IMP**
