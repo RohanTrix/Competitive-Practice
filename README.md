@@ -781,3 +781,4 @@
 780. Minimum Addition to Make Integer Beautiful (Greedy) --**IMP** --**REVISE**
 781. Height of Binary Tree After Subtree Removal Queries (Euler Tour + Tree DP + Prefix Suffix) --**V.V.IMP**
 782. Where Will the Ball Fall
+783. Implement Magic Dictionary (Trie)
