@@ -783,3 +783,4 @@
 782. Where Will the Ball Fall
 783. Implement Magic Dictionary (Trie)
 784. Minimum Genetic Mutation (BFS)
+785. Orderly Queue (Greedy)
