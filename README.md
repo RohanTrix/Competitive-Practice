@@ -784,3 +784,6 @@
 783. Implement Magic Dictionary (Trie)
 784. Minimum Genetic Mutation (BFS)
 785. Orderly Queue (Greedy)
+786. Maximum Sum of Distinct Subarrays With Length K (Fixed Sling Window)
+787. Total Cost to Hire K Workers (Greedy) --**IMP**
+788. Minimum Total Distance Traveled (DP)
