@@ -787,3 +787,6 @@
 786. Maximum Sum of Distinct Subarrays With Length K (Fixed Sling Window)
 787. Total Cost to Hire K Workers (Greedy) --**IMP**
 788. Minimum Total Distance Traveled (DP)
+789. Online Stock Span (MonoStack) --**IMP** --**REVISE**
+790. Valid Sudoku --**IMP**
+791. Odd Even Linked List
