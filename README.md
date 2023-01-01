@@ -790,3 +790,4 @@
 789. Online Stock Span (MonoStack) --**IMP** --**REVISE**
 790. Valid Sudoku --**IMP**
 791. Odd Even Linked List
+792. Reconstruct Itinerary (Euler Path of Graph) --**V.IMP** --**REVISE**
