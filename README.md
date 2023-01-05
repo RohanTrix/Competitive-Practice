@@ -792,3 +792,4 @@
 791. Odd Even Linked List
 792. Reconstruct Itinerary (Euler Path of Graph) --**V.IMP** --**REVISE**
 793. Minimum Rounds to Complete All Tasks (Math) ---**Revise**
+794. Powerful Integers (Brute Force + Math)
