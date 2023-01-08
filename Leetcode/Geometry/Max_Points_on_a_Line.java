@@ -1,13 +1,71 @@
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Objects;
+
 /**
- *      NOTE : THIS IS A O(N^3) LOGIC I CAME UP WITH. OPTIMIAL SOLN IS O(N^2)
- *      IDEA : Everytime, we conisder two points to form a line(lets say L). Next, we go through the all points once and increment counter if line formed by Point 1 and currPoint
- *             is the same line as line L. To check whether 2 lines are same or not, you can check if they are parallel(smae slope) and if y-intercept
- *             is same. Finally take max of this cnt for all lines L considered
- * 
- * 
+ *      
+ *      EXPLANATION ONLY :(https://leetcode.com/problems/max-points-on-a-line/solutions/47106/c-o-n-2-solution-for-your-reference/?orderBy=most_votes)
+ *      CODED BY SELF
  */
 
-public class Max_Points_on_a_Line {
+ class Solution {
+    public int maxPoints(int[][] points) {
+        int maxi = 0;
+        int n = points.length;
+        Map<Slope, Integer> map = new HashMap<>();
+        for(int i = 0; i<n; i++)
+        {
+            int x1 = points[i][0], y1 = points[i][1];
+            
+            for(int j = i+1; j<n; j++)
+            {
+                int x2 = points[j][0], y2 = points[j][1];
+                Slope del = new Slope(y2 - y1, x2 - x1);
+                map.put(del, map.getOrDefault(del, 0)+1);
+                maxi = Math.max(maxi, map.get(del));
+            }
+            map.clear();
+        }
+        return maxi+1;
+    }
+    class Slope
+    {
+        int dy, dx;
+        public Slope(int dy, int dx)
+        {
+            int g = gcd(dy,dx);
+            dy/=g; dx/=g;    
+            this.dy = dy;
+            this.dx = dx;
+            
+        }
+        public int gcd(int a, int b)
+        {
+            if(a == 0)
+                return b;
+            return gcd(b % a, a);
+        }
+        @Override
+        public boolean equals(Object o)
+        {
+            Slope that = (Slope) o;
+            return this.dx == that.dx && this.dy == that.dy;
+        } 
+        public int hashCode()
+        {
+            return Objects.hash(dx,dy);
+        }
+    }
+}
+
+
+/**
+ * NOTE : THIS IS A O(N^3) LOGIC I CAME UP WITH.
+ * IDEA : Everytime, we conisder two points to form a line(lets say L). Next, we go through the all points once and increment counter if line formed by Point 1 and currPoint
+ *             is the same line as line L. To check whether 2 lines are same or not, you can check if they are parallel(smae slope) and if y-intercept
+ *             is same. Finally take max of this cnt for all lines L considered
+ */
+class Max_Points_on_a_Line1 {
     public int maxPoints(int[][] points) {
         int maxi = 1;
         for(int p1[] : points)
