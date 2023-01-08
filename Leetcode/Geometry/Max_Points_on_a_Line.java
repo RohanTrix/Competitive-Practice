@@ -1,8 +1,8 @@
 /**
  *      NOTE : THIS IS A O(N^3) LOGIC I CAME UP WITH. OPTIMIAL SOLN IS O(N^2)
- *      IDEA : Everytime, we conisder to points to form a line(lets say L). Next, we go through the all points once and increment counter if Point 1 and currPoint
- *             for the same line as line L. To check whether 2 lines are same or not, you can check if they are parallel(smae slope) and if y-intercept
- *             is same. Finally maximise this cnt for each line considered
+ *      IDEA : Everytime, we conisder two points to form a line(lets say L). Next, we go through the all points once and increment counter if line formed by Point 1 and currPoint
+ *             is the same line as line L. To check whether 2 lines are same or not, you can check if they are parallel(smae slope) and if y-intercept
+ *             is same. Finally take max of this cnt for all lines L considered
  * 
  * 
  */

@@ -793,3 +793,5 @@
 792. Reconstruct Itinerary (Euler Path of Graph) --**V.IMP** --**REVISE**
 793. Minimum Rounds to Complete All Tasks (Math) ---**Revise**
 794. Powerful Integers (Brute Force + Math)
+795. Maximal Score After Applying K Operations
+796. Make Number of Distinct Characters Equal
