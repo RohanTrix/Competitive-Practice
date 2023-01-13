@@ -795,3 +795,6 @@
 794. Powerful Integers (Brute Force + Math)
 795. Maximal Score After Applying K Operations
 796. Make Number of Distinct Characters Equal
+797. As Far from Land as Possible (Multi Source BFS) --**IMP** --**REVISE**
+798. Maximize Score After N Operations (Bitmask DP)
+799. Longest Path With Different Adjacent Characters (Tree DP) --**IMP**
