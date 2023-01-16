@@ -39,6 +39,7 @@ public class Main
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
     final long mod = 1000000000+7;
+    void debug(Object... o) { System.out.println(Arrays.deepToString(o));}
     public static long power(long x, long y, long mod)
     {
         long res = 1L;

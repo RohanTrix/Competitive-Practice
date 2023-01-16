@@ -798,3 +798,5 @@
 797. As Far from Land as Possible (Multi Source BFS) --**IMP** --**REVISE**
 798. Maximize Score After N Operations (Bitmask DP)
 799. Longest Path With Different Adjacent Characters (Tree DP) --**IMP**
+800. Longest Well-Performing Interval (Prefix Sum) --**V.IMP** --**Tricky**
+801. Count the Number of Good Subarrays (Sliding Window) --**V.IMP** --**Concept**

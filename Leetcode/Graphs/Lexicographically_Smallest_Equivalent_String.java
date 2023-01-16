@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class Lexicographically_Smallest_Equivalent_String
 {
     // Solved on binarysearch.com
