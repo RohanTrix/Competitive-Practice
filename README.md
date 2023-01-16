@@ -800,3 +800,4 @@
 799. Longest Path With Different Adjacent Characters (Tree DP) --**IMP**
 800. Longest Well-Performing Interval (Prefix Sum) --**V.IMP** --**Tricky**
 801. Count the Number of Good Subarrays (Sliding Window) --**V.IMP** --**Concept**
+802. Number of Valid Words for Each Puzzle (Bitmask/Submask Enumeration) --**V.IMP** --**CONCEPT**

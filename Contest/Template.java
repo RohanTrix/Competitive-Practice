@@ -2,7 +2,7 @@ import java.io.*;
 import java.util.*;
 
 @SuppressWarnings("all")
-public class Main 
+public class Template 
 {
     
     void solve(FastReader sc)
@@ -14,7 +14,7 @@ public class Main
     {
         // FastReader(true)         for File I/O
         // FastReader()             for terminal I/O
-        Main ob = new Main();
+        Template ob = new Template();
         if(args.length>0 && args[0].equals("local")){
             FastReader sc=new FastReader(true); 
             //CODE BEGIN
