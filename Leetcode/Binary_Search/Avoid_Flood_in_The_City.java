@@ -1,3 +1,9 @@
+package Leetcode.Binary_Search;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.TreeSet;
+
 /**
  *      IDEA : We need to know the lastOccurence position of a lake's rain day since we want to
  *             only allocate drain days after this day. Moreover, we need to assign drain days such that

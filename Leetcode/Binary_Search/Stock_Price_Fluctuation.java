@@ -1,3 +1,7 @@
+package Leetcode.Binary_Search;
+
+import java.util.TreeMap;
+
 class StockPrice {
     TreeMap<Integer, Integer> tm; // Maps timestamp -> latest price
     TreeMap<Integer, Integer> prices; // Maps price -> Count of timestamps having this price

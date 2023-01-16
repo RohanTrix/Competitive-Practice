@@ -1,3 +1,14 @@
+package Leetcode.Graphs;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
+import java.util.TreeSet;
+
 /**
  *      IDEA : Use a DSU on the accounts array to check which accounts are interconnected. To check if there
  *             is a common mail b/w 2 accounts...add the mails of one account to a set....then traverse the other account.

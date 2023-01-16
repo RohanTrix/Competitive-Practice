@@ -1,3 +1,7 @@
+package Leetcode.Binary_Search;
+
+import java.util.Arrays;
+
 /**
  * IDEA : If we are able to cut the ribbons such that we can make ribbons of length x with cnt>=k,
  *        then surely we could have made as many or more cuts with a ribbon length <x. Hence this gives us a binary searchable property.

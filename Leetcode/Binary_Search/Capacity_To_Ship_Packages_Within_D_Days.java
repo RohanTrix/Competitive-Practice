@@ -1,3 +1,5 @@
+package Leetcode.Binary_Search;
+
 
 import java.util.stream.*;
 class Capacity_To_Ship_Packages_Within_D_Days {

@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Number_of_Nodes_in_the_Sub_Tree_With_the_Same_Label {
     Map<Integer, List<Integer>> map;
     int ans[];

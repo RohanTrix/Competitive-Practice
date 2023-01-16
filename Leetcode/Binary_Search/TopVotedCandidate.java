@@ -1,4 +1,8 @@
-public class Online_Election {
+package Leetcode.Binary_Search;
+
+import java.util.TreeMap;
+
+public class TopVotedCandidate {
     // Times can go upto 10^9 but length of the array can only be uptil 5000.
     // So we keep a TreeMap mapping time -> winner at that time.
     // And since the time array is sorted, we keep a running freq arr for votes...and as soon as a winner changes, we update it

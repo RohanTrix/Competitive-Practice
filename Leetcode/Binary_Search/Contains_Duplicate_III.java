@@ -1,3 +1,7 @@
+package Leetcode.Binary_Search;
+
+import java.util.TreeMap;
+
 /**
  *      IDEA : Whenenver we have <= or >= condition, it should be a hint for Binary Search or using a SORTED DS
  *  
@@ -25,13 +29,13 @@ public class Contains_Duplicate_III
         {
             if(i>indexDiff)
             {
-                Long v = new Long(nums[i - indexDiff - 1]);
+                Long v = (long)nums[i - indexDiff - 1];
                 tm.put(v, tm.get(v) - 1);
                 if(tm.get(v) == 0)
                     tm.remove(v);
             }
             
-            Long num = new Long(nums[i]);
+            Long num = (long)nums[i];
             
             Long floor = tm.floorKey(num + valueDiff);
             Long ceil  = tm.ceilingKey(num - valueDiff);
