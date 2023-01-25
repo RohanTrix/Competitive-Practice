@@ -801,3 +801,8 @@
 800. Longest Well-Performing Interval (Prefix Sum) --**V.IMP** --**Tricky**
 801. Count the Number of Good Subarrays (Sliding Window) --**V.IMP** --**Concept**
 802. Number of Valid Words for Each Puzzle (Bitmask/Submask Enumeration) --**V.IMP** --**CONCEPT**
+803. Flip String to Monotone Increasing (DP)
+804. Get Equal Substrings Within Budget (Binary Search + Fixed SLiding Window)
+805. Apply Bitwise Operations to Make Strings Equal (Bit Operations Observation)
+806. Minimum Cost to Split an Array (DP + Preprocessing) --**IMP** --**REVISE**
+807. Find Closest Node to Given Two Nodes ( Graphs)
