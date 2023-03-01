@@ -4,19 +4,18 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    public double powerRecursive(double base, int exponent) {
-        if(exponent < 0)
-            return (1.0/base) * powerRecursive(base, exponent+1);
-        else if(exponent > 0)
-            return base * powerRecursive(base, exponent-1);
-        else
-            return 1.0;
-    }
     
     void solve(FastReader sc)
     {
-        
-        
+        int n = sc.nextInt();
+        long arr[] = new long[n];
+        for(int i = 0; i<n; i++) arr[i] = sc.nextLong();
+        Arrays.sort(arr);
+        long maxi = arr[0], add = 0;
+        for(int i = 0; i<n-1; i++){
+            maxi = Math.max(maxi, arr[i+1] - arr[i]);
+        }
+        sc.println(maxi);
     }
     public static void main(String[] args) 
     {
@@ -47,7 +46,6 @@ public class Main
     final int INTMAX = Integer.MAX_VALUE/2;
     final int INTMIN = Integer.MIN_VALUE/2;
     final long mod = 1000000000+7;
-    void debug(Object... o) { System.out.println(Arrays.deepToString(o));}
     public static long power(long x, long y, long mod)
     {
         long res = 1L;

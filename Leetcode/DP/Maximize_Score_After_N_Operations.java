@@ -5,7 +5,7 @@
  *         with some other number.
  * 
  * 
- *         Thus, looking at the constraints(n<=14), we can think of enumerating all possible paths of choosing pairs.
+ *         Thus, looking at the constraints(2*n<=14), we can think of enumerating all possible paths of choosing pairs.
  *         Moreover, this can be memoized ----> for example consider we have choices (A,B) and (C,D) and after this we have 
  *         a remaining array [E,F,G,H,.....]. Now, there are two paths possible
  *                  

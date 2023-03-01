@@ -810,4 +810,5 @@
 809. Freedom Trail (DP) --**CONCEPT**
 810. Count the Number of Fair Pairs (Sorting + Binary Search) --**V.IMP** -**Revise***
 811. Substring XOR Queries (Bit Manipulation + Tricky Observation) --**Revise** --**CONCEPT**
-812. Subsequence With the Minimum Score (Prefix and Suffix) --**IMP. CONCEPT
+812. Subsequence With the Minimum Score (Prefix and Suffix) --**IMP. CONCEPT**
+813. Maximum Number of Consecutive Values You Can Make (Greedy/ Observation) --**IMP** --**Tricky CONCEPT**
