@@ -1,3 +1,8 @@
+import java.util.LinkedList;
+import java.util.Map;
+import java.util.Queue;
+import java.util.HashMap;
+
 public class Minimum_Possible_Integer_After_at_Most_K_Adjacent_Swaps_On_Digits
 {
     // REFER for explanation : https://leetcode.com/problems/minimum-possible-integer-after-at-most-k-adjacent-swaps-on-digits/discuss/720548/O(n-logn)-or-Detailed-Explanation
