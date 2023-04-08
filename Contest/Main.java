@@ -4,18 +4,30 @@ import java.util.*;
 @SuppressWarnings("all")
 public class Main 
 {
-    
+    public boolean possible(int val, int arr[]) {
+        int cnt = 0;
+        for(int num : arr)
+            cnt+=num<=val?1:0;
+        return cnt <= val;
+    }
+    int findDup(int arr[], int n) {
+        int l = 0, r = n-1;
+        int ans = 0;
+        while(l<=r) {
+            int mid = l + (r-l)/2;
+            if(possible(mid, arr)){
+                ans = mid;
+                l = mid + 1;
+            }
+            else r = mid - 1;
+        }
+        return ans+1;
+    }
     void solve(FastReader sc)
     {
         int n = sc.nextInt();
-        long arr[] = new long[n];
-        for(int i = 0; i<n; i++) arr[i] = sc.nextLong();
-        Arrays.sort(arr);
-        long maxi = arr[0], add = 0;
-        for(int i = 0; i<n-1; i++){
-            maxi = Math.max(maxi, arr[i+1] - arr[i]);
-        }
-        sc.println(maxi);
+        int arr[] = sc.nextArray(n);
+        sc.println(findDup(arr, n));
     }
     public static void main(String[] args) 
     {
