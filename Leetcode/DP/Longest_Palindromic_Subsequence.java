@@ -1,7 +1,23 @@
 package Leetcode.DP;
 
-
 public class Longest_Palindromic_Subsequence {
+    char s[];
+    Integer dp[][];
+    public int longest(int l, int r) {
+        if(l>r) return 0;
+        if(l == r) return 1;
+        if(dp[l][r]!=null) return dp[l][r];
+        if(s[l] == s[r])
+            return dp[l][r] = 2 + longest(l+1, r-1);
+        return dp[l][r] = Math.max(longest(l+1,r), longest(l, r-1));
+    }
+    public int longestPalindromeSubseq(String str) {
+        s = str.toCharArray();
+        dp = new Integer[s.length][s.length];
+        return longest(0, s.length-1);
+    }
+}
+class Longest_Palindromic_Subsequence1 {
     public int longestPalindromeSubseq(String str) {
         int n = str.length();
         if(n==1) return 1;
