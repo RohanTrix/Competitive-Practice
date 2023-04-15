@@ -820,3 +820,4 @@
 819. The Number of Beautiful Subsets (Backtracking)
 820. Smallest Missing Non-negative Integer After Operations (Math) --**V. IMP**
 821. Design Underground System (Design)
+822. Maximum Value of K Coins From Piles (DP) --**Concept**
