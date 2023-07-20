@@ -823,3 +823,4 @@
 822. Maximum Value of K Coins From Piles (DP) --**Concept**
 823. Shortest Bridge (DFS + BFS) --**IMP**
 824. Put Marbles in Bags (Heaps/Greedy) --**Tricky** --**Revise**
+825. All Nodes Distance K in Binary Tree (Graphs)
