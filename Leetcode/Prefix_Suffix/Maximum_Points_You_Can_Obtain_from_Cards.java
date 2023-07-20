@@ -1,16 +1,16 @@
-class Maximum_Points_You_Can_Obtain_from_Cards {
-    // IDEA: Taking out items from beginning or end is same as finding out 
-    public int maxScore(int[] nums, int k) {
-        int n = nums.length;
-        k = n-k;
-        int prefSum[] = new int[n+1];
-        prefSum[0] = 0;
-        for(int i =1; i<=n;i++) prefSum[i] = prefSum[i-1]+nums[i-1];
-        int mini = Integer.MAX_VALUE;
-        for( int i = k; i<=n;i++)
-        {
-            mini = Math.min(mini, prefSum[i]-prefSum[i-k]);
+class Solution {
+    // IDEA : Removing from beginning or end of a fixed no. of elements...is same as keeping some middle subarray.
+    //        Problem is of Finding Min sum fixed sized window of n-k elements
+    public int maxScore(int[] cards, int k) {
+        int n = cards.length;
+        k = n - k;
+        int sum = 0, mini = Integer.MAX_VALUE, totSum = 0;
+        for(int right = 0; right<n; right++) {
+            sum+=cards[right];
+            totSum+=cards[right];
+            if(right - k>=0) sum-=cards[right - k];
+            if(right >= k-1) mini = Math.min(mini, sum);
         }
-        return prefSum[n] - mini;
+        return totSum - mini;
     }
 }
