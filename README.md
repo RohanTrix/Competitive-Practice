@@ -823,4 +823,6 @@
 822. Maximum Value of K Coins From Piles (DP) --**Concept**
 823. Shortest Bridge (DFS + BFS) --**IMP**
 824. Put Marbles in Bags (Heaps/Greedy) --**Tricky** --**Revise**
-825. All Nodes Distance K in Binary Tree (Graphs)
+825. All Nodes Distance K in Binary Tree (Graphs) --**IMP**
+826. Find All Duplicates in an Array (Cycle Sort) --**IMP** --**Concept** --**Revise**
+827. Minimum Speed to Arrive on Time (Binary Search)

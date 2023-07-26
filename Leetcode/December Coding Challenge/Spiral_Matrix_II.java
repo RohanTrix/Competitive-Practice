@@ -1,5 +1,28 @@
 public class Spiral_Matrix_II {
+    // Short Code using Direction Vectors
+    // IDEA : Let i, j be coordinates on our grid and di, dj is current direction we need to move. 
+    //        In geometrical sense, rotate by 90 degrees clockwise is written as di, dj = -dj, di.
     public int[][] generateMatrix(int n) {
+        int i = 0, j = 0, di = 0, dj = 1;
+        int val = 1;
+        int mat[][] = new int[n][n];
+        while(val<=n*n) {
+            mat[i][j] = val++;
+            int ni = i+di, nj = j+dj;
+            // If next cell is out of bounds OR next cell already filled ---> Change the direction
+            if(Math.min(ni,nj)<0 || Math.max(ni, nj)>=n || mat[ni][nj]!=0) {
+                // di, dj = -dj, di
+                int t = dj;
+                dj = -di;
+                di = t;
+            }
+            i+=di;
+            j+=dj;
+        }
+        return mat;
+    }
+    // Solution 2
+    public int[][] generateMatrix1(int n) {
         
         int arr[][] = new int[n][n];
         int k=1;
