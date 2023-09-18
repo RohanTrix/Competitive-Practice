@@ -826,3 +826,4 @@
 825. All Nodes Distance K in Binary Tree (Graphs) --**IMP**
 826. Find All Duplicates in an Array (Cycle Sort) --**IMP** --**Concept** --**Revise**
 827. Minimum Speed to Arrive on Time (Binary Search)
+828. Minimum Number of Removals to Make Mountain Array (DP) --**IMP** --**Concept**
