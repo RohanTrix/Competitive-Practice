@@ -827,3 +827,4 @@
 826. Find All Duplicates in an Array (Cycle Sort) --**IMP** --**Concept** --**Revise**
 827. Minimum Speed to Arrive on Time (Binary Search)
 828. Minimum Number of Removals to Make Mountain Array (DP) --**IMP** --**Concept**
+829. Dinner Plate Stacks (Stacks + TreeSet) --**IMP** --**Revise**
